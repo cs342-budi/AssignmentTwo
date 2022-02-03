@@ -20,6 +20,28 @@
 		2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6451F26C1DBE70020C206 /* CK_ORKSerialization.swift */; };
 		2E02B7ECEB2186F8E5868D90 /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9CCFBC6701FC7A8C18DE19 /* Pods_CardinalKit_Example.framework */; };
 		2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */; };
+		338AA1FA27AC559B0094D6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338AA1F927AC559B0094D6F0 /* Assets.xcassets */; };
+		338AA20027AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		338AA20527AC559C0094D6F0 /* CardinalKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20427AC559C0094D6F0 /* CardinalKitApp.swift */; };
+		338AA20727AC559C0094D6F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20627AC559C0094D6F0 /* ContentView.swift */; };
+		338AA20927AC559C0094D6F0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20827AC559C0094D6F0 /* NotificationController.swift */; };
+		338AA20B27AC559C0094D6F0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20A27AC559C0094D6F0 /* NotificationView.swift */; };
+		338AA20D27AC559C0094D6F0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20C27AC559C0094D6F0 /* ComplicationController.swift */; };
+		338AA20F27AC559D0094D6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338AA20E27AC559D0094D6F0 /* Assets.xcassets */; };
+		338AA21227AC559D0094D6F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338AA21127AC559D0094D6F0 /* Preview Assets.xcassets */; };
+		338AA21E27AC559D0094D6F0 /* BUDI_WatchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA21D27AC559D0094D6F0 /* BUDI_WatchKitTests.swift */; };
+		338AA22827AC559D0094D6F0 /* BUDI_WatchKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA22727AC559D0094D6F0 /* BUDI_WatchKitUITests.swift */; };
+		338AA22A27AC559D0094D6F0 /* BUDI_WatchKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA22927AC559D0094D6F0 /* BUDI_WatchKitUITestsLaunchTests.swift */; };
+		338AA22D27AC559D0094D6F0 /* BUDI WatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 338AA1F727AC55990094D6F0 /* BUDI WatchKit.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		338AA23C27AC572B0094D6F0 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA23B27AC572B0094D6F0 /* WorkoutManager.swift */; };
+		338AA23E27AC575B0094D6F0 /* SendDataToPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA23D27AC575B0094D6F0 /* SendDataToPhone.swift */; };
+		338AA24027AC577F0094D6F0 /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA23F27AC577F0094D6F0 /* SessionPagingView.swift */; };
+		338AA24227AC57AB0094D6F0 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24127AC57AB0094D6F0 /* SummaryView.swift */; };
+		338AA24427AC57D10094D6F0 /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24327AC57D10094D6F0 /* CoreMotionManager.swift */; };
+		338AA24627AC58100094D6F0 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24527AC58100094D6F0 /* ActivityRingsView.swift */; };
+		338AA24827AC58870094D6F0 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24727AC58870094D6F0 /* MetricsView.swift */; };
+		338AA24A27AC58AA0094D6F0 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24927AC58AA0094D6F0 /* ElapsedTimeView.swift */; };
+		338AA24C27AC5BD50094D6F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24B27AC5BD50094D6F0 /* ControlsView.swift */; };
 		8E0A43AC244A4A0400656518 /* CKStudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4382244A4A0400656518 /* CKStudyUser.swift */; };
 		8E0A43AD244A4A0400656518 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4384244A4A0400656518 /* Constants.swift */; };
 		8E0A43AE244A4A0400656518 /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4386244A4A0400656518 /* ORKESerialization.m */; };
@@ -93,7 +115,60 @@
 		E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F1FD7724D62064006C39DF /* CKConfiguration.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		338AA20127AC559C0094D6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
+			remoteInfo = "BUDI WatchKit WatchKit Extension";
+		};
+		338AA21A27AC559D0094D6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
+			remoteInfo = "BUDI WatchKit WatchKit Extension";
+		};
+		338AA22427AC559D0094D6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338AA1F627AC55990094D6F0;
+			remoteInfo = "BUDI WatchKit";
+		};
+		338AA22B27AC559D0094D6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338AA1F627AC55990094D6F0;
+			remoteInfo = "BUDI WatchKit";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		338AA1E727AC53840094D6F0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				338AA22D27AC559D0094D6F0 /* BUDI WatchKit.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA23127AC559D0094D6F0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				338AA20027AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E0A43D0244A60D800656518 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +198,32 @@
 		2BF6451F26C1DBE70020C206 /* CK_ORKSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CK_ORKSerialization.swift; sourceTree = "<group>"; };
 		2D9CCFBC6701FC7A8C18DE19 /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
+		338AA1F727AC55990094D6F0 /* BUDI WatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BUDI WatchKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		338AA1F927AC559B0094D6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BUDI WatchKit WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		338AA20427AC559C0094D6F0 /* CardinalKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardinalKitApp.swift; sourceTree = "<group>"; };
+		338AA20627AC559C0094D6F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		338AA20827AC559C0094D6F0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		338AA20A27AC559C0094D6F0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		338AA20C27AC559C0094D6F0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		338AA20E27AC559D0094D6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338AA21127AC559D0094D6F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		338AA21327AC559D0094D6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338AA21427AC559D0094D6F0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		338AA21927AC559D0094D6F0 /* BUDI WatchKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BUDI WatchKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		338AA21D27AC559D0094D6F0 /* BUDI_WatchKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDI_WatchKitTests.swift; sourceTree = "<group>"; };
+		338AA22327AC559D0094D6F0 /* BUDI WatchKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BUDI WatchKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		338AA22727AC559D0094D6F0 /* BUDI_WatchKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDI_WatchKitUITests.swift; sourceTree = "<group>"; };
+		338AA22927AC559D0094D6F0 /* BUDI_WatchKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDI_WatchKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		338AA23B27AC572B0094D6F0 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		338AA23D27AC575B0094D6F0 /* SendDataToPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataToPhone.swift; sourceTree = "<group>"; };
+		338AA23F27AC577F0094D6F0 /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		338AA24127AC57AB0094D6F0 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		338AA24327AC57D10094D6F0 /* CoreMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionManager.swift; sourceTree = "<group>"; };
+		338AA24527AC58100094D6F0 /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
+		338AA24727AC58870094D6F0 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		338AA24927AC58AA0094D6F0 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		338AA24B27AC5BD50094D6F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		41DC264876E45FE5A3FD8701 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CardinalKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardinalKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AA5CD1C2188D392530510F /* CardinalKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CardinalKit.podspec; path = ../CardinalKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -200,6 +301,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		338AA1FC27AC559B0094D6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA21627AC559D0094D6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA22027AC559D0094D6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +356,64 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		338AA1F827AC55990094D6F0 /* BUDI WatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				338AA1F927AC559B0094D6F0 /* Assets.xcassets */,
+			);
+			path = "BUDI WatchKit";
+			sourceTree = "<group>";
+		};
+		338AA20327AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				338AA20427AC559C0094D6F0 /* CardinalKitApp.swift */,
+				338AA20627AC559C0094D6F0 /* ContentView.swift */,
+				338AA20827AC559C0094D6F0 /* NotificationController.swift */,
+				338AA20A27AC559C0094D6F0 /* NotificationView.swift */,
+				338AA20C27AC559C0094D6F0 /* ComplicationController.swift */,
+				338AA20E27AC559D0094D6F0 /* Assets.xcassets */,
+				338AA21327AC559D0094D6F0 /* Info.plist */,
+				338AA21427AC559D0094D6F0 /* PushNotificationPayload.apns */,
+				338AA21027AC559D0094D6F0 /* Preview Content */,
+				338AA23B27AC572B0094D6F0 /* WorkoutManager.swift */,
+				338AA23D27AC575B0094D6F0 /* SendDataToPhone.swift */,
+				338AA23F27AC577F0094D6F0 /* SessionPagingView.swift */,
+				338AA24127AC57AB0094D6F0 /* SummaryView.swift */,
+				338AA24327AC57D10094D6F0 /* CoreMotionManager.swift */,
+				338AA24527AC58100094D6F0 /* ActivityRingsView.swift */,
+				338AA24727AC58870094D6F0 /* MetricsView.swift */,
+				338AA24927AC58AA0094D6F0 /* ElapsedTimeView.swift */,
+				338AA24B27AC5BD50094D6F0 /* ControlsView.swift */,
+			);
+			path = "BUDI WatchKit WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		338AA21027AC559D0094D6F0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				338AA21127AC559D0094D6F0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		338AA21C27AC559D0094D6F0 /* BUDI WatchKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				338AA21D27AC559D0094D6F0 /* BUDI_WatchKitTests.swift */,
+			);
+			path = "BUDI WatchKitTests";
+			sourceTree = "<group>";
+		};
+		338AA22627AC559D0094D6F0 /* BUDI WatchKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				338AA22727AC559D0094D6F0 /* BUDI_WatchKitUITests.swift */,
+				338AA22927AC559D0094D6F0 /* BUDI_WatchKitUITestsLaunchTests.swift */,
+			);
+			path = "BUDI WatchKitUITests";
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +421,10 @@
 				8E0A438B244A4A0400656518 /* CardinalKit-Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* CardinalKit-Example */,
+				338AA1F827AC55990094D6F0 /* BUDI WatchKit */,
+				338AA20327AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension */,
+				338AA21C27AC559D0094D6F0 /* BUDI WatchKitTests */,
+				338AA22627AC559D0094D6F0 /* BUDI WatchKitUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				A562A578C883F67F0DAE1385 /* Pods */,
 				2C45A885E8BD0CAC5349997A /* Frameworks */,
@@ -251,6 +435,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* CardinalKit Example.app */,
+				338AA1F727AC55990094D6F0 /* BUDI WatchKit.app */,
+				338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */,
+				338AA21927AC559D0094D6F0 /* BUDI WatchKitTests.xctest */,
+				338AA22327AC559D0094D6F0 /* BUDI WatchKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -524,6 +712,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		338AA1F627AC55990094D6F0 /* BUDI WatchKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338AA23227AC559D0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKit" */;
+			buildPhases = (
+				338AA1F527AC55990094D6F0 /* Resources */,
+				338AA23127AC559D0094D6F0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338AA20227AC559C0094D6F0 /* PBXTargetDependency */,
+			);
+			name = "BUDI WatchKit";
+			productName = "BUDI WatchKit";
+			productReference = 338AA1F727AC55990094D6F0 /* BUDI WatchKit.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338AA22E27AC559D0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKit WatchKit Extension" */;
+			buildPhases = (
+				338AA1FB27AC559B0094D6F0 /* Sources */,
+				338AA1FC27AC559B0094D6F0 /* Frameworks */,
+				338AA1FD27AC559B0094D6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BUDI WatchKit WatchKit Extension";
+			productName = "BUDI WatchKit WatchKit Extension";
+			productReference = 338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		338AA21827AC559D0094D6F0 /* BUDI WatchKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338AA23527AC559E0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKitTests" */;
+			buildPhases = (
+				338AA21527AC559D0094D6F0 /* Sources */,
+				338AA21627AC559D0094D6F0 /* Frameworks */,
+				338AA21727AC559D0094D6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338AA21B27AC559D0094D6F0 /* PBXTargetDependency */,
+			);
+			name = "BUDI WatchKitTests";
+			productName = "BUDI WatchKitTests";
+			productReference = 338AA21927AC559D0094D6F0 /* BUDI WatchKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		338AA22227AC559D0094D6F0 /* BUDI WatchKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338AA23827AC559E0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKitUITests" */;
+			buildPhases = (
+				338AA21F27AC559D0094D6F0 /* Sources */,
+				338AA22027AC559D0094D6F0 /* Frameworks */,
+				338AA22127AC559D0094D6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338AA22527AC559D0094D6F0 /* PBXTargetDependency */,
+			);
+			name = "BUDI WatchKitUITests";
+			productName = "BUDI WatchKitUITests";
+			productReference = 338AA22327AC559D0094D6F0 /* BUDI WatchKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		607FACCF1AFB9204008FA782 /* CardinalKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CardinalKit_Example" */;
@@ -534,10 +792,12 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				8E0A43D0244A60D800656518 /* Embed Frameworks */,
 				FC4F548B21E4CA46DBB09BB4 /* [CP] Embed Pods Frameworks */,
+				338AA1E727AC53840094D6F0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				338AA22C27AC559D0094D6F0 /* PBXTargetDependency */,
 			);
 			name = CardinalKit_Example;
 			packageProductDependencies = (
@@ -556,10 +816,24 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					338AA1F627AC55990094D6F0 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					338AA1FE27AC559B0094D6F0 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					338AA21827AC559D0094D6F0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 338AA1FE27AC559B0094D6F0;
+					};
+					338AA22227AC559D0094D6F0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 338AA1F627AC55990094D6F0;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 1120;
@@ -584,11 +858,46 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* CardinalKit_Example */,
+				338AA1F627AC55990094D6F0 /* BUDI WatchKit */,
+				338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */,
+				338AA21827AC559D0094D6F0 /* BUDI WatchKitTests */,
+				338AA22227AC559D0094D6F0 /* BUDI WatchKitUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		338AA1F527AC55990094D6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338AA1FA27AC559B0094D6F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA1FD27AC559B0094D6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338AA21227AC559D0094D6F0 /* Preview Assets.xcassets in Resources */,
+				338AA20F27AC559D0094D6F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA21727AC559D0094D6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA22127AC559D0094D6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -715,6 +1024,44 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		338AA1FB27AC559B0094D6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338AA24C27AC5BD50094D6F0 /* ControlsView.swift in Sources */,
+				338AA20927AC559C0094D6F0 /* NotificationController.swift in Sources */,
+				338AA20727AC559C0094D6F0 /* ContentView.swift in Sources */,
+				338AA24A27AC58AA0094D6F0 /* ElapsedTimeView.swift in Sources */,
+				338AA20D27AC559C0094D6F0 /* ComplicationController.swift in Sources */,
+				338AA24627AC58100094D6F0 /* ActivityRingsView.swift in Sources */,
+				338AA20527AC559C0094D6F0 /* CardinalKitApp.swift in Sources */,
+				338AA23E27AC575B0094D6F0 /* SendDataToPhone.swift in Sources */,
+				338AA20B27AC559C0094D6F0 /* NotificationView.swift in Sources */,
+				338AA24427AC57D10094D6F0 /* CoreMotionManager.swift in Sources */,
+				338AA23C27AC572B0094D6F0 /* WorkoutManager.swift in Sources */,
+				338AA24027AC577F0094D6F0 /* SessionPagingView.swift in Sources */,
+				338AA24827AC58870094D6F0 /* MetricsView.swift in Sources */,
+				338AA24227AC57AB0094D6F0 /* SummaryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA21527AC559D0094D6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338AA21E27AC559D0094D6F0 /* BUDI_WatchKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338AA21F27AC559D0094D6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338AA22827AC559D0094D6F0 /* BUDI_WatchKitUITests.swift in Sources */,
+				338AA22A27AC559D0094D6F0 /* BUDI_WatchKitUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -797,6 +1144,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		338AA20227AC559C0094D6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */;
+			targetProxy = 338AA20127AC559C0094D6F0 /* PBXContainerItemProxy */;
+		};
+		338AA21B27AC559D0094D6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */;
+			targetProxy = 338AA21A27AC559D0094D6F0 /* PBXContainerItemProxy */;
+		};
+		338AA22527AC559D0094D6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338AA1F627AC55990094D6F0 /* BUDI WatchKit */;
+			targetProxy = 338AA22427AC559D0094D6F0 /* PBXContainerItemProxy */;
+		};
+		338AA22C27AC559D0094D6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338AA1F627AC55990094D6F0 /* BUDI WatchKit */;
+			targetProxy = 338AA22B27AC559D0094D6F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8E0A4389244A4A0400656518 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -809,6 +1179,294 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		338AA22F27AC559D0094D6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BUDI WatchKit WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 CocoaPods. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		338AA23027AC559D0094D6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BUDI WatchKit WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 CocoaPods. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		338AA23327AC559D0094D6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		338AA23427AC559D0094D6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		338AA23627AC559E0094D6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.budi.BUDI-WatchKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BUDI WatchKit WatchKit Extension.appex/BUDI WatchKit WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		338AA23727AC559E0094D6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.budi.BUDI-WatchKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BUDI WatchKit WatchKit Extension.appex/BUDI WatchKit WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		338AA23927AC559E0094D6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.budi.BUDI-WatchKitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "BUDI WatchKit";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		338AA23A27AC559E0094D6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.budi.BUDI-WatchKitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "BUDI WatchKit";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -963,6 +1621,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		338AA22E27AC559D0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKit WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338AA22F27AC559D0094D6F0 /* Debug */,
+				338AA23027AC559D0094D6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338AA23227AC559D0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338AA23327AC559D0094D6F0 /* Debug */,
+				338AA23427AC559D0094D6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338AA23527AC559E0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338AA23627AC559E0094D6F0 /* Debug */,
+				338AA23727AC559E0094D6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338AA23827AC559E0094D6F0 /* Build configuration list for PBXNativeTarget "BUDI WatchKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338AA23927AC559E0094D6F0 /* Debug */,
+				338AA23A27AC559E0094D6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "CardinalKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
