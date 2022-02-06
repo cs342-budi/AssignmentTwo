@@ -19,7 +19,7 @@
 	<key>Tint Color</key>
 	<string>#b6133f</string>
 	<key>Primary Color</key>
-	<string>#ff3961</string>
+	<string>#1AAF54</string>
 	<key>Review Consent Step Text</key>
 	<string>Review Consent Form</string>
 	<key>Reason for Consent Text</key>
@@ -183,27 +183,27 @@
 	<array>
 		<dict>
 			<key>Title</key>
-			<string>First Title</string>
+			<string>Welcome to BUDI!</string>
 			<key>Description</key>
-			<string>Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+			<string>Your new pal for therapy.  </string>
 			<key>Logo</key>
-			<string>1️⃣</string>
+			<string>budi-art</string>
 		</dict>
 		<dict>
 			<key>Title</key>
-			<string>Second Title</string>
+			<string>Watch-Driven Workouts</string>
 			<key>Description</key>
-			<string>Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+			<string>Make therapy fun with Apple Watch workouts.</string>
 			<key>Logo</key>
-			<string>2️⃣</string>
+			<string>green-watch</string>
 		</dict>
 		<dict>
 			<key>Title</key>
-			<string>Third Title</string>
+			<string>Track Your Progress</string>
 			<key>Description</key>
-			<string>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+			<string>Schedule workouts, track progress, and stay motivated!</string>
 			<key>Logo</key>
-			<string>3️⃣</string>
+			<string>progress</string>
 		</dict>
 	</array>
 	<key>Use Cloud Surveys</key>

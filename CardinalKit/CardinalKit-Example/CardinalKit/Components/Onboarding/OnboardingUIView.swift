@@ -47,21 +47,28 @@ struct OnboardingUIView: View {
             Image("SBDLogoGrey")
                 .resizable()
                 .scaledToFit()
-                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*4)
-                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN*4)
+                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*5)
+                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN*5)
             
             Spacer(minLength: 2)
             
-            Text(config.read(query: "Study Title"))
-                .foregroundColor(self.color)
-                .multilineTextAlignment(.center)
-                .font(.system(size: 35, weight: .bold, design: .default))
-                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
-                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+            Image("budi-green")
+                .resizable()
+                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*3)
+                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN*3)
+                .scaledToFit()
             
-            Text(config.read(query: "Team Name"))
-                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
-                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+            
+//            Text(config.read(query: "Study Title"))
+//                .foregroundColor(self.color)
+//                .multilineTextAlignment(.center)
+//                .font(.system(size: 35, weight: .bold, design: .default))
+//                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+//                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+            
+//            Text(config.read(query: "Team Name"))
+//                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+//                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
 
             PageView(self.onboardingElements.map { InfoView(logo: $0.logo, title: $0.title, description: $0.description, color: self.color) })
 
@@ -72,7 +79,7 @@ struct OnboardingUIView: View {
                 Button(action: {
                     self.showingOnboard.toggle()
                 }, label: {
-                     Text("Join Study")
+                     Text("Join BUDI")
                         .padding(Metrics.PADDING_BUTTON_LABEL)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
@@ -128,15 +135,18 @@ struct InfoView: View {
     let description: String
     let color: Color
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 2) {
             Circle()
-                .fill(color)
-                .frame(width: 100, height: 100, alignment: .center)
+                .fill(.white)
+                .frame(width: 100, height: 120, alignment: .center)
                 .padding(6)
                 .overlay(
-                    Text(logo)
-                        .foregroundColor(.white)
-                        .font(.system(size: 42, weight: .light, design: .default))
+//                    Text(logo)
+//                        .foregroundColor(.white)
+//                        .font(.system(size: 42, weight: .light, design: .default))
+                    Image(logo)
+                        .resizable()
+                        .scaledToFit()
                 )
 
             Text(title).font(.title)
@@ -146,6 +156,7 @@ struct InfoView: View {
                 .multilineTextAlignment(.center)
                 .padding(.leading, 40)
                 .padding(.trailing, 40)
+                .padding(.bottom)
         }
     }
 }
