@@ -1,0 +1,3 @@
+[submodule "CardinalKit/CardinalKit-Example/ResearchKit"]
+	path = CardinalKit/CardinalKit-Example/ResearchKit
+	url = https://github.com/ResearchKit/ResearchKit.git

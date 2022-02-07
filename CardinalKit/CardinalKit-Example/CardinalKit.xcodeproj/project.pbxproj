@@ -105,7 +105,9 @@
 		8EA664B2259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */; };
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
-		9553F50327ACDADC00DF7191 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9553F50027ACDABD00DF7191 /* ResearchKit.framework */; platformFilter = ios; };
+		9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50627B06CCA00DF7191 /* HomeUIView.swift */; };
+		9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50827B0817200DF7191 /* CareTeamView.swift */; };
+		95A8C5F427B0AB1900E0D4AC /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -145,16 +147,16 @@
 			remoteGlobalIDString = 338AA1F627AC55990094D6F0;
 			remoteInfo = "BUDI WatchKit";
 		};
-		9553F4FF27ACDABD00DF7191 /* PBXContainerItemProxy */ = {
+		95A8C5F027B0AB0300E0D4AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9553F4F927ACDABC00DF7191 /* ResearchKit.xcodeproj */;
+			containerPortal = 95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		9553F50127ACDABD00DF7191 /* PBXContainerItemProxy */ = {
+		95A8C5F227B0AB0300E0D4AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9553F4F927ACDABC00DF7191 /* ResearchKit.xcodeproj */;
+			containerPortal = 95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
@@ -295,7 +297,9 @@
 		8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKCareKitRemoteSyncWithFirestore.swift; sourceTree = "<group>"; };
 		8EA664B32594387900B6A45A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
-		9553F4F927ACDABC00DF7191 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "ResearchKit-main/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		9553F50627B06CCA00DF7191 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		9553F50827B0817200DF7191 /* CareTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamView.swift; sourceTree = "<group>"; };
+		95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -337,7 +341,7 @@
 				8E0A43D5244A693D00656518 /* HealthKit.framework in Frameworks */,
 				8E9CDE912591534B00C8A228 /* CareKitStore in Frameworks */,
 				8E9CDE932591534B00C8A228 /* CareKitFHIR in Frameworks */,
-				9553F50327ACDADC00DF7191 /* ResearchKit.framework in Frameworks */,
+				95A8C5F427B0AB1900E0D4AC /* ResearchKit.framework in Frameworks */,
 				70D8E463B763586C062498FC /* Pods_CardinalKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +428,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				9553F4F927ACDABC00DF7191 /* ResearchKit.xcodeproj */,
+				95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */,
 				270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */,
 				8E0A438B244A4A0400656518 /* CardinalKit-Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
@@ -599,6 +603,7 @@
 			isa = PBXGroup;
 			children = (
 				8E6E1E1F253529760024B8DF /* DocumentView.swift */,
+				9553F50827B0817200DF7191 /* CareTeamView.swift */,
 				8E6E1E19253528450024B8DF /* WithdrawView.swift */,
 				8E6E1E1B253528D70024B8DF /* ReportView.swift */,
 				8E6E1E1D253528F50024B8DF /* SupportView.swift */,
@@ -625,6 +630,7 @@
 			children = (
 				8E6E1E23253537580024B8DF /* MainUIView.swift */,
 				E29143FB24E74AD100EE97B2 /* LaunchUIView.swift */,
+				9553F50527B069CB00DF7191 /* Home */,
 				8E0A4399244A4A0400656518 /* Onboarding */,
 				8E9CDEA525915F6600C8A228 /* Schedule */,
 				8E9CDEB42591818200C8A228 /* Care Team */,
@@ -708,11 +714,19 @@
 			path = ResearchKit;
 			sourceTree = "<group>";
 		};
-		9553F4FA27ACDABC00DF7191 /* Products */ = {
+		9553F50527B069CB00DF7191 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9553F50027ACDABD00DF7191 /* ResearchKit.framework */,
-				9553F50227ACDABD00DF7191 /* ResearchKitTests.xctest */,
+				9553F50627B06CCA00DF7191 /* HomeUIView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		95A8C5EB27B0AB0200E0D4AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */,
+				95A8C5F327B0AB0300E0D4AC /* ResearchKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -873,8 +887,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9553F4FA27ACDABC00DF7191 /* Products */;
-					ProjectRef = 9553F4F927ACDABC00DF7191 /* ResearchKit.xcodeproj */;
+					ProductGroup = 95A8C5EB27B0AB0200E0D4AC /* Products */;
+					ProjectRef = 95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -889,18 +903,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9553F50027ACDABD00DF7191 /* ResearchKit.framework */ = {
+		95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = 9553F4FF27ACDABD00DF7191 /* PBXContainerItemProxy */;
+			remoteRef = 95A8C5F027B0AB0300E0D4AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9553F50227ACDABD00DF7191 /* ResearchKitTests.xctest */ = {
+		95A8C5F327B0AB0300E0D4AC /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = 9553F50127ACDABD00DF7191 /* PBXContainerItemProxy */;
+			remoteRef = 95A8C5F227B0AB0300E0D4AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1146,6 +1160,7 @@
 				8E6E1E20253529760024B8DF /* DocumentView.swift in Sources */,
 				8E7FFFBB25DE37FF002982B4 /* CoffeePieChartView.swift in Sources */,
 				8E7FFFB825DE350A002982B4 /* CoffeeUIView.swift in Sources */,
+				9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */,
 				2BF6451826C1D0040020C206 /* (null) in Sources */,
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
@@ -1168,6 +1183,7 @@
 				E2F1FD7624D61EDA006C39DF /* CKPropertyReader.swift in Sources */,
 				8E6E1E1025351E890024B8DF /* Extensions+UIColor.swift in Sources */,
 				8E9CDF832592844A00C8A228 /* LearnUIView.swift in Sources */,
+				9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */,
 				8E9CDEA725916B2800C8A228 /* ScheduleViewControllerRepresentable.swift in Sources */,
 				2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */,
 				E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */,

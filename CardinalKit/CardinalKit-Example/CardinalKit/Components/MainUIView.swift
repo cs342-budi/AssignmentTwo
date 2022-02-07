@@ -23,6 +23,11 @@ struct MainUIView: View {
     
     var body: some View {
         TabView {
+            HomeUIView().tabItem {
+                Image("tab_home").renderingMode(.template)
+                Text("Home")
+            }
+            
             TasksUIView(color: self.color).tabItem {
                 Image("tab_tasks").renderingMode(.template)
                 Text("Tasks")
@@ -36,12 +41,12 @@ struct MainUIView: View {
                         Text("Schedule")
                 }
                 
-                CareTeamViewControllerRepresentable()
-                    .ignoresSafeArea(edges: .all)
-                    .tabItem {
-                        Image("tab_care").renderingMode(.template)
-                        Text("Contact")
-                }
+//                CareTeamViewControllerRepresentable()
+//                    .ignoresSafeArea(edges: .all)
+//                    .tabItem {
+//                        Image("tab_care").renderingMode(.template)
+//                        Text("Contact")
+//                }
             }
 
             ProfileUIView(color: self.color).tabItem {

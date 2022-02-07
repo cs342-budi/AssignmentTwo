@@ -17,12 +17,20 @@ struct ProfileUIView: View {
     }
     
     var body: some View {
+        
         VStack {
             Text("Profile").font(.system(size: 25, weight:.bold))
+            
+            
             List {
                 Section {
                     PatientIDView()
                 }.listRowBackground(Color.white)
+                
+                Section {
+                    CareTeamView()
+                }
+                
                 
                 Section {
                     SendRecordsView()
@@ -44,6 +52,8 @@ struct ProfileUIView: View {
                     Text(config.read(query: "Copyright"))
                 }
             }.listStyle(GroupedListStyle())
+            
+         
         }
     }
 }
