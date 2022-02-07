@@ -22,38 +22,41 @@ struct MainUIView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeUIView().tabItem {
-                Image("tab_home").renderingMode(.template)
-                Text("Home")
-            }
-            
-            TasksUIView(color: self.color).tabItem {
-                Image("tab_tasks").renderingMode(.template)
-                Text("Tasks")
-            }
-            
-            if useCareKit && carekitLoaded {
-                ScheduleViewControllerRepresentable()
-                    .ignoresSafeArea(edges: .all)
-                    .tabItem {
-                        Image("tab_schedule").renderingMode(.template)
-                        Text("Schedule")
-                }
-                
-//                CareTeamViewControllerRepresentable()
+        HomeUIView()
+        
+        //removed navigation bar
+//        TabView {
+//            HomeUIView().tabItem {
+//                Image("tab_home").renderingMode(.template)
+//                Text("Home")
+//            }
+//
+//            TasksUIView(color: self.color).tabItem {
+//                Image("tab_tasks").renderingMode(.template)
+//                Text("Tasks")
+//            }
+//
+//            if useCareKit && carekitLoaded {
+//                ScheduleViewControllerRepresentable()
 //                    .ignoresSafeArea(edges: .all)
 //                    .tabItem {
-//                        Image("tab_care").renderingMode(.template)
-//                        Text("Contact")
+//                        Image("tab_schedule").renderingMode(.template)
+//                        Text("Schedule")
 //                }
-            }
-
-            ProfileUIView(color: self.color).tabItem {
-                Image("tab_profile").renderingMode(.template)
-                Text("Profile")
-            }
-        }
+//
+////                CareTeamViewControllerRepresentable()
+////                    .ignoresSafeArea(edges: .all)
+////                    .tabItem {
+////                        Image("tab_care").renderingMode(.template)
+////                        Text("Contact")
+////                }
+//            }
+//
+//            ProfileUIView(color: self.color).tabItem {
+//                Image("tab_profile").renderingMode(.template)
+//                Text("Profile")
+//            }
+//        }
         .accentColor(self.color)
         .onAppear(perform: {
             self.useCareKit = config.readBool(query: "Use CareKit")

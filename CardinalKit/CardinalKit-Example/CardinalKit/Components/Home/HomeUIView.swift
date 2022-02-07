@@ -27,7 +27,6 @@ struct HomeUIView: View {
     var body: some View {
         VStack {
             HStack {
-                
                 Image("budi-green")
                     .resizable()
                     .frame(width: 160, height: 40)
@@ -41,52 +40,86 @@ struct HomeUIView: View {
                     .frame(height: 50)
                     .padding(.bottom)
                     .padding(.trailing)
-                
-                
             }
             
-            Button(action:{}){
-                Text("START THERAPY")
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .padding(.top, Metrics.PADDING_HORIZONTAL_MAIN*2)
-                    .padding(.bottom, Metrics.PADDING_HORIZONTAL_MAIN*2)
-                    .background(self.color)
-                    .foregroundColor(Color.white)
-                    .padding(.leading)
-                    .padding(.trailing)
-                    .padding(.bottom, Metrics.PADDING_HORIZONTAL_MAIN*1.5)
-            }
-            
-            Button(action:{}) {
-                Text("PLAY GAMES")
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .padding(.top, Metrics.PADDING_HORIZONTAL_MAIN*2)
-                    .padding(.bottom, Metrics.PADDING_HORIZONTAL_MAIN*2)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.white)
-                    .padding(.leading)
-                    .padding(.trailing)
-                    .padding(.bottom, Metrics.PADDING_HORIZONTAL_MAIN*1.5)
-            }
-            
-            Button(action:{}) {
-                Text("VIEW PROGRESS")
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .padding(.top, Metrics.PADDING_HORIZONTAL_MAIN*2)
-                    .padding(.bottom, Metrics.PADDING_HORIZONTAL_MAIN*2)
-                    .background(self.accent)
-                    .foregroundColor(Color.white)
-                    .padding(.leading)
-                    .padding(.trailing)
-                    .padding(.bottom, Metrics.PADDING_HORIZONTAL_MAIN*1.5)
-            }
+            NavigationView {
+                List {
+                    ZStack {
+                        Text("START THERAPY")
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .background(self.color)
+                            .foregroundColor(Color.white)
+                        
+                        NavigationLink(destination: LiveTherapyView(),
+                                   label: {}).opacity(0)
+                    }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                    
+                  
+                  
 
+                    ZStack {
+                        Text("PLAY GAMES")
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .background(Color.yellow)
+                            .foregroundColor(Color.white)
+                        NavigationLink(destination: GamesMainView(),
+                                   label: {}).opacity(0)
+                    }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                       
+                 
+                    
+                    ZStack {
+                        Text("VIEW PROGRESS")
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .background(self.accent)
+                            .foregroundColor(Color.white)
+   
+                        NavigationLink(destination: ProgressUIView(),
+                                   label: {}).opacity(0)
+                    }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                    
+                   
+                        
+                    
+                    ZStack {
+                        Text("MY PROFILE")
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                            .background(Color.gray)
+                            .foregroundColor(Color.white)
+                        
+                        NavigationLink(destination: ProfileUIView(color: self.color),
+                                   label: {}).opacity(0)
+                    }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
+                    
+                    
+               
+                }.listStyle(PlainListStyle())
+                    .padding(.leading)
+                    .padding(.trailing)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(true)
+
+            }
             Spacer()
            
         

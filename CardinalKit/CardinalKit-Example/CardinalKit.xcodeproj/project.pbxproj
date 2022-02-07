@@ -108,6 +108,9 @@
 		9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50627B06CCA00DF7191 /* HomeUIView.swift */; };
 		9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50827B0817200DF7191 /* CareTeamView.swift */; };
 		95A8C5F427B0AB1900E0D4AC /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
+		95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */; };
+		95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */; };
+		95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -300,6 +303,9 @@
 		9553F50627B06CCA00DF7191 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		9553F50827B0817200DF7191 /* CareTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamView.swift; sourceTree = "<group>"; };
 		95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesMainView.swift; sourceTree = "<group>"; };
+		95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUIView.swift; sourceTree = "<group>"; };
+		95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyView.swift; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -718,6 +724,9 @@
 			isa = PBXGroup;
 			children = (
 				9553F50627B06CCA00DF7191 /* HomeUIView.swift */,
+				95A8C60327B11A6D00E0D4AC /* Live Therapy */,
+				95A8C60027B119F600E0D4AC /* Progress */,
+				95A8C5F827B10BA000E0D4AC /* Games */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -729,6 +738,30 @@
 				95A8C5F327B0AB0300E0D4AC /* ResearchKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		95A8C5F827B10BA000E0D4AC /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		95A8C60027B119F600E0D4AC /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		95A8C60327B11A6D00E0D4AC /* Live Therapy */ = {
+			isa = PBXGroup;
+			children = (
+				95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */,
+			);
+			path = "Live Therapy";
 			sourceTree = "<group>";
 		};
 		A562A578C883F67F0DAE1385 /* Pods */ = {
@@ -1139,6 +1172,7 @@
 				8E9CDEBA2591843200C8A228 /* CKConfig.swift in Sources */,
 				2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */,
 				8E9CDFAE2592B79900C8A228 /* Metrics.swift in Sources */,
+				95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */,
 				27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */,
 				8E6E1E092534F4100024B8DF /* OnboardingViewController.swift in Sources */,
 				8E7FFFB425DCE9B7002982B4 /* CKUploadToGCPTaskViewControllerDelegate.swift in Sources */,
@@ -1148,6 +1182,7 @@
 				8E6E1E3225353ABE0024B8DF /* ProfileUIView.swift in Sources */,
 				8E6E1E1E253528F50024B8DF /* SupportView.swift in Sources */,
 				8E6E1E1C253528D70024B8DF /* ReportView.swift in Sources */,
+				95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */,
 				8E6E1E26253537E40024B8DF /* TasksUIView.swift in Sources */,
 				8E9CDEAD259170AD00C8A228 /* CKCareKitManager.swift in Sources */,
 				8EA664892593213000B6A45A /* CKSendHelper.swift in Sources */,
@@ -1187,6 +1222,7 @@
 				8E9CDEA725916B2800C8A228 /* ScheduleViewControllerRepresentable.swift in Sources */,
 				2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */,
 				E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */,
+				95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */,
 				8E6E1E16253524500024B8DF /* WithdrawalViewController.swift in Sources */,
 				E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */,
 				8E6E1E2A2535398D0024B8DF /* HelpView.swift in Sources */,
