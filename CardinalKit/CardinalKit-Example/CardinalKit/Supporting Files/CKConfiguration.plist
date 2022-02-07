@@ -193,9 +193,9 @@
 		</dict>
 		<dict>
 			<key>Title</key>
-			<string>Watch-Driven Workouts</string>
+			<string>Watch-Driven Therapy</string>
 			<key>Description</key>
-			<string>Make therapy fun with Apple Watch workouts.</string>
+			<string>Make therapy fun with your Apple Watch.</string>
 			<key>Logo</key>
 			<string>green-watch</string>
 		</dict>
@@ -203,7 +203,7 @@
 			<key>Title</key>
 			<string>Track Your Progress</string>
 			<key>Description</key>
-			<string>Schedule workouts, track progress, and stay motivated!</string>
+			<string>Schedule therapy, track progress, and stay motivated!</string>
 			<key>Logo</key>
 			<string>progress</string>
 		</dict>
