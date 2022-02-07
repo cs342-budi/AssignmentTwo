@@ -47,7 +47,7 @@ struct HomeUIView: View {
             
             
             Button(action:{}) {
-                Text("START A WORKOUT")
+                Text("START THERAPY")
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
                     .padding()
