@@ -45,14 +45,18 @@ struct HomeUIView: View {
             NavigationView {
                 List {
                     ZStack {
-                        Text("START THERAPY")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .background(self.color)
-                            .foregroundColor(Color.white)
+                        Button (action:{}) {
+                            Text("START THERAPY")
+                                .fontWeight(.heavy)
+                                .font(.title2)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .background(self.color)
+                        .cornerRadius(10)
                         
                         NavigationLink(destination: LiveTherapyView(),
                                    label: {}).opacity(0)
@@ -63,14 +67,20 @@ struct HomeUIView: View {
                   
 
                     ZStack {
-                        Text("PLAY GAMES")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .background(Color.yellow)
-                            .foregroundColor(Color.white)
+                        Button (action:{}) {
+                            Text("PLAY GAMES")
+                                .fontWeight(.heavy)
+                                .font(.title2)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .background(Color.yellow)
+                        .cornerRadius(10)
+                        
+                        
                         NavigationLink(destination: GamesMainView(),
                                    label: {}).opacity(0)
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
@@ -79,14 +89,18 @@ struct HomeUIView: View {
                  
                     
                     ZStack {
-                        Text("VIEW PROGRESS")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .background(self.accent)
-                            .foregroundColor(Color.white)
+                        Button (action:{}) {
+                            Text("VIEW PROGRESS")
+                                .fontWeight(.heavy)
+                                .font(.title2)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .background(self.accent)
+                        .cornerRadius(10)
    
                         NavigationLink(destination: ProgressUIView(),
                                    label: {}).opacity(0)
@@ -97,14 +111,19 @@ struct HomeUIView: View {
                         
                     
                     ZStack {
-                        Text("MY PROFILE")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                            .background(Color.gray)
-                            .foregroundColor(Color.white)
+                        Button (action:{}) {
+                            Text("MY PROFILE")
+                                .fontWeight(.heavy)
+                                .font(.title2)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                        .background(Color.gray)
+                        .cornerRadius(10)
+                        
                         
                         NavigationLink(destination: ProfileUIView(color: self.color),
                                    label: {}).opacity(0)

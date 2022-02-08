@@ -107,6 +107,8 @@
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
 		9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50627B06CCA00DF7191 /* HomeUIView.swift */; };
 		9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50827B0817200DF7191 /* CareTeamView.swift */; };
+		9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */; };
+		9590DFAD27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */; };
 		95A8C5F427B0AB1900E0D4AC /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
 		95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */; };
 		95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */; };
@@ -302,6 +304,8 @@
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
 		9553F50627B06CCA00DF7191 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		9553F50827B0817200DF7191 /* CareTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamView.swift; sourceTree = "<group>"; };
+		9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewController.swift; sourceTree = "<group>"; };
+		9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewCoordinator.swift; sourceTree = "<group>"; };
 		95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesMainView.swift; sourceTree = "<group>"; };
 		95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUIView.swift; sourceTree = "<group>"; };
@@ -744,6 +748,8 @@
 			isa = PBXGroup;
 			children = (
 				95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */,
+				9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */,
+				9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -1174,6 +1180,7 @@
 				8E9CDFAE2592B79900C8A228 /* Metrics.swift in Sources */,
 				95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */,
 				27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */,
+				9590DFAD27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift in Sources */,
 				8E6E1E092534F4100024B8DF /* OnboardingViewController.swift in Sources */,
 				8E7FFFB425DCE9B7002982B4 /* CKUploadToGCPTaskViewControllerDelegate.swift in Sources */,
 				8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */,
@@ -1220,6 +1227,7 @@
 				8E9CDF832592844A00C8A228 /* LearnUIView.swift in Sources */,
 				9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */,
 				8E9CDEA725916B2800C8A228 /* ScheduleViewControllerRepresentable.swift in Sources */,
+				9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */,
 				2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */,
 				E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */,
 				95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */,
