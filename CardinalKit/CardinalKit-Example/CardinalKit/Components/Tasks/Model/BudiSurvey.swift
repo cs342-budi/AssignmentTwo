@@ -1,5 +1,5 @@
 //
-//  MoodSurvey.swift
+//  BudiSurvey.swift
 //  CardinalKit_Example
 //
 //  Created by Lina Fang on 23.01.22.
@@ -71,6 +71,20 @@ struct BudiSurvey {
         
         steps += [textStepQ5]
         
+        // Q6
+        let textChoicesQ6 = [
+        ORKTextChoice(text: "I", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "II", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "III", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "IV", value: 3 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "V", value: 4 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "I don't know", value: 4 as NSCoding & NSCopying & NSObjectProtocol)
+        ]
+        let textChoiceQ6AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ6)
+        let textStepQ6 = ORKQuestionStep(identifier: "Q6QuestionStep", title: "Question #6", question: "What is your motor function according to the Gross Motor Function Classification System", answer: textChoiceQ6AnswerFormat)
+        
+        steps += [textStepQ6]
+        
         // Q7
         let textChoicesQ7 = [
         ORKTextChoice(text: "Wheelchair", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
@@ -108,7 +122,7 @@ struct BudiSurvey {
         
         steps += [summaryStep]
         
-        return ORKOrderedTask(identifier: "MoodSurvey", steps: steps)
+        return ORKOrderedTask(identifier: "BudiSurvey", steps: steps)
     
     }()
     

@@ -9,7 +9,7 @@
 	<key>Team Name</key>
 	<string>StanfordByers Center for Biodesign</string>
 	<key>Email</key>
-	<string>linafang@stanford.edu</string>
+	<string>blynns@stanford.edu</string>
 	<key>Phone</key>
 	<string>123-456-7890</string>
 	<key>Copyright</key>
@@ -113,9 +113,11 @@
 			<key>Title</key>
 			<string>Hi there! 👋🏽</string>
 			<key>Summary</key>
-			<string>CardinalKit is a suite of tools designed to help you build a digital health app experience from the ground up. It integrates with Firebase to provide full-stack solutions. We hope you enjoy the love poured into this sample and make many great things with it!</string>
+			<string>BUDI, the Biofeedback Upper-Limb Device for
+Impairment, is a platform for improving upper limb function every day in
+patients with limb disabilities.</string>
 			<key>Content</key>
-			<string>CardinalKit is a suite of tools designed to help you build a digital health app experience from the ground up. It integrates with Firebase to provide full-stack solutions. We hope you enjoy the love poured into this sample and make many great things with it!</string>
+			<string>xx</string>
 		</dict>
 		<key>DataGathering</key>
 		<dict>
@@ -156,11 +158,11 @@
 		<key>StudySurvey</key>
 		<dict>
 			<key>Title</key>
-			<string>Study Survey</string>
+			<string>BUDI Onboarding Survey</string>
 			<key>Summary</key>
-			<string>Information about any survey(s) in the app.</string>
+			<string>Welcome to BUDI! Before we can get start, we would like you to answer a few questions and tell us more about you.</string>
 			<key>Content</key>
-			<string>Information about any survey(s) in the app. Additional content.</string>
+			<string>xxx</string>
 		</dict>
 		<key>StudyTasks</key>
 		<dict>
