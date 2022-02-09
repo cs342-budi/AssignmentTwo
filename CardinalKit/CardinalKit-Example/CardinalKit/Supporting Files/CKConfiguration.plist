@@ -113,47 +113,33 @@
 			<key>Title</key>
 			<string>Hi there! 👋🏽</string>
 			<key>Summary</key>
-			<string>BUDI, the Biofeedback Upper-Limb Device for
-Impairment, is a platform for improving upper limb function every day in
-patients with limb disabilities.</string>
+			<string>The Biofeedback Upper-Limb Device for Impairment (BUDI) is an Apple Watch &amp; iPhone application designed to help children with motor disabilities with therapy &amp; mobility.</string>
 			<key>Content</key>
-			<string>xx</string>
+			<string>You are invited to participant in testing the beta version of the Biofeedback Upper-Limb Device for Impairment (BUDI).  BUDI is an Apple Watch &amp; iPhone application designed to help children with motor disabilities with therapy &amp; mobility.  You were selected as a possible participant because you (1) have a diagnosis of cerebral palsy or (2) are a healthy volunteer aged 5-60 and can provide feedback regarding the user experience for remote therapy.  BUDI creates a digital platform to facilitate remote upper limb therapy &amp; motivate you to reach a daily therapy goal.  This is particularly important for children with cerebral palsy and others with hemiparetic neurological injuries who require daily therapy to improve upper limb function.  You could think of BUDI as a daily therapy goal; perhaps your “therapy ring” for Apple Watch. 
+
+For simplicity, BUDI approaches a therapy goal as a combination of gross motor therapy &amp; fine motor therapy.  Gross motor therapy is measured on BUDI by starting a therapy on your Apple Watch application &amp; practicing stretching your upper extremity as you do in occupational &amp; physical therapy. Fine motor therapy is measured by completing Finger &amp; Dexterity ActiveTasks designed by Apple Health on your iPhone application. 
+
+Accordingly, BUDI uses sensors from Apple Watch &amp; tools from open-source Apple databases like CardinalKit, ResearchKit, CareKit, &amp; HealthKit to obtain objective measures of gross motor therapy (CoreMotion &amp; Workouts) and fine motor therapy (via ActiveTasks &amp; dexterity games) to provide biofeedback on daily arm usage, “gameify” rehabilitation, and ultimately encourage mobility to prevent adverse musculoskeletal outcomes.</string>
 		</dict>
 		<key>DataGathering</key>
 		<dict>
 			<key>Title</key>
 			<string>Data Gathering</string>
 			<key>Summary</key>
-			<string>Here you should write a bit about what data you are collecting, and why.</string>
+			<string>BUDI will ask for 1) your type of motor impairment, 2) your motion data, and 3) your Apple Health Data.</string>
 			<key>Content</key>
-			<string>Here you should write a bit about what data you are collecting, and why. Additional content written here will show in final consent review form and generated PDF.</string>
+			<string>BUDI will first ask you questions about you questions about your physical condition. This will help the BUDI team better understand how the digital platform affects various motor deficits seen in cerebral palsy and neuromuscular disorders.
+
+Next, BUDI will ask to access your Motion Hardware Data. This will allow the BUDI team to build interactive, real-time therapeutic environments and detect therapeutic movements in your therapy sessions. BUDI will also ask to access your Apple Health Data in order to store your therapy sessions and document your trends over time you and your healthcare providers.</string>
 		</dict>
-		<key>Privacy</key>
-		<dict>
-			<key>Title</key>
-			<string>Privacy</string>
-			<key>Summary</key>
-			<string>What is your commitment in terms of data protection to your app participants? Who will have access to data?</string>
-			<key>Content</key>
-			<string>What is your commitment in terms of data protection to your app participants? Who will have access to data? Additional content written here will show in final consent review form and generated PDF.</string>
-		</dict>
-		<key>DataUse</key>
+		<key>Privacy &amp; Data Use</key>
 		<dict>
 			<key>Title</key>
 			<string>Data Use</string>
 			<key>Summary</key>
-			<string>Information about your team&apos;s use of data.</string>
+			<string>Only the BUDI Team and those who you authorize will be able to access your data. BUDI will use your motion &amp; health data to help design the best digital solution for pediatric rehabilitation therapy.</string>
 			<key>Content</key>
-			<string>Information about your team&apos;s use of data. Additional content.</string>
-		</dict>
-		<key>TimeCommitment</key>
-		<dict>
-			<key>Title</key>
-			<string>Time Commitment</string>
-			<key>Summary</key>
-			<string>Information about the expected time commitment per app participant.</string>
-			<key>Content</key>
-			<string>Information about the expected time commitment per app participant. Additional content.</string>
+			<string>The data collected in the BUDI Apple Watch &amp; iPhone applications may be used only by the BUDI team and parties authorized to see data stored in the Apple Health App for the purposes of understanding the potential benefits of a remote therapy iOS/watchOS platform and improving the user interface/user experience. Your identity and/or your personal health information will not be disclosed except as authorized by you or as required by law. However, there is always some risk that even de-identified information might be re-identified. Patient information may be provided to Federal and other regulatory agencies as required.</string>
 		</dict>
 		<key>StudySurvey</key>
 		<dict>
@@ -162,25 +148,35 @@ patients with limb disabilities.</string>
 			<key>Summary</key>
 			<string>Welcome to BUDI! Before we can get start, we would like you to answer a few questions and tell us more about you.</string>
 			<key>Content</key>
-			<string>xxx</string>
+			<string></string>
 		</dict>
 		<key>StudyTasks</key>
 		<dict>
 			<key>Title</key>
 			<string>Study Tasks</string>
 			<key>Summary</key>
-			<string>Information about any task(s) in the app.</string>
+			<string>The study tasks are related to 1) Gross Motor Therapy and 2) Fine Motor Therapy.</string>
 			<key>Content</key>
-			<string>Information about any task(s) in the app. Additional content.</string>
+			<string>The study tasks are related to 1) Gross Motor Therapy and 2) Fine Motor Therapy.</string>
 		</dict>
 		<key>Withdrawing</key>
 		<dict>
 			<key>Title</key>
 			<string>Withdrawing</string>
 			<key>Summary</key>
-			<string>What should your study participants know about the withdrawing process of your study?</string>
+			<string>You can stop any time!</string>
 			<key>Content</key>
-			<string>What should your study participants know about the withdrawing process of your study? Additional content.</string>
+			<string>Your participation in this study is entirely voluntary. Your decision whether or not to participate will not prejudice you or your medical care. If you decide to participate, you are free to withdraw your consent and to discontinue participation at any time without prejudice to you or effect on your medical care. If you first agree to participate and then you change your mind, you are free to withdraw your consent and discontinue your participation at any time. Your decision will not affect your ability to receive medical care for your disease and you will not lose any benefits to which you would otherwise be entitled. The BUDI may also revoke your access to BUDI without your consent for one or more of the following reasons: Failure to follow the instructions of the BUDI team, The BUDI team decides that continuing your participation 
+could be harmful to you, Pregnancy, You need treatment not allowed while using BUDI, The BUDI beta version development ends, Other administrative reasons, Unanticipated circumstances.</string>
+		</dict>
+		<key>Time &amp; Financial Commitment</key>
+		<dict>
+			<key>Title</key>
+			<string>Time &amp; Financial Commitment</string>
+			<key>Summary</key>
+			<string>BUDI aims to collect your mobility data and therapy trends for 2-3 months. Users should aim to use BUDI for 5-60 minutes every day. The BUDI beta version is being offered free of any fees. You are welcome to use BUDI as often as you would like during this time period. You will not receive any compensation for your participation in the BUDI beta version testing.</string>
+			<key>Content</key>
+			<string>BUDI aims to collect your mobility data and therapy trends for 2-3 months. Users should aim to use BUDI for 5-60 minutes every day. The BUDI beta version is being offered free of any fees. You are welcome to use BUDI as often as you would like during this time period. You will not receive any compensation for your participation in the BUDI beta version testing.</string>
 		</dict>
 	</dict>
 	<key>Onboarding</key>
