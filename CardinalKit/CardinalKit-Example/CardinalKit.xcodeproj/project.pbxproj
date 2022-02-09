@@ -106,6 +106,11 @@
 		8EA664B2259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */; };
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
+		954796F027B3A6D7006D5D02 /* TherapySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */; };
+		954796F627B3AC3B006D5D02 /* TimeBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796F527B3AC3B006D5D02 /* TimeBlockView.swift */; };
+		954796FA27B3AD46006D5D02 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796F927B3AD46006D5D02 /* ScheduleView.swift */; };
+		954796FC27B3AD9A006D5D02 /* AddMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796FB27B3AD9A006D5D02 /* AddMenuView.swift */; };
+		954796FE27B3B233006D5D02 /* AddBlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */; };
 		9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50627B06CCA00DF7191 /* HomeUIView.swift */; };
 		9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50827B0817200DF7191 /* CareTeamView.swift */; };
 		9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */; };
@@ -304,6 +309,11 @@
 		8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKCareKitRemoteSyncWithFirestore.swift; sourceTree = "<group>"; };
 		8EA664B32594387900B6A45A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
+		954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapySettingsView.swift; sourceTree = "<group>"; };
+		954796F527B3AC3B006D5D02 /* TimeBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockView.swift; sourceTree = "<group>"; };
+		954796F927B3AD46006D5D02 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		954796FB27B3AD9A006D5D02 /* AddMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuView.swift; sourceTree = "<group>"; };
+		954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockButtonView.swift; sourceTree = "<group>"; };
 		9553F50627B06CCA00DF7191 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		9553F50827B0817200DF7191 /* CareTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamView.swift; sourceTree = "<group>"; };
 		9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewController.swift; sourceTree = "<group>"; };
@@ -626,6 +636,7 @@
 				8E6E1E2B253539AE0024B8DF /* ChangePasscodeView.swift */,
 				8E6E1E2D25353A1E0024B8DF /* PatientIDView.swift */,
 				8EA664AC2593380D00B6A45A /* SendRecordsView.swift */,
+				954796F427B3AC14006D5D02 /* TherapySettings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -727,6 +738,18 @@
 				8E7FFFB325DCE9B7002982B4 /* CKUploadToGCPTaskViewControllerDelegate.swift */,
 			);
 			path = ResearchKit;
+			sourceTree = "<group>";
+		};
+		954796F427B3AC14006D5D02 /* TherapySettings */ = {
+			isa = PBXGroup;
+			children = (
+				954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */,
+				954796F527B3AC3B006D5D02 /* TimeBlockView.swift */,
+				954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */,
+				954796F927B3AD46006D5D02 /* ScheduleView.swift */,
+				954796FB27B3AD9A006D5D02 /* AddMenuView.swift */,
+			);
+			path = TherapySettings;
 			sourceTree = "<group>";
 		};
 		9553F50527B069CB00DF7191 /* Home */ = {
@@ -1169,9 +1192,11 @@
 				E29143FC24E74AD100EE97B2 /* LaunchUIView.swift in Sources */,
 				2B8FB80427552B02000B2D7B /* CKMultipleSignInStep.swift in Sources */,
 				8EA6648725930B6B00B6A45A /* CKHealthRecordsStepViewController.swift in Sources */,
+				954796F627B3AC3B006D5D02 /* TimeBlockView.swift in Sources */,
 				8E0A43C0244A4A0400656518 /* PasswordlessLoginStep.swift in Sources */,
 				8EA664B2259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift in Sources */,
 				8EA664AD2593380D00B6A45A /* SendRecordsView.swift in Sources */,
+				954796FC27B3AD9A006D5D02 /* AddMenuView.swift in Sources */,
 				8E6E1E28253538CC0024B8DF /* CloudTaskListItemView.swift in Sources */,
 				8E0A43B3244A4A0400656518 /* TaskSamples.swift in Sources */,
 				8E6E1E2225352C780024B8DF /* OnboardingUIView.swift in Sources */,
@@ -1221,8 +1246,10 @@
 				8E0A43AE244A4A0400656518 /* ORKESerialization.m in Sources */,
 				8E9CDEB6259181B400C8A228 /* CareTeamViewControllerRepresentable.swift in Sources */,
 				8E9CDEAF259172C200C8A228 /* CKCareKitManager+Sample.swift in Sources */,
+				954796FE27B3B233006D5D02 /* AddBlockButtonView.swift in Sources */,
 				8E9CDEA925916E6600C8A228 /* ScheduleViewController.swift in Sources */,
 				2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */,
+				954796F027B3A6D7006D5D02 /* TherapySettingsView.swift in Sources */,
 				D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */,
 				8E6E1E0D25351D8F0024B8DF /* PageViewController.swift in Sources */,
 				8E0A43AC244A4A0400656518 /* CKStudyUser.swift in Sources */,
@@ -1235,6 +1262,7 @@
 				333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */,
 				9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */,
 				8E9CDEA725916B2800C8A228 /* ScheduleViewControllerRepresentable.swift in Sources */,
+				954796FA27B3AD46006D5D02 /* ScheduleView.swift in Sources */,
 				9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */,
 				2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */,
 				E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */,

@@ -17,9 +17,9 @@ struct ProfileUIView: View {
     }
     
     var body: some View {
-        
+       
         VStack {
-            Text("Profile").font(.system(size: 25, weight:.bold))
+            //Text("Profile").font(.system(size: 25, weight:.bold))
             
             
             List {
@@ -28,7 +28,11 @@ struct ProfileUIView: View {
                 }.listRowBackground(Color.white)
                 
                 Section {
-                    CareTeamView()
+                    VStack (alignment: .leading) {
+                        TherapySettingsView()
+                        CareTeamView()
+                    }
+                   
                 }
                 
                 
@@ -52,10 +56,11 @@ struct ProfileUIView: View {
                     Text(config.read(query: "Copyright"))
                 }
             }.listStyle(GroupedListStyle())
-            
-         
+                .navigationBarTitle("Profile")
+                    .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
 }
 
 struct ProfileUIView_Previews: PreviewProvider {

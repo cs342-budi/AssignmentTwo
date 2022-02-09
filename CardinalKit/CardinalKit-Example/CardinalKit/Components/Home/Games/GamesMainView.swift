@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct GamesMainView: View {
     @State private var showingTapGame = false
@@ -14,53 +15,54 @@ struct GamesMainView: View {
     
     var body: some View {
 
-        VStack {
-            HStack {
-                Button (action:{
-                    showingTapGame.toggle()
-                }) {
-                    Text("QUICK TAP")
-                        .fontWeight(.heavy)
-                        .font(.title)
-                        .foregroundColor(Color.white)
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .sheet(isPresented: $showingTapGame) {
-                    ActiveTaskViewController()
-                }
-            }.padding()
-            
-            HStack {
-                Button (action:{
-                    showingNineHole.toggle()
-                }) {
-                    Text("9-HOLE PEG")
-                        .fontWeight(.heavy)
-                        .font(.title)
-                        .foregroundColor(Color.white)
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .sheet(isPresented: $showingNineHole) {
-                    NineHoleViewController()
-                }
+
+            VStack {
+                HStack {
+                    Button (action:{
+                        showingTapGame.toggle()
+                    }) {
+                        Text("QUICK TAP")
+                            .fontWeight(.heavy)
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingTapGame) {
+                        ActiveTaskViewController()
+                    }
+                }.padding()
+                    .navigationBarTitle("Games")
                 
-            }.padding()
-            
-            
-            Spacer()
-        }
+                HStack {
+                    Button (action:{
+                        showingNineHole.toggle()
+                    }) {
+                        Text("9-HOLE PEG")
+                            .fontWeight(.heavy)
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingNineHole) {
+                        NineHoleViewController()
+                    }
+                    
+                }.padding()
+                
+                
+                Spacer()
+            }
     }
-    
 }
 
 struct GamesMainView_Previews: PreviewProvider {

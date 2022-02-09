@@ -1,21 +1,22 @@
 //
-//  CareTeamView.swift
+//  TherapySettingsView.swift
 //  CardinalKit_Example
 //
-//  Created by Taylor  Lallas on 2/6/22.
+//  Created by Taylor  Lallas on 2/8/22.
 //  Copyright © 2022 CocoaPods. All rights reserved.
 //
 
 import SwiftUI
 
-struct CareTeamView: View {
-    @State var showContacts = false
+struct TherapySettingsView: View {
+    @State var showSettings = false
     
     var body: some View {
         HStack {
-            Image("provider-icon-white").padding(.trailing)
-            
-            Text("MY PROVIDERS")
+            Image("therapy-settings-white")
+                .padding(.trailing)
+               
+            Text("MY SETTINGS")
                 .fontWeight(.bold)
                 .font(.title2)
                 .foregroundColor(.white)
@@ -30,18 +31,17 @@ struct CareTeamView: View {
             .background(Color.gray)
             .cornerRadius(10)
             .gesture(TapGesture().onEnded({
-                self.showContacts.toggle()
-            })).sheet(isPresented: $showContacts, onDismiss: {
-                
+                self.showSettings.toggle()
+            })).sheet(isPresented: $showSettings, onDismiss: {
             }, content: {
-                CareTeamViewControllerRepresentable()
+                ScheduleView()
             }).padding()
         
     }
 }
 
-struct CareTeamView_Previews: PreviewProvider {
+struct TherapySettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        CareTeamView()
+        TherapySettingsView()
     }
 }
