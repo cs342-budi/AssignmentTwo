@@ -22,6 +22,30 @@ class CKUploadToGCPTaskViewControllerDelegate : NSObject, ORKTaskViewControllerD
                     // (2) send using Firebase
                     try CKSendJSON(json)
                     
+                    let defaults = UserDefaults.standard
+                    if let results = json["results"] as? [Any] {
+                        if let question_1 = results[0] as? [String : Any],
+                            let answer_dict = question_1["results"] as? [String: Any],
+                            let first_name = answer_dict["answer"] as? String
+                             {
+                            defaults.set(first_name, forKey: DefaultsKeys.FirstName)
+                        }
+                        
+                        if let question_2 = results[1] as? [String : Any],
+                            let answer_dict = question_2["results"] as? [String: Any],
+                            let last_name = answer_dict["answer"] as? String
+                             {
+                            defaults.set(last_name, forKey: DefaultsKeys.LastName)
+                        }
+                        
+                        if let question_3 = results[2] as? [String : Any],
+                            let answer_dict = question_3["results"] as? [String: Any],
+                            let birthday = answer_dict["answer"] as? String
+                             {
+                            defaults.set(birthday, forKey: DefaultsKeys.Birthday)
+                        }
+                    }
+                    
                     // (3) if we have any files, send those using Google Storage
                     if let associatedFiles = taskViewController.outputDirectory {
                         try CKSendFiles(associatedFiles, result: json)
