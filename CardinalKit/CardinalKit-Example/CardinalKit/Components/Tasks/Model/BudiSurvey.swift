@@ -98,8 +98,13 @@ struct BudiSurvey {
         
         // Q8
         
+        let testString = NSMutableAttributedString(string: "Walking  ")
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(named: "walking_image_resized")
+        testString.append(NSAttributedString(attachment: attachment))
+        
         let textChoicesQ8 = [
-        ORKTextChoice(text: "Walking", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: nil,primaryTextAttributedString: testString, detailText: "", detailTextAttributedString: nil, value: 3 as NSCoding & NSCopying & NSObjectProtocol, exclusive: false),
         ORKTextChoice(text: "Taking the stairs", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Talking", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Eating & Swallowing", value: 3 as NSCoding & NSCopying & NSObjectProtocol),
