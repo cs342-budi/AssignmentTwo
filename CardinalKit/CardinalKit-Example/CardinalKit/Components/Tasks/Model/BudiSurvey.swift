@@ -12,7 +12,7 @@ import UIKit
 
 struct BudiSurvey {
     
-    static let budiSurvey: [ORKStep] = {
+    static let budiSurvey: ORKOrderedTask = {
         var steps = [ORKStep]()
         
         // Q1
@@ -147,8 +147,8 @@ struct BudiSurvey {
 
         steps += [summaryStep]
         
-        return steps
-        // return ORKOrderedTask(identifier: "BudiSurvey", steps: steps)
+//        return steps
+        return ORKOrderedTask(identifier: "BudiSurvey", steps: steps)
     
     }()
     

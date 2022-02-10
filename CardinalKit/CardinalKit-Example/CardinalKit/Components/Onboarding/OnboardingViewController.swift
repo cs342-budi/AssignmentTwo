@@ -119,7 +119,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         informationstep.image = UIImage(named: "budi-and-logo")
         
         // guide the user through ALL steps
-        let fullSteps = introSteps + emailVerificationSteps + [informationstep] + BudiSurvey.budiSurvey
+        let fullSteps = introSteps + emailVerificationSteps + [informationstep]
         
         // unless they have already gotten as far as to enter an email address
         var stepsToUse = fullSteps
