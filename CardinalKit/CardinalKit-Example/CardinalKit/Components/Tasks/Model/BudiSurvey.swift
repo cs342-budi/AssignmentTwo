@@ -121,7 +121,6 @@ struct BudiSurvey {
         steps += [textStepQ8]
         
         // Q9
-        
         let textChoicesQ9 = [
         ORKTextChoice(text: "Walking", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Taking the stairs", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
