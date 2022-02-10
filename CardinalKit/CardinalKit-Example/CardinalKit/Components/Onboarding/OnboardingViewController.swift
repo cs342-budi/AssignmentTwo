@@ -50,7 +50,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         /* **************************************************************
         *  STEP (3.5): get permission to collect HealthKit health records data
         **************************************************************/
-        let healthRecordsStep = CKHealthRecordsStep(identifier: "HealthRecords")
+        //let healthRecordsStep = CKHealthRecordsStep(identifier: "HealthRecords")
         
         /* **************************************************************
         *  STEP (4): ask user to enter their email address for login
@@ -110,12 +110,13 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         let introSteps: [ORKStep] = [consentStep, reviewConsentStep]
         
         // and steps regarding login / security
-        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, healthRecordsStep]
+        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep]
+        //let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, healthRecordsStep]
         
         let informationstep = ORKInstructionStep(identifier: "info")
         informationstep.title = "BUDI Onboarding Survey Coming!"
-        informationstep.text = "Welcome to BUDI! 😊 Before we get started, we would like you to answer a few questions and tell us more about you."
-        informationstep.image = UIImage(named: "budi-green")
+        informationstep.text = "Welcome to BUDI! 😊 Before we get started, we would like to ask you a few questions and get to know you."
+        informationstep.image = UIImage(named: "budi-and-logo")
         
         // guide the user through ALL steps
         let fullSteps = introSteps + emailVerificationSteps + [informationstep] + BudiSurvey.budiSurvey
