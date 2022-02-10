@@ -10,7 +10,31 @@ import SwiftUI
 
 struct LiveTherapyView: View {
     var body: some View {
-        Text("Hello, World! This will house the live therapy view.")
+        // 1
+        VStack{
+            Text("My Live Therapy Tracker")
+                .fontWeight(.heavy)
+                .font(.title2)
+                .foregroundColor(Color.black)
+            HStack {
+              // 2
+              ForEach(0..<12) { session in
+                // 3
+                VStack {
+                  // 4
+                  Spacer()
+                  // 5
+                  Rectangle()
+                    .fill(Color.green)
+                    .frame(width: 20, height: CGFloat(session) * 25)
+                  // 6
+                    Text("\(String(session))")
+                    .font(.footnote)
+                    .frame(height: 20)
+                }
+              }
+            }
+        }
     }
 }
 
