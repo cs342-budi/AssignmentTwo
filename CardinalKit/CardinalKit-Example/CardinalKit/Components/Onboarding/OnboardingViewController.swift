@@ -110,10 +110,15 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         let introSteps: [ORKStep] = [consentStep, reviewConsentStep]
         
         // and steps regarding login / security
-        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, healthRecordsStep, completionStep]
+        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, healthRecordsStep]
+        
+        let informationstep = ORKInstructionStep(identifier: "info")
+        informationstep.title = "BUDI Onboarding Survey Coming!"
+        informationstep.text = "Welcome to BUDI! 😊 Before we get started, we would like you to answer a few questions and tell us more about you."
+        informationstep.image = UIImage(named: "budi-green")
         
         // guide the user through ALL steps
-        let fullSteps = introSteps + emailVerificationSteps
+        let fullSteps = introSteps + emailVerificationSteps + [informationstep] + BudiSurvey.budiSurvey
         
         // unless they have already gotten as far as to enter an email address
         var stepsToUse = fullSteps

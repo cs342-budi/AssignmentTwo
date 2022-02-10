@@ -11,17 +11,17 @@
 	<key>Email</key>
 	<string>blynns@stanford.edu</string>
 	<key>Phone</key>
-	<string>123-456-7890</string>
+	<string>412-216-2424</string>
 	<key>Copyright</key>
 	<string>Made at Stanford with ❤️</string>
 	<key>Website</key>
-	<string>https://cardinalkit.org</string>
+	<string>https://profiles.stanford.edu/blynn</string>
 	<key>Tint Color</key>
-	<string>#b6133f</string>
+	<string>#1AAF54</string>
 	<key>Primary Color</key>
 	<string>#1AAF54</string>
 	<key>Accent Color</key>
-	<string>#979CE9</string>
+	<string>#1AAF54</string>
 	<key>Review Consent Step Text</key>
 	<string>Review Consent Form</string>
 	<key>Reason for Consent Text</key>
@@ -43,11 +43,11 @@
 	<key>Health Permissions Title</key>
 	<string>Permission to read Activity Data 🏃🏽‍♀️</string>
 	<key>Health Permissions Text</key>
-	<string>Use this text to provide an explanation to your app participants about what activity data you intend to read from the Health app and why. This sample will read step count, distance, heart rate, and flights climbed data.</string>
+	<string>BUDI will ask for 1) your type of motor impairment, 2) your motion data, and 3) your Apple Health Data. This will help the BUDI team better understand how the digital platform affects various motor deficits seen in cerebral palsy and neuromuscular disorders.</string>
 	<key>Health Records</key>
 	<dict>
 		<key>Enabled</key>
-		<true/>
+		<false/>
 		<key>Permissions Text</key>
 		<string>Use this text to provide an explanation to your app participants about what electronic health records (EHR) you intend to collect from the Health app and why. This sample will read all available records (for which permission is granted).</string>
 		<key>Permissions Title</key>
@@ -132,16 +132,16 @@ Accordingly, BUDI uses sensors from Apple Watch &amp; tools from open-source App
 
 Next, BUDI will ask to access your Motion Hardware Data. This will allow the BUDI team to build interactive, real-time therapeutic environments and detect therapeutic movements in your therapy sessions. BUDI will also ask to access your Apple Health Data in order to store your therapy sessions and document your trends over time you and your healthcare providers.</string>
 		</dict>
-		<key>Privacy &amp; Data Use</key>
+		<key>Privacy</key>
 		<dict>
 			<key>Title</key>
-			<string>Data Use</string>
+			<string>Privacy &amp; Data Use</string>
 			<key>Summary</key>
 			<string>Only the BUDI Team and those who you authorize will be able to access your data. BUDI will use your motion &amp; health data to help design the best digital solution for pediatric rehabilitation therapy.</string>
 			<key>Content</key>
 			<string>The data collected in the BUDI Apple Watch &amp; iPhone applications may be used only by the BUDI team and parties authorized to see data stored in the Apple Health App for the purposes of understanding the potential benefits of a remote therapy iOS/watchOS platform and improving the user interface/user experience. Your identity and/or your personal health information will not be disclosed except as authorized by you or as required by law. However, there is always some risk that even de-identified information might be re-identified. Patient information may be provided to Federal and other regulatory agencies as required.</string>
 		</dict>
-		<key>StudySurvey</key>
+		<key>StudySurvey-disabled for now</key>
 		<dict>
 			<key>Title</key>
 			<string>BUDI Onboarding Survey</string>
@@ -164,12 +164,12 @@ Next, BUDI will ask to access your Motion Hardware Data. This will allow the BUD
 			<key>Title</key>
 			<string>Withdrawing</string>
 			<key>Summary</key>
-			<string>You can stop any time!</string>
+			<string>Using BUDI is entirely voluntary. You can stop any time!</string>
 			<key>Content</key>
 			<string>Your participation in this study is entirely voluntary. Your decision whether or not to participate will not prejudice you or your medical care. If you decide to participate, you are free to withdraw your consent and to discontinue participation at any time without prejudice to you or effect on your medical care. If you first agree to participate and then you change your mind, you are free to withdraw your consent and discontinue your participation at any time. Your decision will not affect your ability to receive medical care for your disease and you will not lose any benefits to which you would otherwise be entitled. The BUDI may also revoke your access to BUDI without your consent for one or more of the following reasons: Failure to follow the instructions of the BUDI team, The BUDI team decides that continuing your participation 
 could be harmful to you, Pregnancy, You need treatment not allowed while using BUDI, The BUDI beta version development ends, Other administrative reasons, Unanticipated circumstances.</string>
 		</dict>
-		<key>Time &amp; Financial Commitment</key>
+		<key>TimeCommitment</key>
 		<dict>
 			<key>Title</key>
 			<string>Time &amp; Financial Commitment</string>

@@ -8,10 +8,11 @@
 
 import ResearchKit
 import Foundation
+import UIKit
 
 struct BudiSurvey {
     
-    static let budiSurvey: ORKOrderedTask = {
+    static let budiSurvey: [ORKStep] = {
         var steps = [ORKStep]()
         
         // Q1
@@ -28,6 +29,7 @@ struct BudiSurvey {
         // Q2
         let textChoiceQ2AnswerFormat = ORKDateAnswerFormat.dateAnswerFormat()
         let textStepQ2 = ORKQuestionStep(identifier: "Q2QuestionStep", title: "Question #2", question: "Please enter your birthday.", answer: textChoiceQ2AnswerFormat)
+        textStepQ2.image = UIImage(named: "Q2")
         
         steps += [textStepQ2]
         
@@ -68,11 +70,25 @@ struct BudiSurvey {
         ]
         let textChoiceQ5AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ5)
         let textStepQ5 = ORKQuestionStep(identifier: "Q5QuestionStep", title: "Question #5", question: "What type(s) of cerebral palsy do you have? (check all that apply)", answer: textChoiceQ5AnswerFormat)
+        textStepQ5.image = UIImage(named: "Q5")
         
         steps += [textStepQ5]
         
         // Q6
         let textChoicesQ6 = [
+        ORKTextChoice(text: "Spastic", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Dyskinetic", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Ataxic", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "I don't know", value: 3 as NSCoding & NSCopying & NSObjectProtocol)
+        ]
+        let textChoiceQ6AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ6)
+        let textStepQ6 = ORKQuestionStep(identifier: "Q6QuestionStep", title: "Question #6", question: "What type(s) of cerebral palsy do you have? (check all that apply)", answer: textChoiceQ5AnswerFormat)
+        textStepQ6.image = UIImage(named: "Q6")
+        
+        steps += [textStepQ6]
+        
+        // Q7
+        let textChoicesQ7 = [
         ORKTextChoice(text: "I", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "II", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "III", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
@@ -80,25 +96,29 @@ struct BudiSurvey {
         ORKTextChoice(text: "V", value: 4 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "I don't know", value: 4 as NSCoding & NSCopying & NSObjectProtocol)
         ]
-        let textChoiceQ6AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ6)
-        let textStepQ6 = ORKQuestionStep(identifier: "Q6QuestionStep", title: "Question #6", question: "What is your motor function according to the Gross Motor Function Classification System", answer: textChoiceQ6AnswerFormat)
-        
-        steps += [textStepQ6]
-        
-        // Q7
-        let textChoicesQ7 = [
-        ORKTextChoice(text: "Wheelchair", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Walker", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Orthotics", value: 2 as NSCoding & NSCopying & NSObjectProtocol)
-        ]
         let textChoiceQ7AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ7)
-        let textStepQ7 = ORKQuestionStep(identifier: "Q7QuestionStep", title: "Question #7", question: "Do you use any assistive technology? (check all that apply)", answer: textChoiceQ7AnswerFormat)
+        let textStepQ7 = ORKQuestionStep(identifier: "Q7QuestionStep", title: "Question #7", question: "What is your motor function according to the Gross Motor Function Classification System", answer: textChoiceQ6AnswerFormat)
+        textStepQ7.image = UIImage(named: "Q7")
         
         steps += [textStepQ7]
         
         // Q8
-        
         let textChoicesQ8 = [
+        ORKTextChoice(text: "Wheelchair", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Walker", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Orthotics", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Arm crutches", value: 3 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoiceOther(text: "Other", value: 4 as NSCoding & NSCopying & NSObjectProtocol)
+        ]
+        let textChoiceQ8AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ8)
+        let textStepQ8 = ORKQuestionStep(identifier: "Q8QuestionStep", title: "Question #8", question: "Do you use any assistive technology? (check all that apply)", answer: textChoiceQ8AnswerFormat)
+        textStepQ8.image = UIImage(named: "Q8")
+        
+        steps += [textStepQ8]
+        
+        // Q9
+        
+        let textChoicesQ9 = [
         ORKTextChoice(text: "Walking", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Taking the stairs", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Talking", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
@@ -107,22 +127,24 @@ struct BudiSurvey {
         ORKTextChoice(text: "Going to the bathroom", value: 5 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Brushing my teeth", value: 6 as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "Texting & Using my phone", value: 7 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Sleeping", value: 8 as NSCoding & NSCopying & NSObjectProtocol)
+        ORKTextChoice(text: "Sleeping", value: 8 as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoiceOther(text: "Other", value: 4 as NSCoding & NSCopying & NSObjectProtocol)
         ]
-        let textChoiceQ8AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ8)
-        let textStepQ8 = ORKQuestionStep(identifier: "Q8QuestionStep", title: "Question #8", question: "What sorts of activities to you find difficult? (check all that apply)", answer: textChoiceQ8AnswerFormat)
+        let textChoiceQ9AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ9)
+        let textStepQ9 = ORKQuestionStep(identifier: "Q9QuestionStep", title: "Question #9", question: "What sorts of activities to you find difficult? (check all that apply)", answer: textChoiceQ9AnswerFormat)
         
-        steps += [textStepQ8]
+        steps += [textStepQ9]
         
         // Summary
-        
+
         let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
         summaryStep.title = "Thank you!"
         summaryStep.text = "We appreciate your time."
-        
+
         steps += [summaryStep]
         
-        return ORKOrderedTask(identifier: "BudiSurvey", steps: steps)
+        return steps
+        // return ORKOrderedTask(identifier: "BudiSurvey", steps: steps)
     
     }()
     
