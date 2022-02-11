@@ -507,7 +507,7 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
   RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
-  ResearchKit: 9d6981b42c8633aa64097f4490be65abf39c350a
+  ResearchKit: 454bd5d013f5d6817b1c893ebe471a082061ceee
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   Zip: 8877eede3dda76bcac281225c20e71c25270774c

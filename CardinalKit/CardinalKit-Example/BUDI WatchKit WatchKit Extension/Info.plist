@@ -7,10 +7,20 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>edu.stanford.budi.watchkitapp</string>
+			<string>Stanford-CS342.BUDI.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array/>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Your workout related data will be used to display your saved workouts in BUDI </string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Workouts tracked by BUDI on Apple Watch will be saved to HealthKit</string>
 </dict>
 </plist>

@@ -113,6 +113,7 @@
 		E2DF9F0A2500C9CE00A93B93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF9F092500C9CE00A93B93 /* LoginViewController.swift */; };
 		E2F1FD7624D61EDA006C39DF /* CKPropertyReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1FD7524D61EDA006C39DF /* CKPropertyReader.swift */; };
 		E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F1FD7724D62064006C39DF /* CKConfiguration.plist */; };
+		F563224D27B62C780009F24C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F563224C27B62C780009F24C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,7 +209,6 @@
 		338AA20C27AC559C0094D6F0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		338AA20E27AC559D0094D6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338AA21127AC559D0094D6F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		338AA21327AC559D0094D6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338AA21427AC559D0094D6F0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		338AA21927AC559D0094D6F0 /* BUDI WatchKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BUDI WatchKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338AA21D27AC559D0094D6F0 /* BUDI_WatchKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDI_WatchKitTests.swift; sourceTree = "<group>"; };
@@ -298,6 +298,7 @@
 		E2DF9F092500C9CE00A93B93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2F1FD7524D61EDA006C39DF /* CKPropertyReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKPropertyReader.swift; sourceTree = "<group>"; };
 		E2F1FD7724D62064006C39DF /* CKConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CKConfiguration.plist; sourceTree = "<group>"; };
+		F563224C27B62C780009F24C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,8 +373,8 @@
 				338AA20827AC559C0094D6F0 /* NotificationController.swift */,
 				338AA20A27AC559C0094D6F0 /* NotificationView.swift */,
 				338AA20C27AC559C0094D6F0 /* ComplicationController.swift */,
+				F563224C27B62C780009F24C /* Info.plist */,
 				338AA20E27AC559D0094D6F0 /* Assets.xcassets */,
-				338AA21327AC559D0094D6F0 /* Info.plist */,
 				338AA21427AC559D0094D6F0 /* PushNotificationPayload.apns */,
 				338AA21027AC559D0094D6F0 /* Preview Content */,
 				338AA23B27AC572B0094D6F0 /* WorkoutManager.swift */,
@@ -881,6 +882,7 @@
 			files = (
 				338AA21227AC559D0094D6F0 /* Preview Assets.xcassets in Resources */,
 				338AA20F27AC559D0094D6F0 /* Assets.xcassets in Resources */,
+				F563224D27B62C780009F24C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
