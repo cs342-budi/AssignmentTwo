@@ -13,13 +13,14 @@ struct SurveyView: View {
     
     var body: some View {
         HStack {
+            Spacer()
             Text("SURVEY")
                 .fontWeight(.bold)
                 .font(.title2)
                 .foregroundColor(.white)
+                .frame(alignment: .center)
             Spacer()
-            
-        }.frame(height: 60)
+        }.frame(height: 60, alignment: .center)
             .contentShape(Rectangle())
             .frame(maxWidth: .infinity)
             .padding()
