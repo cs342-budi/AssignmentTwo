@@ -44,26 +44,6 @@ struct HomeUIView: View {
             
             NavigationView {
                 List {
-                    ZStack{
-                        Button (action:{}) {
-                            Text("SURVEYS")
-                                .fontWeight(.heavy)
-                                .font(.title2)
-                                .foregroundColor(Color.white)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                        .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                        .background(self.color)
-                        .cornerRadius(10)
-                        
-                        NavigationLink(destination: TasksUIView(color: self.color).tabItem{
-                                Image("tab_tasks").renderingMode(.template)
-                                Text("Tasks")
-                            }, label: {}).padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
-                            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
-                    }
                     ZStack {
                         Button (action:{}) {
                             Text("START THERAPY")
