@@ -10,11 +10,18 @@ import SwiftUI
 
 @main
 struct CardinalKitApp: App {
+    @StateObject var workoutManager = WorkoutManager()
+    @StateObject var cmMotionManager = CoreMotionManager()
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
             }
+            .sheet(isPresented: $workoutManager.showingSummaryView) {
+                SummaryView()
+            }
+            .environmentObject(workoutManager)
+            .environmentObject(cmMotionManager)
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
