@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D6A5A01279E5FD900184D5F /* BudiSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */; };
+		275F719827B9D526005B6D18 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F719727B9D526005B6D18 /* HealthKit.framework */; };
 		27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */; };
 		2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */; };
 		2B19DD9426FE1D2600649CE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9326FE1D2600649CE1 /* TestViewController.swift */; };
@@ -16,7 +17,7 @@
 		2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B932F83276BF8D300AB3A02 /* CKReviewConsentDocument.swift */; };
 		2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328226C2CC4E00C4636E /* CkResearchSurveysManager.swift */; };
 		2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328426C30F2E00C4636E /* CloudTaskItem.swift */; };
-		2BF6451826C1D0040020C206 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		2BF6451826C1D0040020C206 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6451F26C1DBE70020C206 /* CK_ORKSerialization.swift */; };
 		2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */; };
 		333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DABED27B3645B0032D213 /* UserDefaultsKeys.swift */; };
@@ -205,6 +206,8 @@
 		07D78DA16FC9C3C7709EA243 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudiSurvey.swift; sourceTree = "<group>"; };
 		270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardinalKit_ExampleRelease.entitlements; sourceTree = "<group>"; };
+		275F719627B9D526005B6D18 /* BUDI WatchKit WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BUDI WatchKit WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		275F719727B9D526005B6D18 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskListItemView.swift; sourceTree = "<group>"; };
 		2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonToSurvey.swift; sourceTree = "<group>"; };
 		2B19DD9326FE1D2600649CE1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275F719827B9D526005B6D18 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +391,7 @@
 		2C45A885E8BD0CAC5349997A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				275F719727B9D526005B6D18 /* HealthKit.framework */,
 				8E0A43D4244A693D00656518 /* HealthKit.framework */,
 				E2167F404ACC84E4BFF91D5A /* Pods_CardinalKit_Example.framework */,
 			);
@@ -404,6 +409,7 @@
 		338AA20327AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				275F719627B9D526005B6D18 /* BUDI WatchKit WatchKit Extension.entitlements */,
 				338AA20427AC559C0094D6F0 /* CardinalKitApp.swift */,
 				338AA20627AC559C0094D6F0 /* ContentView.swift */,
 				338AA20827AC559C0094D6F0 /* NotificationController.swift */,
@@ -1237,7 +1243,7 @@
 				8E7FFFBB25DE37FF002982B4 /* CoffeePieChartView.swift in Sources */,
 				8E7FFFB825DE350A002982B4 /* CoffeeUIView.swift in Sources */,
 				9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */,
-				2BF6451826C1D0040020C206 /* BuildFile in Sources */,
+				2BF6451826C1D0040020C206 /* (null) in Sources */,
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
 				2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */,
@@ -1329,6 +1335,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "BUDI WatchKit WatchKit Extension/BUDI WatchKit WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1373,6 +1380,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "BUDI WatchKit WatchKit Extension/BUDI WatchKit WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
