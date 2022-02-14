@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+import Combine
 
 import WatchConnectivity
 
-class SendDataToPhone : NSObject,  WCSessionDelegate{
+class SendDataToPhone: NSObject, WCSessionDelegate {
+    
     var session: WCSession
     
     init(session: WCSession = .default){
@@ -22,4 +25,5 @@ class SendDataToPhone : NSObject,  WCSessionDelegate{
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
+
 }

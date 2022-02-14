@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct LiveTherapyView: View {
+    
+    @ObservedObject var watchViewModel = WatchViewModel()
+    
     var body: some View {
         // 1
         VStack{
@@ -16,23 +19,32 @@ struct LiveTherapyView: View {
                 .fontWeight(.heavy)
                 .font(.title2)
                 .foregroundColor(Color.black)
+            
+            Spacer()
+            
+            Text(watchViewModel.messageText)
+                .font(.system(size: 50))
+                .bold()
+            
+            Spacer()
+            
             HStack {
-              // 2
-              ForEach(0..<12) { session in
-                // 3
-                VStack {
-                  // 4
-                  Spacer()
-                  // 5
-                  Rectangle()
-                    .fill(Color.green)
-                    .frame(width: 20, height: CGFloat(session) * 25)
-                  // 6
-                    Text("\(String(session))")
-                    .font(.footnote)
-                    .frame(height: 20)
+                // 2
+                ForEach(0..<12) { session in
+                    // 3
+                    VStack {
+                        // 4
+                        Spacer()
+                        // 5
+                        Rectangle()
+                            .fill(Color.green)
+                            .frame(width: 20, height: CGFloat(session) * 25)
+                        // 6
+                        Text("\(String(session))")
+                            .font(.footnote)
+                            .frame(height: 20)
+                    }
                 }
-              }
             }
         }
     }

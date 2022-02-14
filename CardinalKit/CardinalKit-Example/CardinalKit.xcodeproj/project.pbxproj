@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1D6A5A01279E5FD900184D5F /* BudiSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */; };
 		275F719827B9D526005B6D18 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F719727B9D526005B6D18 /* HealthKit.framework */; };
+		275F71CB27B9E481005B6D18 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
+		275F71CC27B9E481005B6D18 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		275F71D127BA14AB005B6D18 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F71D027BA14AB005B6D18 /* WatchViewModel.swift */; };
 		27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */; };
 		2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */; };
 		2B19DD9426FE1D2600649CE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9326FE1D2600649CE1 /* TestViewController.swift */; };
@@ -117,7 +120,6 @@
 		9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */; };
 		9590DFAD27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */; };
 		9590DFAF27B2479000B6A633 /* NineHoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */; };
-		95A8C5F427B0AB1900E0D4AC /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
 		95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */; };
 		95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */; };
 		95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */; };
@@ -178,6 +180,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		275F71CD27B9E481005B6D18 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				275F71CC27B9E481005B6D18 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		338AA1E727AC53840094D6F0 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +221,7 @@
 		270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardinalKit_ExampleRelease.entitlements; sourceTree = "<group>"; };
 		275F719627B9D526005B6D18 /* BUDI WatchKit WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BUDI WatchKit WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		275F719727B9D526005B6D18 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		275F71D027BA14AB005B6D18 /* WatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
 		27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskListItemView.swift; sourceTree = "<group>"; };
 		2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonToSurvey.swift; sourceTree = "<group>"; };
 		2B19DD9326FE1D2600649CE1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -371,7 +385,7 @@
 				8E0A43D5244A693D00656518 /* HealthKit.framework in Frameworks */,
 				8E9CDE912591534B00C8A228 /* CareKitStore in Frameworks */,
 				8E9CDE932591534B00C8A228 /* CareKitFHIR in Frameworks */,
-				95A8C5F427B0AB1900E0D4AC /* ResearchKit.framework in Frameworks */,
+				275F71CB27B9E481005B6D18 /* ResearchKit.framework in Frameworks */,
 				AD2FB271D41F98531AF6C05F /* Pods_CardinalKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +511,7 @@
 				8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */,
 				E235077624F7082700CC1899 /* SceneDelegate.swift */,
 				2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */,
+				275F71D027BA14AB005B6D18 /* WatchViewModel.swift */,
 			);
 			name = "CardinalKit-Example";
 			path = CardinalKit;
@@ -900,6 +915,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				338AA1E727AC53840094D6F0 /* Embed Watch Content */,
 				218DA68A8A3EB3AB2C4B03A7 /* [CP] Embed Pods Frameworks */,
+				275F71CD27B9E481005B6D18 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1247,6 +1263,7 @@
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
 				2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */,
+				275F71D127BA14AB005B6D18 /* WatchViewModel.swift in Sources */,
 				8E6E1E2C253539AE0024B8DF /* ChangePasscodeView.swift in Sources */,
 				9590DFAF27B2479000B6A633 /* NineHoleViewController.swift in Sources */,
 				8E0A43AD244A4A0400656518 /* Constants.swift in Sources */,
