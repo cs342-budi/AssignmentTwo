@@ -194,7 +194,7 @@ internal extension OCKStore {
                                   familyName: "Shideler", carePlanUUID: nil)
         contact2.asset = "BlynnShideler"
         contact2.title = "Medical Student"
-        contact2.role = "Blynn Shideler is a Stanford Medical student and the director of BUDI."
+        contact2.role = "Blynn is a medical student at Stanford & is the lead of BUDI and the Pediatric Rehabilitation Technologies Program."
         contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(412) 216-2424")]
         contact2.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "blynns@stanford.edu")]
         contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(412) 216-2424")]
