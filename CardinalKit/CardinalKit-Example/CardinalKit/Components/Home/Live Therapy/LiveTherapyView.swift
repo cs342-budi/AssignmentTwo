@@ -22,9 +22,31 @@ struct LiveTherapyView: View {
             
             Spacer()
             
-            Text(watchViewModel.messageText)
+            /* Text(watchViewModel.messageText)
                 .font(.system(size: 50))
-                .bold()
+                .bold() */
+            
+            Button (action:{
+                // MARK: TAYLOR
+                // check if the watch is reachable
+                if self.watchViewModel.session.isReachable {
+                // send a message to the watch to stop the therapy session
+                    self.watchViewModel.session.sendMessage(["action": "THERAPY_STOP"], replyHandler: nil, errorHandler: { (err) in
+                        print(err.localizedDescription)
+                    })
+                }
+                
+            }) {
+                Text("STOP THERAPY")
+                    .fontWeight(.heavy)
+                    .font(.title2)
+                    .foregroundColor(.white)
+            }
+            .padding()
+            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+            .background(Color.blue)
+            .cornerRadius(10)
             
             Spacer()
             

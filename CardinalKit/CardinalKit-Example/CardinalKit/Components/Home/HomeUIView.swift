@@ -11,6 +11,9 @@ import SwiftUI
 
 
 struct HomeUIView: View {
+    
+    let watchViewModel = WatchViewModel()
+    
     let color: Color
     let config = CKPropertyReader(file: "CKConfiguration")
     let accent: Color
@@ -47,7 +50,17 @@ struct HomeUIView: View {
             NavigationView {
                 List {
                     ZStack {
-                        Button (action:{}) {
+                        Button (action:{
+                            // MARK: TAYLOR
+                            // check if the watch is reachable
+                            if self.watchViewModel.session.isReachable {
+                                // send a message to the watch to start the therapy session
+                                self.watchViewModel.session.sendMessage(["action": "THERAPY_START"], replyHandler: nil,         errorHandler: { (err) in
+                                    print(err.localizedDescription)
+                                })
+                            }
+                            
+                        }) {
                             Text("START THERAPY")
                                 .fontWeight(.heavy)
                                 .font(.title2)
