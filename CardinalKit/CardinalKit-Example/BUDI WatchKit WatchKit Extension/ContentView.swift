@@ -42,7 +42,7 @@ struct ContentView: View {
             .onReceive(self.phoneViewModel.actionNotification){ action in
                 // MARK: Taylor
                 // We subscribe to *actionNotification* from the viewModel to listen for a notification
-                // to start the workout and activate the navigation link by toggling *isTherapyStarted*
+                // then based on the message we got, we either start or stop the therapy session.
                 
                 switch action {
                     case "THERAPY_START":
