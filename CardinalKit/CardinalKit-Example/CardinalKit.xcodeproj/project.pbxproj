@@ -117,6 +117,7 @@
 		954796FE27B3B233006D5D02 /* AddBlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */; };
 		9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50627B06CCA00DF7191 /* HomeUIView.swift */; };
 		9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50827B0817200DF7191 /* CareTeamView.swift */; };
+		956E7DF127BE25B000F91358 /* TherapyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */; };
 		9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */; };
 		9590DFAD27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */; };
 		9590DFAF27B2479000B6A633 /* NineHoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */; };
@@ -333,6 +334,7 @@
 		954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockButtonView.swift; sourceTree = "<group>"; };
 		9553F50627B06CCA00DF7191 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		9553F50827B0817200DF7191 /* CareTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamView.swift; sourceTree = "<group>"; };
+		956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyScheduleViewController.swift; sourceTree = "<group>"; };
 		9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewController.swift; sourceTree = "<group>"; };
 		9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewCoordinator.swift; sourceTree = "<group>"; };
 		9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineHoleViewController.swift; sourceTree = "<group>"; };
@@ -771,6 +773,7 @@
 				954796F527B3AC3B006D5D02 /* TimeBlockView.swift */,
 				954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */,
 				954796F927B3AD46006D5D02 /* ScheduleView.swift */,
+				956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */,
 				954796FB27B3AD9A006D5D02 /* AddMenuView.swift */,
 			);
 			path = TherapySettings;
@@ -1285,6 +1288,7 @@
 				8E7FFFBD25DE38E4002982B4 /* CoffeeChartDataSource.swift in Sources */,
 				E2F1FD7624D61EDA006C39DF /* CKPropertyReader.swift in Sources */,
 				8E6E1E1025351E890024B8DF /* Extensions+UIColor.swift in Sources */,
+				956E7DF127BE25B000F91358 /* TherapyScheduleViewController.swift in Sources */,
 				8E9CDF832592844A00C8A228 /* LearnUIView.swift in Sources */,
 				333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */,
 				9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */,

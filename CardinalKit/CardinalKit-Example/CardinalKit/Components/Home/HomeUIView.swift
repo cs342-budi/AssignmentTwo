@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+
+
 struct HomeUIView: View {
     let color: Color
     let config = CKPropertyReader(file: "CKConfiguration")
@@ -21,7 +23,7 @@ struct HomeUIView: View {
         
     }
 
-    
+
     
     
     var body: some View {
