@@ -20,15 +20,16 @@ struct MetricsView: View {
                 ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: context.cadence == .live)
                     .foregroundStyle(.yellow)
                 Text(Measurement(value: workoutManager.activeEnergy, unit: UnitEnergy.kilocalories)
-                        .formatted(.measurement(width: .abbreviated, usage: .workout, numberFormatStyle: .number.precision(.fractionLength(0)))))
-                Text(workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
-                Text(cmMotionManager.accelaration.formatted(.number.precision(.fractionLength(0)))+" cm/s")+Text("2").font(.system(.footnote)).baselineOffset(10)
+                        .formatted(.measurement(width: .abbreviated, usage: .workout, numberFormatStyle: .number.precision(.fractionLength(0))))).foregroundColor(.red)
+                Text(workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm").foregroundColor(.mint)
+                Text(cmMotionManager.accelaration.formatted(.number.precision(.fractionLength(0)))+" cm/s").foregroundColor(.purple)+Text("2").font(.system(.footnote)).baselineOffset(10).foregroundColor(.purple)
 //                Text(Measurement(value: workoutManager.distance, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
             }
             .font(.system(.title, design: .rounded).monospacedDigit().lowercaseSmallCaps())
             .frame(maxWidth: .infinity, alignment: .leading)
             .ignoresSafeArea(edges: .bottom)
             .scenePadding()
+            .background(Color.gray)
         }
     }
 }
