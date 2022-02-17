@@ -55,11 +55,24 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
     
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+        // MARK: Taylor
+        // This method is called when a message is received from the phone
+        // We will extract the "action" key if it exists and then set it to
+        // the *action* variable above, which will trigger a notification to the
+        // main view.
+        
         self.action = message["action"] as? String ?? ""
         print(self.action)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        
+        // MARK: Taylor
+        // This is the same method as above, but it also allows us to
+        // provide a reply back to the phone using the *replyHandler*
+        // if we want to.
+        
         self.action = message["action"] as? String ?? ""
         print(self.action)
     }
