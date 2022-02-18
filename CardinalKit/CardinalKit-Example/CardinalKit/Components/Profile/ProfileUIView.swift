@@ -24,6 +24,10 @@ struct ProfileUIView: View {
             
             List {
                 Section {
+                    ProfilePictureView()
+                }
+                
+                Section {
                     PatientIDView()
                 }.listRowBackground(Color.white)
                 

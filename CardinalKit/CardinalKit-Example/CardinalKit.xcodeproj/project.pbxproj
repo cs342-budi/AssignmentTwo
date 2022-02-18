@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D6A5A01279E5FD900184D5F /* BudiSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */; };
+		1DD7142727BE050500B4A6EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142627BE050500B4A6EB /* ImagePicker.swift */; };
+		1DD7142927BE080700B4A6EB /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */; };
 		275F719827B9D526005B6D18 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F719727B9D526005B6D18 /* HealthKit.framework */; };
 		275F71CB27B9E481005B6D18 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
 		275F71CC27B9E481005B6D18 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -218,6 +220,8 @@
 /* Begin PBXFileReference section */
 		07D78DA16FC9C3C7709EA243 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudiSurvey.swift; sourceTree = "<group>"; };
+		1DD7142627BE050500B4A6EB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
 		270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardinalKit_ExampleRelease.entitlements; sourceTree = "<group>"; };
 		275F719627B9D526005B6D18 /* BUDI WatchKit WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BUDI WatchKit WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		275F719727B9D526005B6D18 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -535,6 +539,7 @@
 				8E6E1E3125353ABE0024B8DF /* ProfileUIView.swift */,
 				8E6E1E1125351F830024B8DF /* DocumentPreviewViewController.swift */,
 				8E6E1E15253524500024B8DF /* WithdrawalViewController.swift */,
+				1DD7142627BE050500B4A6EB /* ImagePicker.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -661,6 +666,7 @@
 				8EA664AC2593380D00B6A45A /* SendRecordsView.swift */,
 				954796F427B3AC14006D5D02 /* TherapySettings */,
 				33D8711927B5DF8D0095516B /* SurveyView.swift */,
+				1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1225,6 +1231,7 @@
 				8E6E1E28253538CC0024B8DF /* CloudTaskListItemView.swift in Sources */,
 				8E0A43B3244A4A0400656518 /* TaskSamples.swift in Sources */,
 				8E6E1E2225352C780024B8DF /* OnboardingUIView.swift in Sources */,
+				1DD7142927BE080700B4A6EB /* ProfilePictureView.swift in Sources */,
 				8E6E1E1A253528450024B8DF /* WithdrawView.swift in Sources */,
 				8E6E1E2E25353A1E0024B8DF /* PatientIDView.swift in Sources */,
 				8E6E1E0B2534FF640024B8DF /* OnboardingViewController+Coordinator.swift in Sources */,
@@ -1267,6 +1274,7 @@
 				8E6E1E2C253539AE0024B8DF /* ChangePasscodeView.swift in Sources */,
 				9590DFAF27B2479000B6A633 /* NineHoleViewController.swift in Sources */,
 				8E0A43AD244A4A0400656518 /* Constants.swift in Sources */,
+				1DD7142727BE050500B4A6EB /* ImagePicker.swift in Sources */,
 				8E0A43BE244A4A0400656518 /* CKHealthDataStepViewController.swift in Sources */,
 				2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */,
 				8E0A43AE244A4A0400656518 /* ORKESerialization.m in Sources */,
