@@ -7,8 +7,13 @@ The workout manager that interfaces with HealthKit.
 
 import Foundation
 import HealthKit
+import SwiftUI
+import simd
 
 class WorkoutManager: NSObject, ObservableObject {
+    
+    var phoneViewModel = SendDataToPhone()
+    
     var selectedWorkout: HKWorkoutActivityType? {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }

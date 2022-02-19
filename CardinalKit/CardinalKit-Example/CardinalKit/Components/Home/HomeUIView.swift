@@ -9,6 +9,8 @@
 import SwiftUI
 import Charts
 
+
+
 struct HomeUIView: View {
     let color: Color
     let config = CKPropertyReader(file: "CKConfiguration")
@@ -56,14 +58,7 @@ struct HomeUIView: View {
                         .background(self.color)
                         .cornerRadius(10)
                         
-                        NavigationLink(destination: LiveTherapyView(entries: [
-                            //x - position of a bar, y - height of a bar
-                            ChartDataEntry(x: 1, y: 1),
-                            ChartDataEntry(x: 2, y: 2),
-                            ChartDataEntry(x: 3, y: 3),
-                            ChartDataEntry(x: 4, y: 4),
-                            ChartDataEntry(x: 5, y: 5)
-                        ]),
+                        NavigationLink(destination: LiveTherapyView(),
                                    label: {}).opacity(0)
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)

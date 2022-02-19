@@ -29,12 +29,11 @@ struct ProfileUIView: View {
                 
                 Section {
                     VStack (alignment: .leading) {
+                        SurveyView()
                         TherapySettingsView()
                         CareTeamView()
                     }
-                   
                 }
-                
                 
                 Section {
                     SendRecordsView()
