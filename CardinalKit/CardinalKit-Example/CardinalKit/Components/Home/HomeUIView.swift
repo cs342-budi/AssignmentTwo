@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct HomeUIView: View {
     let color: Color
@@ -20,9 +21,6 @@ struct HomeUIView: View {
         self.accent = Color(config.readColor(query: "Accent Color"))
         
     }
-
-    
-    
     
     var body: some View {
         VStack {
@@ -58,7 +56,14 @@ struct HomeUIView: View {
                         .background(self.color)
                         .cornerRadius(10)
                         
-                        NavigationLink(destination: LiveTherapyView(),
+                        NavigationLink(destination: LiveTherapyView(entries: [
+                            //x - position of a bar, y - height of a bar
+                            ChartDataEntry(x: 1, y: 1),
+                            ChartDataEntry(x: 2, y: 2),
+                            ChartDataEntry(x: 3, y: 3),
+                            ChartDataEntry(x: 4, y: 4),
+                            ChartDataEntry(x: 5, y: 5)
+                        ]),
                                    label: {}).opacity(0)
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
@@ -102,7 +107,14 @@ struct HomeUIView: View {
                         .background(self.accent)
                         .cornerRadius(10)
    
-                        NavigationLink(destination: ProgressUIView(),
+                        NavigationLink(destination: ProgressUIView(entries: [
+                            //x - position of a bar, y - height of a bar
+                            BarChartDataEntry(x: 1, y: 1),
+                            BarChartDataEntry(x: 2, y: 2),
+                            BarChartDataEntry(x: 3, y: 3),
+                            BarChartDataEntry(x: 4, y: 4),
+                            BarChartDataEntry(x: 5, y: 5)
+                        ]),
                                    label: {}).opacity(0)
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
