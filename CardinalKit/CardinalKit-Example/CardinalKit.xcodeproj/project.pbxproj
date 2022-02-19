@@ -48,6 +48,7 @@
 		338AA24C27AC5BD50094D6F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24B27AC5BD50094D6F0 /* ControlsView.swift */; };
 		33D8711A27B5DF8D0095516B /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D8711927B5DF8D0095516B /* SurveyView.swift */; };
 		7643164C27C1705C0036BE83 /* LiveTherapyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */; };
+		7643165127C176300036BE83 /* ProgressUIChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643165027C176300036BE83 /* ProgressUIChartView.swift */; };
 		8E0A43AC244A4A0400656518 /* CKStudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4382244A4A0400656518 /* CKStudyUser.swift */; };
 		8E0A43AD244A4A0400656518 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4384244A4A0400656518 /* Constants.swift */; };
 		8E0A43AE244A4A0400656518 /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4386244A4A0400656518 /* ORKESerialization.m */; };
@@ -266,6 +267,7 @@
 		607FACD01AFB9204008FA782 /* CardinalKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardinalKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AA5CD1C2188D392530510F /* CardinalKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CardinalKit.podspec; path = ../CardinalKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyChartView.swift; sourceTree = "<group>"; };
+		7643165027C176300036BE83 /* ProgressUIChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUIChartView.swift; sourceTree = "<group>"; };
 		8E0A4378244A4A0300656518 /* CardinalKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardinalKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E0A4382244A4A0400656518 /* CKStudyUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKStudyUser.swift; sourceTree = "<group>"; };
 		8E0A4384244A4A0400656518 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -816,6 +818,7 @@
 			isa = PBXGroup;
 			children = (
 				95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */,
+				7643165027C176300036BE83 /* ProgressUIChartView.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -1266,6 +1269,7 @@
 				8E6E1E20253529760024B8DF /* DocumentView.swift in Sources */,
 				8E7FFFBB25DE37FF002982B4 /* CoffeePieChartView.swift in Sources */,
 				8E7FFFB825DE350A002982B4 /* CoffeeUIView.swift in Sources */,
+				7643165127C176300036BE83 /* ProgressUIChartView.swift in Sources */,
 				9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */,
 				2BF6451826C1D0040020C206 /* (null) in Sources */,
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,

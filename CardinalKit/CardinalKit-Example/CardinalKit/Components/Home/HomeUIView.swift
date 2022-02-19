@@ -102,14 +102,7 @@ struct HomeUIView: View {
                         .background(self.accent)
                         .cornerRadius(10)
    
-                        NavigationLink(destination: ProgressUIView(entries: [
-                            //x - position of a bar, y - height of a bar
-                            BarChartDataEntry(x: 1, y: 1),
-                            BarChartDataEntry(x: 2, y: 2),
-                            BarChartDataEntry(x: 3, y: 3),
-                            BarChartDataEntry(x: 4, y: 4),
-                            BarChartDataEntry(x: 5, y: 5)
-                        ]),
+                        NavigationLink(destination: ProgressUIView(),
                                    label: {}).opacity(0)
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
