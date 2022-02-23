@@ -7,15 +7,32 @@
 //
 
 import SwiftUI
+import CareKitStore
+import CareKit
+import Charts
 
 struct ProgressUIView: View {
+    
     var body: some View {
-        Text("Hello, World! This will house the progress view.")
-    }
-}
-
-struct ProgressUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgressUIView()
+        // 1
+        VStack{
+            Text("My Games")
+                .fontWeight(.heavy)
+                .font(.title2)
+                .foregroundColor(Color.black)
+            
+            Spacer()
+            
+            ProgressUIChartView(entries: [
+                //x - position of a bar, y - height of a bar
+                BarChartDataEntry(x: 1, y: 1),
+                BarChartDataEntry(x: 2, y: 2),
+                BarChartDataEntry(x: 3, y: 3),
+                BarChartDataEntry(x: 4, y: 4),
+                BarChartDataEntry(x: 5, y: 5)
+            ])
+            
+            Spacer()
+        }
     }
 }

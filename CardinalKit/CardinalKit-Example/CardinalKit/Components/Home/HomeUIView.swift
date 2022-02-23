@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Charts
 
 
 
@@ -25,9 +26,6 @@ struct HomeUIView: View {
         self.accent = Color(config.readColor(query: "Accent Color"))
         
     }
-
-
-    
     
     var body: some View {
         VStack {
