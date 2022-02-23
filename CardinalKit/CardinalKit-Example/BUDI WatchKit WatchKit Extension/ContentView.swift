@@ -50,6 +50,8 @@ struct ContentView: View {
                             print("Starting therapy...")
                             // setting the workout type triggers it to start
                             workoutManager.selectedWorkout = workoutTypes.first
+                            
+                            
                         } else {
                             print("Therapy has already been started.")
                         }

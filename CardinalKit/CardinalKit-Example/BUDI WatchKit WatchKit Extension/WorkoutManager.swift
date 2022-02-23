@@ -9,10 +9,12 @@ import Foundation
 import HealthKit
 import SwiftUI
 import simd
+import CoreMotion
 
 class WorkoutManager: NSObject, ObservableObject {
     
     var phoneViewModel = SendDataToPhone()
+    @EnvironmentObject var cmMotionManager: CoreMotionManager
     
     var selectedWorkout: HKWorkoutActivityType? {
         didSet {
@@ -61,6 +63,11 @@ class WorkoutManager: NSObject, ObservableObject {
         session?.startActivity(with: startDate)
         builder?.beginCollection(withStart: startDate) { (success, error) in
             // The workout has started.
+            if self.phoneViewModel.session.isReachable {
+                //send data to phone
+                print("SENDING DATA TO PHONE")
+                self.phoneViewModel.session.sendMessage(["data": self.cmMotionManager.accelaration], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+            }
         }
     }
 

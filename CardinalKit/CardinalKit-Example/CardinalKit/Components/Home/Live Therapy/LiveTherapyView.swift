@@ -60,7 +60,7 @@ struct LiveTherapyView: View {
             .padding()
             .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
             .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-            .background(Color.blue)
+            .background(Color.red)
             .cornerRadius(10)
             
             Spacer()
