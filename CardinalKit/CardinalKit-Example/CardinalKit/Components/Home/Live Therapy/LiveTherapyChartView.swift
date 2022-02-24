@@ -13,6 +13,23 @@ import Charts
 
 struct LiveTherapyChartView: UIViewRepresentable {
     var entries: [ChartDataEntry]
+//    func overlay<Overlay>(_ overlay: Overlay, alignment: Alignment = .center) {
+//        LiveTherapyChartView(entries: populateXYCharData( xvec: myXData, yvec: myYData ) , mylinecolor: [UIColor(#colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))] )
+//
+//        .padding(.top, 30 )
+//        .padding(.leading, 30)
+//        .overlay(Text("Time")
+//        .font(.system(size: 15))
+//        .fontWeight(.medium)
+//        .rotationEffect(.degrees(270))
+//        .offset(x: -60.0, y: 0.0),
+//        alignment: .leading)
+//        .overlay(Text("Acceleration")
+//        .font(.system(size: 15))
+//        .fontWeight(.medium)
+//        .offset(x: 0, y: 0),
+//        alignment: .top)
+//    }
     func makeUIView(context: Context) -> LineChartView {
         let chart = LineChartView()
         chart.data = addData()
@@ -33,7 +50,6 @@ struct LiveTherapyChartView: UIViewRepresentable {
     }
     
     typealias UIViewType = LineChartView
-    
 }
 
 
@@ -47,7 +63,19 @@ struct LiveTherapyChartView_Previews: PreviewProvider {
             ChartDataEntry(x: 3, y: 3),
             ChartDataEntry(x: 4, y: 4),
             ChartDataEntry(x: 5, y: 5)
-        ])
+        ]).padding(.top, 30 )
+            .padding(.leading, 30)
+            .overlay(Text("Time")
+            .font(.system(size: 15))
+            .fontWeight(.medium)
+            .rotationEffect(.degrees(270))
+            .offset(x: 0.0, y: 0.0),
+            alignment: .leading)
+            .overlay(Text("Acceleration")
+            .font(.system(size: 15))
+            .fontWeight(.medium)
+            .offset(x: 0, y: 0),
+            alignment: .top)
     }
 }
 
