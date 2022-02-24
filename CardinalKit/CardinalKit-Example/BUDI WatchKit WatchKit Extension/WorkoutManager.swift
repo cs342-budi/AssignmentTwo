@@ -19,7 +19,7 @@ class WorkoutManager: NSObject, ObservableObject {
     var selectedWorkout: HKWorkoutActivityType? {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }
-            startWorkout(workoutType: selectedWorkout)
+            startWorkout(workoutType: .flexibility) //hardcoded flexibility
         }
     }
 
@@ -38,7 +38,7 @@ class WorkoutManager: NSObject, ObservableObject {
     // Start the workout.
     func startWorkout(workoutType: HKWorkoutActivityType) {
         let configuration = HKWorkoutConfiguration()
-        configuration.activityType = workoutType
+        configuration.activityType = .flexibility //hardcoded
         configuration.locationType = .outdoor
 
         // Create the session and obtain the workout builder.

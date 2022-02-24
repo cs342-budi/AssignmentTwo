@@ -35,7 +35,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         //MARK: testing arbitrary data
         self.data = message["data"] as? Double ?? 0.0
         //append to published array 
-        print(self.data)
+        print("RECEIVED FROM WATCH: \(self.data)")
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {

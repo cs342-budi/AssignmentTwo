@@ -19,6 +19,7 @@ class CoreMotionManager: NSObject, ObservableObject {
     //var timer: Timer?
     var accelArray : [Double] = []
     var maxArray : [Double] = []
+    fileprivate let dmUserAccelSemaphore = DispatchSemaphore(value: 1)
     
     fileprivate lazy var motionQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -44,25 +45,33 @@ class CoreMotionManager: NSObject, ObservableObject {
        // Make sure the accelerometer hardware is available.
 
       print("INSIDE START ACCEL")
+        print(accelArray)
         
         
         //MARK: Testing arbitrary data
         if SendDataToPhone.shared.session.isReachable {
             //send data to phone
             print("TESTING ARBITRARY DATA ")
-            SendDataToPhone.shared.session.sendMessage(["data": 666], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+            SendDataToPhone.shared.session.sendMessage(["data": 123], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
     }
        
         if self.motion.isDeviceMotionAvailable {
             print("MOTION AVAILABLE")
             self.motion.deviceMotionUpdateInterval = 1.0/60.0
             self.motion.startDeviceMotionUpdates(to: motionQueue, withHandler: { [weak self] (data: CMDeviceMotion?, error: Error?) in
+                
+                guard let strongSelf = self else {
+                    return
+                }
+                
                 if let data = data  {
+                    
+                    strongSelf.dmUserAccelSemaphore.wait()
                         let xVal = data.userAcceleration.x
-                        self?.accelArray.append(xVal)
+                        strongSelf.accelArray.append(xVal)
                         print("THIS IS THE XVAL \(xVal)")
-                        if self?.accelArray.count ?? 0 > 300 { //60 * 5
-                            if let max = self?.accelArray.max() {
+                        if strongSelf.accelArray.count > 300 { //60 * 5
+                            if let max = strongSelf.accelArray.max() {
                                 self?.maxArray.append(max)
                                 self?.accelaration = max
                                 
@@ -73,6 +82,7 @@ class CoreMotionManager: NSObject, ObservableObject {
                                 }
                             }
                         }
+                    strongSelf.dmUserAccelSemaphore.signal()
                     }
                 })
         } else {

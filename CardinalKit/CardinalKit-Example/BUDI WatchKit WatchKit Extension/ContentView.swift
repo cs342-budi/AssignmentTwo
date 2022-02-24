@@ -99,7 +99,7 @@ extension HKWorkoutActivityType: Identifiable{
             //        case .cycling:
             //            return "Bike"
         case .flexibility:
-            return "       Therapy              "
+            return "Therapy"
         default:
             return ""
         }
