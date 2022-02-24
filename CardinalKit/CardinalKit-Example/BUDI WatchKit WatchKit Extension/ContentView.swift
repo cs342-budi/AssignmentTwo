@@ -12,10 +12,11 @@ import simd
 struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     //    var workoutTypes: [HKWorkoutActivityType] = [.cycling, .running, .walking]
-    var workoutTypes: [HKWorkoutActivityType] = [.walking]
+    var workoutTypes: [HKWorkoutActivityType] = [.flexibility]
     var phoneViewModel = SendDataToPhone()
     var body: some View {
         VStack{
+            /*
             Button(action: {
                 if self.phoneViewModel.session.isReachable {
                     print("phone is reachable")
@@ -28,6 +29,7 @@ struct ContentView: View {
             }) {
                 Text("Test Connection")
             }
+             */
             List(workoutTypes){ workoutType in
                 NavigationLink(workoutType.name,
                                destination: SessionPagingView(),
@@ -35,12 +37,18 @@ struct ContentView: View {
                 ).padding(
                     EdgeInsets(top: 80, leading: 5, bottom: 80, trailing: 5)
                 ).font(.system(size: 24, weight: .bold))
-                    .foregroundColor(.green)
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(20)
+                    .padding(
+                        EdgeInsets(top: 10, leading: 0, bottom:80, trailing: 0)
+                        )
+                
                 
                 
             }
             .listStyle(.carousel)
-            .navigationBarTitle("Workouts")
+            .navigationBarTitle("BUDI")
             .onAppear {
                 workoutManager.requestAuthorization()
             }
@@ -65,8 +73,8 @@ extension HKWorkoutActivityType: Identifiable{
             //            return "Run"
             //        case .cycling:
             //            return "Bike"
-        case .walking:
-            return "    Stretch Arm"
+        case .flexibility:
+            return "       Therapy              "
         default:
             return ""
         }

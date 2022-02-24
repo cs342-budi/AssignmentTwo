@@ -7,6 +7,9 @@
 //
 
 import SwiftUI
+import CareKitStore
+import CareKit
+import Charts
 
 struct LiveTherapyView: View {
     
@@ -21,37 +24,20 @@ struct LiveTherapyView: View {
                 .foregroundColor(Color.black)
             
             Spacer()
-            
+            LiveTherapyChartView(entries: [
+                //x - position of a bar, y - height of a bar
+                ChartDataEntry(x: 1, y: 1),
+                ChartDataEntry(x: 2, y: 2),
+                ChartDataEntry(x: 3, y: 3),
+                ChartDataEntry(x: 4, y: 4),
+                ChartDataEntry(x: 5, y: 5)
+            ])
             Text(watchViewModel.messageText)
                 .font(.system(size: 50))
                 .bold()
             
             Spacer()
-            
-            HStack {
-                // 2
-                ForEach(0..<12) { session in
-                    // 3
-                    VStack {
-                        // 4
-                        Spacer()
-                        // 5
-                        Rectangle()
-                            .fill(Color.green)
-                            .frame(width: 20, height: CGFloat(session) * 25)
-                        // 6
-                        Text("\(String(session))")
-                            .font(.footnote)
-                            .frame(height: 20)
-                    }
-                }
-            }
         }
     }
 }
 
-struct LiveTherapyView_Previews: PreviewProvider {
-    static var previews: some View {
-        LiveTherapyView()
-    }
-}

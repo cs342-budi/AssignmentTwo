@@ -15,6 +15,8 @@ import CoreLocation
 struct ScheduleView: View {
     @State private var showingAddMenu = false
     
+    let therapyScheduleController = TherapyScheduleViewController()
+    
     var body: some View {
         VStack (alignment: .leading) {
             HStack {
@@ -33,6 +35,30 @@ struct ScheduleView: View {
             }
             
             Divider()
+            Button("Request Permission") {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }.padding()
+            
+            
+            Button("Schedule Notification") {
+                therapyScheduleController.scheduleLocal()
+            }.padding()
+            
+            AddBlockButtonView()
+                    .gesture(TapGesture().onEnded({
+                self.showingAddMenu.toggle()
+                    
+            })).sheet(isPresented: $showingAddMenu, onDismiss: {
+            }, content: {
+                AddMenuView()
+            })
+            
             ScrollView {
                 VStack (alignment: .leading) {
                 Group {
@@ -47,17 +73,7 @@ struct ScheduleView: View {
                             TimeBlock(time:"11:00", ampm:"AM")
                             
                             TimeBlock(time:"4:00", ampm:"PM")
-                           
-                            AddBlockButtonView()
-                                    .gesture(TapGesture().onEnded({
-                                self.showingAddMenu.toggle()
-                                    
-                            })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                            }, content: {
-                                AddMenuView()
-                            })
-                                    
-                                
+
                             }
                         }.padding(.leading)
                         Divider()
@@ -75,13 +91,6 @@ struct ScheduleView: View {
                                 TimeBlock(time:"11:00", ampm:"AM")
                                 TimeBlock(time:"5:00", ampm:"PM")
                                 TimeBlock(time: "8:00", ampm: "PM")
-                                AddBlockButtonView()
-                                        .gesture(TapGesture().onEnded({
-                                    self.showingAddMenu.toggle()
-                                })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                                }, content: {
-                                    AddMenuView()
-                                })
                                       
                             }.padding(.leading)
                         }
@@ -96,14 +105,7 @@ struct ScheduleView: View {
                         ScrollView (.horizontal){
                             HStack {
                                 TimeBlock(time:"8:00", ampm:"AM")
-                                AddBlockButtonView()
-                                        .gesture(TapGesture().onEnded({
-                                    self.showingAddMenu.toggle()
-                                })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                                }, content: {
-                                    AddMenuView()
-                                })
-                                      
+ 
                             }.padding(.leading)
                             
                         }
@@ -118,14 +120,7 @@ struct ScheduleView: View {
                             HStack {
                                 TimeBlock(time:"5:00", ampm:"PM")
                                 TimeBlock(time: "8:00", ampm: "PM")
-                                AddBlockButtonView()
-                                        .gesture(TapGesture().onEnded({
-                                    self.showingAddMenu.toggle()
-                                        
-                                })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                                }, content: {
-                                    AddMenuView()
-                                })
+
                             }.padding(.leading)
                         }
                         Divider()
@@ -137,14 +132,7 @@ struct ScheduleView: View {
                             .padding(.leading)
                         ScrollView (.horizontal){
                             HStack {
-                                AddBlockButtonView()
-                                        .gesture(TapGesture().onEnded({
-                                    self.showingAddMenu.toggle()
-                                        
-                                })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                                }, content: {
-                                    AddMenuView()
-                                })
+    
                             }.padding(.leading)
                         }
                         Divider()
@@ -157,14 +145,7 @@ struct ScheduleView: View {
                         ScrollView (.horizontal){
                             HStack {
                                 TimeBlock(time:"11:00", ampm:"AM")
-                                AddBlockButtonView()
-                                        .gesture(TapGesture().onEnded({
-                                    self.showingAddMenu.toggle()
-                                        
-                                })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                                }, content: {
-                                    AddMenuView()
-                                })
+                
                             }.padding(.leading)
                         }
                         Divider()
@@ -180,14 +161,7 @@ struct ScheduleView: View {
                                 
                                 TimeBlock(time:"11:00", ampm:"AM")
                                 
-                                AddBlockButtonView()
-                                        .gesture(TapGesture().onEnded({
-                                    self.showingAddMenu.toggle()
-                                        
-                                })).sheet(isPresented: $showingAddMenu, onDismiss: {
-                                }, content: {
-                                    AddMenuView()
-                                })
+                          
                              
                             }.padding(.leading)
                         }
