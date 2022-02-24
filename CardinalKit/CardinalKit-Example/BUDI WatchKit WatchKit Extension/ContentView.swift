@@ -13,12 +13,14 @@ struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     //    var workoutTypes: [HKWorkoutActivityType] = [.cycling, .running, .walking]
     var workoutTypes: [HKWorkoutActivityType] = [.flexibility]
+    @EnvironmentObject var cmManager : CoreMotionManager
     
-    var phoneViewModel = SendDataToPhone()
+    //var phoneViewModel = SendDataToPhone()
     
     var body: some View {
         VStack{
             
+            //MARK: initiate session with phone when start therapy tapped from watch
             List(workoutTypes){ workoutType in
                 NavigationLink(workoutType.name,
                                destination: SessionPagingView(),
@@ -38,8 +40,15 @@ struct ContentView: View {
             .navigationBarTitle("BUDI")
             .onAppear {
                 workoutManager.requestAuthorization()
+                cmManager.startAccelerometers()
+                if SendDataToPhone.shared.session.isReachable {
+                    print("Session reached")
+                } else {
+                    print("Session not reached.")
+                }
+                
             }
-            .onReceive(self.phoneViewModel.actionNotification){ action in
+            .onReceive(SendDataToPhone.shared.actionNotification){ action in
                 // MARK: Taylor
                 // We subscribe to *actionNotification* from the viewModel to listen for a notification
                 // then based on the message we got, we either start or stop the therapy session.
@@ -50,7 +59,7 @@ struct ContentView: View {
                             print("Starting therapy...")
                             // setting the workout type triggers it to start
                             workoutManager.selectedWorkout = workoutTypes.first
-                            
+                            cmManager.startAccelerometers()
                             
                         } else {
                             print("Therapy has already been started.")

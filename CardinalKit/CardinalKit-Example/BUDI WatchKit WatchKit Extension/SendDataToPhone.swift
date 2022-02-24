@@ -16,6 +16,9 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
     
     var session: WCSession
     
+    //MARK: changed this to singleton 
+    static let shared = SendDataToPhone()
+    
     // MARK: Taylor
     // When we recieve a message from the phone to start the workout
     // the *action* variable is set with the contents of the message.
@@ -42,11 +45,13 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    init(session: WCSession = .default){
+    // MARK: added private b/c singleton
+    private init(session: WCSession = .default){
         self.session = session
         super.init()
         self.session.delegate = self
         session.activate()
+        print("INITIALIZED SINGLETON")
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

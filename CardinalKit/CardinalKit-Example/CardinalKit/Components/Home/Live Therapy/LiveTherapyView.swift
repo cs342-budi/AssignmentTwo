@@ -24,11 +24,26 @@ struct LiveTherapyView: View {
                 .foregroundColor(Color.black)
             
             Spacer()
+            
+            /*
+            Text(watchViewModel.data).onReceive($watchViewModel.actionNotification){ action in
+                // MARK: Taylor
+                // We subscribe to *actionNotification* from the viewModel to listen for a notification
+                // then based on the message we got, we either start or stop the therapy session.
+                
+                switch action {
+                    case "data":
+                        print("this is the change " + watchViewModel.data)
+                    default:
+                        return
+                }
+                
+            }*/
 
             
-            /* Text(watchViewModel.messageText)
+            Text("This is the data: \(watchViewModel.data)")
 
-            LiveTherapyChartView(entries: [
+           /* LiveTherapyChartView(entries: [
                 //x - position of a bar, y - height of a bar
                 ChartDataEntry(x: 1, y: 1),
                 ChartDataEntry(x: 2, y: 2),
