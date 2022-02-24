@@ -14,6 +14,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
     
     @Published var messageText = ""
+    @Published var data = 0.0
     
     init(session: WCSession = .default) {
         self.session = session
@@ -30,6 +31,11 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("recieved message")
         self.messageText = message["message"] as? String ?? ""
+        
+        //MARK: testing arbitrary data
+        self.data = message["data"] as? Double ?? 0.0
+        //append to published array 
+        print(self.data)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {

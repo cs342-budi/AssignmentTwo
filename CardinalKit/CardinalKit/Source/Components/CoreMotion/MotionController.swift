@@ -234,34 +234,34 @@ class MotionController {
     
     fileprivate func startMotionUpdates() {
         
-        pedometer.startUpdates(from: Date()) { [weak self] (data: CMPedometerData?, error: Error?) in
-            
-            guard let strongSelf = self else {
-                return
-            }
-            
-            // update inactivity duration if new data comes in
-            strongSelf.updateInactivityDuration()
-            
-            if let data = data {
-                strongSelf.pedometerSemaphore.wait()
-                
-                let pedometer = PedometerPayload(fromData: data)
-                
-                let startDate = data.startDate.ISOStringFromDate()
-                let endDate = data.endDate.ISOStringFromDate()
-                pedometer.setTimestamp(wallTime: strongSelf.currentTime, timer: strongSelf.timer, startDate: startDate, endDate: endDate)
-                
-                strongSelf.pedometerItems.append(pedometer)
-                strongSelf.delegate?.pedometer(pedometer)
-                
-                if let cadence = data.currentCadence?.floatValue {
-                    self?.motionAnalyzer.report(cadence: cadence)
-                }
-                strongSelf.pedometerSemaphore.signal()
-            }
-            
-        }
+//        pedometer.startUpdates(from: Date()) { [weak self] (data: CMPedometerData?, error: Error?) in
+//            
+//            guard let strongSelf = self else {
+//                return
+//            }
+//            
+//            // update inactivity duration if new data comes in
+//            strongSelf.updateInactivityDuration()
+//            
+//            if let data = data {
+//                strongSelf.pedometerSemaphore.wait()
+//                
+//                let pedometer = PedometerPayload(fromData: data)
+//                
+//                let startDate = data.startDate.ISOStringFromDate()
+//                let endDate = data.endDate.ISOStringFromDate()
+//                pedometer.setTimestamp(wallTime: strongSelf.currentTime, timer: strongSelf.timer, startDate: startDate, endDate: endDate)
+//                
+//                strongSelf.pedometerItems.append(pedometer)
+//                strongSelf.delegate?.pedometer(pedometer)
+//                
+//                if let cadence = data.currentCadence?.floatValue {
+//                    self?.motionAnalyzer.report(cadence: cadence)
+//                }
+//                strongSelf.pedometerSemaphore.signal()
+//            }
+//            
+//        }
         
         if motionManager.isAccelerometerAvailable {
             motionManager.accelerometerUpdateInterval = 0.01
@@ -285,27 +285,27 @@ class MotionController {
             }
         }
         
-        if motionManager.isGyroAvailable {
-            motionManager.gyroUpdateInterval = 0.01
-            motionManager.startGyroUpdates(to: motionQueue, withHandler: { [weak self] (data: CMGyroData?, error: Error?) in
-                
-                guard let strongSelf = self else {
-                    return
-                }
-                
-                if let data = data {
-                    strongSelf.rawGyroSemaphore.wait()
-                    
-                    let gyro = GyroPayload(fromData: data)
-                    gyro.setTimestamp(wallTime: strongSelf.currentTime, timer: strongSelf.timer, sensorTime: data.timestamp)
-                    
-                    strongSelf.rawGyroItems.append(gyro)
-                    
-                    strongSelf.rawGyroSemaphore.signal()
-                }
-                
-            })
-        }
+//        if motionManager.isGyroAvailable {
+//            motionManager.gyroUpdateInterval = 0.01
+//            motionManager.startGyroUpdates(to: motionQueue, withHandler: { [weak self] (data: CMGyroData?, error: Error?) in
+//
+//                guard let strongSelf = self else {
+//                    return
+//                }
+//
+//                if let data = data {
+//                    strongSelf.rawGyroSemaphore.wait()
+//
+//                    let gyro = GyroPayload(fromData: data)
+//                    gyro.setTimestamp(wallTime: strongSelf.currentTime, timer: strongSelf.timer, sensorTime: data.timestamp)
+//
+//                    strongSelf.rawGyroItems.append(gyro)
+//
+//                    strongSelf.rawGyroSemaphore.signal()
+//                }
+//
+//            })
+//        }
         
         if motionManager.isDeviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 0.01

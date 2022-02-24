@@ -13,23 +13,14 @@ struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     //    var workoutTypes: [HKWorkoutActivityType] = [.cycling, .running, .walking]
     var workoutTypes: [HKWorkoutActivityType] = [.flexibility]
-    var phoneViewModel = SendDataToPhone()
+    @EnvironmentObject var cmManager : CoreMotionManager
+    
+    //var phoneViewModel = SendDataToPhone()
+    
     var body: some View {
         VStack{
-            /*
-            Button(action: {
-                if self.phoneViewModel.session.isReachable {
-                    print("phone is reachable")
-                    self.phoneViewModel.session.sendMessage(["message": "Message Received from Watch!!"], replyHandler: nil, errorHandler: { (err) in
-                        print(err.localizedDescription)
-                    })
-                } else {
-                    print("can't reach phone.")
-                }
-            }) {
-                Text("Test Connection")
-            }
-             */
+            
+            //MARK: initiate session with phone when start therapy tapped from watch
             List(workoutTypes){ workoutType in
                 NavigationLink(workoutType.name,
                                destination: SessionPagingView(),
@@ -44,13 +35,47 @@ struct ContentView: View {
                         EdgeInsets(top: 10, leading: 0, bottom:80, trailing: 0)
                         )
                 
-                
-                
             }
             .listStyle(.carousel)
             .navigationBarTitle("BUDI")
             .onAppear {
                 workoutManager.requestAuthorization()
+                cmManager.startAccelerometers()
+                if SendDataToPhone.shared.session.isReachable {
+                    print("Session reached")
+                } else {
+                    print("Session not reached.")
+                }
+                
+            }
+            .onReceive(SendDataToPhone.shared.actionNotification){ action in
+                // MARK: Taylor
+                // We subscribe to *actionNotification* from the viewModel to listen for a notification
+                // then based on the message we got, we either start or stop the therapy session.
+                
+                switch action {
+                    case "THERAPY_START":
+                        if !workoutManager.running {
+                            print("Starting therapy...")
+                            // setting the workout type triggers it to start
+                            workoutManager.selectedWorkout = workoutTypes.first
+                            cmManager.startAccelerometers()
+                            
+                        } else {
+                            print("Therapy has already been started.")
+                        }
+                        
+                    case "THERAPY_STOP":
+                        if workoutManager.running {
+                            print("Stopping therapy...")
+                            workoutManager.endWorkout()
+                        } else {
+                            print("Therapy hasn't been started.")
+                        }
+                    default:
+                        return
+                }
+                
             }
         }
     }
