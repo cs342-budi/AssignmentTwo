@@ -33,14 +33,6 @@ struct PatientIDView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("PATIENT ID").font(.system(.headline)).foregroundColor(Color(.greyText()))
-                Spacer()
-            }
-            HStack {
-                Text(self.userID).font(.system(.body)).foregroundColor(Color(.greyText()))
-                Spacer()
-            }
-            HStack {
                 Text("First Name: " + self.firstName).font(.system(.body)).foregroundColor(Color(.greyText()))
                 Spacer()
             }
