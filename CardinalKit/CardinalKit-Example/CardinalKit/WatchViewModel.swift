@@ -15,6 +15,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     
     @Published var messageText = ""
     @Published var data = 0.0
+    @Published var maxReceived : [Double] = []
     
     init(session: WCSession = .default) {
         self.session = session
@@ -34,6 +35,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         
         //MARK: testing arbitrary data
         self.data = message["data"] as? Double ?? 0.0
+        maxReceived.append(self.data);
         //append to published array 
         print("RECEIVED FROM WATCH: \(self.data)")
     }

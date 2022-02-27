@@ -81,6 +81,8 @@ class CoreMotionManager: NSObject, ObservableObject {
                                         SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
                                 }
                             }
+                            //clear array
+                            strongSelf.accelArray.removeAll()
                         }
                     strongSelf.dmUserAccelSemaphore.signal()
                     }
