@@ -33,9 +33,7 @@ struct ProgressUIChartView: UIViewRepresentable {
     }
     
     typealias UIViewType = BarChartView
-    
 }
-
 
 struct ProgressUIChartView_Previews: PreviewProvider {
     static var previews: some View {

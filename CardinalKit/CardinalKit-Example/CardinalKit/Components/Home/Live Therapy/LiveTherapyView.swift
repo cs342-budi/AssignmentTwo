@@ -43,31 +43,32 @@ struct LiveTherapyView: View {
             
             Text("This is the data: \(watchViewModel.data)")
 
-           /* LiveTherapyChartView(entries: [
+            LiveTherapyChartView(entries: [
                 //x - position of a bar, y - height of a bar
-                ChartDataEntry(x: 1, y: 1),
-                ChartDataEntry(x: 2, y: 2),
-                ChartDataEntry(x: 3, y: 3),
-                ChartDataEntry(x: 4, y: 4),
-                ChartDataEntry(x: 5, y: 5)
+                BarChartDataEntry(x: 1, y: 1),
+                BarChartDataEntry(x: 2, y: 2),
+                BarChartDataEntry(x: 3, y: 3),
+                BarChartDataEntry(x: 4, y: 4),
+                BarChartDataEntry(x: 5, y: 5)
             ])
-                .padding(.top, 30 )
-                .padding(.leading, 30)
-                .overlay(Text("Time")
-                .font(.system(size: 15))
-                .fontWeight(.medium)
-                .rotationEffect(.degrees(270))
-                .offset(x: 0.0, y: 0.0),
-                alignment: .leading)
+                .padding(.top, 20 )
+                .padding(.leading, 50)
                 .overlay(Text("Acceleration")
                 .font(.system(size: 15))
                 .fontWeight(.medium)
-                .offset(x: 0, y: 0),
+                .rotationEffect(.degrees(270))
+                .offset(x: -10.0, y: 0.0),
+                alignment: .leading)
+                .overlay(Text("Time (seconds)")
+                .font(.system(size: 15))
+                .fontWeight(.medium)
+                .offset(x: 10.0, y: 0.0),
                 alignment: .top)
+            
             Text(watchViewModel.messageText)
 
                 .font(.system(size: 50))
-                .bold() */
+                .bold()
             
             Button (action:{
                 // MARK: TAYLOR
