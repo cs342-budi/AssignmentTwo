@@ -56,7 +56,10 @@ struct HomeUIView: View {
                                 self.watchViewModel.session.sendMessage(["action": "THERAPY_START"], replyHandler: nil,         errorHandler: { (err) in
                                     print(err.localizedDescription)
                                 })
+                            } else {
+                                print ("cannot reach watch")
                             }
+                        
                             
                         }) {
                             Text("START THERAPY")
