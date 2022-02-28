@@ -49,8 +49,10 @@ struct LiveTherapyView: View {
                 BarChartDataEntry(x: 2, y: 2),
                 BarChartDataEntry(x: 3, y: 3),
                 BarChartDataEntry(x: 4, y: 4),
-                BarChartDataEntry(x: 5, y: 5)
+                BarChartDataEntry(x: 5, y: 1),
+                BarChartDataEntry(x: 6, y: 2),
             ])
+                
                 .padding(.top, 20 )
                 .padding(.leading, 50)
                 .overlay(Text("Acceleration")
