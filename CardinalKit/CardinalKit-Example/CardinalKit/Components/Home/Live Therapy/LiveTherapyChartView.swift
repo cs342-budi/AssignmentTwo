@@ -30,16 +30,18 @@ struct LiveTherapyChartView: UIViewRepresentable {
         let data = BarChartData()
         
         var maxAccelArray : [BarChartDataEntry] = []
-
+        print("in add data")
         // convert the Doubles to BarChartDataEntry
 //        maxData.suffix(maxData from maxData.count - 6)
         for i in 1...5 {
-            if i <= maxAccelArray.count {
+            if i <= maxData.count {
                 var xVal = 6 - Double(i)
                 var yVal = maxData[maxData.count - i]
                 maxAccelArray.append(BarChartDataEntry(x: xVal, y: yVal))
+                print("the y is \(yVal)")
             }
         }
+        
         let dataSet = BarChartDataSet(entries : maxAccelArray)
         dataSet.colors = [NSUIColor.green]
         dataSet.label = "My Data"
