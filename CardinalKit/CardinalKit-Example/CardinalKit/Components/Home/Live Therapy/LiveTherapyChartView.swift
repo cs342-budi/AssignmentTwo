@@ -36,7 +36,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
         for i in 1...5 {
             if i <= maxData.count {
                 var xVal = 6 - Double(i)
-                var yVal = maxData[maxData.count - i]
+                var yVal = maxData[maxData.count - i]*9.8
                 maxAccelArray.append(BarChartDataEntry(x: xVal, y: yVal))
                 print("the y is \(yVal)")
             }
