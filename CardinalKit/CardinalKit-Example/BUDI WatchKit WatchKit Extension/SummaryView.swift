@@ -22,6 +22,8 @@ struct SummaryView: View {
         return formatter
     }()
     
+    //lifecycle method
+    
     var body: some View {
 //        if workoutManager.workout == nil {
 //            ProgressView("Saving Workout")

@@ -19,22 +19,24 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            
             //MARK: initiate session with phone when start therapy tapped from watch
             List(workoutTypes){ workoutType in
-                NavigationLink(workoutType.name,
-                               destination: SessionPagingView(),
-                               tag: workoutType, selection: $workoutManager.selectedWorkout
-                ).padding(
-                    EdgeInsets(top: 80, leading: 5, bottom: 80, trailing: 5)
-                ).font(.system(size: 24, weight: .bold))
+                HStack{
+                    Spacer()
+                    NavigationLink(workoutType.name,
+                                                   destination: SessionPagingView(),
+                                                   tag: workoutType, selection: $workoutManager.selectedWorkout
+                    ).padding(
+                        EdgeInsets(top: 65, leading: 0, bottom: 65, trailing: 0)
+                    )
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(20)
+                    Spacer()
+                }.background(Color.green)
+                    .cornerRadius(15)
                     .padding(
-                        EdgeInsets(top: 10, leading: 0, bottom:80, trailing: 0)
-                        )
-                
+                        EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+                    )
             }
             .listStyle(.carousel)
             .navigationBarTitle("BUDI")

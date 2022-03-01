@@ -108,6 +108,19 @@
 	</array>
 	<key>Consent Form</key>
 	<dict>
+		<key>Custom</key>
+		<dict>
+			<key>Title</key>
+			<string>Under 18?</string>
+			<key>Summary</key>
+			<string>Please have this consent form reviewed &amp; signed by a parent or guardian before using BUDI.
+
+If you are a parent or guardian reviewing &amp; signing this consent document on behalf of your child, the language “you” herein refers to your child.</string>
+			<key>Content</key>
+			<string>Please have this consent form reviewed &amp; signed by a parent or guardian before using BUDI.
+
+If you are a parent or guardian reviewing &amp; signing this consent document on behalf of your child, the language “you” herein refers to your child.</string>
+		</dict>
 		<key>Overview</key>
 		<dict>
 			<key>Title</key>
@@ -126,7 +139,13 @@ Accordingly, BUDI uses sensors from Apple Watch &amp; tools from open-source App
 			<key>Title</key>
 			<string>Data Gathering</string>
 			<key>Summary</key>
-			<string>BUDI will ask for 1) your type of motor impairment, 2) your motion data, and 3) your Apple Health Data.</string>
+			<string>BUDI will ask for 
+
+1) your type of motor impairment,
+
+2) your motion data, and
+
+3) your Apple Health Data.</string>
 			<key>Content</key>
 			<string>BUDI will first ask you questions about you questions about your physical condition. This will help the BUDI team better understand how the digital platform affects various motor deficits seen in cerebral palsy and neuromuscular disorders.
 
@@ -155,9 +174,17 @@ Next, BUDI will ask to access your Motion Hardware Data. This will allow the BUD
 			<key>Title</key>
 			<string>Study Tasks</string>
 			<key>Summary</key>
-			<string>The study tasks are related to 1) Gross Motor Therapy and 2) Fine Motor Therapy.</string>
+			<string>The study tasks are related to
+ 
+1) Gross Motor Therapy and
+
+2) Fine Motor Therapy.</string>
 			<key>Content</key>
-			<string>The study tasks are related to 1) Gross Motor Therapy and 2) Fine Motor Therapy.</string>
+			<string>The study tasks are related to 
+
+1) Gross Motor Therapy and
+
+2) Fine Motor Therapy.</string>
 		</dict>
 		<key>Withdrawing</key>
 		<dict>

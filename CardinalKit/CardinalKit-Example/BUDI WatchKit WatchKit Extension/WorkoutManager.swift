@@ -20,6 +20,7 @@ class WorkoutManager: NSObject, ObservableObject {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }
             startWorkout(workoutType: .flexibility) //hardcoded flexibility
+            startTime = Date()
         }
     }
 
@@ -126,8 +127,15 @@ class WorkoutManager: NSObject, ObservableObject {
     
     func endWorkout() {
         session?.end()
-        
         showingSummaryView = true
+        endTime = Date()
+        let interval = endTime.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate
+        if SendDataToPhone.shared.session.isReachable {
+            //send data to phone
+            
+            print("TESTING Therapy duration data")
+            SendDataToPhone.shared.session.sendMessage(["total-duration":interval], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+        }
 //        getAccelarationMean()
     }
 
@@ -137,6 +145,8 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var activeEnergy: Double = 0
     @Published var distance: Double = 0
     @Published var workout: HKWorkout?
+    var startTime: Date = Date()
+    var endTime: Date = Date()
 
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else { return }
