@@ -14,7 +14,11 @@ import Charts
 struct LiveTherapyView: View {
     
     @ObservedObject var watchViewModel = WatchViewModel()
-    
+//
+//    @State var doubleQueue = Queue<Double>()
+//
+//    @StateObject var valuePublisher = ValuePublisher()
+//
     var body: some View {
         // 1
         VStack{
@@ -42,15 +46,9 @@ struct LiveTherapyView: View {
 
             
             Text("This is the data: \(watchViewModel.data)")
-
-            LiveTherapyChartView(entries: [
-                //x - position of a bar, y - height of a bar
-                BarChartDataEntry(x: 1, y: 1),
-                BarChartDataEntry(x: 2, y: 2),
-                BarChartDataEntry(x: 3, y: 3),
-                BarChartDataEntry(x: 4, y: 4),
-                BarChartDataEntry(x: 5, y: 5)
-            ])
+                
+            // pass in array of max accelerations into LiveTherapyChartView
+            LiveTherapyChartView(maxData: watchViewModel.maxReceived)
                 .padding(.top, 20 )
                 .padding(.leading, 50)
                 .overlay(Text("Acceleration")
