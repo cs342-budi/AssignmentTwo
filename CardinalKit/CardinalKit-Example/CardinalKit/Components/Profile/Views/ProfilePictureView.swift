@@ -7,25 +7,55 @@
 //
 
 import SwiftUI
+import Firebase
+
+class ProfilePictureViewModel: ObservableObject {
+    @Published var downloadedImage: Image?
+
+    func getImage() {
+        let storageRef = Storage.storage().reference()
+        
+        let profilePictureRef = storageRef.child("profile_pictures/profile_picture.jpg")
+        
+        profilePictureRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                print(" Error: Image could not downlioad")
+            } else {
+                let downloadedUIImage = UIImage(data: data!)
+                self.downloadedImage = Image(uiImage: downloadedUIImage!)
+
+            }
+        }
+    }
+}
 
 struct ProfilePictureView: View {
-    @State private var showingImagePicker = false
+    @StateObject private var viewModel = ProfilePictureViewModel()
+
     @State private var inputImage: UIImage?
+    @State private var showingImagePicker = false
     @State private var image: Image?
 
     var body: some View {
         ZStack {
-            if (image != nil) {
-                image?
-                               .resizable()
-                                    .scaledToFit()
-                                    .clipShape(Circle())
-            }
-            else {
-                Text("Tap to upload your profile picture")
-                    .fontWeight(.bold)
- //                   .font(.title2)
-                    .foregroundColor(.gray)
+            if let downloadedImage = viewModel.downloadedImage {
+                downloadedImage
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Circle())
+            } else {
+                if (image != nil) {
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(Circle())
+                }
+                else {
+                    Text("Tap to upload your profile picture")
+                        .fontWeight(.bold)
+     //                   .font(.title2)
+                        .foregroundColor(.gray)
+                }
             }
             Spacer()
         }
@@ -38,6 +68,9 @@ struct ProfilePictureView: View {
             }
             .sheet(isPresented: $showingImagePicker) {
                 ImagePicker(image: $inputImage)
+            }
+            .onAppear {
+                viewModel.getImage()
             }
     }
     
