@@ -15,6 +15,9 @@
 		275F71CC27B9E481005B6D18 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		275F71D127BA14AB005B6D18 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F71D027BA14AB005B6D18 /* WatchViewModel.swift */; };
 		27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */; };
+		278E856E27D028AF00E737BF /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E856A27D028A700E737BF /* GoalsView.swift */; };
+		278E857027D028C700E737BF /* SetGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E856F27D028C700E737BF /* SetGoals.swift */; };
+		278E857227D0294C00E737BF /* TherapyRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E857127D0294C00E737BF /* TherapyRingView.swift */; };
 		2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */; };
 		2B19DD9426FE1D2600649CE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9326FE1D2600649CE1 /* TestViewController.swift */; };
 		2B19DD9626FE1D2F00649CE1 /* CheckListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9526FE1D2F00649CE1 /* CheckListItemViewController.swift */; };
@@ -22,7 +25,7 @@
 		2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B932F83276BF8D300AB3A02 /* CKReviewConsentDocument.swift */; };
 		2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328226C2CC4E00C4636E /* CkResearchSurveysManager.swift */; };
 		2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328426C30F2E00C4636E /* CloudTaskItem.swift */; };
-		2BF6451826C1D0040020C206 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		2BF6451826C1D0040020C206 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6451F26C1DBE70020C206 /* CK_ORKSerialization.swift */; };
 		2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */; };
 		333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DABED27B3645B0032D213 /* UserDefaultsKeys.swift */; };
@@ -230,6 +233,9 @@
 		275F719727B9D526005B6D18 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		275F71D027BA14AB005B6D18 /* WatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
 		27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskListItemView.swift; sourceTree = "<group>"; };
+		278E856A27D028A700E737BF /* GoalsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsView.swift; path = CardinalKit/Components/Profile/Goals/GoalsView.swift; sourceTree = SOURCE_ROOT; };
+		278E856F27D028C700E737BF /* SetGoals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetGoals.swift; path = CardinalKit/Components/Profile/Goals/SetGoals.swift; sourceTree = SOURCE_ROOT; };
+		278E857127D0294C00E737BF /* TherapyRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyRingView.swift; sourceTree = "<group>"; };
 		2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonToSurvey.swift; sourceTree = "<group>"; };
 		2B19DD9326FE1D2600649CE1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2B19DD9526FE1D2F00649CE1 /* CheckListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListItemViewController.swift; sourceTree = "<group>"; };
@@ -661,6 +667,8 @@
 		8E6E1E3025353AA70024B8DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				278E856A27D028A700E737BF /* GoalsView.swift */,
+				278E856F27D028C700E737BF /* SetGoals.swift */,
 				8E6E1E1F253529760024B8DF /* DocumentView.swift */,
 				9553F50827B0817200DF7191 /* CareTeamView.swift */,
 				8E6E1E19253528450024B8DF /* WithdrawView.swift */,
@@ -825,6 +833,7 @@
 			children = (
 				95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */,
 				7643165027C176300036BE83 /* ProgressUIChartView.swift */,
+				278E857127D0294C00E737BF /* TherapyRingView.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -1231,6 +1240,7 @@
 				8E6E1E14253520440024B8DF /* PasscodeViewController.swift in Sources */,
 				2B19DD9626FE1D2F00649CE1 /* CheckListItemViewController.swift in Sources */,
 				2B19DD9426FE1D2600649CE1 /* TestViewController.swift in Sources */,
+				278E857227D0294C00E737BF /* TherapyRingView.swift in Sources */,
 				E29143FC24E74AD100EE97B2 /* LaunchUIView.swift in Sources */,
 				2B8FB80427552B02000B2D7B /* CKMultipleSignInStep.swift in Sources */,
 				8EA6648725930B6B00B6A45A /* CKHealthRecordsStepViewController.swift in Sources */,
@@ -1254,6 +1264,7 @@
 				8E9CDFAE2592B79900C8A228 /* Metrics.swift in Sources */,
 				95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */,
 				27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */,
+				278E856E27D028AF00E737BF /* GoalsView.swift in Sources */,
 				9590DFAD27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift in Sources */,
 				8E6E1E092534F4100024B8DF /* OnboardingViewController.swift in Sources */,
 				8E7FFFB425DCE9B7002982B4 /* CKUploadToGCPTaskViewControllerDelegate.swift in Sources */,
@@ -1278,7 +1289,7 @@
 				8E7FFFB825DE350A002982B4 /* CoffeeUIView.swift in Sources */,
 				7643165127C176300036BE83 /* ProgressUIChartView.swift in Sources */,
 				9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */,
-				2BF6451826C1D0040020C206 /* BuildFile in Sources */,
+				2BF6451826C1D0040020C206 /* (null) in Sources */,
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
 				2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */,
@@ -1319,6 +1330,7 @@
 				8E6E1E16253524500024B8DF /* WithdrawalViewController.swift in Sources */,
 				E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */,
 				8E6E1E2A2535398D0024B8DF /* HelpView.swift in Sources */,
+				278E857027D028C700E737BF /* SetGoals.swift in Sources */,
 				8E9CDED02591AC4A00C8A228 /* CKHealthKitManager.swift in Sources */,
 				8E0A43C2244A4A0400656518 /* ConsentDocument.swift in Sources */,
 			);

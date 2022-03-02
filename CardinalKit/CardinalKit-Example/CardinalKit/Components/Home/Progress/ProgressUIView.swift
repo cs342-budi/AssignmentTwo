@@ -13,6 +13,8 @@ import Charts
 
 struct ProgressUIView: View {
     
+    let therapyProgress = [30, 20, 10, 50, 40]
+    
     var body: some View {
         // 1
         VStack{
@@ -20,6 +22,19 @@ struct ProgressUIView: View {
                 .fontWeight(.heavy)
                 .font(.title2)
                 .foregroundColor(Color.black)
+            
+            Spacer()
+            
+            ScrollView(.horizontal) {
+                HStack(spacing: 20) {
+                    ForEach(therapyProgress, id: \.self) { percent in
+                        TherapyRingView(ringWidth: 5, percent: Double(percent),
+                                        backgroundColor: Color.green.opacity(0.2),
+                                        foregroundColors: [.green, .blue])
+                            .frame(width: 50, height: 50)
+                    }
+                }
+            }
             
             Spacer()
             
@@ -31,8 +46,6 @@ struct ProgressUIView: View {
                 BarChartDataEntry(x: 4, y: 4),
                 BarChartDataEntry(x: 5, y: 5)
             ])
-            
-            Spacer()
         }
     }
 }
