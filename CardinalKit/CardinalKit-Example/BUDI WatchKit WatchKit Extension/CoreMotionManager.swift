@@ -44,16 +44,7 @@ class CoreMotionManager: NSObject, ObservableObject {
         self.accelaration += 1
        // Make sure the accelerometer hardware is available.
 
-      print("INSIDE START ACCEL")
-        print(accelArray)
         
-        
-        //MARK: Testing arbitrary data
-        if SendDataToPhone.shared.session.isReachable {
-            //send data to phone
-            print("TESTING ARBITRARY DATA ")
-            SendDataToPhone.shared.session.sendMessage(["data": 123], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-    }
        
         if self.motion.isDeviceMotionAvailable {
             print("MOTION AVAILABLE")

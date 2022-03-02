@@ -21,6 +21,7 @@ class ConsentDocument: ORKConsentDocument {
         
         let sectionTypes: [ORKConsentSectionType] = [
             // see ORKConsentSectionType.description for CKConfiguration.plist keys
+            .custom, //"Custom"
             .overview, // "Overview"
             .dataGathering, // "DataGathering"
             .privacy, // "Privacy"
