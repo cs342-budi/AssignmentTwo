@@ -43,26 +43,28 @@ struct ImagePicker: UIViewControllerRepresentable {
 
             if provider.canLoadObject(ofClass: UIImage.self) {
                 provider.loadObject(ofClass: UIImage.self) { image, _ in
-                    self.parent.image = image as? UIImage
-                    
-                    let profileImagesRef = Storage.storage().reference().child("profile_pictures/profile_picture.jpg")
-                    
-                    // convert image to data
-                    guard let uploadData = (image as! UIImage).jpegData(compressionQuality: 0.3) else { return }
-                    
-                    // save data to Firebase storage
-                    profileImagesRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-                        if let error = error { return }
+                    if (image != nil) {
+                        self.parent.image = image as? UIImage
 
-                        // After the image has been successfully uploaded we need to grab its download url
-                        profileImagesRef.downloadURL(completion: { (downloadURL, error) in
+                        let profileImagesRef = Storage.storage().reference().child("profile_pictures/profile_picture.jpg")
+                        
+                        // convert image to data
+                        guard let uploadData = (image as! UIImage).jpegData(compressionQuality: 0.3) else { return }
+                        
+                        // save data to Firebase storage
+                        profileImagesRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                             if let error = error { return }
 
-                            guard let downloadURL = downloadURL else { return }
+                            // After the image has been successfully uploaded we need to grab its download url
+                            profileImagesRef.downloadURL(completion: { (downloadURL, error) in
+                                if let error = error { return }
 
-                            print("successfully fetched download URL: \(downloadURL.absoluteString)")
+                                guard let downloadURL = downloadURL else { return }
+
+                                print("successfully fetched download URL: \(downloadURL.absoluteString)")
+                            })
                         })
-                    })
+                    }
                     
                 }
             }
