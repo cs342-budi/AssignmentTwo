@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // (2) check if this is the first time
         // that the app runs!
         cleanIfFirstRun()
-        
+    
         // (3) initialize CardinalKit API
         CKAppLaunch()
         
