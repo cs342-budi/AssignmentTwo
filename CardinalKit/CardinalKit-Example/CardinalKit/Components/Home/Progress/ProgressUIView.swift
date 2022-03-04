@@ -13,25 +13,27 @@ import Charts
 
 struct ProgressUIView: View {
     
-    let therapyProgress = [30, 20, 10, 50, 40]
+    // Dummy data
+    let therapyProgress = [10, 20, 30, 40, 50]
     
     var body: some View {
         // 1
         VStack{
-            Text("My Games")
-                .fontWeight(.heavy)
-                .font(.title2)
-                .foregroundColor(Color.black)
+//            Text("My activity in the past 7 days")
+//                .fontWeight(.heavy)
+//                .font(.title2)
+//                .foregroundColor(Color.black)
             
             Spacer()
             
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
+                    Spacer()
                     ForEach(therapyProgress, id: \.self) { percent in
                         TherapyRingView(ringWidth: 5, percent: Double(percent),
                                         backgroundColor: Color.green.opacity(0.2),
-                                        foregroundColors: [.green, .blue])
-                            .frame(width: 50, height: 50)
+                                        foregroundColors: [.blue, .green])
+                            .frame(width: 55, height: 55)
                     }
                 }
             }
