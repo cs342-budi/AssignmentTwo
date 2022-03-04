@@ -28,10 +28,6 @@ struct ProfileUIView: View {
                 }
                 
                 Section {
-                    PatientIDView()
-                }.listRowBackground(Color.white)
-                
-                Section {
                     VStack (alignment: .leading) {
                         SurveyView()
                         TherapySettingsView()

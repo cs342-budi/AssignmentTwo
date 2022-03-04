@@ -48,9 +48,17 @@ struct ProfilePictureView: View {
     @State private var inputImage: UIImage?
     @State private var showingImagePicker = false
     @State private var image: Image?
+    var firstName: String = ""
+    
+    init() {
+        let defaults = UserDefaults.standard
+        if let first_name = defaults.string(forKey: DefaultsKeys.FirstName) {
+            self.firstName = first_name
+        }
+    }
     
     var body: some View {
-        ZStack {
+        VStack {
             switch viewModel.state {
                 case .idle:
                     Color.clear.onAppear(perform: viewModel.fetchImage)
@@ -65,7 +73,6 @@ struct ProfilePictureView: View {
                     } else {
                         Text("Tap to upload your profile picture")
                             .fontWeight(.bold)
-         //                   .font(.title2)
                             .foregroundColor(.gray)
                     }
                 case .loaded:
@@ -78,6 +85,11 @@ struct ProfilePictureView: View {
                     }
             }
             Spacer()
+            Text(self.firstName)
+                .foregroundColor(Color(.greyText()))
+                .fontWeight(.heavy)
+                .font(.title2)
+            Spacer()
         }
             .onTapGesture {
                 showingImagePicker = true
@@ -88,7 +100,6 @@ struct ProfilePictureView: View {
             .sheet(isPresented: $showingImagePicker) {
                 ImagePicker(image: $inputImage)
             }
-            
     }
     
     func loadImage() {
