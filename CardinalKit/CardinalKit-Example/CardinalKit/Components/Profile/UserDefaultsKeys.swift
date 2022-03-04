@@ -12,4 +12,5 @@ struct DefaultsKeys {
     static let Birthday = "birthday"
     static let FirstName = "first_name"
     static let LastName = "last_name"
+    static let Image = "image"
 }

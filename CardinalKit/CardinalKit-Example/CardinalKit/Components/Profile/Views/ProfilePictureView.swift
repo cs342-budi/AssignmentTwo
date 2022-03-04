@@ -22,23 +22,32 @@ class ProfilePictureViewModel: ObservableObject {
 
     func fetchImage() {
         state = .loading
-        
-        let storageRef = Storage.storage().reference()
-
-        let profilePictureRef = storageRef.child("profile_pictures/profile_picture.jpg")
-
-        profilePictureRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                print(" Error: Image could not downlioad")
-                self.state = .failed
-            } else {
-                DispatchQueue.main.async {
-                    let downloadedUIImage = UIImage(data: data!)
-                    self.downloadedImage = Image(uiImage: downloadedUIImage!)
-                    self.state = .loaded
-                }
-            }
+        let defaults = UserDefaults.standard
+        let imageData = defaults.object(forKey: DefaultsKeys.Image)
+        if (imageData != nil) {
+            let downloadedUIImage = UIImage(data: (imageData as! NSData) as Data)
+            self.downloadedImage = Image(uiImage: downloadedUIImage!)
+            state = .loaded
+        } else {
+            state = .failed
         }
+        
+//        let storageRef = Storage.storage().reference()
+//
+//        let profilePictureRef = storageRef.child("profile_pictures/profile_picture.jpg")
+//
+//        profilePictureRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+//            if let error = error {
+//                print(" Error: Image could not downlioad")
+//                self.state = .failed
+//            } else {
+//                DispatchQueue.main.async {
+//                    let downloadedUIImage = UIImage(data: data!)
+//                    self.downloadedImage = Image(uiImage: downloadedUIImage!)
+//                    self.state = .loaded
+//                }
+//            }
+//        }
     }
 }
 
@@ -85,20 +94,23 @@ struct ProfilePictureView: View {
                     }
             }
             Spacer()
-            Text(self.firstName)
-                .foregroundColor(Color(.greyText()))
-                .fontWeight(.heavy)
-                .font(.title2)
-            Spacer()
+
+            if (viewModel.state == .loaded) {
+                Text(self.firstName)
+                    .foregroundColor(Color(.greyText()))
+                    .fontWeight(.heavy)
+                    .font(.title2)
+                Spacer()
+            }
         }
             .onTapGesture {
                 showingImagePicker = true
             }
+            .sheet(isPresented: $showingImagePicker, onDismiss: viewModel.fetchImage) {
+                ImagePicker(image: $inputImage)
+            }
             .onChange(of: inputImage) {
                 _ in loadImage()
-            }
-            .sheet(isPresented: $showingImagePicker) {
-                ImagePicker(image: $inputImage)
             }
     }
     

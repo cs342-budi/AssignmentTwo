@@ -12,7 +12,7 @@ import Firebase
 
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
-
+    
     func makeUIViewController(context: Context) -> PHPickerViewController {
         var config = PHPickerConfiguration()
         config.filter = .images
@@ -50,6 +50,9 @@ struct ImagePicker: UIViewControllerRepresentable {
                         
                         // convert image to data
                         guard let uploadData = (image as! UIImage).jpegData(compressionQuality: 0.3) else { return }
+                         
+                        let defaults = UserDefaults.standard
+                        defaults.set(uploadData, forKey: DefaultsKeys.Image)
                         
                         // save data to Firebase storage
                         profileImagesRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
