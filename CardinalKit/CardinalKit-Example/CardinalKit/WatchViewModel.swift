@@ -40,7 +40,14 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
 //        let test_json = ["totalDuration": 10]
         print("RECEIVED FROM WATCH: \(self.data)")
         let uuid = UUID().uuidString
-        try! CKSendHelper.sendToFirestoreWithUUID(json: ["total-duration": message["total-duration"]], collection: "therapy-sessions", withIdentifier: uuid)
+        
+        // get date
+        let currDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        let formattedDate = dateFormatter.string(from: currDate)
+        
+        try! CKSendHelper.sendToFirestoreWithUUID(json: ["total-duration": message["total-duration"], "date": formattedDate], collection: "therapy-sessions", withIdentifier: uuid)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
