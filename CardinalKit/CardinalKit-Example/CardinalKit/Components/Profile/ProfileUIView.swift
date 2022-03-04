@@ -11,7 +11,7 @@ import SwiftUI
 struct ProfileUIView: View {
     let color: Color
     let config = CKPropertyReader(file: "CKConfiguration")
-    
+
     init(color: Color) {
         self.color = color
     }

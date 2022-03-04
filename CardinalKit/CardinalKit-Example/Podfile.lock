@@ -402,6 +402,7 @@ PODS:
   - Realm/Headers (10.7.2)
   - RealmSwift (10.7.2):
     - Realm (= 10.7.2)
+  - ResearchKit (2.1.0-beta)
   - SAMKeychain (1.5.3)
   - SwiftyJSON (4.1.0)
   - Zip (1.1.0)
@@ -417,6 +418,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleSignIn
   - Granola (from `https://github.com/CardinalKit/Granola.git`, branch `main`)
+  - ResearchKit (from `https://github.com/ResearchKit/ResearchKit.git`, branch `main`)
 
 SPEC REPOS:
   trunk:
@@ -463,11 +465,17 @@ EXTERNAL SOURCES:
   Granola:
     :branch: main
     :git: https://github.com/CardinalKit/Granola.git
+  ResearchKit:
+    :branch: main
+    :git: https://github.com/ResearchKit/ResearchKit.git
 
 CHECKOUT OPTIONS:
   Granola:
     :commit: 4b6a421bab81bea5fad4b124b0441b3dd2d82c6b
     :git: https://github.com/CardinalKit/Granola.git
+  ResearchKit:
+    :commit: 249eee5dfb03bd3a19496d5f9ab8249d01ea7b95
+    :git: https://github.com/ResearchKit/ResearchKit.git
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -505,10 +513,11 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
   RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
+  ResearchKit: 9d6981b42c8633aa64097f4490be65abf39c350a
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 62e43246bb142ba5a53d6ae384ca7f2983929252
+PODFILE CHECKSUM: e9c2e31618effef8d4d0ba57aaec0623e06fdb41
 
 COCOAPODS: 1.11.2
