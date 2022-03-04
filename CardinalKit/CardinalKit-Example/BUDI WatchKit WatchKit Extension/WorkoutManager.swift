@@ -9,15 +9,18 @@ import Foundation
 import HealthKit
 import SwiftUI
 import simd
+import CoreMotion
 
 class WorkoutManager: NSObject, ObservableObject {
     
-    var phoneViewModel = SendDataToPhone()
+    //var phoneViewModel = SendDataToPhone()
+    @EnvironmentObject var cmMotionManager: CoreMotionManager
     
     var selectedWorkout: HKWorkoutActivityType? {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }
-            startWorkout(workoutType: selectedWorkout)
+            startWorkout(workoutType: .flexibility) //hardcoded flexibility
+            startTime = Date()
         }
     }
 
@@ -36,13 +39,14 @@ class WorkoutManager: NSObject, ObservableObject {
     // Start the workout.
     func startWorkout(workoutType: HKWorkoutActivityType) {
         let configuration = HKWorkoutConfiguration()
-        configuration.activityType = workoutType
+        configuration.activityType = .flexibility //hardcoded
         configuration.locationType = .outdoor
 
         // Create the session and obtain the workout builder.
         do {
             session = try HKWorkoutSession(healthStore: healthStore, configuration: configuration)
             builder = session?.associatedWorkoutBuilder()
+            
         } catch {
             // Handle any exceptions.
             return
@@ -60,7 +64,17 @@ class WorkoutManager: NSObject, ObservableObject {
         let startDate = Date()
         session?.startActivity(with: startDate)
         builder?.beginCollection(withStart: startDate) { (success, error) in
+            
             // The workout has started.
+            
+            //MARK: Tried to insert sending data to phone
+//            if self.phoneViewModel.session.isReachable {
+//                //send data to phone
+//                print("SENDING DATA TO PHONE")
+//                self.phoneViewModel.session.sendMessage(["data": self.cmMotionManager.accelaration], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+//            }
+            
+            
         }
     }
 
@@ -113,8 +127,15 @@ class WorkoutManager: NSObject, ObservableObject {
     
     func endWorkout() {
         session?.end()
-        
         showingSummaryView = true
+        endTime = Date()
+        let interval = endTime.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate
+        if SendDataToPhone.shared.session.isReachable {
+            //send data to phone
+            
+            print("TESTING Therapy duration data")
+            SendDataToPhone.shared.session.sendMessage(["total-duration":interval], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+        }
 //        getAccelarationMean()
     }
 
@@ -124,6 +145,8 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var activeEnergy: Double = 0
     @Published var distance: Double = 0
     @Published var workout: HKWorkout?
+    var startTime: Date = Date()
+    var endTime: Date = Date()
 
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else { return }

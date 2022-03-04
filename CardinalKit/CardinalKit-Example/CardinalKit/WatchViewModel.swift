@@ -14,6 +14,8 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
     
     @Published var messageText = ""
+    @Published var data = 0.0
+    @Published var maxReceived : [Double] = []
     
     init(session: WCSession = .default) {
         self.session = session
@@ -30,6 +32,15 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("recieved message")
         self.messageText = message["message"] as? String ?? ""
+        
+        //MARK: testing arbitrary data
+        self.data = message["data"] as? Double ?? 0.0
+        maxReceived.append(self.data);
+        //append to published array
+//        let test_json = ["totalDuration": 10]
+        print("RECEIVED FROM WATCH: \(self.data)")
+        let uuid = UUID().uuidString
+        try! CKSendHelper.sendToFirestoreWithUUID(json: ["total-duration": message["total-duration"]], collection: "therapy-sessions", withIdentifier: uuid)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
