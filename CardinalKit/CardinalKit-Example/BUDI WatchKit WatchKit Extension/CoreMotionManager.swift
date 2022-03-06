@@ -61,7 +61,7 @@ class CoreMotionManager: NSObject, ObservableObject {
                         let xVal = data.userAcceleration.x
                         strongSelf.accelArray.append(xVal)
                         print("THIS IS THE XVAL \(xVal)")
-                        if strongSelf.accelArray.count > 300 { //60 * 5
+                        if strongSelf.accelArray.count > 60 { //60 * 1 (once a second)
                             if let max = strongSelf.accelArray.max() {
                                 self?.maxArray.append(max)
                                 self?.accelaration = max

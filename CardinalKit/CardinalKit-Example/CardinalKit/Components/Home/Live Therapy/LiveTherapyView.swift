@@ -19,16 +19,33 @@ struct LiveTherapyView: View {
 //
 //    @StateObject var valuePublisher = ValuePublisher()
 //
+    @State private var showingTherapyVideos = false
+    
     var body: some View {
+        
         // 1
         VStack{
-            Text("My Live Therapy Tracker")
-                .fontWeight(.heavy)
-                .font(.title2)
-                .foregroundColor(Color.black)
-            
             Spacer()
             
+   
+
+            
+            ViewInstructionsButton()
+                    .gesture(TapGesture().onEnded({
+                self.showingTherapyVideos.toggle()
+                    
+            })).sheet(isPresented: $showingTherapyVideos, onDismiss: {
+            }, content: {
+                TherapyInstructionsView()
+            })
+            
+//            Text("My Live Therapy Tracker")
+//                .fontWeight(.heavy)
+//                .font(.title2)
+//                .foregroundColor(Color.black)
+//
+//            Spacer()
+//
             /*
             Text(watchViewModel.data).onReceive($watchViewModel.actionNotification){ action in
                 // MARK: Taylor
@@ -45,7 +62,7 @@ struct LiveTherapyView: View {
             }*/
 
             
-            Text("This is the data: \(watchViewModel.data)")
+//            Text("This is the data: \(watchViewModel.data)")
                 
             // pass in array of max accelerations into LiveTherapyChartView
             LiveTherapyChartView(maxData: watchViewModel.maxReceived)
@@ -61,13 +78,16 @@ struct LiveTherapyView: View {
                 .font(.system(size: 15))
                 .fontWeight(.medium)
                 .offset(x: 10.0, y: 0.0),
-                alignment: .top)
+                alignment: .bottom)
             
             Text(watchViewModel.messageText)
 
                 .font(.system(size: 50))
                 .bold()
             
+            HStack {
+                Spacer()
+                
             Button (action:{
                 // MARK: TAYLOR
                 // check if the watch is reachable
@@ -83,13 +103,15 @@ struct LiveTherapyView: View {
                     .fontWeight(.heavy)
                     .font(.title2)
                     .foregroundColor(.white)
-            }
+            }.frame(maxWidth: .infinity)
             .padding()
-            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.2)
+            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.2)
             .background(Color.red)
-            .cornerRadius(10)
-            
+            .cornerRadius(10).navigationBarTitle("Live Therapy Tracker")
+                
+                Spacer()
+            }
             Spacer()
         }
     }
