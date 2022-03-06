@@ -62,17 +62,18 @@ struct LiveTherapyChartView: UIViewRepresentable {
 //        }
         //Option B: live data grows from left & resets every at the end of the x axis, where limits go from 0 to <dataViewLengh>
         let dataViewLength = 10
+
         for i in 1...dataViewLength {
               if dataViewLength <= maxData.count {
                 //let xVal = Double(dataViewLength - i + 1)
                 let xVal = Double(i)
-                let yVal = maxData[maxData.count + i - dataViewLength - 1]*9.8
+                let yVal = (maxData[maxData.count + i - dataViewLength - 1]*9.8)
                 maxAccelArray.append(ChartDataEntry(x: xVal, y: yVal))
-                
+                print(“the y is \(yVal)“)
               } else {
                 if dataViewLength - i < maxData.count {
                   let xVal = Double(i)
-                  let yVal = maxData[dataViewLength-i]*9.8
+                  let yVal = (maxData[maxData.count - dataViewLength + i - 1]*9.8)
                   maxAccelArray.append(ChartDataEntry(x: xVal, y: yVal))
                 } else {
                   let xVal = Double(i)
@@ -83,18 +84,19 @@ struct LiveTherapyChartView: UIViewRepresentable {
         }
         
         let dataSet = LineChartDataSet(entries : maxAccelArray)
+        dataSet.colors = [NSUIColor(red: 205.0/255.0, green: 153.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        let gradientColors = [UIColor.green.cgColor, UIColor.clear.cgColor] as CFArray // Colors of the gradient
+        let colorLocations:[CGFloat] = [1.0, 0.0] // Positioning of the gradient
+        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
+        dataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+        dataSet.drawFilledEnabled = true // Draw the Gradient
+        //dataSet.label = “My Data”
         dataSet.mode = .cubicBezier
-        dataSet.fill = Fill(color: .green)
-        dataSet.fillAlpha = 0.8
+        //dataSet.fill = Fill(color: .green)
+        //dataSet.fillAlpha = 0.8
         dataSet.lineWidth = 4
         dataSet.drawCirclesEnabled = false
         dataSet.drawFilledEnabled = true
-      
-     
-
-        dataSet.colors = [NSUIColor.green]
-        dataSet.label = "My Data"
-        data.addDataSet(dataSet)
         return data
     }
     
