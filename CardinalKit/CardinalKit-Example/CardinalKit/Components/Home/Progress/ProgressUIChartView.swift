@@ -24,27 +24,31 @@ class ProgressUIChartViewModel: ObservableObject {
         let docRef = db.collection("studies").document("edu.stanford.budi.blynn").collection("users").document(currUser!.uid).collection("Dummy-therapy-session")
         
         //only want to grab documents from last 7 days
-        let currDate = Date().timeIntervalSince1970
+        let currDate = Date()
         let startDate = Calendar.current.date(byAdding: .day, value: -7, to: currDate)!.timeIntervalSince1970
+        
+        
+        
         // possible way to convert date to epochs: currDate.timeIntervalSince1970
         
         
         docRef.whereField("Date", isGreaterThan: startDate).whereField("Date", isLessThan: currDate).getDocuments { (snapshot, error) in
             
-            //for document in snapshot?.documents {
-                //document.get("date")
-            //}
+            for document in snapshot!.documents {
+                document.get("date")
+                print(document.documentID)
+            }
             
-            //if (document != nil) && document.get("date") == currDate {
-                // do something
-                // modelData[document.get("date")] = document.get("total_duration")
+//            if (document != nil) && document.get("date") == currDate {
+//                 do something
+//                 modelData[document.get("date")] = document.get("total_duration")
                 
-                // 1 . compile multiple values from 1 day into 1 summed value
-                // 2. write the value to our modelData Dictionary
-            //}
+                 //1 . compile multiple values from 1 day into 1 summed value
+                 //2. write the value to our modelData Dictionary
+            }
         }
     }
-}
+
 
 struct ProgressUIChartView: UIViewRepresentable {
     @ObservedObject var viewModel = ProgressUIChartViewModel()
