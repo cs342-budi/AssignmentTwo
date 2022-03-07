@@ -29,23 +29,24 @@ struct HomeUIView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Image("budi-green")
-                    .resizable()
-                    .frame(width: 160, height: 40)
-                    .scaledToFit()
-                    .padding(.bottom)
-                    .padding(.leading)
-                Spacer()
-                Image("budi-art")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 50)
-                    .padding(.bottom)
-                    .padding(.trailing)
-            }
             
             NavigationView {
+                VStack{
+                HStack {
+                    Image("budi-green")
+                        .resizable()
+                        .frame(width: 160, height: 40)
+                        .scaledToFit()
+                        .padding(.bottom)
+                        .padding(.leading)
+                    Spacer()
+                    Image("budi-art")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 50)
+                        .padding(.bottom)
+                        .padding(.trailing)
+                }
                 List {
                     ZStack {
                         Button (action:{
@@ -154,9 +155,11 @@ struct HomeUIView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarHidden(true)
 
+
             }
             Spacer()
            
+            }
         
         }.padding(.top)
     

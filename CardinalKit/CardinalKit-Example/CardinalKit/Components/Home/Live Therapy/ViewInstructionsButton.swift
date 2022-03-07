@@ -31,12 +31,12 @@ struct ViewInstructionsButton: View {
                     .foregroundColor(Color.white)
                
             }
-            .frame(maxWidth: .infinity)
-            .padding(Metrics.PADDING_VERTICAL_MAIN*3.2)
-            .background(self.color)
+            .frame(maxWidth: 250)
+            .padding(Metrics.PADDING_VERTICAL_MAIN*2)
+            .background(Color.gray)
             .cornerRadius(10)
-            .padding(.leading)
-            .padding(.trailing)
+            .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
+            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
  
             
         }.sheet(isPresented: $showingTherapyVideos) {

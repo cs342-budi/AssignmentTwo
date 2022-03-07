@@ -69,7 +69,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
                 let xVal = Double(i)
                 let yVal = (maxData[maxData.count + i - dataViewLength - 1]*9.8)
                 maxAccelArray.append(ChartDataEntry(x: xVal, y: yVal))
-                print(“the y is \(yVal)“)
+              
               } else {
                 if dataViewLength - i < maxData.count {
                   let xVal = Double(i)

@@ -25,11 +25,7 @@ struct LiveTherapyView: View {
         
         // 1
         VStack{
-            Spacer()
-            
-   
-
-            
+            Spacer(minLength: Metrics.PADDING_VERTICAL_MAIN * 2)
             ViewInstructionsButton()
                     .gesture(TapGesture().onEnded({
                 self.showingTherapyVideos.toggle()
@@ -103,17 +99,18 @@ struct LiveTherapyView: View {
                     .fontWeight(.heavy)
                     .font(.title2)
                     .foregroundColor(.white)
-            }.frame(maxWidth: .infinity)
-            .padding()
-            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.2)
-            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.2)
+            }
+            .frame(maxWidth: 250)
+            .padding(Metrics.PADDING_VERTICAL_MAIN*2)
             .background(Color.red)
-            .cornerRadius(10).navigationBarTitle("Live Therapy Tracker")
-                
+            .cornerRadius(10)
+            .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
+            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5).navigationBarTitle("Live Therapy Tracker")
+     
                 Spacer()
             }
             Spacer()
-        }
+        }.background(Color.white)
     }
 }
 
