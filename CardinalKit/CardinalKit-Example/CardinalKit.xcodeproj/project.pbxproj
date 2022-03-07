@@ -117,11 +117,6 @@
 		8EA664B2259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */; };
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
-		9515CC2F27D58F6800749E09 /* squeeze.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9515CC2927D58F6800749E09 /* squeeze.mov */; };
-		9515CC3127D58F6800749E09 /* fingers.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9515CC2E27D58F6800749E09 /* fingers.mov */; };
-		9515CC3327D58FC700749E09 /* pushUpWallmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9515CC3227D58FC700749E09 /* pushUpWallmov.mov */; };
-		9515CC3527D58FD500749E09 /* upDownmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9515CC3427D58FD400749E09 /* upDownmov.mov */; };
-		9515CC3727D590D100749E09 /* backCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9515CC3627D590D000749E09 /* backCircles.mov */; };
 		954796F027B3A6D7006D5D02 /* TherapySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */; };
 		954796F627B3AC3B006D5D02 /* TimeBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796F527B3AC3B006D5D02 /* TimeBlockView.swift */; };
 		954796FA27B3AD46006D5D02 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796F927B3AD46006D5D02 /* ScheduleView.swift */; };
@@ -138,11 +133,6 @@
 		95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */; };
 		95ECF81D27D44A4F00763452 /* TherapyInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */; };
 		95ECF82227D44B1D00763452 /* ViewInstructionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */; };
-		95ECF82827D56EAB00763452 /* armAcrossBody.mov in Resources */ = {isa = PBXBuildFile; fileRef = 95ECF82427D56EAB00763452 /* armAcrossBody.mov */; };
-		95ECF82A27D5732B00763452 /* armOutCropped.mov in Resources */ = {isa = PBXBuildFile; fileRef = 95ECF82927D5732600763452 /* armOutCropped.mov */; };
-		95ECF82C27D5755500763452 /* armUpCropped.mov in Resources */ = {isa = PBXBuildFile; fileRef = 95ECF82B27D5755100763452 /* armUpCropped.mov */; };
-		95ECF83027D576D800763452 /* forwardArmCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 95ECF82F27D576D700763452 /* forwardArmCircles.mov */; };
-		95ECF83227D5778700763452 /* backwardArmCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 95ECF83127D5778000763452 /* backwardArmCircles.mov */; };
 		BFDDE54E95C46F253E504CBF /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEAE98950F5F43B8C8D2BC1 /* Pods_CardinalKit_Example.framework */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
@@ -356,11 +346,6 @@
 		8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKCareKitRemoteSyncWithFirestore.swift; sourceTree = "<group>"; };
 		8EA664B32594387900B6A45A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
-		9515CC2927D58F6800749E09 /* squeeze.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = squeeze.mov; path = ../../../../../../../../Documents/squeeze.mov; sourceTree = "<group>"; };
-		9515CC2E27D58F6800749E09 /* fingers.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = fingers.mov; path = ../../../../../../../../Documents/fingers.mov; sourceTree = "<group>"; };
-		9515CC3227D58FC700749E09 /* pushUpWallmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = pushUpWallmov.mov; path = ../../../../../../../../Documents/pushUpWallmov.mov; sourceTree = "<group>"; };
-		9515CC3427D58FD400749E09 /* upDownmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = upDownmov.mov; path = ../../../../../../../../Documents/upDownmov.mov; sourceTree = "<group>"; };
-		9515CC3627D590D000749E09 /* backCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = backCircles.mov; path = ../../../../../../../../Documents/backCircles.mov; sourceTree = "<group>"; };
 		954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapySettingsView.swift; sourceTree = "<group>"; };
 		954796F527B3AC3B006D5D02 /* TimeBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockView.swift; sourceTree = "<group>"; };
 		954796F927B3AD46006D5D02 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -378,11 +363,6 @@
 		95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyView.swift; sourceTree = "<group>"; };
 		95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyInstructionsView.swift; sourceTree = "<group>"; };
 		95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstructionsButton.swift; sourceTree = "<group>"; };
-		95ECF82427D56EAB00763452 /* armAcrossBody.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = armAcrossBody.mov; path = ../../../../../../../../Documents/armAcrossBody.mov; sourceTree = "<group>"; };
-		95ECF82927D5732600763452 /* armOutCropped.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = armOutCropped.mov; path = ../../../../../../../../Documents/armOutCropped.mov; sourceTree = "<group>"; };
-		95ECF82B27D5755100763452 /* armUpCropped.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = armUpCropped.mov; path = ../../../../../../../../Documents/armUpCropped.mov; sourceTree = "<group>"; };
-		95ECF82F27D576D700763452 /* forwardArmCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = forwardArmCircles.mov; path = ../../../../../../../../Documents/forwardArmCircles.mov; sourceTree = "<group>"; };
-		95ECF83127D5778000763452 /* backwardArmCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = backwardArmCircles.mov; path = ../../../../../../../../Documents/backwardArmCircles.mov; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -865,16 +845,6 @@
 		95A8C60327B11A6D00E0D4AC /* Live Therapy */ = {
 			isa = PBXGroup;
 			children = (
-				95ECF82427D56EAB00763452 /* armAcrossBody.mov */,
-				95ECF82B27D5755100763452 /* armUpCropped.mov */,
-				9515CC3227D58FC700749E09 /* pushUpWallmov.mov */,
-				9515CC3627D590D000749E09 /* backCircles.mov */,
-				9515CC3427D58FD400749E09 /* upDownmov.mov */,
-				9515CC2E27D58F6800749E09 /* fingers.mov */,
-				9515CC2927D58F6800749E09 /* squeeze.mov */,
-				95ECF83127D5778000763452 /* backwardArmCircles.mov */,
-				95ECF82927D5732600763452 /* armOutCropped.mov */,
-				95ECF82F27D576D700763452 /* forwardArmCircles.mov */,
 				95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */,
 				7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */,
 				95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */,
@@ -1109,19 +1079,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0A43AF244A4A0400656518 /* Assets.xcassets in Resources */,
-				9515CC3727D590D100749E09 /* backCircles.mov in Resources */,
-				95ECF83027D576D800763452 /* forwardArmCircles.mov in Resources */,
-				95ECF83227D5778700763452 /* backwardArmCircles.mov in Resources */,
-				9515CC3127D58F6800749E09 /* fingers.mov in Resources */,
-				9515CC2F27D58F6800749E09 /* squeeze.mov in Resources */,
-				9515CC3327D58FC700749E09 /* pushUpWallmov.mov in Resources */,
 				8E0A43B0244A4A0400656518 /* LaunchScreen.storyboard in Resources */,
-				95ECF82C27D5755500763452 /* armUpCropped.mov in Resources */,
 				E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */,
 				8E0A43C1244A4A0400656518 /* LoginCustomWaitStepView.xib in Resources */,
-				9515CC3527D58FD500749E09 /* upDownmov.mov in Resources */,
-				95ECF82827D56EAB00763452 /* armAcrossBody.mov in Resources */,
-				95ECF82A27D5732B00763452 /* armOutCropped.mov in Resources */,
 				E290FB1D24FF4BBA00D19BE9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

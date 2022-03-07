@@ -14,7 +14,7 @@ import Firebase
 import FirebaseAuth
 
 class ProgressUIChartViewModel: ObservableObject {
-    @Published var modelData: Dictionary<Int, Int> // keys: date, value: total_duration
+    @Published var modelData: Dictionary<Int, Int> = [:]// keys: date, value: total_duration // initialize
     
     init() {
         // find current user
@@ -35,10 +35,11 @@ class ProgressUIChartViewModel: ObservableObject {
         docRef.whereField("Date", isGreaterThan: startDate).whereField("Date", isLessThan: currDate).getDocuments { (snapshot, error) in
             
             for document in snapshot!.documents {
-                document.get("date")
+                //document.get("date")
                 print(document.documentID)
             }
             
+            // goes to exact second? Check range - 
 //            if (document != nil) && document.get("date") == currDate {
 //                 do something
 //                 modelData[document.get("date")] = document.get("total_duration")
@@ -70,7 +71,8 @@ struct ProgressUIChartView: UIViewRepresentable {
         
         // createe dataset using fetched data
         for (date, total_duration) in viewModel.modelData {
-            dataSet.append(BarChartDataEntry(x: date, y: total_duration))
+            dataSet.append(BarChartDataEntry(x: Double(date), y: Double(total_duration)))
+            //string - actual date - convert?
         }
         
         dataSet.colors = [NSUIColor.green]
