@@ -15,7 +15,9 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ProgressUIChartViewModel: ObservableObject {
+    @AppStorage("TherapyGoal") private var therapyGoal = "10"
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
+    @Published var therapyProgress: Array<Double> = [] // initialize array of barchart entry
     @Published var last7Dates: Array<String> = [] // initialize array of barchart entry
     
     init() {
@@ -55,7 +57,7 @@ class ProgressUIChartViewModel: ObservableObject {
                 let date = cal.startOfDay(for: Date())
                 var days = [BarChartDataEntry]()
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "MM/dd"
+                dateFormatter.dateFormat = "MM-dd-yyyy"
 
                 for i in 1 ... 7 {
                     let newdate = cal.date(byAdding: .day, value: -i, to: date)!
@@ -63,13 +65,25 @@ class ProgressUIChartViewModel: ObservableObject {
                     let datacur = dataarr[str] ?? 0  // bar value 0
                     let bar = BarChartDataEntry(x: Double(8-i), y: datacur)
                     self.modelData.append(bar) //append each bar
+                    self.therapyProgress.append((datacur/(Double(self.therapyGoal)!*60)) * 100)
                     self.last7Dates.append(str)
                 }
+                self.therapyProgress.reverse()
                 self.last7Dates.reverse()
                 
-                for val in self.last7Dates {
-                    print("dates: \(val)")
+//                for val in self.last7Dates {
+//                    print("dates: \(val)")
+//                }
+//
+//                for val in self.modelData {
+//                    print("\(val)")
+//                }
+                
+                print("goal \(self.therapyGoal)")
+                for val in self.therapyProgress {
+                    print("percentages: \(val)")
                 }
+                        
             }
             
             // if there's any gaps - how many days are in between

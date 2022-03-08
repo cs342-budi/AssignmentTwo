@@ -12,9 +12,10 @@ import CareKit
 import Charts
 
 struct ProgressUIView: View {
+    @ObservedObject var dataViewModel = ProgressUIChartViewModel()
     
     // Dummy data
-    let therapyProgress = [10, 20, 30, 40, 50]
+//    let therapyProgress = [10, 20, 30, 40, 50]
     
     var body: some View {
         // 1
@@ -29,7 +30,7 @@ struct ProgressUIView: View {
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
                     Spacer()
-                    ForEach(therapyProgress, id: \.self) { percent in
+                    ForEach(dataViewModel.therapyProgress, id: \.self) { percent in
                         TherapyRingView(ringWidth: 5, percent: Double(percent),
                                         backgroundColor: Color.green.opacity(0.2),
                                         foregroundColors: [.blue, .green])
