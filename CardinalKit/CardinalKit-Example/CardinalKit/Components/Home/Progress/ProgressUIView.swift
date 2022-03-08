@@ -38,24 +38,22 @@ struct ProgressUIView: View {
                     }
                 }
             }
-            .padding(.top, 20 )
-            .padding(.leading, 50)
-            .overlay(Text("Games Completed")
-            .font(.system(size: 15))
-            .fontWeight(.medium)
-            .rotationEffect(.degrees(270))
-            .offset(x: -10.0, y: 0.0),
-            alignment: .leading)
-            .overlay(Text("Days of the Week")
-            .font(.system(size: 15))
-            .fontWeight(.medium)
-            .offset(x: 10.0, y: 0.0),
-            alignment: .bottom)
-            
-            Spacer()
-            
             ProgressUIChartView()
-            
+                .padding(.top, 20)
+                .padding(.leading, 70)
+                .overlay(Text("Games Completed")
+                .font(.system(size: 15))
+                .fontWeight(.medium)
+                .rotationEffect(.degrees(270))
+                .offset(x: -10.0, y: 0.0),
+                alignment: .leading)
+                .overlay(Text("Days of the Week")
+                .font(.system(size: 15))
+                .fontWeight(.medium)
+                .offset(x: 10.0, y: 0.0),
+                alignment: .bottom)
+
+            Spacer()
     
         }
     }
