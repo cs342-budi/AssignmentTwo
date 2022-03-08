@@ -63,18 +63,20 @@ struct LiveTherapyView: View {
             // pass in array of max accelerations into LiveTherapyChartView
             LiveTherapyChartView(maxData: watchViewModel.maxReceived)
                 .padding(.top, 20 )
-                .padding(.leading, 50)
-                .overlay(Text("Acceleration")
-                .font(.system(size: 15))
-                .fontWeight(.medium)
-                .rotationEffect(.degrees(270))
-                .offset(x: -10.0, y: 0.0),
-                alignment: .leading)
-                .overlay(Text("Time (seconds)")
-                .font(.system(size: 15))
-                .fontWeight(.medium)
-                .offset(x: 10.0, y: 0.0),
-                alignment: .bottom)
+                .padding(.leading, 5)
+                .padding(.trailing, 5)
+                .padding(.bottom, 20)
+//                .overlay(Text("Acceleration")
+//                .font(.system(size: 15))
+//                .fontWeight(.medium)
+//                .rotationEffect(.degrees(270))
+//                .offset(x: -10.0, y: 0.0),
+//                alignment: .leading)
+//                .overlay(Text("Time (seconds)")
+//                .font(.system(size: 15))
+//                .fontWeight(.medium)
+//                .offset(x: 10.0, y: 0.0),
+//                alignment: .bottom)
             
             Text(watchViewModel.messageText)
 

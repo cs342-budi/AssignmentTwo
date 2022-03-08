@@ -24,15 +24,21 @@ struct LiveTherapyChartView: UIViewRepresentable {
         let chart = LineChartView()
         chart.data = addData()
         let yAxis = chart.leftAxis
-        yAxis.axisMinimum = 0
+        yAxis.axisMinimum = -0.8 //hard sets minimum
         
-        chart.xAxis.drawGridLinesEnabled = false
-        chart.leftAxis.drawGridLinesEnabled = false
-        chart.leftAxis.drawAxisLineEnabled = false
-        chart.rightAxis.drawAxisLineEnabled = false
-        chart.rightAxis.drawGridLinesEnabled = false
-        chart.rightAxis.enabled = false
-        chart.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        chart.xAxis.drawGridLinesEnabled = false //hides horizontal gridlines
+        chart.leftAxis.drawGridLinesEnabled = false //hides vertical gridlines
+        //chart.leftAxis.drawAxisLineEnabled = false
+        chart.rightAxis.drawAxisLineEnabled = false //hides right axis
+        chart.rightAxis.drawGridLinesEnabled = false //hides other vertical gridlines
+        chart.rightAxis.enabled = false //hides right axis fully
+        chart.xAxis.labelPosition = XAxis.LabelPosition.bottom //puts x axis on bottom
+        chart.xAxis.drawLabelsEnabled = false //hides x axis labels
+        chart.leftAxis.drawLabelsEnabled = false //hides y axis labels
+        
+        //chart.leftAxis.axisMinimum = -0.5 //hard sets minimum
+        chart.legend.enabled = false //hides little square legend
+        chart.leftAxis.drawTopYLabelEntryEnabled = false //hides values on top of each data point
 
         
         return chart
@@ -61,7 +67,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
 //            }
 //        }
         //Option B: live data grows from left & resets every at the end of the x axis, where limits go from 0 to <dataViewLengh>
-        let dataViewLength = 10
+        let dataViewLength = 15
 
         for i in 1...dataViewLength {
               if dataViewLength <= maxData.count {
@@ -81,12 +87,13 @@ struct LiveTherapyChartView: UIViewRepresentable {
                   maxAccelArray.append(ChartDataEntry(x: xVal, y: yVal))
                 }
               }
+           // print("data looped")
         }
         
         let dataSet = LineChartDataSet(entries : maxAccelArray)
-        dataSet.colors = [NSUIColor(red: 205.0/255.0, green: 153.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        dataSet.colors = [NSUIColor(red: 0.0/255.0, green: 153.0/255.0, blue: 76.0/255.0, alpha: 1.0)]
         let gradientColors = [UIColor.green.cgColor, UIColor.clear.cgColor] as CFArray // Colors of the gradient
-        let colorLocations:[CGFloat] = [1.0, 0.0] // Positioning of the gradient
+        let colorLocations:[CGFloat] = [0.3, 0.0] // Positioning of the gradient
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
         dataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
         dataSet.drawFilledEnabled = true // Draw the Gradient
@@ -96,7 +103,9 @@ struct LiveTherapyChartView: UIViewRepresentable {
         //dataSet.fillAlpha = 0.8
         dataSet.lineWidth = 4
         dataSet.drawCirclesEnabled = false
-        dataSet.drawFilledEnabled = true
+        dataSet.drawValuesEnabled = false //remove data values on top of each data point
+        //dataSet.drawFilledEnabled = true
+        data.addDataSet(dataSet)
         return data
     }
     
