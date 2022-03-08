@@ -142,6 +142,17 @@ struct ProgressUIChartView: UIViewRepresentable {
         let chart = BarChartView()
         chart.data = addData()
         
+        let yAxis = chart.leftAxis
+        yAxis.axisMinimum = 0
+        
+        chart.xAxis.drawGridLinesEnabled = false
+        chart.leftAxis.drawGridLinesEnabled = false
+        chart.leftAxis.drawAxisLineEnabled = false
+        chart.rightAxis.drawAxisLineEnabled = false
+        chart.rightAxis.drawGridLinesEnabled = false
+        chart.rightAxis.enabled = false
+        chart.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        
         //chart.xAxis.valueFormatter = ChartFormatter()
         return chart
     }
@@ -160,7 +171,7 @@ struct ProgressUIChartView: UIViewRepresentable {
 //            //string - actual date - convert?
 //        }
         
-        dataSet.colors = [NSUIColor.green]
+        dataSet.colors = [NSUIColor(red: 32.0/255.0, green: 172.0/255.0, blue: 84.0/255.0, alpha: 1.0)]
         dataSet.label = "My Data"
         data.addDataSet(dataSet)
         return data
