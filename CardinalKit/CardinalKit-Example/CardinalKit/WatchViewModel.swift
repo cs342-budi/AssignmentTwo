@@ -87,7 +87,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
                 }
                 // run after data is back
                 print("\(totaltime) + totaltimehellooooo")
-                do { try CKSendHelper.sendToFirestoreWithUUID(json: ["totaltime": totaltime, "date": formattedDate], collection: "therapy-sessions", withIdentifier: formattedDate)
+                do { try CKSendHelper.sendToFirestoreWithUUID(json: ["totaltime": totaltime, "date": Date().timeIntervalSinceReferenceDate], collection: "therapy-sessions", withIdentifier: formattedDate)
                 } catch {
                     print("somthing went wrong!!!!")
                 }
