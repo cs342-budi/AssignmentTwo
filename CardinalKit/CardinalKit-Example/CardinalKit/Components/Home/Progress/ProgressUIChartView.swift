@@ -14,13 +14,27 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
+struct TherapyProgress: Hashable {
+    static func == (lhs: TherapyProgress, rhs: TherapyProgress) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+    
+    var id = UUID().uuidString
+    var percent: Double
+    var date: String
+}
+
 class ProgressUIChartViewModel: ObservableObject {
     @AppStorage("TherapyGoal") private var therapyGoal = "10"
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
-    @Published var therapyProgress: Array<Double> = [] // initialize array of barchart entry
+    @Published var therapyProgress: Array<TherapyProgress> = [] // initialize array of barchart entry
     
     init() {
-       //ref to collection
+        //ref to collection
         guard let authCollection =  CKStudyUser.shared.authCollection else { return } // stop executing if not logged in
         let db = Firestore.firestore()
         let collectionRef = db.collection(authCollection + "therapy-sessions")
@@ -32,19 +46,19 @@ class ProgressUIChartViewModel: ObservableObject {
         // array = set of dates & values
         var dataarr : [String : Double] = [:]  //date: key, value:
         collectionRef.order(by: "payload.date", descending: true).limit(to: 7).getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            print("\(document.documentID) => \(document.data())")
-                            let payload = document.data()["payload"] as? [String : Any]  // cast payload to dic
-                            let runningtotal = payload?["totaltime"] as? Double ?? 0
-                            // add in dictionary with key = document date
-                            dataarr[document.documentID] = runningtotal
-                        }
-                        getLast7Dates()
-                        
-                    } // have all our data
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let payload = document.data()["payload"] as? [String : Any]  // cast payload to dic
+                    let runningtotal = payload?["totaltime"] as? Double ?? 0
+                    // add in dictionary with key = document date
+                    dataarr[document.documentID] = runningtotal
+                }
+                getLast7Dates()
+                
+            } // have all our data
             
             // 1) create loop that goes days 1 - 7
             // 2) goes back, each day -> convert the same format, does it exist in data array.
@@ -57,66 +71,69 @@ class ProgressUIChartViewModel: ObservableObject {
                 var days = [BarChartDataEntry]()
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM-dd-yyyy"
-
+                
                 for i in 0 ... 6 {
                     let newdate = cal.date(byAdding: .day, value: -i, to: date)!
                     let str = dateFormatter.string(from: newdate)
                     let datacur = dataarr[str] ?? 0  // bar value 0
                     let bar = BarChartDataEntry(x: Double(7-i), y: datacur)
                     self.modelData.append(bar) //append each bar
-                    self.therapyProgress.append((datacur/(Double(self.therapyGoal)!*60)) * 100)
+                    
+                    dateFormatter.dateFormat = "E"
+                    let dateForRing = dateFormatter.string(from: newdate)
+                    self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)!*60)) * 100, date: dateForRing))
                 }
                 self.therapyProgress.reverse()
                 
-//
-//                for val in self.modelData {
-//                    print("\(val)")
-//                }
+                //
+                //                for val in self.modelData {
+                //                    print("\(val)")
+                //                }
                 
                 print("goal \(self.therapyGoal)")
                 for val in self.therapyProgress {
                     print("percentages: \(val)")
                 }
-                        
+                
             }
             
             // if there's any gaps - how many days are in between
             // create last 7 days array, find days that exist
             
             // string format
-        
-//        //only want to grab documents from last 7 days
-//        let currDate = Date()
-//        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: currDate)!.timeIntervalSince1970
-        
-        
-        // possible way to convert date to epochs: currDate.timeIntervalSince1970
-        
-//        docRef.whereField("Date", isGreaterThan: startDate).whereField("Date", isLessThan: currDate).getDocuments { (snapshot, error) in
-//
-//            for document in snapshot!.documents {
-//                //document.get("date")
-//                print(document.documentID)
-//            }
             
-            // goes to exact second? Check range - 
-//            if (document != nil) && document.get("date") == currDate {
-//                 do something
-//                 modelData[document.get("date")] = document.get("total_duration")
-                
-                 //1 . compile multiple values from 1 day into 1 summed value
-                 //2. write the value to our modelData Dictionary
-            }
+            //        //only want to grab documents from last 7 days
+            //        let currDate = Date()
+            //        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: currDate)!.timeIntervalSince1970
+            
+            
+            // possible way to convert date to epochs: currDate.timeIntervalSince1970
+            
+            //        docRef.whereField("Date", isGreaterThan: startDate).whereField("Date", isLessThan: currDate).getDocuments { (snapshot, error) in
+            //
+            //            for document in snapshot!.documents {
+            //                //document.get("date")
+            //                print(document.documentID)
+            //            }
+            
+            // goes to exact second? Check range -
+            //            if (document != nil) && document.get("date") == currDate {
+            //                 do something
+            //                 modelData[document.get("date")] = document.get("total_duration")
+            
+            //1 . compile multiple values from 1 day into 1 summed value
+            //2. write the value to our modelData Dictionary
         }
+    }
 }
 
 final class ChartFormatter: NSObject, IAxisValueFormatter {
-
+    
     func stringForValue( _ value: Double, axis _: AxisBase?) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "MM/dd"
-
+        
         let cal = Calendar.current
         let date = cal.startOfDay(for: Date())
         let newdate = cal.date(byAdding: .day, value: -(7-Int(value)), to: date)!
@@ -124,7 +141,7 @@ final class ChartFormatter: NSObject, IAxisValueFormatter {
         
         return str
     }
-
+    
 }
 
 struct ProgressUIChartView: UIViewRepresentable {
@@ -140,7 +157,7 @@ struct ProgressUIChartView: UIViewRepresentable {
         
         chart.xAxis.drawGridLinesEnabled = false
         chart.leftAxis.drawGridLinesEnabled = false
-//        chart.leftAxis.drawAxisLineEnabled = false
+        //        chart.leftAxis.drawAxisLineEnabled = false
         chart.rightAxis.drawAxisLineEnabled = false
         chart.rightAxis.drawGridLinesEnabled = false
         chart.rightAxis.enabled = false
@@ -161,10 +178,10 @@ struct ProgressUIChartView: UIViewRepresentable {
         let dataSet = BarChartDataSet(entries: viewModel.modelData)  //set out actual data
         
         // createe dataset using fetched data
-//        for (date, total_duration) in viewModel.modelData {
-//            dataSet.append(BarChartDataEntry(x: Double(date), y: Double(total_duration)))
-//            //string - actual date - convert?
-//        }
+        //        for (date, total_duration) in viewModel.modelData {
+        //            dataSet.append(BarChartDataEntry(x: Double(date), y: Double(total_duration)))
+        //            //string - actual date - convert?
+        //        }
         
         dataSet.colors = [NSUIColor(red: 0.0/255.0, green: 128.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
         dataSet.label = "My Data"

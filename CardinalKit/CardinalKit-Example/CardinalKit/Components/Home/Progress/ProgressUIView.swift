@@ -28,17 +28,22 @@ struct ProgressUIView: View {
             
             Spacer()
             
-            ScrollView(.horizontal) {
+            //ScrollView(.horizontal) {
                 HStack(spacing: 20) {
-                    Spacer()
-                    ForEach(dataViewModel.therapyProgress, id: \.self) { percent in
-                        TherapyRingView(ringWidth: 5, percent: Double(percent),
+                    ForEach(dataViewModel.therapyProgress, id: \.self) { therapyProgress in
+                        VStack {
+                            TherapyRingView(ringWidth: 5, percent: therapyProgress.percent,
                                         backgroundColor: Color.purple.opacity(0.2),
                                         foregroundColors: [.purple, .purple])
-                            .frame(width: 55, height: 55)
+                            //.frame(width: 55, height: 55)
+                            Text(therapyProgress.date)
+                                
+                        }
                     }
-                }
-            }
+                }.padding(.leading, 7)
+                .padding(.trailing, 7)
+                .frame(height: 75)
+            //}
             Spacer()
             Text("Weekly Minutes of Therapy")
                 .fontWeight(.heavy)
