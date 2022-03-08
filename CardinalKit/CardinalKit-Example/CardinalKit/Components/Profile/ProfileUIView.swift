@@ -23,12 +23,15 @@ struct ProfileUIView: View {
             
             
             List {
-                Section {
-                    ProfilePictureView()
-                }
+//                Section {
+//                    ProfilePictureView()
+//                }
                 
                 Section {
-                    PatientIDView()
+                    HStack {
+                        ProfilePictureView()
+                        PatientIDView()
+                    }
                 }.listRowBackground(Color.white)
                 
                 Section {
