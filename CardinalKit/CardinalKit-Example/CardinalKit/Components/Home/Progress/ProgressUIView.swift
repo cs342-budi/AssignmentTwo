@@ -20,10 +20,11 @@ struct ProgressUIView: View {
     var body: some View {
         // 1
         VStack{
-//            Text("My activity in the past 7 days")
-//                .fontWeight(.heavy)
-//                .font(.title2)
-//                .foregroundColor(Color.black)
+            Spacer()
+            Text("Therapy Rings")
+                .fontWeight(.heavy)
+                .font(.title2)
+                .foregroundColor(Color.purple)
             
             Spacer()
             
@@ -32,25 +33,34 @@ struct ProgressUIView: View {
                     Spacer()
                     ForEach(dataViewModel.therapyProgress, id: \.self) { percent in
                         TherapyRingView(ringWidth: 5, percent: Double(percent),
-                                        backgroundColor: Color.green.opacity(0.2),
-                                        foregroundColors: [.blue, .green])
+                                        backgroundColor: Color.purple.opacity(0.2),
+                                        foregroundColors: [.purple, .purple])
                             .frame(width: 55, height: 55)
                     }
                 }
             }
+            Spacer()
+            Text("Weekly Minutes of Therapy")
+                .fontWeight(.heavy)
+                .font(.title2)
+                .foregroundColor(Color.blue)
+                .padding(.top, 40)
+            Spacer()
             ProgressUIChartView()
                 .padding(.top, 20)
-                .padding(.leading, 70)
-                .overlay(Text("Games Completed")
+                .padding(.leading, 40)
+                .padding(.trailing, 40)
+                .padding(.bottom, 20)
+                .overlay(Text("Active Tasks")
                 .font(.system(size: 15))
                 .fontWeight(.medium)
                 .rotationEffect(.degrees(270))
-                .offset(x: -10.0, y: 0.0),
+                .offset(x: -20.0, y: 0.0),
                 alignment: .leading)
                 .overlay(Text("Days of the Week")
                 .font(.system(size: 15))
                 .fontWeight(.medium)
-                .offset(x: 10.0, y: 0.0),
+                .offset(x: 0.0, y: 5.0),
                 alignment: .bottom)
 
             Spacer()
