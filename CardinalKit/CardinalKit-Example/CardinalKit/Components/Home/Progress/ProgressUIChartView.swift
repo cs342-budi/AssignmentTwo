@@ -16,6 +16,7 @@ import FirebaseFirestore
 
 class ProgressUIChartViewModel: ObservableObject {
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
+    @Published var last7Dates: Array<String> = [] // initialize array of barchart entry
     
     init() {
        //ref to collection
@@ -29,7 +30,7 @@ class ProgressUIChartViewModel: ObservableObject {
         // set up array to fill; array of dictionary - day - strings, and doubles
         // array = set of dates & values
         var dataarr : [String : Double] = [:]  //date: key, value:
-        collectionRef.order(by: "date", descending: true).limit(to: 7).getDocuments() { (querySnapshot, err) in
+        collectionRef.order(by: "payload.date", descending: true).limit(to: 7).getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
@@ -41,6 +42,7 @@ class ProgressUIChartViewModel: ObservableObject {
                             dataarr[document.documentID] = runningtotal
                         }
                         getLast7Dates()
+                        
                     } // have all our data
             
             // 1) create loop that goes days 1 - 7
@@ -53,14 +55,20 @@ class ProgressUIChartViewModel: ObservableObject {
                 let date = cal.startOfDay(for: Date())
                 var days = [BarChartDataEntry]()
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "MM-dd-yyyy"
+                dateFormatter.dateFormat = "MM/dd"
 
                 for i in 1 ... 7 {
                     let newdate = cal.date(byAdding: .day, value: -i, to: date)!
                     let str = dateFormatter.string(from: newdate)
                     let datacur = dataarr[str] ?? 0  // bar value 0
-                    let bar = BarChartDataEntry(x: Double(i), y: datacur)
+                    let bar = BarChartDataEntry(x: Double(8-i), y: datacur)
                     self.modelData.append(bar) //append each bar
+                    self.last7Dates.append(str)
+                }
+                self.last7Dates.reverse()
+                
+                for val in self.last7Dates {
+                    print("dates: \(val)")
                 }
             }
             
@@ -102,8 +110,15 @@ class ProgressUIChartViewModel: ObservableObject {
                  //2. write the value to our modelData Dictionary
             }
         }
-    
+}
 
+//class ChartFormatter: NSObject, IAxisValueFormatter {
+//    @ObservedObject var viewModel = ProgressUIChartViewModel()
+//
+//    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+//        return Calendar.current.shortWeekdaySymbols[Int(value)]
+//    }
+//}
 
 struct ProgressUIChartView: UIViewRepresentable {
     @ObservedObject var viewModel = ProgressUIChartViewModel()
@@ -112,6 +127,8 @@ struct ProgressUIChartView: UIViewRepresentable {
     func makeUIView(context: Context) -> BarChartView {
         let chart = BarChartView()
         chart.data = addData()
+        
+        //chart.xAxis.valueFormatter = ChartFormatter()
         return chart
     }
     
@@ -151,4 +168,4 @@ struct ProgressUIChartView: UIViewRepresentable {
 //        ])
 //    }
 //}
-}
+

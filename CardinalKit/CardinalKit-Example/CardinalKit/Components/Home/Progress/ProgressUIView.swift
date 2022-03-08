@@ -41,6 +41,8 @@ struct ProgressUIView: View {
             Spacer()
             
             ProgressUIChartView()
+            
+    
         }
     }
 }
