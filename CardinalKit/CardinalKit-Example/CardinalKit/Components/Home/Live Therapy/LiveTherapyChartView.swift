@@ -91,7 +91,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
         }
         
         let dataSet = LineChartDataSet(entries : maxAccelArray)
-        dataSet.colors = [NSUIColor(red: 0.0/255.0, green: 153.0/255.0, blue: 76.0/255.0, alpha: 1.0)]
+        dataSet.colors = [NSUIColor(red: 32.0/255.0, green: 172.0/255.0, blue: 84.0/255.0, alpha: 1.0)]
         let gradientColors = [UIColor.green.cgColor, UIColor.clear.cgColor] as CFArray // Colors of the gradient
         let colorLocations:[CGFloat] = [0.3, 0.0] // Positioning of the gradient
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
