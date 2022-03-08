@@ -21,7 +21,7 @@ enum LocalTaskItem: Int {
 //         sampleResearchKitActiveTask,
 //         sampleFunCoffeeSurvey,
 //         sampleFunCoffeeResult,
-         sampleCoreMotionAppleWatch,
+//         sampleCoreMotionAppleWatch,
 //         sampleLearnItem,
          budiSurvey
     
@@ -35,8 +35,8 @@ enum LocalTaskItem: Int {
 //            return "Survey (ResearchKit)"
 //        case .sampleResearchKitActiveTask:
 //            return "Active Task (ResearchKit)"
-        case .sampleCoreMotionAppleWatch:
-            return "Sensors Demo"
+//        case .sampleCoreMotionAppleWatch:
+//            return "Sensors Demo"
 //        case .sampleFunCoffeeSurvey:
 //            return "Coffee Survey"
 //        case .sampleFunCoffeeResult:
@@ -57,8 +57,8 @@ enum LocalTaskItem: Int {
 //            return "Sample questions and forms."
 //        case .sampleResearchKitActiveTask:
 //            return "Sample sensor/data collection activities."
-        case .sampleCoreMotionAppleWatch:
-            return "CoreMotion & Cloud Storage"
+//        case .sampleCoreMotionAppleWatch:
+//            return "CoreMotion & Cloud Storage"
 //        case .sampleFunCoffeeSurvey:
 //            return "How do you like your coffee?"
 //        case .sampleFunCoffeeResult:
@@ -83,8 +83,8 @@ enum LocalTaskItem: Int {
 //            return getImage(named: "CoffeeIcon")
 //        case .sampleFunCoffeeResult:
 //            return getImage(named: "DataIcon")
-        case .sampleCoreMotionAppleWatch:
-            return getImage(named: "WatchIcon")
+//        case .sampleCoreMotionAppleWatch:
+//            return getImage(named: "WatchIcon")
 //        case .sampleLearnItem:
 //            return getImage(named: "CKLogoIcon")
         default:
@@ -101,8 +101,8 @@ enum LocalTaskItem: Int {
             return "Current Tasks"
 //        case .sampleFunCoffeeSurvey, .sampleFunCoffeeResult:
 //            return "Your Interests"
-        case .sampleCoreMotionAppleWatch:
-            return "Learn"
+//        case .sampleCoreMotionAppleWatch:
+//            return "Learn"
         }
     }
     
@@ -116,8 +116,8 @@ enum LocalTaskItem: Int {
 //            return AnyView(CKTaskViewController(tasks: TaskSamples.sampleSurveyTask))
 //        case .sampleResearchKitActiveTask:
 //            return AnyView(CKTaskViewController(tasks: TaskSamples.sampleWalkingTask))
-        case .sampleCoreMotionAppleWatch:
-            return AnyView(SensorsDemoUIView())
+//        case .sampleCoreMotionAppleWatch:
+//            return AnyView(SensorsDemoUIView())
 //        case .sampleFunCoffeeSurvey:
 //            return AnyView(CKTaskViewController(tasks: TaskSamples.sampleCoffeeTask))
 //        case .sampleFunCoffeeResult:

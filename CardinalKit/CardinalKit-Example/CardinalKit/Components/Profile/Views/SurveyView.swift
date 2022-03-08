@@ -30,12 +30,10 @@ struct SurveyView: View {
             .cornerRadius(10)
             .gesture(TapGesture().onEnded({
                 self.showSettings.toggle()
-            })).sheet(isPresented: $showSettings, onDismiss: {
+            }))
+            .sheet(isPresented: $showSettings, onDismiss: {
             }, content: {
-                TasksUIView(color: Color.black).tabItem{
-                    Image("tab_tasks").renderingMode(.template)
-                    Text("Tasks")
-                }
+                CKTaskViewController(tasks: BudiSurvey.budiSurvey)
             }).padding()
         
     }
