@@ -24,7 +24,7 @@ struct ProgressUIView: View {
             Text("Therapy Rings")
                 .fontWeight(.heavy)
                 .font(.title2)
-                .foregroundColor(Color.purple)
+                .foregroundColor(Color.purple).navigationBarTitle("Your Progress")
             
             Spacer()
             
