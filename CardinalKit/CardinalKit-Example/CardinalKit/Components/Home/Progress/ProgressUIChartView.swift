@@ -18,7 +18,6 @@ class ProgressUIChartViewModel: ObservableObject {
     @AppStorage("TherapyGoal") private var therapyGoal = "10"
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
     @Published var therapyProgress: Array<Double> = [] // initialize array of barchart entry
-    @Published var last7Dates: Array<String> = [] // initialize array of barchart entry
     
     init() {
        //ref to collection
@@ -59,21 +58,16 @@ class ProgressUIChartViewModel: ObservableObject {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM-dd-yyyy"
 
-                for i in 1 ... 7 {
+                for i in 0 ... 6 {
                     let newdate = cal.date(byAdding: .day, value: -i, to: date)!
                     let str = dateFormatter.string(from: newdate)
                     let datacur = dataarr[str] ?? 0  // bar value 0
-                    let bar = BarChartDataEntry(x: Double(8-i), y: datacur)
+                    let bar = BarChartDataEntry(x: Double(7-i), y: datacur)
                     self.modelData.append(bar) //append each bar
                     self.therapyProgress.append((datacur/(Double(self.therapyGoal)!*60)) * 100)
-                    self.last7Dates.append(str)
                 }
                 self.therapyProgress.reverse()
-                self.last7Dates.reverse()
                 
-//                for val in self.last7Dates {
-//                    print("dates: \(val)")
-//                }
 //
 //                for val in self.modelData {
 //                    print("\(val)")
@@ -90,23 +84,13 @@ class ProgressUIChartViewModel: ObservableObject {
             // create last 7 days array, find days that exist
             
             // string format
-            
-            
-            
-
-        
-        
-        
-        
         
 //        //only want to grab documents from last 7 days
 //        let currDate = Date()
 //        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: currDate)!.timeIntervalSince1970
         
         
-        
         // possible way to convert date to epochs: currDate.timeIntervalSince1970
-        
         
 //        docRef.whereField("Date", isGreaterThan: startDate).whereField("Date", isLessThan: currDate).getDocuments { (snapshot, error) in
 //
@@ -126,13 +110,22 @@ class ProgressUIChartViewModel: ObservableObject {
         }
 }
 
-//class ChartFormatter: NSObject, IAxisValueFormatter {
-//    @ObservedObject var viewModel = ProgressUIChartViewModel()
-//
-//    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-//        return Calendar.current.shortWeekdaySymbols[Int(value)]
-//    }
-//}
+final class ChartFormatter: NSObject, IAxisValueFormatter {
+
+    func stringForValue( _ value: Double, axis _: AxisBase?) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "MM/dd"
+
+        let cal = Calendar.current
+        let date = cal.startOfDay(for: Date())
+        let newdate = cal.date(byAdding: .day, value: -(7-Int(value)), to: date)!
+        let str = formatter.string(from: newdate)
+        
+        return str
+    }
+
+}
 
 struct ProgressUIChartView: UIViewRepresentable {
     @ObservedObject var viewModel = ProgressUIChartViewModel()
@@ -154,7 +147,8 @@ struct ProgressUIChartView: UIViewRepresentable {
         chart.xAxis.labelPosition = XAxis.LabelPosition.bottom
         chart.legend.enabled = false
         chart.leftAxis.drawLabelsEnabled = false
-        //chart.xAxis.valueFormatter = ChartFormatter()
+        chart.xAxis.valueFormatter = ChartFormatter()
+        
         return chart
     }
     
