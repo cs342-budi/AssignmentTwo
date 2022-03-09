@@ -38,7 +38,7 @@ struct ProgressUIView: View {
                 Text("Daily Therapy Goal")
                     .font(.title2)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.black).navigationBarTitle("Your Progress")
+                    .foregroundColor(Color.black).navigationBarTitle("My Progress")
                     .padding(.top)
                     .padding(.leading)
                 
