@@ -41,6 +41,7 @@ struct ProgressUIView: View {
                     .foregroundColor(Color.black).navigationBarTitle("My Progress")
                     .padding(.top)
                     .padding(.leading)
+                    .padding(.bottom, 5)
                 
                                 
                 //ScrollView(.horizontal) {
@@ -55,12 +56,15 @@ struct ProgressUIView: View {
                                     .font(.footnote)
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color.gray)
+                                Text(therapyProgress.monthDate)
+                                    .font(.footnote)
+                                    .foregroundColor(Color.gray)
                                     
                             }
                         }
                     }.padding(.leading, 7)
                     .padding(.trailing, 7)
-                    .frame(height: 65)
+                    .frame(height: 75)
                 //}
                 }.frame(width: .infinity, alignment: .leading)
             

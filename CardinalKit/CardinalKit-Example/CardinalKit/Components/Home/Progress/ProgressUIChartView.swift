@@ -26,6 +26,7 @@ struct TherapyProgress: Hashable {
     var id = UUID().uuidString
     var percent: Double
     var date: String
+    var monthDate: String
 }
 
 class ProgressUIChartViewModel: ObservableObject {
@@ -78,12 +79,14 @@ class ProgressUIChartViewModel: ObservableObject {
                     let newdate = cal.date(byAdding: .day, value: -i, to: date)!
                     let str = dateFormatter.string(from: newdate)
                     let datacur = dataarr[str] ?? 0  // bar value 0
-                    let bar = BarChartDataEntry(x: Double(7-i), y: datacur)
+                    let bar = BarChartDataEntry(x: Double(7-i), y: Double(datacur/60))
                     self.modelData.append(bar) //append each bar
                     
                     dateFormatter.dateFormat = "E"
-                    let dateForRing = dateFormatter.string(from: newdate)
-                    self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)!*60)) * 100, date: dateForRing))
+                    let dayForRing = dateFormatter.string(from: newdate)
+                    dateFormatter.dateFormat = "M/d"
+                    let monthDay = dateFormatter.string(from: newdate)
+                    self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)!*60)) * 100, date: dayForRing, monthDate: monthDay))
                 }
                 self.therapyProgress.reverse()
                 
@@ -134,7 +137,8 @@ final class ChartFormatter: NSObject, IAxisValueFormatter {
     func stringForValue( _ value: Double, axis _: AxisBase?) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "MM/dd"
+//        formatter.dateFormat = "MM/dd"
+        formatter.dateFormat = "E"
         
         let cal = Calendar.current
         let date = cal.startOfDay(for: Date())
