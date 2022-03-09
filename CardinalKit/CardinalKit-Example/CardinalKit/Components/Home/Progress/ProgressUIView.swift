@@ -102,6 +102,8 @@ struct ProgressUIView: View {
 
             Spacer()
     
-        }
+        }.onAppear(perform: {
+            self.dataViewModel.getData()
+        })
     }
 }
