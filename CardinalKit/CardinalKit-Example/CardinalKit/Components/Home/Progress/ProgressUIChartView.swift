@@ -34,9 +34,18 @@ class ProgressUIChartViewModel: ObservableObject {
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
     @Published var therapyProgress: Array<TherapyProgress> = [] // initialize array of barchart entry
     
+    func reset() -> Void {
+        self.modelData = []
+        self.therapyProgress = []
+    }
     
- 
-    init() {
+    func getData() -> Void {
+        
+        // clear out existing data
+        self.reset()
+        
+        // now get new data
+        
         //ref to collection
         guard let authCollection =  CKStudyUser.shared.authCollection else { return } // stop executing if not logged in
         let db = Firestore.firestore()
@@ -135,6 +144,10 @@ class ProgressUIChartViewModel: ObservableObject {
             //1 . compile multiple values from 1 day into 1 summed value
             //2. write the value to our modelData Dictionary
         }
+    }
+ 
+    init() {
+       getData()
     }
     
 
