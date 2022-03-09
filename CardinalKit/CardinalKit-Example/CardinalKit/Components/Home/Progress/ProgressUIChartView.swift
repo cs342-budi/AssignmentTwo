@@ -33,11 +33,13 @@ class ProgressUIChartViewModel: ObservableObject {
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
     @Published var therapyProgress: Array<TherapyProgress> = [] // initialize array of barchart entry
     
+ 
     init() {
         //ref to collection
         guard let authCollection =  CKStudyUser.shared.authCollection else { return } // stop executing if not logged in
         let db = Firestore.firestore()
         let collectionRef = db.collection(authCollection + "therapy-sessions")
+        
         
         // last 7 days doc using the timestamp comparison,
         // query our therapy sessions in collection - order them by date - limit them by 7; decending order
@@ -183,7 +185,8 @@ struct ProgressUIChartView: UIViewRepresentable {
         //            //string - actual date - convert?
         //        }
         
-        dataSet.colors = [NSUIColor(red: 0.0/255.0, green: 128.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        //changed to match progress color 
+        dataSet.colors = [NSUIColor(red: 151.0/255.0, green: 156.0/255.0, blue: 233.0/255.0, alpha: 1.0)]
         dataSet.label = "My Data"
         data.addDataSet(dataSet)
         return data
