@@ -34,6 +34,7 @@ class ProgressUIChartViewModel: ObservableObject {
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
     @Published var therapyProgress: Array<TherapyProgress> = [] // initialize array of barchart entry
     
+    
  
     init() {
         //ref to collection
@@ -59,8 +60,9 @@ class ProgressUIChartViewModel: ObservableObject {
                     // add in dictionary with key = document date
                     dataarr[document.documentID] = runningtotal
                 }
+                print("this is data arr")
+                print(dataarr)
                 getLast7Dates()
-                
             } // have all our data
             
             // 1) create loop that goes days 1 - 7
@@ -69,6 +71,7 @@ class ProgressUIChartViewModel: ObservableObject {
             // bar array =
             func getLast7Dates()
             {
+                print(dataarr)
                 let cal = Calendar.current
                 let date = cal.startOfDay(for: Date())
                 var days = [BarChartDataEntry]()
@@ -78,7 +81,9 @@ class ProgressUIChartViewModel: ObservableObject {
                 for i in 0 ... 6 {
                     let newdate = cal.date(byAdding: .day, value: -i, to: date)!
                     let str = dateFormatter.string(from: newdate)
+                    print(str)
                     let datacur = dataarr[str] ?? 0  // bar value 0
+                    print(datacur)
                     let bar = BarChartDataEntry(x: Double(7-i), y: Double(datacur/60))
                     self.modelData.append(bar) //append each bar
                     
@@ -87,6 +92,7 @@ class ProgressUIChartViewModel: ObservableObject {
                     dateFormatter.dateFormat = "M/d"
                     let monthDay = dateFormatter.string(from: newdate)
                     self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)!*60)) * 100, date: dayForRing, monthDate: monthDay))
+                    dateFormatter.dateFormat = "MM-dd-yyyy"
                 }
                 self.therapyProgress.reverse()
                 
@@ -130,6 +136,8 @@ class ProgressUIChartViewModel: ObservableObject {
             //2. write the value to our modelData Dictionary
         }
     }
+    
+
 }
 
 final class ChartFormatter: NSObject, IAxisValueFormatter {

@@ -27,6 +27,8 @@ struct ProgressUIView: View {
     }
     
     
+    
+    
     // Dummy data
 //    let therapyProgress = [10, 20, 30, 40, 50]
     
@@ -45,6 +47,7 @@ struct ProgressUIView: View {
                 
                                 
                 //ScrollView(.horizontal) {
+              
                     HStack(spacing: 20) {
                         ForEach(dataViewModel.therapyProgress, id: \.self) { therapyProgress in
                             VStack {
@@ -67,7 +70,7 @@ struct ProgressUIView: View {
                     .frame(height: 75)
                 //}
                 }.frame(width: .infinity, alignment: .leading)
-            
+                
             Spacer()
             Divider()
             Spacer()
