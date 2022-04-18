@@ -35,7 +35,7 @@ struct ScheduleView: View {
             }
             
             Divider()
-            Button("Request Permission") {
+            Button("Request Permission") { //MOVE THIS TO VIEW DID LOAD
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
                     if success {
                         print("All set!")
@@ -47,7 +47,7 @@ struct ScheduleView: View {
             
             
             Button("Schedule Notification") {
-                therapyScheduleController.scheduleLocal()
+                therapyScheduleController.scheduleLocal(days: ["Monday"], time: Date())
             }.padding()
             
             AddBlockButtonView()

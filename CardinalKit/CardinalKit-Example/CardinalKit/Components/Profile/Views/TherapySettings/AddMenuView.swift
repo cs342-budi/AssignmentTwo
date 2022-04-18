@@ -9,7 +9,7 @@
 import SwiftUI
 import UIKit
 
-struct DayElem : Identifiable {
+struct DayElem : Identifiable, Hashable {
     let id = UUID()
     let day: String
 }
@@ -26,18 +26,32 @@ struct AddMenuView: View {
     
     @State private var currentDate = Date()
     @State private var multiSelection = Set<UUID>()
+    let therapyScheduleController = TherapyScheduleViewController()
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack (alignment: .leading) {
             HStack{
-                Button(action: {}) {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
                     Text("Cancel")
                 }
                 Spacer()
                 Text("Add Therapy Session")
                     .font(.title3).bold()
                 Spacer()
-                Button(action: {}) {
+                Button(action: {
+                    //Schedule notification
+                    var selected_days: [String] = []
+                    for d in week {
+                        if multiSelection.contains(d.id) {
+                            selected_days.append(d.day)
+                        }
+                    }
+                    therapyScheduleController.scheduleLocal(days: selected_days, time: currentDate)
+                    presentationMode.wrappedValue.dismiss()
+                }) {
                     Text("Save").bold()
                 }
                 
@@ -54,17 +68,19 @@ struct AddMenuView: View {
             }
                 
             Divider()
-            Text("Select Days")
-                .font(.headline)
-                .padding(.leading)
-            
+
             NavigationView {
-                List(week, selection: $multiSelection) {
-                    Text($0.day)
-                        .font(.title3)
-                        .padding()
-                }.environment(\.editMode, .constant(EditMode.active))
-                    .navigationBarHidden(true)
+                VStack{
+                    List(selection: $multiSelection) {
+                        ForEach(week, id: \.id) { day in
+                            Text("\(day.day)")
+                                .font(.title3)
+                                .padding()
+                        }
+
+                    }.environment(\.editMode, .constant(EditMode.active))
+                        .navigationBarHidden(true)
+                }
                 
             }
                 

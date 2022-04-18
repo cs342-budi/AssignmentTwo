@@ -10,23 +10,25 @@ import Foundation
 import UserNotifications
 import UIKit
 
+
 class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterDelegate {
     
-    func scheduleLocal() {
+    func scheduleLocal(days: [String], time: Date) {
         registerCategories()
+        print(days)
+        print(time)
         let content = UNMutableNotificationContent()
         content.title = "It's therapy time!"
         content.body = "Open BUDI to get started."
         content.sound = UNNotificationSound.default
         content.launchImageName = "AppIcon"
         content.categoryIdentifier = "startTherapy"
+      
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content,   trigger: trigger)
-        
-        
-       
+        let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour,
+                                                        .minute], from: time)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
     
@@ -41,7 +43,7 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //let userInfo = response.notification.request.content.userInfo
-        let sceneDel = SceneDelegate()
+       // let sceneDel = SceneDelegate()
         
         switch response.actionIdentifier {
         case UNNotificationDefaultActionIdentifier : //user swiped to unlock
