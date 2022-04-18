@@ -15,8 +15,6 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
     
     func scheduleLocal(days: [String], time: Date) {
         registerCategories()
-        print(days)
-        print(time)
         let content = UNMutableNotificationContent()
         content.title = "It's therapy time!"
         content.body = "Open BUDI to get started."
