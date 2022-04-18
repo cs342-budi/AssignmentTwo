@@ -20,191 +20,193 @@ class CKHealthKitManager : NSObject {
     fileprivate let config = CKConfig.shared
     
     private let quantyTypes = [
-        HKQuantityTypeIdentifier.bodyMassIndex,
-        .bodyFatPercentage,
-        .height,
-        .bodyMass,
-        .leanBodyMass,
-        .waistCircumference,
-        .stepCount,
-        .distanceWalkingRunning,
-        .distanceCycling,
-        .distanceWheelchair,
-        .basalEnergyBurned,
-        .activeEnergyBurned,
-        .flightsClimbed,
-        .nikeFuel,
-        .appleExerciseTime,
-        .pushCount,
-        .distanceSwimming,
-        .swimmingStrokeCount,
-        .vo2Max,
-        .distanceDownhillSnowSports,
-        .appleStandTime,
-        .heartRate,
-        .bodyTemperature,
-        .basalBodyTemperature,
-        .bloodPressureSystolic,
-        .bloodPressureDiastolic,
-        .respiratoryRate,
-        .restingHeartRate,
-        .walkingHeartRateAverage,
-        .heartRateVariabilitySDNN,
-        .oxygenSaturation,
-        .peripheralPerfusionIndex,
-        .bloodGlucose,
-        .numberOfTimesFallen,
-        .electrodermalActivity,
-        .inhalerUsage,
-        .insulinDelivery,
-        .bloodAlcoholContent,
-        .forcedVitalCapacity,
-        .forcedExpiratoryVolume1,
-        .peakExpiratoryFlowRate,
-        .environmentalAudioExposure,
-        .headphoneAudioExposure,
-        .dietaryFatTotal,
-        .dietaryFatPolyunsaturated,
-        .dietaryFatMonounsaturated,
-        .dietaryFatSaturated,
-        .dietaryCholesterol,
-        .dietarySodium,
-        .dietaryCarbohydrates,
-        .dietaryFiber,
-        .dietarySugar,
-        .dietaryEnergyConsumed,
-        .dietaryProtein,
-        .dietaryVitaminA,
-        .dietaryVitaminB6,
-        .dietaryVitaminB12,
-        .dietaryVitaminC,
-        .dietaryVitaminD,
-        .dietaryVitaminE,
-        .dietaryVitaminK,
-        .dietaryCalcium,
-        .dietaryIron,
-        .dietaryThiamin,
-        .dietaryRiboflavin,
-        .dietaryNiacin,
-        .dietaryFolate,
-        .dietaryBiotin,
-        .dietaryPantothenicAcid,
-        .dietaryPhosphorus,
-        .dietaryIodine,
-        .dietaryMagnesium,
-        .dietaryZinc,
-        .dietarySelenium,
-        .dietaryCopper,
-        .dietaryManganese,
-        .dietaryChromium,
-        .dietaryMolybdenum,
-        .dietaryChloride,
-        .dietaryPotassium,
-        .dietaryCaffeine,
-        .dietaryWater,
-        .uvExposure,
+        HKQuantityTypeIdentifier.basalEnergyBurned,//keep
+//        HKQuantityTypeIdentifier.bodyMassIndex,
+//        .bodyFatPercentage,
+//        .height,
+//        .bodyMass,
+//        .leanBodyMass,
+//        .waistCircumference,
+//        .stepCount,
+//        .distanceWalkingRunning,
+//        .distanceCycling,
+//        .distanceWheelchair,
+//        .basalEnergyBurned, //keep
+        .activeEnergyBurned, //keep
+//        .flightsClimbed,
+//        .nikeFuel,
+        .appleExerciseTime, //keep
+//        .pushCount,
+//        .distanceSwimming,
+//        .swimmingStrokeCount,
+//        .vo2Max,
+//        .distanceDownhillSnowSports,
+//        .appleStandTime,
+        .heartRate, //keep
+//        .bodyTemperature,
+//        .basalBodyTemperature,
+//        .bloodPressureSystolic,
+//        .bloodPressureDiastolic,
+//        .respiratoryRate,
+        .restingHeartRate,// keep
+//        .walkingHeartRateAverage,
+        .heartRateVariabilitySDNN, //keep
+//        .oxygenSaturation,
+//        .peripheralPerfusionIndex,
+//        .bloodGlucose,
+//        .numberOfTimesFallen,
+//        .electrodermalActivity,
+//        .inhalerUsage,
+//        .insulinDelivery,
+//        .bloodAlcoholContent,
+//        .forcedVitalCapacity,
+//        .forcedExpiratoryVolume1,
+//        .peakExpiratoryFlowRate,
+//        .environmentalAudioExposure,
+//        .headphoneAudioExposure,
+//        .dietaryFatTotal,
+//        .dietaryFatPolyunsaturated,
+//        .dietaryFatMonounsaturated,
+//        .dietaryFatSaturated,
+//        .dietaryCholesterol,
+//        .dietarySodium,
+//        .dietaryCarbohydrates,
+//        .dietaryFiber,
+//        .dietarySugar,
+//        .dietaryEnergyConsumed,
+//        .dietaryProtein,
+//        .dietaryVitaminA,
+//        .dietaryVitaminB6,
+//        .dietaryVitaminB12,
+//        .dietaryVitaminC,
+//        .dietaryVitaminD,
+//        .dietaryVitaminE,
+//        .dietaryVitaminK,
+//        .dietaryCalcium,
+//        .dietaryIron,
+//        .dietaryThiamin,
+//        .dietaryRiboflavin,
+//        .dietaryNiacin,
+//        .dietaryFolate,
+//        .dietaryBiotin,
+//        .dietaryPantothenicAcid,
+//        .dietaryPhosphorus,
+//        .dietaryIodine,
+//        .dietaryMagnesium,
+//        .dietaryZinc,
+//        .dietarySelenium,
+//        .dietaryCopper,
+//        .dietaryManganese,
+//        .dietaryChromium,
+//        .dietaryMolybdenum,
+//        .dietaryChloride,
+//        .dietaryPotassium,
+//        .dietaryCaffeine,
+//        .dietaryWater,
+//        .uvExposure,
     ]
     
-    private let categoryTypes = [
-        HKCategoryTypeIdentifier.sleepAnalysis,
-        .appleStandHour,
-        .cervicalMucusQuality,
-        .ovulationTestResult,
-        .menstrualFlow,
-        .intermenstrualBleeding,
-        .sexualActivity,
-        .mindfulSession,
-        .highHeartRateEvent,
-        .lowHeartRateEvent,
-        .irregularHeartRhythmEvent,
-        .audioExposureEvent,
-        .toothbrushingEvent,
+//    private let categoryTypes = [
+//        HKCategoryTypeIdentifier.highHeartRateEvent,
+//        HKCategoryTypeIdentifier.sleepAnalysis,
+//        .appleStandHour,
+//        .cervicalMucusQuality,
+//        .ovulationTestResult,
+//        .menstrualFlow,
+//        .intermenstrualBleeding,
+//        .sexualActivity,
+//        .mindfulSession,
+//        .highHeartRateEvent,
+//        .lowHeartRateEvent,
+//        .irregularHeartRhythmEvent,
+//        .audioExposureEvent,
+//        .toothbrushingEvent,
         
-    ]
+  //  ]
            
     override init() {
         for quantiType in quantyTypes{
             hkTypesToReadInBackground.insert(HKObjectType.quantityType(forIdentifier: quantiType)!)
         }
         
-        for categoryType in categoryTypes{
-            hkTypesToReadInBackground.insert(HKObjectType.categoryType(forIdentifier: categoryType)!)
-        }
+//        for categoryType in categoryTypes{
+//            hkTypesToReadInBackground.insert(HKObjectType.categoryType(forIdentifier: categoryType)!)
+//        }
                 
         hkTypesToReadInBackground.insert(HKObjectType.documentType(forIdentifier: .CDA)!)
         if #available(iOS 14.3, *) {
-            let quantyType14Available = [
-                HKQuantityTypeIdentifier.walkingSpeed,
-                .walkingDoubleSupportPercentage,
-                .walkingAsymmetryPercentage,
-                .walkingStepLength,
-                .sixMinuteWalkTestDistance,
-                .stairAscentSpeed,
-                .stairDescentSpeed
-            ]
+//            let quantyType14Available = [
+//                HKQuantityTypeIdentifier.walkingSpeed,
+//                .walkingDoubleSupportPercentage,
+//                .walkingAsymmetryPercentage,
+//                .walkingStepLength,
+//                .sixMinuteWalkTestDistance,
+//                .stairAscentSpeed,
+//                .stairDescentSpeed
+//            ]
             
-            let categoryTypes14Available=[
-                HKCategoryTypeIdentifier.pregnancy,
-                .lactation,
-                .contraceptive,
-                .environmentalAudioExposureEvent,
-                .headphoneAudioExposureEvent,
-                .handwashingEvent,
-                .lowCardioFitnessEvent,
-                .abdominalCramps,
-                .acne,
-                .appetiteChanges,
-                .bladderIncontinence,
-                .bloating,
-                .breastPain,
-                .chestTightnessOrPain,
-                .chills,
-                .constipation,
-                .coughing,
-                .diarrhea,
-                .dizziness,
-                .drySkin,
-                .fainting,
-                .fatigue,
-                .fever,
-                .generalizedBodyAche,
-                .hairLoss,
-                .headache,
-                .heartburn,
-                .hotFlashes,
-                .lossOfSmell,
-                .lossOfTaste,
-                .lowerBackPain,
-                .lowCardioFitnessEvent,
-                .memoryLapse,
-                .moodChanges,
-                .nausea,
-                .nightSweats,
-                .pelvicPain,
-                .rapidPoundingOrFlutteringHeartbeat,
-                .runnyNose,
-                .shortnessOfBreath,
-                .sinusCongestion,
-                .skippedHeartbeat,
-                .sleepChanges,
-                .soreThroat,
-                .vaginalDryness,
-                .vomiting,
-                .wheezing
-            ]
-            hkTypesToReadInBackground.insert(HKElectrocardiogramType.electrocardiogramType())
-            for quantiType in quantyType14Available{
-                hkTypesToReadInBackground.insert(HKObjectType.quantityType(forIdentifier: quantiType)!)
-            }
-            for categoryType in categoryTypes14Available{
-                hkTypesToReadInBackground.insert(HKObjectType.categoryType(forIdentifier: categoryType)!)
-            }
+       //     let categoryTypes14Available=[
+    //            HKCategoryTypeIdentifier.pregnancy,
+//                .lactation,
+//                .contraceptive,
+//                .environmentalAudioExposureEvent,
+//                .headphoneAudioExposureEvent,
+//                .handwashingEvent,
+//                .lowCardioFitnessEvent,
+//                .abdominalCramps,
+//                .acne,
+//                .appetiteChanges,
+//                .bladderIncontinence,
+//                .bloating,
+//                .breastPain,
+//                .chestTightnessOrPain,
+//                .chills,
+//                .constipation,
+//                .coughing,
+//                .diarrhea,
+//                .dizziness,
+//                .drySkin,
+//                .fainting,
+//                .fatigue,
+//                .fever,
+//                .generalizedBodyAche,
+//                .hairLoss,
+//                .headache,
+//                .heartburn,
+//                .hotFlashes,
+//                .lossOfSmell,
+//                .lossOfTaste,
+//                .lowerBackPain,
+//                .lowCardioFitnessEvent,
+//                .memoryLapse,
+//                .moodChanges,
+//                .nausea,
+//                .nightSweats,
+//                .pelvicPain,
+//                .rapidPoundingOrFlutteringHeartbeat,
+//                .runnyNose,
+//                .shortnessOfBreath,
+//                .sinusCongestion,
+//                .skippedHeartbeat,
+//                .sleepChanges,
+//                .soreThroat,
+//                .vaginalDryness,
+//                .vomiting,
+//                .wheezing
+     //       ]
+//            hkTypesToReadInBackground.insert(HKElectrocardiogramType.electrocardiogramType())
+//            for quantiType in quantyType14Available{
+//                hkTypesToReadInBackground.insert(HKObjectType.quantityType(forIdentifier: quantiType)!)
+//            }
+//            for categoryType in categoryTypes14Available{
+//                hkTypesToReadInBackground.insert(HKObjectType.categoryType(forIdentifier: categoryType)!)
+//            }
         }
         
-        hkTypesToReadInBackground.insert(HKAudiogramSampleType.audiogramSampleType())
+//        hkTypesToReadInBackground.insert(HKAudiogramSampleType.audiogramSampleType())
         hkTypesToReadInBackground.insert(HKWorkoutType.workoutType())
-        hkTypesToReadInBackground.insert(HKAudiogramSampleType.audiogramSampleType())
-        hkTypesToReadInBackground.insert(HKSeriesType.workoutRoute())
+////        hkTypesToReadInBackground.insert(HKAudiogramSampleType.audiogramSampleType())
+//        hkTypesToReadInBackground.insert(HKSeriesType.workoutRoute())
         hkTypesToReadInBackground.insert(HKSeriesType.heartbeat())
         
     }
