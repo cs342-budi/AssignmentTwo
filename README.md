@@ -5,7 +5,7 @@ Welcome to the BUDI repository! In order to get the project up and running on yo
 
 _Environment Setup_
   1) Install XCode, and ensure that you have at least version 13.2.1  
-  2) Clone the "old-state" repository into the desired directory on your device. 
+  2) Clone the "main-app" repository into the desired directory on your device. 
   3) In your terminal, navigate to the project directory. Within the project directory, go to CardinalKit > CardinalKit-Example 
   4) Once you're in CardinalKit-Example, run "pod install" to get the CocoaPods setup. 
 
