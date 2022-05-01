@@ -141,6 +141,8 @@
 		95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */; };
 		95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */; };
 		95A8C60527B11A9F00E0D4AC /* LiveTherapyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */; };
+		95D9C2B3281D8CD600982FD2 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2B2281D8CD600982FD2 /* PersistenceController.swift */; };
+		95D9C2B9281D8D3800982FD2 /* BudiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2B7281D8D3800982FD2 /* BudiModel.xcdatamodeld */; };
 		95ECF81D27D44A4F00763452 /* TherapyInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */; };
 		95ECF82227D44B1D00763452 /* ViewInstructionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */; };
 		BFDDE54E95C46F253E504CBF /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEAE98950F5F43B8C8D2BC1 /* Pods_CardinalKit_Example.framework */; };
@@ -381,6 +383,8 @@
 		95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesMainView.swift; sourceTree = "<group>"; };
 		95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUIView.swift; sourceTree = "<group>"; };
 		95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyView.swift; sourceTree = "<group>"; };
+		95D9C2B2281D8CD600982FD2 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudiModel.xcdatamodel; sourceTree = "<group>"; };
 		95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyInstructionsView.swift; sourceTree = "<group>"; };
 		95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstructionsButton.swift; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
@@ -548,6 +552,7 @@
 				8E9CDEAA25916F2A00C8A228 /* Components */,
 				8E0A43C5244A4A5700656518 /* Library */,
 				8E0A4396244A4A0400656518 /* AppDelegate.swift */,
+				95D9C2B2281D8CD600982FD2 /* PersistenceController.swift */,
 				8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */,
 				E235077624F7082700CC1899 /* SceneDelegate.swift */,
 				2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */,
@@ -598,6 +603,7 @@
 				8E0A43C9244A4C6500656518 /* Info.plist */,
 				E290FB1C24FF4BBA00D19BE9 /* GoogleService-Info.plist */,
 				E2F1FD7724D62064006C39DF /* CKConfiguration.plist */,
+				95D9C2B7281D8D3800982FD2 /* BudiModel.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1319,6 +1325,7 @@
 				8E0A43B9244A4A0400656518 /* AppDelegate.swift in Sources */,
 				8EA664232592E57200B6A45A /* SensorsDemoUIView.swift in Sources */,
 				8E6E1E3225353ABE0024B8DF /* ProfileUIView.swift in Sources */,
+				95D9C2B9281D8D3800982FD2 /* BudiModel.xcdatamodeld in Sources */,
 				8E6E1E1E253528F50024B8DF /* SupportView.swift in Sources */,
 				8E6E1E1C253528D70024B8DF /* ReportView.swift in Sources */,
 				95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */,
@@ -1381,6 +1388,7 @@
 				278E857027D028C700E737BF /* SetGoals.swift in Sources */,
 				8E9CDED02591AC4A00C8A228 /* CKHealthKitManager.swift in Sources */,
 				8E0A43C2244A4A0400656518 /* ConsentDocument.swift in Sources */,
+				95D9C2B3281D8CD600982FD2 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1964,6 +1972,19 @@
 			productName = CareKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		95D9C2B7281D8D3800982FD2 /* BudiModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */,
+			);
+			currentVersion = 95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */;
+			path = BudiModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }
