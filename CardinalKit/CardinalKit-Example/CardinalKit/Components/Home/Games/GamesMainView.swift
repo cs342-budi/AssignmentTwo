@@ -32,9 +32,12 @@ struct GamesMainView: View {
                     .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                     .background(Color.yellow)
                     .cornerRadius(10)
-                    .sheet(isPresented: $showingTapGame) {
+                    .fullScreenCover(isPresented: $showingTapGame, content: {
                         ActiveTaskViewController()
-                    }
+                    })
+                    /*.sheet(isPresented: $showingTapGame) {
+                        ActiveTaskViewController()
+                    }*/
                 }.padding()
                     .navigationBarTitle("Games")
                 
@@ -53,7 +56,7 @@ struct GamesMainView: View {
                     .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                     .background(Color.yellow)
                     .cornerRadius(10)
-                    .sheet(isPresented: $showingNineHole) {
+                    .fullScreenCover(isPresented: $showingNineHole) {
                         NineHoleViewController()
                     }
                     
