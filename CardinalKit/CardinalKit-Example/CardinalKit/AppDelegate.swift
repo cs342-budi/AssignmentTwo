@@ -7,6 +7,10 @@
 import UIKit
 import Firebase
 import ResearchKit
+import SwiftUI
+import Foundation
+import CoreData
+
 
 // import facebook
 import FBSDKCoreKit
@@ -17,6 +21,7 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -30,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         // (3) initialize CardinalKit API
         CKAppLaunch()
+        
         
         let config = CKPropertyReader(file: "CKConfiguration")
         UIView.appearance(whenContainedInInstancesOf: [ORKTaskViewController.self]).tintColor = config.readColor(query: "Tint Color")

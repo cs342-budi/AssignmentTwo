@@ -13,7 +13,7 @@ import UIKit
 
 class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterDelegate {
     
-    func scheduleLocal(days: [String], time: Date) {
+    func scheduleLocal(day: String, time: Date) {
         registerCategories()
         let content = UNMutableNotificationContent()
         content.title = "It's therapy time!"
@@ -21,11 +21,11 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
         content.sound = UNNotificationSound.default
         content.launchImageName = "AppIcon"
         content.categoryIdentifier = "startTherapy"
-      
         
-        let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour,
+        let dateComp = Calendar.current.dateComponents([.weekday, .hour,
                                                         .minute], from: time)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: false)
+        print(dateComp)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: true)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
@@ -53,6 +53,25 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
             break
         }
         completionHandler()
+    }
+    
+    func establishPermissions() {
+        let current = UNUserNotificationCenter.current()
+        current.getNotificationSettings(completionHandler: { (settings) in
+            if settings.authorizationStatus == .authorized {
+                // Notification permission granted, do nothing
+            } else if settings.authorizationStatus == .denied {
+                // Notification permission was previously denied, go to settings & privacy to re-enable
+            } else if settings.authorizationStatus == .notDetermined {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        })
     }
     
 }

@@ -7,21 +7,18 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct TimeBlock: View {
-    var time: String
-    var ampm: String
+    var time: Date
     
     var body: some View {
         Button(action: {
             print("Button tapped.")
         }) {
             HStack(alignment: .lastTextBaseline) {
-            Text(time)
+                Text(TimeConverter.toStrTime(time: time))
                 .font(.title)
-                .foregroundColor(Color.white)
-            Text(ampm)
-                .font(.headline)
                 .foregroundColor(Color.white)
             }
             .padding(Metrics.PADDING_VERTICAL_MAIN*3.5)
@@ -35,8 +32,18 @@ struct TimeBlock: View {
     }
 }
 
+class TimeConverter {
+    static func toStrTime(time: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        let strTime = dateFormatter.string(from: time)
+        print(strTime)
+        return strTime
+    }
+}
+
 struct TimeBlock_Previews: PreviewProvider {
     static var previews: some View {
-        TimeBlock(time:"11:00", ampm: "AM")
+        TimeBlock(time: Date())
     }
 }

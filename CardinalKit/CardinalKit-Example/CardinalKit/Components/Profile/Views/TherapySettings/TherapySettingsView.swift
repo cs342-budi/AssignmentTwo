@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TherapySettingsView: View {
     @State var showSettings = false
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     var body: some View {
         HStack {
@@ -34,7 +35,7 @@ struct TherapySettingsView: View {
                 self.showSettings.toggle()
             })).sheet(isPresented: $showSettings, onDismiss: {
             }, content: {
-                ScheduleView()
+                ScheduleView().environment(\.managedObjectContext, self.managedObjectContext)
             }).padding()
         
     }
