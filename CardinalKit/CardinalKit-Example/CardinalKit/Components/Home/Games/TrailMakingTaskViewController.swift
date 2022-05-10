@@ -40,4 +40,3 @@ struct TrailMakingTaskViewController_Previews: PreviewProvider {
         TrailMakingTaskViewController()
     }
 }
-

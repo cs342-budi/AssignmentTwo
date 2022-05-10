@@ -12,32 +12,13 @@ import UIKit
 struct GamesMainView: View {
     @State private var showingTapGame = false
     @State private var showingNineHole = false
+    @State private var showingTrailMakingTask = false
+    @State private var showingReactionTime = false
     
     var body: some View {
 
 
             VStack {
-                HStack {
-                    Button (action:{
-                        showingTapGame.toggle()
-                    }) {
-                        Text("QUICK TAP")
-                            .fontWeight(.heavy)
-                            .font(.title)
-                            .foregroundColor(Color.white)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                    .background(Color.yellow)
-                    .cornerRadius(10)
-                    .sheet(isPresented: $showingTapGame) {
-                        ActiveTaskViewController()
-                    }
-                }.padding()
-                    .navigationBarTitle("Games")
-                
                 HStack {
                     Button (action:{
                         showingNineHole.toggle()
@@ -58,8 +39,69 @@ struct GamesMainView: View {
                     }
                     
                 }.padding()
+                    .navigationBarTitle("Games")
                 
+                HStack {
+                    Button (action:{
+                        showingTapGame.toggle()
+                    }) {
+                        Text("QUICK TAP")
+                            .fontWeight(.heavy)
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingTapGame) {
+                        ActiveTaskViewController()
+                    }
+                }.padding()
+        
+                HStack {
+                    Button (action:{
+                        showingReactionTime.toggle()
+                    }) {
+                        Text("REACTION TIME")
+                            .fontWeight(.heavy)
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingReactionTime) {
+                        ReactionTimeViewController()
+                    }
+                }.padding()
                 
+                HStack {
+                    Button (action:{
+                        showingTrailMakingTask.toggle()
+                    }) {
+                        Text("TRAIL MAKING TASK")
+                            .fontWeight(.heavy)
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingTrailMakingTask) {
+                        TrailMakingTaskViewController()
+                    }
+                }.padding()
+                   
+            
                 Spacer()
             }
     }

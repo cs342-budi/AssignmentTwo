@@ -146,6 +146,8 @@
 		95ECF81D27D44A4F00763452 /* TherapyInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */; };
 		95ECF82227D44B1D00763452 /* ViewInstructionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */; };
 		BFDDE54E95C46F253E504CBF /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEAE98950F5F43B8C8D2BC1 /* Pods_CardinalKit_Example.framework */; };
+		C57684E92829E94C00CD47DF /* TrailMakingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */; };
+		C57684ED2829EA7D00CD47DF /* ReactionTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -387,6 +389,8 @@
 		95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudiModel.xcdatamodel; sourceTree = "<group>"; };
 		95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyInstructionsView.swift; sourceTree = "<group>"; };
 		95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstructionsButton.swift; sourceTree = "<group>"; };
+		C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMakingTaskViewController.swift; sourceTree = "<group>"; };
+		C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTimeViewController.swift; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -853,6 +857,8 @@
 				95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */,
 				9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */,
 				9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */,
+				C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */,
+				C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */,
 				9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */,
 			);
 			path = Games;
@@ -1308,6 +1314,7 @@
 				8E6E1E1A253528450024B8DF /* WithdrawView.swift in Sources */,
 				8E6E1E2E25353A1E0024B8DF /* PatientIDView.swift in Sources */,
 				8E6E1E0B2534FF640024B8DF /* OnboardingViewController+Coordinator.swift in Sources */,
+				C57684E92829E94C00CD47DF /* TrailMakingTaskViewController.swift in Sources */,
 				8E40DC042471E5940027536B /* CKNetworkManager.swift in Sources */,
 				1D6A5A01279E5FD900184D5F /* BudiSurvey.swift in Sources */,
 				8EA664B025941A4D00B6A45A /* SurveyItemViewController.swift in Sources */,
@@ -1362,6 +1369,7 @@
 				954796FE27B3B233006D5D02 /* AddBlockButtonView.swift in Sources */,
 				8E9CDEA925916E6600C8A228 /* ScheduleViewController.swift in Sources */,
 				2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */,
+				C57684ED2829EA7D00CD47DF /* ReactionTimeViewController.swift in Sources */,
 				954796F027B3A6D7006D5D02 /* TherapySettingsView.swift in Sources */,
 				D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */,
 				8E6E1E0D25351D8F0024B8DF /* PageViewController.swift in Sources */,
