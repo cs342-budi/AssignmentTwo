@@ -31,13 +31,16 @@ struct TherapyInstructionsView: View {
                     .frame(height: 202)
                     .padding(.bottom)
                 
+
                 VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "forwardArmCircles", withExtension: "mov")!))
                     .frame(height: 202)
                     .padding(.bottom)
                 
-                VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "backCircles", withExtension: "mov")!))
-                    .frame(height: 202)
-                    .padding(.bottom)
+ ///                note: removed since we don't have animated version.
+//                VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "backCircles", withExtension: "mov")!))
+//                    .frame(height: 202)
+//                    .padding(.bottom)
+                
                 VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "upDownmov", withExtension: "mov")!))
                     .frame(height: 202)
                     .padding(.bottom)

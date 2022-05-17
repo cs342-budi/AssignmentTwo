@@ -66,7 +66,6 @@ struct MainUIView: View {
                 self.carekitLoaded = true
             }
             
-            
         })
     }
 }
