@@ -34,7 +34,7 @@ struct GamesMainView: View {
                     .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                     .background(Color.yellow)
                     .cornerRadius(10)
-                    .sheet(isPresented: $showingNineHole) {
+                    .fullScreenCover(isPresented: $showingNineHole) {
                         NineHoleViewController()
                     }
                     
@@ -56,7 +56,7 @@ struct GamesMainView: View {
                     .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                     .background(Color.yellow)
                     .cornerRadius(10)
-                    .sheet(isPresented: $showingTapGame) {
+                    .fullScreenCover(isPresented: $showingTapGame) {
                         ActiveTaskViewController()
                     }
                 }.padding()
@@ -76,7 +76,7 @@ struct GamesMainView: View {
                     .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                     .background(Color.yellow)
                     .cornerRadius(10)
-                    .sheet(isPresented: $showingReactionTime) {
+                    .fullScreenCover(isPresented: $showingReactionTime) {
                         ReactionTimeViewController()
                     }
                 }.padding()
@@ -96,7 +96,7 @@ struct GamesMainView: View {
                     .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                     .background(Color.yellow)
                     .cornerRadius(10)
-                    .sheet(isPresented: $showingTrailMakingTask) {
+                    .fullScreenCover(isPresented: $showingTrailMakingTask) {
                         TrailMakingTaskViewController()
                     }
                 }.padding()

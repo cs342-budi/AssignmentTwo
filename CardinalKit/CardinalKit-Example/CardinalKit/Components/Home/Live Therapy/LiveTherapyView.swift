@@ -25,15 +25,8 @@ struct LiveTherapyView: View {
         
         // 1
         VStack{
-            Spacer(minLength: Metrics.PADDING_VERTICAL_MAIN * 2)
-            ViewInstructionsButton()
-                    .gesture(TapGesture().onEnded({
-                self.showingTherapyVideos.toggle()
-                    
-            })).sheet(isPresented: $showingTherapyVideos, onDismiss: {
-            }, content: {
-                TherapyInstructionsView()
-            })
+            Spacer()
+            TherapyInstructionsView()
             
 //            Text("My Live Therapy Tracker")
 //                .fontWeight(.heavy)
