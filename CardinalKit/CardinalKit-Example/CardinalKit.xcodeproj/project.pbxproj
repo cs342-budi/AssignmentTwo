@@ -129,6 +129,7 @@
 		956447CB283C8D64009970B0 /* armAcrossBody.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CA283C8D64009970B0 /* armAcrossBody.mov */; };
 		956447CD283C8D87009970B0 /* upDownmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CC283C8D86009970B0 /* upDownmov.mov */; };
 		956447CF283C8DA3009970B0 /* armUpCropped.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CE283C8DA3009970B0 /* armUpCropped.mov */; };
+		956447D1283CAAAB009970B0 /* SurveyCompletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956447D0283CAAAB009970B0 /* SurveyCompletionController.swift */; };
 		956E7DF127BE25B000F91358 /* TherapyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */; };
 		957EFD8A27D6A78600495061 /* backCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8927D6A78600495061 /* backCircles.mov */; };
 		957EFD8E27D6A7A200495061 /* fingers.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8D27D6A7A200495061 /* fingers.mov */; };
@@ -373,6 +374,7 @@
 		956447CA283C8D64009970B0 /* armAcrossBody.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = armAcrossBody.mov; sourceTree = "<group>"; };
 		956447CC283C8D86009970B0 /* upDownmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = upDownmov.mov; sourceTree = "<group>"; };
 		956447CE283C8DA3009970B0 /* armUpCropped.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = armUpCropped.mov; sourceTree = "<group>"; };
+		956447D0283CAAAB009970B0 /* SurveyCompletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCompletionController.swift; sourceTree = "<group>"; };
 		956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyScheduleViewController.swift; sourceTree = "<group>"; };
 		957EFD8927D6A78600495061 /* backCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backCircles.mov; sourceTree = "<group>"; };
 		957EFD8D27D6A7A200495061 /* fingers.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fingers.mov; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				8E0A4388244A4A0400656518 /* Assets.xcassets */,
 				8E0A4389244A4A0400656518 /* LaunchScreen.storyboard */,
 				8E0A4384244A4A0400656518 /* Constants.swift */,
+				956447D0283CAAAB009970B0 /* SurveyCompletionController.swift */,
 				8E0A4378244A4A0300656518 /* CardinalKit_Example-Bridging-Header.h */,
 				95962CA92831FE1400FED336 /* GoogleService-Info.plist */,
 				8E0A43C9244A4C6500656518 /* Info.plist */,
@@ -1389,6 +1392,7 @@
 				333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */,
 				9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */,
 				8E9CDEA725916B2800C8A228 /* ScheduleViewControllerRepresentable.swift in Sources */,
+				956447D1283CAAAB009970B0 /* SurveyCompletionController.swift in Sources */,
 				954796FA27B3AD46006D5D02 /* ScheduleView.swift in Sources */,
 				9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */,
 				2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */,

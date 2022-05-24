@@ -36,7 +36,7 @@ struct ProfileUIView: View {
                 
                 Section {
                     VStack (alignment: .leading) {
-                        SurveyView()
+//                        SurveyView()
                         TherapySettingsView()
                         GoalsView()
                         CareTeamView()

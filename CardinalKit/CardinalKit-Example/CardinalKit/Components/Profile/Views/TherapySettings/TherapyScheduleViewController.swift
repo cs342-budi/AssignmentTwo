@@ -22,6 +22,7 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
         content.launchImageName = "AppIcon"
         content.categoryIdentifier = "startTherapy"
         
+        
         let dateComp = Calendar.current.dateComponents([.weekday, .hour,
                                                         .minute], from: time)
         print(dateComp)
@@ -42,6 +43,7 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //let userInfo = response.notification.request.content.userInfo
        // let sceneDel = SceneDelegate()
+        print("in the response handler")
         
         switch response.actionIdentifier {
         case UNNotificationDefaultActionIdentifier : //user swiped to unlock
@@ -49,6 +51,8 @@ class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterD
         case "start" :
             print("start therapy")
             //code to open to a specific scene
+        case "startTherapy":
+            print("opened notification")
         default :
             break
         }

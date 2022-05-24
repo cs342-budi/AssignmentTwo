@@ -144,6 +144,9 @@ class CKSendHelper {
                 onCompletion?(false, err)
             } else {
                 print("[appendResultToFirestore] document successfully written!")
+                let surveyController = SurveyCompletionController.shared
+                surveyController.completeSurvey()
+                print(surveyController.completed)
                 onCompletion?(true, nil)
             }
         }
