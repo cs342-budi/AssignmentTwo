@@ -11,23 +11,24 @@ import Foundation
 
 struct TimeBlock: View {
     var time: Date
+    var day : String
+    @State var showDeleteModal : Bool = false
+    @Binding var updater : Bool
     
     var body: some View {
         Button(action: {
-            print("Button tapped.")
-        }) {
+            showDeleteModal.toggle()
+        }, label: {
             HStack(alignment: .lastTextBaseline) {
                 Text(TimeConverter.toStrTime(time: time))
                 .font(.title)
                 .foregroundColor(Color.white)
             }
             .padding(Metrics.PADDING_VERTICAL_MAIN*3.5)
-//            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-//            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-            .background(Color.pink)
+            .background(Color("Accent"))
             .cornerRadius(10)
- 
-            
+        }).sheet(isPresented: $showDeleteModal) {
+            DeleteModalView(isPresented: $showDeleteModal, day: day, time: time, updater: $updater)
         }
     }
 }
@@ -42,8 +43,4 @@ class TimeConverter {
     }
 }
 
-struct TimeBlock_Previews: PreviewProvider {
-    static var previews: some View {
-        TimeBlock(time: Date())
-    }
-}
+

@@ -29,7 +29,7 @@ struct ProfileUIView: View {
                 
                 Section {
                     HStack {
-                        ProfilePictureView()
+//                        ProfilePictureView()
                         PatientIDView()
                     }
                 }.listRowBackground(Color.white)

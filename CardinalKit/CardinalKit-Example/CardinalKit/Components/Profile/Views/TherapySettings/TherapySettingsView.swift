@@ -17,7 +17,7 @@ struct TherapySettingsView: View {
             Image("therapy-settings-white")
                 .padding(.trailing)
                
-            Text("MY SETTINGS")
+            Text("MY SCHEDULE")
                 .fontWeight(.bold)
                 .font(.title2)
                 .foregroundColor(.white)
@@ -35,7 +35,7 @@ struct TherapySettingsView: View {
                 self.showSettings.toggle()
             })).sheet(isPresented: $showSettings, onDismiss: {
             }, content: {
-                ScheduleView().environment(\.managedObjectContext, self.managedObjectContext)
+                ScheduleView(showingSchedule: $showSettings).environment(\.managedObjectContext, self.managedObjectContext)
             }).padding()
         
     }

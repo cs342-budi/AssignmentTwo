@@ -9,6 +9,9 @@
     <entity name="Saturday" representedClassName="Saturday" syncable="YES" codeGenerationType="class">
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="Schedule" representedClassName="Schedule" syncable="YES" codeGenerationType="class">
+        <attribute name="set" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Sunday" representedClassName="Sunday" syncable="YES" codeGenerationType="class">
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
@@ -29,5 +32,6 @@
         <element name="Thursday" positionX="-18" positionY="27" width="128" height="44"/>
         <element name="Tuesday" positionX="-36" positionY="9" width="128" height="44"/>
         <element name="Wednesday" positionX="0" positionY="45" width="128" height="44"/>
+        <element name="Schedule" positionX="-9" positionY="45" width="128" height="44"/>
     </elements>
 </model>

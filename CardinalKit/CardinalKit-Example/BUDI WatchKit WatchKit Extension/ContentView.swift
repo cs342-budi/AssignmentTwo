@@ -42,7 +42,6 @@ struct ContentView: View {
             .navigationBarTitle("BUDI")
             .onAppear {
                 workoutManager.requestAuthorization()
-                //cmManager.startAccelerometers()
                 if SendDataToPhone.shared.session.isReachable {
                     print("Session reached")
                 } else {
