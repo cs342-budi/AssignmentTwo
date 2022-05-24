@@ -25,12 +25,11 @@
 		2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B932F83276BF8D300AB3A02 /* CKReviewConsentDocument.swift */; };
 		2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328226C2CC4E00C4636E /* CkResearchSurveysManager.swift */; };
 		2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328426C30F2E00C4636E /* CloudTaskItem.swift */; };
-		2BF6451826C1D0040020C206 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		2BF6451826C1D0040020C206 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6451F26C1DBE70020C206 /* CK_ORKSerialization.swift */; };
 		2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */; };
 		333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DABED27B3645B0032D213 /* UserDefaultsKeys.swift */; };
 		338AA1FA27AC559B0094D6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338AA1F927AC559B0094D6F0 /* Assets.xcassets */; };
-		338AA20027AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		338AA20527AC559C0094D6F0 /* CardinalKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20427AC559C0094D6F0 /* CardinalKitApp.swift */; };
 		338AA20727AC559C0094D6F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20627AC559C0094D6F0 /* ContentView.swift */; };
 		338AA20927AC559C0094D6F0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA20827AC559C0094D6F0 /* NotificationController.swift */; };
@@ -145,6 +144,7 @@
 		95D9C2B9281D8D3800982FD2 /* BudiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2B7281D8D3800982FD2 /* BudiModel.xcdatamodeld */; };
 		95ECF81D27D44A4F00763452 /* TherapyInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */; };
 		95ECF82227D44B1D00763452 /* ViewInstructionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */; };
+		C50D145A283361470023874A /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C57684E92829E94C00CD47DF /* TrailMakingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */; };
 		C57684ED2829EA7D00CD47DF /* ReactionTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
@@ -159,13 +159,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		338AA20127AC559C0094D6F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
-			remoteInfo = "BUDI WatchKit WatchKit Extension";
-		};
 		338AA21A27AC559D0094D6F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
@@ -201,6 +194,13 @@
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
 		};
+		C50D145B283361EE0023874A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
+			remoteInfo = "BUDI WatchKit WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -232,7 +232,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				338AA20027AC559C0094D6F0 /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */,
+				C50D145A283361470023874A /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +389,7 @@
 		95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudiModel.xcdatamodel; sourceTree = "<group>"; };
 		95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyInstructionsView.swift; sourceTree = "<group>"; };
 		95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstructionsButton.swift; sourceTree = "<group>"; };
+		C5255C2928335FFE0028EA66 /* BUDI-WatchKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BUDI-WatchKit-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMakingTaskViewController.swift; sourceTree = "<group>"; };
 		C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTimeViewController.swift; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
@@ -463,6 +464,7 @@
 		338AA1F827AC55990094D6F0 /* BUDI WatchKit */ = {
 			isa = PBXGroup;
 			children = (
+				C5255C2928335FFE0028EA66 /* BUDI-WatchKit-Info.plist */,
 				338AA1F927AC559B0094D6F0 /* Assets.xcassets */,
 			);
 			path = "BUDI WatchKit";
@@ -917,7 +919,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				338AA20227AC559C0094D6F0 /* PBXTargetDependency */,
+				C50D145C283361EE0023874A /* PBXTargetDependency */,
 			);
 			name = "BUDI WatchKit";
 			productName = "BUDI WatchKit";
@@ -1351,7 +1353,7 @@
 				8E7FFFB825DE350A002982B4 /* CoffeeUIView.swift in Sources */,
 				7643165127C176300036BE83 /* ProgressUIChartView.swift in Sources */,
 				9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */,
-				2BF6451826C1D0040020C206 /* BuildFile in Sources */,
+				2BF6451826C1D0040020C206 /* (null) in Sources */,
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
 				2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */,
@@ -1403,11 +1405,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		338AA20227AC559C0094D6F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */;
-			targetProxy = 338AA20127AC559C0094D6F0 /* PBXContainerItemProxy */;
-		};
 		338AA21B27AC559D0094D6F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */;
@@ -1422,6 +1419,11 @@
 			isa = PBXTargetDependency;
 			target = 338AA1F627AC55990094D6F0 /* BUDI WatchKit */;
 			targetProxy = 338AA22B27AC559D0094D6F0 /* PBXContainerItemProxy */;
+		};
+		C50D145C283361EE0023874A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338AA1FE27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension */;
+			targetProxy = C50D145B283361EE0023874A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1455,7 +1457,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1473,7 +1475,7 @@
 				MARKETING_VERSION = 2.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp.watchkitextension2;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.mks.watchkitapp.watchkitextension2M;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1502,7 +1504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1519,7 +1521,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp.watchkitextension2;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.mks.watchkitapp.watchkitextension2M;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1548,17 +1550,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
+				INFOPLIST_FILE = "BUDI-WatchKit-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi.mks;
 				MARKETING_VERSION = 2.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.mks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1587,16 +1591,18 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
+				INFOPLIST_FILE = "BUDI-WatchKit-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi.mks;
 				MARKETING_VERSION = 2.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.mks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1624,7 +1630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1658,7 +1664,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1689,7 +1695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1721,7 +1727,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1845,7 +1851,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "CardinalKit-Example.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1854,7 +1860,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.mks;
 				PRODUCT_NAME = "CardinalKit Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardinalKit/Supporting Files/CardinalKit_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1871,7 +1877,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CardinalKit_ExampleRelease.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J69VMXBK6A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1880,7 +1886,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.mks;
 				PRODUCT_NAME = "CardinalKit Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardinalKit/Supporting Files/CardinalKit_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

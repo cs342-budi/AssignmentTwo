@@ -42,7 +42,7 @@ struct ContentView: View {
             .navigationBarTitle("BUDI")
             .onAppear {
                 workoutManager.requestAuthorization()
-                cmManager.startAccelerometers()
+                //cmManager.startAccelerometers()
                 if SendDataToPhone.shared.session.isReachable {
                     print("Session reached")
                 } else {
@@ -70,6 +70,7 @@ struct ContentView: View {
                     case "THERAPY_STOP":
                         if workoutManager.running {
                             print("Stopping therapy...")
+                            cmManager.stopAccelerometers()
                             workoutManager.endWorkout()
                         } else {
                             print("Therapy hasn't been started.")

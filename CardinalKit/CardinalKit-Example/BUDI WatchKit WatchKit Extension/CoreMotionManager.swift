@@ -120,6 +120,11 @@ class CoreMotionManager: NSObject, ObservableObject {
 //       }
     }
 
+
+
+    func stopAccelerometers () {
+        self.motion.stopAccelerometerUpdates()
+        self.motion.stopDeviceMotionUpdates()
+    }
+
 }
-
-
