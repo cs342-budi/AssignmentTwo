@@ -112,6 +112,39 @@ extension AppDelegate {
     
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate{
 
+  // This function will be called when the app receive notification
+  func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+      
+    // show the notification alert (banner), and with sound
+      completionHandler([.sound,.banner])
+  }
+    
+  // This function will be called right after user tap on the notification
+  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+      
+      let application = UIApplication.shared
+      
+      if(application.applicationState == .active){
+        print("user tapped the notification bar when the app is in foreground")
+        
+      }
+      
+      if(application.applicationState == .inactive)
+      {
+        print("user tapped the notification bar when the app is in background")
+      }
+      
+      /* Change root view controller to a specific viewcontroller */
+      // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      // let vc = storyboard.instantiateViewController(withIdentifier: "ViewControllerStoryboardID") as? ViewController
+      // self.window?.rootViewController = vc
+      
+      
+    // tell the app that we have finished processing the user’s action / response
+    completionHandler()
+  }
+}
 
 

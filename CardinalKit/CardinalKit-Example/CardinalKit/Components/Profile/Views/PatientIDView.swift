@@ -33,18 +33,35 @@ struct PatientIDView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("First Name: " + self.firstName).font(.system(.body)).foregroundColor(Color(.greyText()))
                 Spacer()
-            }
+                Text("Name: " + self.firstName).font(.system(.body)).foregroundColor(Color(.greyText()))
+                Spacer()
+            }.padding([.top, .bottom])
             HStack {
-                Text("Last Name: " + self.lastName).font(.system(.body)).foregroundColor(Color(.greyText()))
-                Spacer()
-            }
+                Text("Total Therapy (min):")
+                Text("65")
+                    .foregroundColor(Color.green)
+                    .fontWeight(.heavy)
+                    .font(.system(size: 24))
+            }.padding(.bottom)
             HStack {
-                Text("Birthday: " + self.birthday).font(.system(.body)).foregroundColor(Color(.greyText()))
-                Spacer()
-            }
-        }.frame(height: 100)
+                Text("Badge 1")
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(30)
+                    .foregroundColor(Color.green)
+                Text("Badge 2")
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(30)
+                    .foregroundColor(Color.green)
+                Text("Badge 3")
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(30)
+                    .foregroundColor(Color.green)
+            }.padding(.bottom)
+        }
     }
 }
 
