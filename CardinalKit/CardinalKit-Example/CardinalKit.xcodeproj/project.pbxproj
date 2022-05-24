@@ -124,11 +124,11 @@
 		954796FE27B3B233006D5D02 /* AddBlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */; };
 		9553F50727B06CCA00DF7191 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50627B06CCA00DF7191 /* HomeUIView.swift */; };
 		9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553F50827B0817200DF7191 /* CareTeamView.swift */; };
-		956447B5283C89B8009970B0 /* upDownmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447B4283C89B8009970B0 /* upDownmov.mov */; };
-		956447B7283C89D5009970B0 /* pushUpWallmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447B6283C89D5009970B0 /* pushUpWallmov.mov */; };
-		956447B9283C89F4009970B0 /* armUpCropped.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447B8283C89F4009970B0 /* armUpCropped.mov */; };
-		956447BB283C8A07009970B0 /* armAcrossBody.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447BA283C8A07009970B0 /* armAcrossBody.mov */; };
-		956447BD283C8A2E009970B0 /* forwardArmCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447BC283C8A2E009970B0 /* forwardArmCircles.mov */; };
+		956447C3283C8CC3009970B0 /* pushUpWallmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447BF283C8CC3009970B0 /* pushUpWallmov.mov */; };
+		956447C5283C8CE6009970B0 /* forwardArmCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447C4283C8CE5009970B0 /* forwardArmCircles.mov */; };
+		956447CB283C8D64009970B0 /* armAcrossBody.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CA283C8D64009970B0 /* armAcrossBody.mov */; };
+		956447CD283C8D87009970B0 /* upDownmov.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CC283C8D86009970B0 /* upDownmov.mov */; };
+		956447CF283C8DA3009970B0 /* armUpCropped.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CE283C8DA3009970B0 /* armUpCropped.mov */; };
 		956E7DF127BE25B000F91358 /* TherapyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */; };
 		957EFD8A27D6A78600495061 /* backCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8927D6A78600495061 /* backCircles.mov */; };
 		957EFD8E27D6A7A200495061 /* fingers.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8D27D6A7A200495061 /* fingers.mov */; };
@@ -368,11 +368,11 @@
 		954796FD27B3B233006D5D02 /* AddBlockButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockButtonView.swift; sourceTree = "<group>"; };
 		9553F50627B06CCA00DF7191 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		9553F50827B0817200DF7191 /* CareTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTeamView.swift; sourceTree = "<group>"; };
-		956447B4283C89B8009970B0 /* upDownmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = upDownmov.mov; path = ../../../../../../../../Documents/upDownmov.mov; sourceTree = "<group>"; };
-		956447B6283C89D5009970B0 /* pushUpWallmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = pushUpWallmov.mov; path = ../../../../../../../../Documents/pushUpWallmov.mov; sourceTree = "<group>"; };
-		956447B8283C89F4009970B0 /* armUpCropped.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = armUpCropped.mov; path = ../../../../../../../../Documents/armUpCropped.mov; sourceTree = "<group>"; };
-		956447BA283C8A07009970B0 /* armAcrossBody.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = armAcrossBody.mov; path = ../../../../../../../../Documents/armAcrossBody.mov; sourceTree = "<group>"; };
-		956447BC283C8A2E009970B0 /* forwardArmCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = forwardArmCircles.mov; path = ../../../../../../../../Documents/forwardArmCircles.mov; sourceTree = "<group>"; };
+		956447BF283C8CC3009970B0 /* pushUpWallmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = pushUpWallmov.mov; sourceTree = "<group>"; };
+		956447C4283C8CE5009970B0 /* forwardArmCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = forwardArmCircles.mov; sourceTree = "<group>"; };
+		956447CA283C8D64009970B0 /* armAcrossBody.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = armAcrossBody.mov; sourceTree = "<group>"; };
+		956447CC283C8D86009970B0 /* upDownmov.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = upDownmov.mov; sourceTree = "<group>"; };
+		956447CE283C8DA3009970B0 /* armUpCropped.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = armUpCropped.mov; sourceTree = "<group>"; };
 		956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyScheduleViewController.swift; sourceTree = "<group>"; };
 		957EFD8927D6A78600495061 /* backCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backCircles.mov; sourceTree = "<group>"; };
 		957EFD8D27D6A7A200495061 /* fingers.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fingers.mov; sourceTree = "<group>"; };
@@ -881,12 +881,12 @@
 			isa = PBXGroup;
 			children = (
 				957EFD8927D6A78600495061 /* backCircles.mov */,
-				956447B6283C89D5009970B0 /* pushUpWallmov.mov */,
-				956447B4283C89B8009970B0 /* upDownmov.mov */,
-				956447B8283C89F4009970B0 /* armUpCropped.mov */,
-				956447BC283C8A2E009970B0 /* forwardArmCircles.mov */,
+				956447BF283C8CC3009970B0 /* pushUpWallmov.mov */,
+				956447CA283C8D64009970B0 /* armAcrossBody.mov */,
+				956447CC283C8D86009970B0 /* upDownmov.mov */,
+				956447CE283C8DA3009970B0 /* armUpCropped.mov */,
 				957EFD8F27D6A7AF00495061 /* squeeze.mov */,
-				956447BA283C8A07009970B0 /* armAcrossBody.mov */,
+				956447C4283C8CE5009970B0 /* forwardArmCircles.mov */,
 				957EFD9327D6A7C600495061 /* armOutCropped.mov */,
 				957EFD9127D6A7BB00495061 /* backwardArmCircles.mov */,
 				957EFD8D27D6A7A200495061 /* fingers.mov */,
@@ -1124,19 +1124,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0A43AF244A4A0400656518 /* Assets.xcassets in Resources */,
-				956447BD283C8A2E009970B0 /* forwardArmCircles.mov in Resources */,
+				956447C5283C8CE6009970B0 /* forwardArmCircles.mov in Resources */,
+				956447CF283C8DA3009970B0 /* armUpCropped.mov in Resources */,
 				95962CAA2831FE1400FED336 /* GoogleService-Info.plist in Resources */,
 				957EFD8A27D6A78600495061 /* backCircles.mov in Resources */,
-				956447B9283C89F4009970B0 /* armUpCropped.mov in Resources */,
 				8E0A43B0244A4A0400656518 /* LaunchScreen.storyboard in Resources */,
 				E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */,
 				957EFD8E27D6A7A200495061 /* fingers.mov in Resources */,
+				956447C3283C8CC3009970B0 /* pushUpWallmov.mov in Resources */,
 				957EFD9427D6A7C600495061 /* armOutCropped.mov in Resources */,
+				956447CB283C8D64009970B0 /* armAcrossBody.mov in Resources */,
 				8E0A43C1244A4A0400656518 /* LoginCustomWaitStepView.xib in Resources */,
-				956447BB283C8A07009970B0 /* armAcrossBody.mov in Resources */,
-				956447B5283C89B8009970B0 /* upDownmov.mov in Resources */,
+				956447CD283C8D87009970B0 /* upDownmov.mov in Resources */,
 				957EFD9227D6A7BB00495061 /* backwardArmCircles.mov in Resources */,
-				956447B7283C89D5009970B0 /* pushUpWallmov.mov in Resources */,
 				957EFD9027D6A7AF00495061 /* squeeze.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
