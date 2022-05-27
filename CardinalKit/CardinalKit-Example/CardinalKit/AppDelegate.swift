@@ -91,7 +91,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate : UNUserNotificationCenterDelegate {
-    // These delegate methods MUST live in App Delegate and nowhere else!
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print("in will present")

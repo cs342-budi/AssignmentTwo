@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ResearchKit
 
 struct MainUIView: View {
     
