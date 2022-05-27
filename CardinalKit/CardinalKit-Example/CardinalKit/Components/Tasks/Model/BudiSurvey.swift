@@ -28,7 +28,7 @@ struct BudiSurvey {
         // Q1
         let textChoiceQ1aAnswerFormat = ORKTextAnswerFormat.textAnswerFormat()
         let textStepQ1a = ORKQuestionStep(identifier: "Q1aQuestionStep", title: "", question: "What is your name?", answer: textChoiceQ1aAnswerFormat)
-        textStepQ1a.image = UIImage(named: "Q1a")
+        textStepQ1a.image = UIImage(named: "Q1b")
         
         steps += [textStepQ1a]
         
@@ -91,7 +91,7 @@ struct BudiSurvey {
         ORKTextChoice(text: "I don't know", value: 3 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         let textChoiceQ5AnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesQ5)
-        let textStepQ5 = ORKQuestionStep(identifier: "Q5QuestionStep", title: "", question: "What type(s) of cerebral palsy do you have? (check all that apply)", answer: textChoiceQ5AnswerFormat)
+        let textStepQ5 = ORKQuestionStep(identifier: "Q5QuestionStep", title: "", question: "What type(s) of cerebral palsy do you have?", answer: textChoiceQ5AnswerFormat)
         textStepQ5.image = UIImage(named: "Q5")
         
         steps += [textStepQ5]

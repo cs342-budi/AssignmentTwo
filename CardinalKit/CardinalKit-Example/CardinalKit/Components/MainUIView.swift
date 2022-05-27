@@ -17,7 +17,6 @@ struct MainUIView: View {
     @State var useCareKit = false
     @State var carekitLoaded = false
     @StateObject var surveyController = SurveyCompletionController.shared
-    @State var surveyCompleted = false
 
     
     init() {
