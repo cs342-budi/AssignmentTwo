@@ -20,6 +20,7 @@ struct LiveTherapyView: View {
 //    @StateObject var valuePublisher = ValuePublisher()
 //
     @State private var showingTherapyVideos = false
+    @Binding public var isShowingTherapyView: Bool
     
     var body: some View {
         
@@ -89,6 +90,8 @@ struct LiveTherapyView: View {
                     })
                 }
                 
+                isShowingTherapyView = false
+
             }) {
                 Text("STOP THERAPY")
                     .fontWeight(.heavy)
@@ -100,7 +103,8 @@ struct LiveTherapyView: View {
             .background(Color.red)
             .cornerRadius(10)
             .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
-            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5).navigationBarTitle("Live Therapy Tracker")
+            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
+                    .navigationBarTitle("Live Therapy Tracker")
      
                 Spacer()
             }
