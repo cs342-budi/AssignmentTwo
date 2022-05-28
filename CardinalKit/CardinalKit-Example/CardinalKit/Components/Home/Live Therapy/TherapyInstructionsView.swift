@@ -64,15 +64,6 @@ struct TherapyInstructionsView: View {
                 }
             }.tabViewStyle(.page).indexViewStyle(.page(backgroundDisplayMode: .always)).accentColor(Color(config.readColor(query: "Primary Color")))
             
-                
-            /*ForEach(0..<instructionViewModel.instruction.count, id: \.self) { index in
-                HStack(spacing: 8) {
-                    Circle()
-                        .fill(index == self.index ? Color.black : Color.gray)
-                        .frame(width: 8, height: 8)
-                }
-                
-            }*/
         }
     }
 }

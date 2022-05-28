@@ -29,14 +29,14 @@ struct ProfileUIView: View {
                 
                 Section {
                     HStack {
-                        ProfilePictureView()
+//                        ProfilePictureView()
                         PatientIDView()
                     }
                 }.listRowBackground(Color.white)
                 
                 Section {
                     VStack (alignment: .leading) {
-                        SurveyView()
+//                        SurveyView()
                         TherapySettingsView()
                         GoalsView()
                         CareTeamView()

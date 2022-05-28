@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
                }
         
+        UNUserNotificationCenter.current().delegate = self
+        
         // Set up FB Sign In
         FBSDKCoreKit.ApplicationDelegate.shared.application(
                     application,
@@ -56,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
+
     
     // Set up Google Sign In
     @available(iOS 9.0, *)
@@ -86,6 +88,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
     
+}
+
+extension AppDelegate : UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("in will present")
+        completionHandler([.banner, .badge, .sound])
+    }
+
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("user notification center received \(response)")
+        completionHandler()
+    }
 }
 
 // Extensions add new functionality to an existing class, structure, enumeration, or protocol type.

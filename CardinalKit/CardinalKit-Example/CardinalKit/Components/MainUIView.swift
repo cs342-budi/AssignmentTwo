@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ResearchKit
 
 struct MainUIView: View {
     
@@ -15,59 +16,29 @@ struct MainUIView: View {
     
     @State var useCareKit = false
     @State var carekitLoaded = false
+    @StateObject var surveyController = SurveyCompletionController.shared
+
     
     init() {
         self.color = Color(config.readColor(query: "Primary Color"))
-        
     }
     
     var body: some View {
-        HomeUIView()
-        
-        //removed navigation bar
-//        TabView {
-//            HomeUIView().tabItem {
-//                Image("tab_home").renderingMode(.template)
-//                Text("Home")
-//            }
-//
-//            TasksUIView(color: self.color).tabItem {
-//                Image("tab_tasks").renderingMode(.template)
-//                Text("Tasks")
-//            }
-//
-//            if useCareKit && carekitLoaded {
-//                ScheduleViewControllerRepresentable()
-//                    .ignoresSafeArea(edges: .all)
-//                    .tabItem {
-//                        Image("tab_schedule").renderingMode(.template)
-//                        Text("Schedule")
-//                }
-//
-////                CareTeamViewControllerRepresentable()
-////                    .ignoresSafeArea(edges: .all)
-////                    .tabItem {
-////                        Image("tab_care").renderingMode(.template)
-////                        Text("Contact")
-////                }
-//            }
-//
-//            ProfileUIView(color: self.color).tabItem {
-//                Image("tab_profile").renderingMode(.template)
-//                Text("Profile")
-//            }
-//        }
-        .accentColor(self.color)
-        .onAppear(perform: {
-            self.useCareKit = config.readBool(query: "Use CareKit")
-            
-            let lastUpdateDate:Date? = UserDefaults.standard.object(forKey: Constants.prefCareKitCoreDataInitDate) as? Date
-            CKCareKitManager.shared.coreDataStore.populateSampleData(lastUpdateDate:lastUpdateDate){() in
-                self.carekitLoaded = true
-            }
-            
-            
-        })
+        if surveyController.completed  {
+            HomeUIView()
+            .accentColor(self.color)
+            .onAppear(perform: {
+                self.useCareKit = config.readBool(query: "Use CareKit")
+                
+                let lastUpdateDate:Date? = UserDefaults.standard.object(forKey: Constants.prefCareKitCoreDataInitDate) as? Date
+                CKCareKitManager.shared.coreDataStore.populateSampleData(lastUpdateDate:lastUpdateDate){() in
+                    self.carekitLoaded = true
+                }
+                
+            })
+        } else {
+            CKTaskViewController(tasks: BudiSurvey.budiSurvey)
+        }
     }
 }
 
