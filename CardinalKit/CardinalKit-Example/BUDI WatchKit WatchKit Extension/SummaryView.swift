@@ -11,6 +11,9 @@ import SwiftUI
 import WatchKit
 import CoreMotion
 
+ //String("X").font(.callout) + String("2").font(.caption).baselineOffset(6.0)
+
+
 struct SummaryView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @EnvironmentObject var cmMotionManager: CoreMotionManager
@@ -21,7 +24,6 @@ struct SummaryView: View {
         formatter.zeroFormattingBehavior = .pad
         return formatter
     }()
-    
     //lifecycle method
     
     var body: some View {
@@ -55,9 +57,11 @@ struct SummaryView: View {
                     // fastest accelaration?
                     //send data back to IOS?
                     
-                    
+                    HStack {
                     SummaryMetricView(title: "Avg. Accelaration",
-                                      value: String(cmMotionManager.meanAccelaration))
+                                      value: String(cmMotionManager.meanAccelaration.formatted(.number.precision(.significantDigits(2))) ))
+                    
+                    }
                     
                         .foregroundStyle(.red)
                     Text("Activity Rings")
