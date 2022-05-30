@@ -57,7 +57,7 @@ struct SummaryView: View {
                     
                     
                     SummaryMetricView(title: "Avg. Accelaration",
-                                      value: String(cmMotionManager.meanAccelaration))
+                                      value: String(cmMotionManager.meanAccelaration.formatted(.number.precision(.significantDigits(2)))))
                     
                         .foregroundStyle(.red)
                     Text("Activity Rings")

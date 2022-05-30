@@ -13,7 +13,7 @@ import CoreMotion
 //provide updated data to views
 class CoreMotionManager: NSObject, ObservableObject {
     @Published var accelaration: Double = 0.0
-    @Published var acclerationHistory: [Double] = [10.0, 20.0, 30.0]
+    @Published var accelerationHistory: [Double] = []
     var meanAccelaration: Double = 0.0
     var motion: CMMotionManager!
     //var timer: Timer?
@@ -36,7 +36,7 @@ class CoreMotionManager: NSObject, ObservableObject {
     }
     
     func getMeanAccelaration(){
-        meanAccelaration = acclerationHistory.reduce(0,+)/Double(acclerationHistory.count)
+        meanAccelaration = accelerationHistory.reduce(0,+)/Double(accelerationHistory.count)
     }
     
     func startAccelerometers() {
@@ -71,6 +71,7 @@ class CoreMotionManager: NSObject, ObservableObject {
                                         print("SENDING MAX TO PHONE")
                                         SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
                                 }
+                                self?.accelerationHistory.append(max)
                             }
                             //clear array
                             strongSelf.accelArray.removeAll()
