@@ -36,7 +36,7 @@ struct AddMenuView: View {
     @State private var multiSelection = Set<UUID>()
     @ObservedObject var therapySchedule : TherapySchedule
     @Binding var updateSchedule: Bool
-    let therapyScheduleController = TherapyScheduleViewController()
+    let therapyScheduleController = AppDelegate() //TherapyScheduleViewController()
     
     @Environment(\.presentationMode) var presentationMode
     

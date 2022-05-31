@@ -96,7 +96,7 @@ struct DeleteModalView: View {
 func handleNotificationDelete () {
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     let defaults = UserDefaults.standard
-    let therapyScheduleController = TherapyScheduleViewController()
+    let therapyScheduleController = AppDelegate() //CHANGED from TherapyScheduleViewController()
     for day in week {
         let dayArr = defaults.object(forKey: day.day) as? [Date] ?? [Date]()
         for session in dayArr {

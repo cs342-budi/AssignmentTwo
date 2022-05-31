@@ -12,6 +12,7 @@ import UIKit
 
 
 class TherapyScheduleViewController: UIViewController, UNUserNotificationCenterDelegate {
+
     
     func scheduleLocal(day: String, time: Date) {
         registerCategories()

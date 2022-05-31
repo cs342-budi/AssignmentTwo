@@ -21,20 +21,18 @@ struct LiveTherapyView: View {
 //
     @State private var showingTherapyVideos = false
     
+    init() {
+        //This changes navbar appearance everywhere, no need to replicate in other views 
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = UIColor.white
+    }
+    
     var body: some View {
         
         // 1
         VStack{
             Spacer()
             TherapyInstructionsView()
-            
-//            Text("My Live Therapy Tracker")
-//                .fontWeight(.heavy)
-//                .font(.title2)
-//                .foregroundColor(Color.black)
-//
-//            Spacer()
-//
             /*
             Text(watchViewModel.data).onReceive($watchViewModel.actionNotification){ action in
                 // MARK: Taylor

@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // (3) initialize CardinalKit API
         CKAppLaunch()
         
+        UNUserNotificationCenter.current().delegate = self
+        establishPermissions()
+        
         
         let config = CKPropertyReader(file: "CKConfiguration")
         UIView.appearance(whenContainedInInstancesOf: [ORKTaskViewController.self]).tintColor = config.readColor(query: "Tint Color")
@@ -48,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
                }
         
-        UNUserNotificationCenter.current().delegate = self
+ 
         
         // Set up FB Sign In
         FBSDKCoreKit.ApplicationDelegate.shared.application(
@@ -92,15 +95,88 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate : UNUserNotificationCenterDelegate {
 
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        print("in will present")
+//        completionHandler([.banner, .badge, .sound])
+//    }
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("in will present")
-        completionHandler([.banner, .badge, .sound])
+        // Here we actually handle the notification
+        print("Notification received with identifier \(notification.request.identifier)")
+        // So we call the completionHandler telling that the notification should display a banner and play the notification sound - this will happen while the app is in foreground
+        completionHandler([.banner, .sound])
     }
-
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("user notification center received \(response)")
-        completionHandler()
+        print("received notification")
+    }
+    
+  
+
+    
+    func scheduleLocal(day: String, time: Date) {
+        registerCategories()
+        let content = UNMutableNotificationContent()
+        content.title = "It's therapy time!"
+        content.body = "Open BUDI to get started."
+        content.sound = UNNotificationSound.default
+        content.launchImageName = "AppIcon"
+        content.categoryIdentifier = "startTherapy"
+        
+        
+        let dateComp = Calendar.current.dateComponents([.weekday, .hour,
+                                                        .minute], from: time)
+        print(dateComp)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: true)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    func registerCategories() {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        let startSession = UNNotificationAction(identifier: "start", title: "Start a Therapy Session", options: [])
+        let category = UNNotificationCategory(identifier: "startTherapy", actions: [startSession], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "", options:.customDismissAction)
+        center.setNotificationCategories([category])
+        
+    }
+    
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        //let userInfo = response.notification.request.content.userInfo
+//       // let sceneDel = SceneDelegate()
+//        print("in the response handler")
+//
+//        switch response.actionIdentifier {
+//        case UNNotificationDefaultActionIdentifier : //user swiped to unlock
+//            print ("default identifier")
+//        case "start" :
+//            print("start therapy")
+//            //code to open to a specific scene
+//        case "startTherapy":
+//            print("opened notification")
+//        default :
+//            break
+//        }
+//        completionHandler()
+//    }
+//
+    func establishPermissions() {
+        let current = UNUserNotificationCenter.current()
+        current.getNotificationSettings(completionHandler: { (settings) in
+            if settings.authorizationStatus == .authorized {
+                // Notification permission granted, do nothing
+            } else if settings.authorizationStatus == .denied {
+                // Notification permission was previously denied, go to settings & privacy to re-enable
+            } else if settings.authorizationStatus == .notDetermined {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        })
     }
 }
 

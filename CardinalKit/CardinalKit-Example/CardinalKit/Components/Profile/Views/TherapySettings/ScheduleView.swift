@@ -29,7 +29,7 @@ struct ScheduleView: View {
     @State var showDeleteModal : Bool = false
 
     
-    let therapyScheduleController = TherapyScheduleViewController()
+    let therapyScheduleController = AppDelegate() //TherapyScheduleViewController()
   
     
     var body: some View {
@@ -160,7 +160,7 @@ struct ScheduleView: View {
             }
         }.onAppear(perform: {
             if defaults.value(forKey: "defs") == nil { //if schedule defaults haven't been set yet
-                let therapyScheduleController = TherapyScheduleViewController()
+                let therapyScheduleController = AppDelegate() //TherapyScheduleViewController()
                 
                 //get yesterday
                 var dayComponent = DateComponents()
