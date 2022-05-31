@@ -20,6 +20,7 @@ struct LiveTherapyView: View {
 //    @StateObject var valuePublisher = ValuePublisher()
 //
     @State private var showingTherapyVideos = false
+    @Binding public var isShowingTherapyView: Bool
     
     init() {
         //This changes navbar appearance everywhere, no need to replicate in other views 
@@ -87,6 +88,8 @@ struct LiveTherapyView: View {
                     })
                 }
                 
+                isShowingTherapyView = false
+
             }) {
                 Text("STOP THERAPY")
                     .fontWeight(.heavy)
@@ -98,7 +101,8 @@ struct LiveTherapyView: View {
             .background(Color.red)
             .cornerRadius(10)
             .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
-            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5).navigationBarTitle("Live Therapy Tracker")
+            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
+                    .navigationBarTitle("Live Therapy Tracker")
      
                 Spacer()
             }

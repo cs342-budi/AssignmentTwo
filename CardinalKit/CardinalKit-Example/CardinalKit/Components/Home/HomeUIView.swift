@@ -27,6 +27,7 @@ struct HomeUIView: View {
         
     }
     
+    @State private var isPresented = false
    
 
     
@@ -63,6 +64,9 @@ struct HomeUIView: View {
                             } else {
                                 print ("cannot reach watch")
                             }
+                            
+                            // Present Live Therapy View
+                            isPresented.toggle()
                         
                             
                         }) {
@@ -77,9 +81,11 @@ struct HomeUIView: View {
                         .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
                         .background(self.color)
                         .cornerRadius(10)
-                        
-                        NavigationLink(destination: LiveTherapyView(),
-                                   label: {}).opacity(0)
+                        .fullScreenCover(isPresented: $isPresented) {
+                                LiveTherapyView(isShowingTherapyView: $isPresented)
+                        }
+//                        NavigationLink(destination: LiveTherapyView(isShowingTherapyView: $isPresented),
+//                                   label: {}).opacity(0)
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
                     
