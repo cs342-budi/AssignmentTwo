@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0348051D284870E500C0E492 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03480519284870E500C0E492 /* GoogleService-Info.plist */; };
 		1D6A5A01279E5FD900184D5F /* BudiSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */; };
 		1DD7142727BE050500B4A6EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142627BE050500B4A6EB /* ImagePicker.swift */; };
 		1DD7142927BE080700B4A6EB /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */; };
@@ -139,7 +140,6 @@
 		9590DFA827B2330100B6A633 /* ActiveTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */; };
 		9590DFAD27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */; };
 		9590DFAF27B2479000B6A633 /* NineHoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */; };
-		95962CAA2831FE1400FED336 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95962CA92831FE1400FED336 /* GoogleService-Info.plist */; };
 		9599A741283357210057A6D3 /* DeleteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599A740283357210057A6D3 /* DeleteModalView.swift */; };
 		95A8C5FD27B10BE100E0D4AC /* GamesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */; };
 		95A8C60227B11A1B00E0D4AC /* ProgressUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */; };
@@ -242,6 +242,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03480519284870E500C0E492 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07D78DA16FC9C3C7709EA243 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0D0180964FA3E6A1B61DBC57 /* Pods-CardinalKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		10F605C3DA7DEE659884A738 /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -384,7 +385,6 @@
 		9590DFA727B2330100B6A633 /* ActiveTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewController.swift; sourceTree = "<group>"; };
 		9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewCoordinator.swift; sourceTree = "<group>"; };
 		9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineHoleViewController.swift; sourceTree = "<group>"; };
-		95962CA92831FE1400FED336 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../.Trash/Test/AssignmentTwo/CardinalKit/CardinalKit-Example/CardinalKit/Supporting Files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9599A740283357210057A6D3 /* DeleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteModalView.swift; sourceTree = "<group>"; };
 		95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesMainView.swift; sourceTree = "<group>"; };
@@ -609,7 +609,7 @@
 				8E0A4384244A4A0400656518 /* Constants.swift */,
 				956447D0283CAAAB009970B0 /* SurveyCompletionController.swift */,
 				8E0A4378244A4A0300656518 /* CardinalKit_Example-Bridging-Header.h */,
-				95962CA92831FE1400FED336 /* GoogleService-Info.plist */,
+				03480519284870E500C0E492 /* GoogleService-Info.plist */,
 				8E0A43C9244A4C6500656518 /* Info.plist */,
 				E2F1FD7724D62064006C39DF /* CKConfiguration.plist */,
 				95D9C2B7281D8D3800982FD2 /* BudiModel.xcdatamodeld */,
@@ -1129,12 +1129,12 @@
 				8E0A43AF244A4A0400656518 /* Assets.xcassets in Resources */,
 				956447C5283C8CE6009970B0 /* forwardArmCircles.mov in Resources */,
 				956447CF283C8DA3009970B0 /* armUpCropped.mov in Resources */,
-				95962CAA2831FE1400FED336 /* GoogleService-Info.plist in Resources */,
 				957EFD8A27D6A78600495061 /* backCircles.mov in Resources */,
 				8E0A43B0244A4A0400656518 /* LaunchScreen.storyboard in Resources */,
 				E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */,
 				957EFD8E27D6A7A200495061 /* fingers.mov in Resources */,
 				956447C3283C8CC3009970B0 /* pushUpWallmov.mov in Resources */,
+				0348051D284870E500C0E492 /* GoogleService-Info.plist in Resources */,
 				957EFD9427D6A7C600495061 /* armOutCropped.mov in Resources */,
 				956447CB283C8D64009970B0 /* armAcrossBody.mov in Resources */,
 				8E0A43C1244A4A0400656518 /* LoginCustomWaitStepView.xib in Resources */,
