@@ -20,6 +20,7 @@ struct LiveTherapyView: View {
 //    @StateObject var valuePublisher = ValuePublisher()
 //
     @State private var showingTherapyVideos = false
+    @Binding public var isLiveTherapyPresented: Bool
     
     var body: some View {
         
@@ -88,6 +89,9 @@ struct LiveTherapyView: View {
                         print(err.localizedDescription)
                     })
                 }
+                
+                // Dismiss View
+                isLiveTherapyPresented = false
                 
             }) {
                 Text("STOP THERAPY")
