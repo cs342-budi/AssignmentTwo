@@ -17,7 +17,6 @@ class TherapySchedule : ObservableObject {
 }
 
 struct ScheduleView: View {
-    @Binding var showingSchedule : Bool
     @State private var showingAddMenu = false
   
     @StateObject var therapySchedule = TherapySchedule()
@@ -34,28 +33,11 @@ struct ScheduleView: View {
     
     var body: some View {
         VStack (alignment: .leading) {
-            HStack (alignment: .center) {
-                Spacer()
-                Text("Cancel")
-                    .foregroundColor(Color.green)
-                    .onTapGesture(perform: {
-                        showingSchedule = false
-                    }).padding(.trailing)
 
-            }.padding(.top)
             
-            HStack {
-                Spacer()
-                Text("Therapy Schedule")
-                    .font(.headline)
-                Spacer()
-            }
-            
-            .sheet(isPresented: $showingAddMenu) {
+            Divider().sheet(isPresented: $showingAddMenu) {
                 AddMenuView(therapySchedule: therapySchedule, updateSchedule: $updater).environment(\.managedObjectContext, self.managedObjectContext)
-            }
-            
-            Divider()
+            }.navigationBarTitle("Therapy Schedule")
             
             Button(action: {
                 self.showingAddMenu.toggle()
