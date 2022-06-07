@@ -132,6 +132,7 @@
 		956447CF283C8DA3009970B0 /* armUpCropped.mov in Resources */ = {isa = PBXBuildFile; fileRef = 956447CE283C8DA3009970B0 /* armUpCropped.mov */; };
 		956447D1283CAAAB009970B0 /* SurveyCompletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956447D0283CAAAB009970B0 /* SurveyCompletionController.swift */; };
 		956E7DF127BE25B000F91358 /* TherapyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */; };
+		95757B6E284EDB0E00E62684 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95757B6D284EDB0D00E62684 /* ProgressBar.swift */; };
 		957EFD8A27D6A78600495061 /* backCircles.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8927D6A78600495061 /* backCircles.mov */; };
 		957EFD8E27D6A7A200495061 /* fingers.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8D27D6A7A200495061 /* fingers.mov */; };
 		957EFD9027D6A7AF00495061 /* squeeze.mov in Resources */ = {isa = PBXBuildFile; fileRef = 957EFD8F27D6A7AF00495061 /* squeeze.mov */; };
@@ -377,6 +378,7 @@
 		956447CE283C8DA3009970B0 /* armUpCropped.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = armUpCropped.mov; sourceTree = "<group>"; };
 		956447D0283CAAAB009970B0 /* SurveyCompletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCompletionController.swift; sourceTree = "<group>"; };
 		956E7DF027BE25B000F91358 /* TherapyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyScheduleViewController.swift; sourceTree = "<group>"; };
+		95757B6D284EDB0D00E62684 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		957EFD8927D6A78600495061 /* backCircles.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backCircles.mov; sourceTree = "<group>"; };
 		957EFD8D27D6A7A200495061 /* fingers.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fingers.mov; sourceTree = "<group>"; };
 		957EFD8F27D6A7AF00495061 /* squeeze.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = squeeze.mov; sourceTree = "<group>"; };
@@ -894,6 +896,7 @@
 				957EFD9127D6A7BB00495061 /* backwardArmCircles.mov */,
 				957EFD8D27D6A7A200495061 /* fingers.mov */,
 				95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */,
+				95757B6D284EDB0D00E62684 /* ProgressBar.swift */,
 				7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */,
 				95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */,
 				95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */,
@@ -1380,6 +1383,7 @@
 				D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */,
 				8E6E1E0D25351D8F0024B8DF /* PageViewController.swift in Sources */,
 				8E0A43AC244A4A0400656518 /* CKStudyUser.swift in Sources */,
+				95757B6E284EDB0E00E62684 /* ProgressBar.swift in Sources */,
 				33D8711A27B5DF8D0095516B /* SurveyView.swift in Sources */,
 				8E0A43C3244A4A0400656518 /* LoginCustomWaitStepViewController.swift in Sources */,
 				8E9CDEB22591739A00C8A228 /* TipView.swift in Sources */,

@@ -21,12 +21,59 @@ struct LiveTherapyView: View {
 //
     @State private var showingTherapyVideos = false
     @Binding public var isLiveTherapyPresented: Bool
+    @State var exerciseCount = 2
+    @State var points = 11
+    @State var time = "2:37"
+    @State var progressValue: Float = 0.35
     
     var body: some View {
         
         // 1
         VStack{
-            Spacer()
+            Spacer(minLength: Metrics.PADDING_VERTICAL_MAIN*2.5)
+            HStack (alignment: .bottom) {
+                VStack {
+                    Text(String(exerciseCount))
+                        .font(.system(size: 24))
+                        .fontWeight(.bold)
+                    
+                    Text("Exercises")
+                        .font(.system(size: 13))
+                        .fontWeight(.light)
+                }
+                Spacer()
+                VStack {
+                    Text(String(points))
+                        .font(.system(size: 44))
+                        .fontWeight(.bold)
+                    
+                    Text("Points")
+                        .font(.system(size: 13))
+                        .fontWeight(.light)
+                    
+                }
+                Spacer()
+                VStack{
+                    Text(String(time))
+                        .font(.system(size: 24))
+                        .fontWeight(.bold)
+                    
+                    Text("Time")
+                        .font(.system(size: 13))
+                        .fontWeight(.light)
+                }
+            }.padding([.leading, .trailing])
+            VStack (alignment: .leading){
+                ProgressBar(value: $progressValue).frame(height: 20)
+                HStack {
+                    Text(String(progressValue*100) + "%")
+                        .font(.system(size: 13))
+                        .fontWeight(.bold)
+                    Text("Progress to next point")
+                        .font(.system(size: 13))
+                        .fontWeight(.light)
+                }
+            }.padding()
             TherapyInstructionsView()
             
 //            Text("My Live Therapy Tracker")
@@ -56,24 +103,13 @@ struct LiveTherapyView: View {
                 
             // pass in array of max accelerations into LiveTherapyChartView
             LiveTherapyChartView(maxData: watchViewModel.maxReceived)
-                .padding(.top, 20 )
+                .frame(width: 350, height: 130)
                 .padding(.leading, 5)
                 .padding(.trailing, 5)
-                .padding(.bottom, 20)
-//                .overlay(Text("Acceleration")
-//                .font(.system(size: 15))
-//                .fontWeight(.medium)
-//                .rotationEffect(.degrees(270))
-//                .offset(x: -10.0, y: 0.0),
-//                alignment: .leading)
-//                .overlay(Text("Time (seconds)")
-//                .font(.system(size: 15))
-//                .fontWeight(.medium)
-//                .offset(x: 10.0, y: 0.0),
-//                alignment: .bottom)
+            
+
             
             Text(watchViewModel.messageText)
-
                 .font(.system(size: 50))
                 .bold()
             
@@ -95,21 +131,23 @@ struct LiveTherapyView: View {
                 
             }) {
                 Text("STOP THERAPY")
-                    .fontWeight(.heavy)
-                    .font(.title2)
-                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .font(.subheadline)
+                    .foregroundColor(.black)
             }
-            .frame(maxWidth: 250)
-            .padding(Metrics.PADDING_VERTICAL_MAIN*2)
-            .background(Color.red)
+            .frame(maxWidth: .infinity)
+            .padding(Metrics.PADDING_VERTICAL_MAIN*1.75)
+            .background(Color("SecondaryStop"))
             .cornerRadius(10)
-            .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN * 2.5)
-            .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN * 2.5).navigationBarTitle("Live Therapy Tracker")
+            .padding()
+                
+         
      
                 Spacer()
             }
-            Spacer()
-        }.background(Color.white)
+            Spacer(minLength: Metrics.PADDING_VERTICAL_MAIN*2)
+        }.background(Color.green)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
