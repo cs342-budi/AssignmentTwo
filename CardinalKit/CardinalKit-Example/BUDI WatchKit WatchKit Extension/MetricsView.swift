@@ -19,31 +19,28 @@ struct MetricsView: View {
         TimelineView(MetricsTimelineSchedule(from: workoutManager.builder?.startDate ?? Date())) { context in
             VStack(alignment: .center) {
                 Spacer()
-                ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: context.cadence == .live)
+                //ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: false)
+                ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: false)
                     .foregroundStyle(.black).font(.title3)//yellow
                 Spacer()
                 VStack(alignment: .center) {
                     HStack(alignment: .center) {
                         Spacer()
                         VStack {
-                            Text("5").font(.title).foregroundColor(.black)
-                            Text("Points").font(.footnote).foregroundColor(.black)
-                        }
-                        Spacer()
-                        VStack {
-                            Text(cmMotionManager.accelaration.formatted(.number.precision(.fractionLength(0)))).foregroundColor(.black)
-                            Text("cm/s").foregroundColor(.black).font(.footnote)+Text("2").font(.system(size: 8)).baselineOffset(5).foregroundColor(.black)//purple
+                            Text("5").font(.largeTitle).foregroundColor(.black)
+                            Text("Points").font(.caption).foregroundColor(.black)
                         }
                         Spacer()
                     }
                     Spacer()
                     HStack {
                         Spacer()
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .center) {
                             Spacer()
                             HStack {
                                 Image(systemName: "flame.fill").foregroundColor(.black).imageScale(.small)
-                                Text(Measurement(value: workoutManager.activeEnergy, unit: UnitEnergy.kilocalories).formatted(.measurement(width: .abbreviated, usage: .workout, numberFormatStyle: .number.precision(.fractionLength(0))))).foregroundColor(.black).font(.caption)
+                                Text(workoutManager.activeEnergy.formatted(.number.precision(.fractionLength(0))) + " Cal").foregroundColor(.black).font(.caption)
+                                //Text(Measurement(value: workoutManager.activeEnergy, unit: UnitEnergy.kilocalories).formatted(.measurement(width: .abbreviated, usage: .workout, numberFormatStyle: .number.precision(.fractionLength(0))))).foregroundColor(.black).font(.caption)
                             }
                             Spacer()
                             HStack {
