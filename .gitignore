@@ -1,1 +1,71 @@
 *.DS_Store
+CardinalKit/CardinalKit-Example/BUDI WatchKit WatchKit Extension/Info.plist
+CardinalKit/CardinalKit-Example/CardinalKit.xcodeproj/project.pbxproj
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Zip/Zip.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Zip/Zip.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/SwiftyJSON/SwiftyJSON.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/SwiftyJSON/SwiftyJSON.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/RealmSwift/RealmSwift.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/RealmSwift/RealmSwift.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Realm/Realm.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Realm/Realm.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Realm/Realm-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Realm/Realm-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/ReachabilitySwift/ReachabilitySwift.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/ReachabilitySwift/ReachabilitySwift.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example-frameworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/ObjectMapper/ObjectMapper.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/ObjectMapper/ObjectMapper.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/gRPC-Core/gRPC-Core.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/gRPC-Core/gRPC-Core.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/gRPC-C++/gRPC-C++.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/gRPC-C++/gRPC-C++.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Granola/Granola.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Granola/Granola.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseStorage/FirebaseStorage.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseStorage/FirebaseStorage.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseDynamicLinks/FirebaseDynamicLinks.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseDynamicLinks/FirebaseDynamicLinks.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseCore/FirebaseCore.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseCore/FirebaseCore.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseAuth/FirebaseAuth.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseAuth/FirebaseAuth.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Firebase/Firebase.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/Firebase/Firebase.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBSDKCoreKit/FBSDKCoreKit-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBSDKCoreKit/FBSDKCoreKit-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBAEMKit/FBAEMKit-xcframeworks.sh
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/FBAEMKit/FBAEMKit-xcframeworks-output-files.xcfilelist
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/CardinalKit/CardinalKit.release.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Target Support Files/CardinalKit/CardinalKit.debug.xcconfig
+CardinalKit/CardinalKit-Example/Pods/Pods.xcodeproj/project.pbxproj
+CardinalKit/CardinalKit-Example/Podfile.lock
+CardinalKit/CardinalKit-Example/CardinalKit.xcodeproj/project.pbxproj
