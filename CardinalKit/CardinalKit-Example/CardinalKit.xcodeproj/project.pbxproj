@@ -118,6 +118,8 @@
 		8EA664B2259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */; };
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
+		951E6C002860F4120043E302 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24927AC58AA0094D6F0 /* ElapsedTimeView.swift */; };
+		951E6C072860F73B0043E302 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E6C062860F73B0043E302 /* Timer.swift */; };
 		954796F027B3A6D7006D5D02 /* TherapySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */; };
 		954796F627B3AC3B006D5D02 /* TimeBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796F527B3AC3B006D5D02 /* TimeBlockView.swift */; };
 		954796FA27B3AD46006D5D02 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796F927B3AD46006D5D02 /* ScheduleView.swift */; };
@@ -364,6 +366,7 @@
 		8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKCareKitRemoteSyncWithFirestore.swift; sourceTree = "<group>"; };
 		8EA664B32594387900B6A45A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
+		951E6C062860F73B0043E302 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapySettingsView.swift; sourceTree = "<group>"; };
 		954796F527B3AC3B006D5D02 /* TimeBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockView.swift; sourceTree = "<group>"; };
 		954796F927B3AD46006D5D02 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -896,6 +899,7 @@
 				957EFD9127D6A7BB00495061 /* backwardArmCircles.mov */,
 				957EFD8D27D6A7A200495061 /* fingers.mov */,
 				95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */,
+				951E6C062860F73B0043E302 /* Timer.swift */,
 				95757B6D284EDB0D00E62684 /* ProgressBar.swift */,
 				7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */,
 				95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */,
@@ -1319,6 +1323,7 @@
 				8E6E1E28253538CC0024B8DF /* CloudTaskListItemView.swift in Sources */,
 				8E0A43B3244A4A0400656518 /* TaskSamples.swift in Sources */,
 				8E6E1E2225352C780024B8DF /* OnboardingUIView.swift in Sources */,
+				951E6C002860F4120043E302 /* ElapsedTimeView.swift in Sources */,
 				1DD7142927BE080700B4A6EB /* ProfilePictureView.swift in Sources */,
 				8E6E1E1A253528450024B8DF /* WithdrawView.swift in Sources */,
 				8E6E1E2E25353A1E0024B8DF /* PatientIDView.swift in Sources */,
@@ -1375,6 +1380,7 @@
 				8E0A43AE244A4A0400656518 /* ORKESerialization.m in Sources */,
 				8E9CDEB6259181B400C8A228 /* CareTeamViewControllerRepresentable.swift in Sources */,
 				8E9CDEAF259172C200C8A228 /* CKCareKitManager+Sample.swift in Sources */,
+				951E6C072860F73B0043E302 /* Timer.swift in Sources */,
 				954796FE27B3B233006D5D02 /* AddBlockButtonView.swift in Sources */,
 				8E9CDEA925916E6600C8A228 /* ScheduleViewController.swift in Sources */,
 				2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */,
