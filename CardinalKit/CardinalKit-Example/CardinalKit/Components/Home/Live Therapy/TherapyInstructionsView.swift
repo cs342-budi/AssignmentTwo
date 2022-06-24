@@ -41,56 +41,53 @@ private class InstructionsViewModel: ObservableObject {
 struct TherapyInstructionsView: View {
     
     @StateObject fileprivate var instructionViewModel = InstructionsViewModel()
+//    @Binding var exerciseCount : Int
     
     let config = CKConfig.shared
     
     
     var body: some View {
-        VStack {
-            //Text("Therapy Exercises")
-               // .font(.title2)
-                //.padding(.top)
             TabView {
                 ForEach(instructionViewModel.instruction) { instruction in
                     VStack {
                         VideoPlayer(player: AVPlayer(url: instruction.video))
                             .frame(width: UIScreen.main.bounds.size.width, height: 200)
-                            .padding(.bottom, 20)
-                        HStack{
-                            Text("\(instruction.title)")
-                                .fontWeight(.semibold)
-                                .font(.system(size: 17))
-                            Spacer()
-                            Text("\(instruction.reps)" + " reps")
-                                .fontWeight(.light)
-                                .font(.system(size: 13))
-                        }.padding([.leading, .trailing])
-                          
+                        
+                        HStack {
+                            HStack (alignment: .bottom){
+                                Text("\(instruction.title)")
+                                    .fontWeight(.semibold)
+                                    .font(.system(size: 17))
+                                Spacer()
+                                Text("\(instruction.reps)" + " reps")
+                                    .fontWeight(.light)
+                                    .font(.system(size: 13))
+                            }.padding([.leading, .trailing])
+//                            Spacer()
+                            
+//MARK: Not including exercise tracking for the beta release
+//                            Button (action:{
+//                                exerciseCount += 1
+//                               print("tapped log exercise")
+//
+//                            }) {
+//                                Text("Log Exercise")
+//                                    .fontWeight(.semibold)
+//                                    .font(.subheadline)
+//                                    .foregroundColor(.white)
+//                            }
+//                            .frame(maxWidth: UIScreen.main.bounds.size.width / 2.5)
+//                            .padding(Metrics.PADDING_VERTICAL_MAIN)
+//                            .background(Color.black)
+//                            .cornerRadius(10)
+//                            .padding([.leading, .trailing])
+                        }
                     }
+                  
                 }
-            }.tabViewStyle(.page).indexViewStyle(.page(backgroundDisplayMode: .interactive)).accentColor(Color(config.readColor(query: "Primary Color")))
-            
-            Button (action:{
-               print("tapped log exercise")
-                
-            }) {
-                Text("Log Exercise")
-                    .fontWeight(.semibold)
-                    .font(.subheadline)
-                    .foregroundColor(.white)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(Metrics.PADDING_VERTICAL_MAIN*1.75)
-            .background(Color.black)
-            .cornerRadius(10)
-            .padding()
-        }
+            }.tabViewStyle(.page)
     }
 }
 
-struct TherapyInstructionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TherapyInstructionsView()
-    }
-}
+
 
