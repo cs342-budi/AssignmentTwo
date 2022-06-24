@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SurveyView: View {
     @State var showSettings = false
+    @Binding var completed : Bool
     
     var body: some View {
         HStack {
@@ -30,8 +31,10 @@ struct SurveyView: View {
             .cornerRadius(10)
             .gesture(TapGesture().onEnded({
                 self.showSettings.toggle()
+                completed = true
             }))
             .sheet(isPresented: $showSettings, onDismiss: {
+                completed = true
             }, content: {
                 CKTaskViewController(tasks: BudiSurvey.budiSurvey)
             }).padding()
@@ -39,8 +42,4 @@ struct SurveyView: View {
     }
 }
 
-struct SurveyView_Previews: PreviewProvider {
-    static var previews: some View {
-        SurveyView()
-    }
-}
+

@@ -11,24 +11,25 @@ import UIKit
 import ResearchKit
 import SwiftUI
 
+
 struct CloudTaskItem: Hashable {
     static func == (lhs: CloudTaskItem, rhs: CloudTaskItem) -> Bool {
         return lhs.title == rhs.title && lhs.section == rhs.section
     }
-    
+
     var order: String;
     var title:String;
     var subtitle:String;
     var imageName: String;
     var section: String;
     var identifier: String;
-    
+
     var image: UIImage?{
         return UIImage(named: imageName) ?? UIImage(systemName: "questionmark.square")
     }
-    
+
     var questions:[String];
-    
+
     func View()->some View{
         var questionAsObj:[[String:Any]] = []
         for question in questions{
@@ -50,8 +51,8 @@ struct CloudTaskItem: Hashable {
             }
             return true
         })
-        
-        
-        return AnyView(CKTaskViewController(tasks: JsonToSurvey.shared.GetSurvey(from: questionAsObj,identifier: identifier)))
+
+
+        return AnyView(CKTaskViewController(tasks: JsonToSurvey.shared.GetSurvey(from: questionAsObj,identifier: identifier) as! ORKNavigableOrderedTask))
     }
 }

@@ -15,7 +15,7 @@ struct CKTaskViewController: UIViewControllerRepresentable {
     let vc: ORKTaskViewController
     let delegate: CKUploadToGCPTaskViewControllerDelegate
     
-    init(tasks: ORKOrderedTask) {
+    init(tasks: ORKNavigableOrderedTask) { //MARK: changed from ORKOrderedTask
         self.vc = ORKTaskViewController(task: tasks, taskRun: NSUUID() as UUID)
         self.delegate = CKUploadToGCPTaskViewControllerDelegate()
     }

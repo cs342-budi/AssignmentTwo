@@ -62,6 +62,9 @@ struct AddMenuView: View {
                             components.weekday = d.num 
                             //get existing array from user defaults for that day, d.day
                             var array : [Date] = defaults.object(forKey: d.day) as? [Date] ?? [Date]()
+                            print("This is the day array")
+                            print(array)
+                            print("end day array")
                             if let newDate = Calendar.current.nextDate(after: getYesterday(), matching: components, matchingPolicy: .nextTime){
                                 //append element
                                 array.append(newDate)

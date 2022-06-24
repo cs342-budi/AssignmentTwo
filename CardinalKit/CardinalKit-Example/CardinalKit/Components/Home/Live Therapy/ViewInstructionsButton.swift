@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ViewInstructionsButton: View {
     @State private var showingTherapyVideos = false
+    @State var exerciseCount = 0
+    
     
     let color: Color
     let config = CKPropertyReader(file: "CKConfiguration")

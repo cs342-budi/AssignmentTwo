@@ -35,14 +35,22 @@ struct ProfileUIView: View {
                 }.listRowBackground(Color.white)
                 
                 Section {
-                    VStack (alignment: .leading) {
-                        SurveyView()
+                   
+                    NavigationLink(destination: ScheduleView()) {
                         TherapySettingsView()
+                    }.padding()
+                    
+                    NavigationLink(destination: SetGoals()) {
                         GoalsView()
+                    }.padding()
+                    
+                    NavigationLink(destination: CareTeamViewControllerRepresentable()) {
                         CareTeamView()
-                    }
+                    }.padding()
+                    
                 }
                 
+           
                 Section {
                     SendRecordsView()
                     ChangePasscodeView()

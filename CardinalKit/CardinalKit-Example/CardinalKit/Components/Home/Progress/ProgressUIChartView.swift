@@ -22,23 +22,27 @@ struct TherapyProgress: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
     }
-    
+       
     var id = UUID().uuidString
     var percent: Double
+    var minsCompleted: Double
     var date: String
     var monthDate: String
-}
+    }
 
-class ProgressUIChartViewModel: ObservableObject {
-    @AppStorage("TherapyGoal") private var therapyGoal = "10"
+    class ProgressUIChartViewModel: ObservableObject {
+    let defaults = UserDefaults.standard
+    private var therapyGoal = 0
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
     @Published var therapyProgress: Array<TherapyProgress> = [] // initialize array of barchart entry
-    
+    @Published var todaysProgress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+
+
     func reset() -> Void {
         self.modelData = []
         self.therapyProgress = []
     }
-    
+
     func getData() -> Void {
         
         // clear out existing data
@@ -50,7 +54,7 @@ class ProgressUIChartViewModel: ObservableObject {
         guard let authCollection =  CKStudyUser.shared.authCollection else { return } // stop executing if not logged in
         let db = Firestore.firestore()
         let collectionRef = db.collection(authCollection + "therapy-sessions")
-        
+        therapyGoal = defaults.integer(forKey: "therapyGoal")
         
         // last 7 days doc using the timestamp comparison,
         // query our therapy sessions in collection - order them by date - limit them by 7; decending order
@@ -100,8 +104,12 @@ class ProgressUIChartViewModel: ObservableObject {
                     let dayForRing = dateFormatter.string(from: newdate)
                     dateFormatter.dateFormat = "M/d"
                     let monthDay = dateFormatter.string(from: newdate)
-                    self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)!*60)) * 100, date: dayForRing, monthDate: monthDay))
+                    self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)*60)) * 100, minsCompleted: datacur, date: dayForRing, monthDate: monthDay))
                     dateFormatter.dateFormat = "MM-dd-yyyy"
+                }
+                self.todaysProgress = self.therapyProgress[0];
+                if self.todaysProgress.percent == 0 {
+                    self.todaysProgress.percent = 0.2
                 }
                 self.therapyProgress.reverse()
                 
@@ -145,20 +153,19 @@ class ProgressUIChartViewModel: ObservableObject {
             //2. write the value to our modelData Dictionary
         }
     }
- 
+
     init() {
+       therapyGoal = defaults.integer(forKey: "therapyGoal")
        getData()
     }
-    
+    }
 
-}
+    final class ChartFormatter: NSObject, IAxisValueFormatter {
 
-final class ChartFormatter: NSObject, IAxisValueFormatter {
-    
     func stringForValue( _ value: Double, axis _: AxisBase?) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
-//        formatter.dateFormat = "MM/dd"
+    //        formatter.dateFormat = "MM/dd"
         formatter.dateFormat = "E"
         
         let cal = Calendar.current
@@ -168,20 +175,20 @@ final class ChartFormatter: NSObject, IAxisValueFormatter {
         
         return str
     }
-    
-}
 
-struct ProgressUIChartView: UIViewRepresentable {
+    }
+
+    struct ProgressUIChartView: UIViewRepresentable {
     @ObservedObject var viewModel = ProgressUIChartViewModel()
-    
+
     //var entries: [BarChartDataEntry]
     func makeUIView(context: Context) -> BarChartView {
         let chart = BarChartView()
         chart.data = addData()
-        
+
         let yAxis = chart.leftAxis
         yAxis.axisMinimum = 0
-        
+
         chart.xAxis.drawGridLinesEnabled = false
         chart.leftAxis.drawGridLinesEnabled = false
         //        chart.leftAxis.drawAxisLineEnabled = false
@@ -192,14 +199,16 @@ struct ProgressUIChartView: UIViewRepresentable {
         chart.legend.enabled = false
         chart.leftAxis.drawLabelsEnabled = false
         chart.xAxis.valueFormatter = ChartFormatter()
-        
+
         return chart
     }
-    
+    //func makeUIView(context: Context) {
+        
+    // }
     func updateUIView(_ uiView: BarChartView, context: Context) {
         uiView.data = addData()
     }
-    
+
     func addData() -> BarChartData{
         let data = BarChartData()
         let dataSet = BarChartDataSet(entries: viewModel.modelData)  //set out actual data
@@ -210,27 +219,26 @@ struct ProgressUIChartView: UIViewRepresentable {
         //            //string - actual date - convert?
         //        }
         
-        //changed to match progress color 
+        //changed to match progress color
         dataSet.colors = [NSUIColor(red: 151.0/255.0, green: 156.0/255.0, blue: 233.0/255.0, alpha: 1.0)]
         dataSet.label = "My Data"
         data.addDataSet(dataSet)
         return data
     }
-    
-    typealias UIViewType = BarChartView
-}
-// 7 days with current date.
-// load data.
-//struct ProgressUIChartView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProgressUIChartView(entries: [
-//            //x - position of a bar, y - height of a bar
-//            BarChartDataEntry(x: 1, y: 1),
-//            BarChartDataEntry(x: 2, y: 2),
-//            BarChartDataEntry(x: 3, y: 3),
-//            BarChartDataEntry(x: 4, y: 4),
-//            BarChartDataEntry(x: 5, y: 5)
-//        ])
-//    }
-//}
 
+    typealias UIViewType = BarChartView
+    }
+    // 7 days with current date.
+    // load data.
+    //struct ProgressUIChartView_Previews: PreviewProvider {
+    //    static var previews: some View {
+    //        ProgressUIChartView(entries: [
+    //            //x - position of a bar, y - height of a bar
+    //            BarChartDataEntry(x: 1, y: 1),
+    //            BarChartDataEntry(x: 2, y: 2),
+    //            BarChartDataEntry(x: 3, y: 3),
+    //            BarChartDataEntry(x: 4, y: 4),
+    //            BarChartDataEntry(x: 5, y: 5)
+    //        ])
+    //    }
+    //}

@@ -12,6 +12,7 @@ struct CareTeamView: View {
     @State var showContacts = false
     
     var body: some View {
+   
         HStack {
             Image("provider-icon-white").padding(.trailing)
             
@@ -25,17 +26,17 @@ struct CareTeamView: View {
             .contentShape(Rectangle())
             .frame(maxWidth: .infinity)
             .padding()
-            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+            .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2)
+            .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2)
             .background(Color.gray)
             .cornerRadius(10)
-            .gesture(TapGesture().onEnded({
-                self.showContacts.toggle()
-            })).sheet(isPresented: $showContacts, onDismiss: {
-                
-            }, content: {
-                CareTeamViewControllerRepresentable()
-            }).padding()
+//            .gesture(TapGesture().onEnded({
+//                self.showContacts.toggle()
+//            })).sheet(isPresented: $showContacts, onDismiss: {
+//
+//            }, content: {
+//                CareTeamViewControllerRepresentable()
+//            }).padding()
         
     }
 }
