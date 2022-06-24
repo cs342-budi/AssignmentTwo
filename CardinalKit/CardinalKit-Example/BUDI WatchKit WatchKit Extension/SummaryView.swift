@@ -31,9 +31,11 @@ struct SummaryView: View {
 //        } else {
             ScrollView {
                 VStack(alignment: .leading) {
-                    SummaryMetricView(title: "Total Time",
-                                      value: durationFormatter.string(from: workoutManager.workout?.duration ?? 0.0) ?? "")
-                        .foregroundStyle(.green)
+                    VStack(alignment: .leading) {
+                        SummaryMetricView(title: "Total Time", value: durationFormatter.string(from: workoutManager.workout?.duration ?? 0.0) ?? "")
+                           .foregroundStyle(.green)
+                    }
+                    
 //                    SummaryMetricView(title: "Total Distance",
 //                                      value: Measurement(value: workoutManager.workout?.totalDistance?.doubleValue(for: .meter()) ?? 0,
 //                                                         unit: UnitLength.meters)
