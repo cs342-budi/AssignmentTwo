@@ -8,10 +8,12 @@
 import SwiftUI
 import HealthKit
 import CoreMotion
+
 var highestAccelaration = 0
 struct MetricsView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @EnvironmentObject var cmMotionManager: CoreMotionManager
+    
     //    @ObservedObject var manager = CoreMotionManager()
     
     var body: some View {
@@ -47,8 +49,9 @@ struct MetricsView: View {
                                 Text(workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm").foregroundColor(.black).font(.caption)
                             }
                             VStack(alignment: .center) {
-                                ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: false)
-                                    .foregroundStyle(.black).font(.title3)//yellow
+                                TimerViewAppleWatch(workoutTime: Int(workoutManager.builder? .elapsedTime ?? 0)).foregroundStyle(.black).font(.title3)
+                                //ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: false)
+                                 //   .foregroundStyle(.black).font(.title3)//yellow
                                 
                             }
                         }
