@@ -18,6 +18,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     @Published var messageText = ""
     @Published var data = 0.0
     @Published var maxReceived : [Double] = []
+    @Published var pause = "unpaused"
     
     init(session: WCSession = .default) {
         self.session = session
@@ -44,6 +45,13 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         //append to published array
 //        let test_json = ["totalDuration": 10]
         print("RECEIVED FROM WATCH: \(self.data)")
+        }
+        
+        // Get Pause Message
+        
+        if let pausePressed = message["message"] as? String {
+            self.pause = pausePressed
+            print("Pause Received from Watch. Message: \(pausePressed)")
         }
 
         // if total duration exists - it could be any messages so check!!

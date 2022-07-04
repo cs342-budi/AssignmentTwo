@@ -109,7 +109,7 @@ class WorkoutManager: NSObject, ObservableObject {
         if running == true {
             self.pause()
         } else {
-            resume()
+            self.resume()
         }
     }
 
@@ -188,7 +188,7 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
         DispatchQueue.main.async {
             self.running = toState == .running
         }
-
+        
         // Wait for the session to transition states before ending the builder.
         if toState == .ended {
             builder?.endCollection(withEnd: date) { (success, error) in

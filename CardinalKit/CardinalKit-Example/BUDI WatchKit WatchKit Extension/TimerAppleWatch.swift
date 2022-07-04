@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TimerViewAppleWatch: View {
     @State public var workoutTime: Int
+    @Binding public var isPaused: Bool
     var hours : Int {
         workoutTime / 3600
     }
@@ -27,6 +28,7 @@ struct TimerViewAppleWatch: View {
             workoutTime += 1
             
         }
+        
     }
     
     var body: some View {

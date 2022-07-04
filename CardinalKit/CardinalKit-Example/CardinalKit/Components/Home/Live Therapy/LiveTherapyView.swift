@@ -99,7 +99,7 @@ struct LiveTherapyView: View {
             Text(watchViewModel.messageText)
                 .font(.system(size: 50))
                 .bold()
-            
+            Text(watchViewModel.pause)
             HStack {
                 Button (action:{
                     // MARK: TAYLOR

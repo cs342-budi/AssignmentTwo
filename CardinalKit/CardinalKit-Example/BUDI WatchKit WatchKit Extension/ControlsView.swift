@@ -27,6 +27,30 @@ struct ControlsView: View {
             VStack {
                 Button {
                     workoutManager.togglePause()
+                    
+                    if workoutManager.running {
+                        print("Pause Pressed")
+                        workoutManager.session?.pause()
+                        
+                        if SendDataToPhone.shared.session.isReachable {
+                            //send data to phone
+                            print("SENDING PAUSE TO PHONE")
+                            SendDataToPhone.shared.session
+                                .sendMessage(["message":"PAUSE_PRESSED"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                    }
+                        
+                        // send message to phone
+                    }
+                    else {
+                        if SendDataToPhone.shared.session.isReachable {
+                            workoutManager.session?.resume()
+                            //send data to phone
+                            print("SENDING RESUME TO PHONE")
+                            SendDataToPhone.shared.session
+                                .sendMessage(["message":"RESUME_PRESSED"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                    }
+                    }
+                    
                 } label: {
                     Image(systemName: workoutManager.running ? "pause" : "play")
                 }

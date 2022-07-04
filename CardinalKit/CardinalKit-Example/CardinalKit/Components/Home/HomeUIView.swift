@@ -168,7 +168,6 @@ struct HomeUIView: View {
             }
         
         }.padding(.top)
-    
     }
 }
 

@@ -36,24 +36,27 @@ struct MetricsView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        VStack(alignment: .center) {
-                            Spacer()
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Image(systemName: "stopwatch.fill").imageScale(.small).foregroundColor(.black)
+                                Spacer()
+                                TimerViewAppleWatch(workoutTime: Int(workoutManager.builder?.elapsedTime ?? 0), isPaused: $workoutManager.running)
+                                
+                            
+                            }
                             HStack {
                                 Image(systemName: "flame.fill").imageScale(.small).foregroundColor(.black)
+                                Spacer()
                                 Text(workoutManager.activeEnergy.formatted(.number.precision(.fractionLength(0))) + " Cal").foregroundColor(.black).font(.caption)
                                 //Text(Measurement(value: workoutManager.activeEnergy, unit: UnitEnergy.kilocalories).formatted(.measurement(width: .abbreviated, usage: .workout, numberFormatStyle: .number.precision(.fractionLength(0))))).foregroundColor(.black).font(.caption)
                             }
                             Spacer()
                             HStack {
                                 Image(systemName: "heart.fill").foregroundColor(.black).imageScale(.small)
+                                Spacer()
                                 Text(workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm").foregroundColor(.black).font(.caption)
                             }
-                            VStack(alignment: .center) {
-                                TimerViewAppleWatch(workoutTime: Int(workoutManager.builder? .elapsedTime ?? 0)).foregroundStyle(.black).font(.title3)
-                                //ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubseconds: false)
-                                 //   .foregroundStyle(.black).font(.title3)//yellow
-                                
-                            }
+                            
                         }
                         Spacer()
                     }
@@ -69,7 +72,6 @@ struct MetricsView: View {
             .ignoresSafeArea(edges: .bottom)
             .scenePadding()
             .background(Color.green)
-            .navigationTitle("Therapy")
         }
         
         

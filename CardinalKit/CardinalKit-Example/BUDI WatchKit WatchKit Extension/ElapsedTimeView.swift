@@ -10,13 +10,14 @@ import SwiftUI
 struct ElapsedTimeView: View {
     
     var elapsedTime: TimeInterval = 0
+    var isPaused: Bool
     var showSubseconds: Bool = true
     @State private var timeFormatter = ElapsedTimeFormatter()
     
 
     var body: some View {
         Text(NSNumber(value: elapsedTime), formatter: timeFormatter)
-            .fontWeight(.semibold)
+            //.fontWeight(.bold)
             .onChange(of: showSubseconds) {
                 timeFormatter.showSubseconds = $0
             }
@@ -30,7 +31,7 @@ class ElapsedTimeFormatter: Formatter {
         formatter.zeroFormattingBehavior = .pad
         return formatter
     }()
-    var showSubseconds = true
+    var showSubseconds = false
 
     override func string(for value: Any?) -> String? {
         guard let time = value as? TimeInterval else {
@@ -53,7 +54,7 @@ class ElapsedTimeFormatter: Formatter {
 
 struct ElapsedTime_Previews: PreviewProvider {
     static var previews: some View {
-        ElapsedTimeView()
+        ElapsedTimeView(isPaused: false)
     }
 }
 
