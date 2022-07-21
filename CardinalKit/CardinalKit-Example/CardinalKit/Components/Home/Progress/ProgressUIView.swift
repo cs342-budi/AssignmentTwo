@@ -21,6 +21,7 @@ struct ProgressUIView: View {
     let color: Color
     let config = CKPropertyReader(file: "CKConfiguration")
     let accent: Color
+    let color_bkg: Color
 
     var onComplete: (() -> Void)? = nil
 
@@ -28,7 +29,7 @@ struct ProgressUIView: View {
         self.color = Color(config.readColor(query: "Primary Color"))
         self.accent = Color(config.readColor(query: "Accent Color"))
         self.therapyGoal = defaults.integer(forKey: "therapyGoal")
-        
+        self.color_bkg = Color.gray
     }
 
 
@@ -46,7 +47,7 @@ struct ProgressUIView: View {
                             .font(.title2)
                             .fontWeight(.light)
                             
-                        Text ("Monday, June 6")
+                        Text (toDay(ind: 0))
                             .font(.title2)
                             .fontWeight(.thin)
                             .foregroundColor(self.color)
@@ -63,7 +64,7 @@ struct ProgressUIView: View {
                         //ForEach(dataViewModel.therapyProgress, id: \.self) {therapyProgress in
                         VStack {
                                 TherapyRingView(ringWidth: 30, percent: dataViewModel.todaysProgress.percent,
-                                                backgroundColor: self.color.opacity(0.2),
+                                                backgroundColor: self.color_bkg.opacity(0.2),
                                                 foregroundColors: [self.color, self.color])
                                 //.frame(width: 55, height: 55)
                                 
@@ -119,80 +120,100 @@ struct ProgressUIView: View {
     //                        .font(.footnote)
     //                        .foregroundColor(Color.gray)
                 
-                }.frame(width: .infinity, alignment: .leading)
-                .padding(.bottom)
+                }.padding(.bottom, 20)
                 .padding(.trailing)
                
             Divider()
             Spacer()
+            
+            
             VStack (alignment: .leading){
-                Text("Past 7 Days")
-                    .font(.title2)
-                    .fontWeight(.light)
-                    .foregroundColor(Color.black)
-                    .padding(.top)
-                    .padding(.leading)
-
-               // ProgressUIChartView()
-                
-                HStack (spacing: 16) {
-                    BarView(val: 50, day: yesterDay(ind: -6))
-                    BarView(val: 70, day: yesterDay(ind: -5))
-                    BarView(val: 150, day: yesterDay(ind: -4))
-                    BarView(val: 78, day: yesterDay(ind: -3))
-                    BarView(val: 170, day: yesterDay(ind: -2))
-                    BarView(val: 80, day: yesterDay(ind: -1))
-                    BarView(val: 20, day: yesterDay(ind: 0))
-                }.padding(.top, 24)
-                
-                
-                    .padding(.top, 20)
-                    .padding(.leading, 40)
-                    .padding(.trailing, 40)
-                    .padding(.bottom, 20)
-    //                    .overlay(Text("Therapy Time (min)")
-    //                                .font(.footnote)
-    //                                .fontWeight(.semibold).foregroundColor(Color.gray)
-    //                    .rotationEffect(.degrees(270))
-    //                    .offset(x: -36.0, y: 0.0),
-    //                    alignment: .leading)
-    //                    .overlay(Text("Day")
-    //                                .font(.footnote)
-    //                                .fontWeight(.semibold).foregroundColor(Color.gray)
-    //                    .offset(x: 0.0, y: 5.0),
-    //                    alignment: .bottom)
-            }
-
+                HStack  {
+                        Text("Past 7 Days")
+                            .font(.title2)
+                            .fontWeight(.light)
+                            .foregroundColor(Color.black)
+                }.padding(.top)
+                            
+                       // ProgressUIChartView()
+                        //ZStack{
+                            HStack (spacing: 16) {
+                                BarView(val: dataViewModel.day6Progress.percent, date: yesterDay(ind: -6), letterDay: letterDay(ind: -6))
+                                BarView(val: dataViewModel.day5Progress.percent, date: yesterDay(ind: -5), letterDay: letterDay(ind: -5))
+                                BarView(val: dataViewModel.day4Progress.percent, date: yesterDay(ind: -4), letterDay: letterDay(ind: -4))
+                                BarView(val: dataViewModel.day3Progress.percent, date: yesterDay(ind: -3), letterDay: letterDay(ind: -3))
+                                BarView(val: dataViewModel.day2Progress.percent, date: yesterDay(ind: -2), letterDay: letterDay(ind: -2))
+                                BarView(val: dataViewModel.day1Progress.percent, date: yesterDay(ind: -1), letterDay: letterDay(ind: -1))
+                                BarView(val: dataViewModel.todaysProgress.percent, date: yesterDay(ind: 0), letterDay: letterDay(ind: 0))
+                                                               
+                            }.padding(.bottom, 20)
+                             .padding(.top)
+                             .padding(.leading)
+        //                     .overlay(Path() { path in
+        //                        path.move(to: CGPoint(x:0, y: 200))
+        //                        path.addLine(to: CGPoint(x: 306, y: 200))
+        //                        }.stroke(Color.gray,
+        //                                 style: StrokeStyle(
+        //                                    lineWidth: 3,
+        //                                    dash: [5, 5],
+        //                                    dashPhase: 0
+        //                                )
+        //                            )
+        //                     )
+                       // }.padding(.top, 24)
+                         
+                        // .padding(.trailing)
+                       //  .padding(.leading)
+            //                    .overlay(Text("Therapy Time (min)")
+            //                                .font(.footnote)
+            //                                .fontWeight(.semibold).foregroundColor(Color.gray)
+            //                    .rotationEffect(.degrees(270))
+            //                    .offset(x: -36.0, y: 0.0),
+            //                    alignment: .leading)
+            //                    .overlay(Text("Day")
+            //                                .font(.footnote)
+            //                                .fontWeight(.semibold).foregroundColor(Color.gray)
+            //                    .offset(x: 0.0, y: 5.0),
+            //                    alignment: .bottom)
+                    }.padding(.bottom, 20)
+                    .padding(.trailing)
+    
             Spacer()
 
         }.onAppear(perform: {
             self.dataViewModel.getData()
+            print(dataViewModel.therapyProgress)
         })
     }
     }
 
     struct BarView: View {
     var val: CGFloat = 0
-    var day: String = ""
+    var date: String = ""
+    var letterDay: String = ""
     var body: some View {
         
        //var style = StrokeStyle(lineWidth: 5)
        //style.dash = [1, 0.7]
         
+        
         VStack{
             ZStack (alignment: .bottom) {
-                Capsule().frame(width:30, height: 200)
+                Capsule().frame(width:35, height: 300)
                     .foregroundColor(.gray.opacity(0.1))
-                Capsule().frame(width:30, height: val)
+                Capsule().frame(width:35, height: val*300)
                     .foregroundColor(.green)
-                    .overlay( Path() { path in
-                        path.move(to: CGPoint(x:0, y: 0))
-                        path.addLine(to: CGPoint(x: 30, y: 0))
-                        }.stroke(Color.gray)
-                    )
+                // this is Average dashed line
+//                    .overlay( Path() { path in
+//                        path.move(to: CGPoint(x:0, y: 0))
+//                        path.addLine(to: CGPoint(x: 30, y: 0))
+//                        }.stroke(Color.gray)
+                    
             }
-            Text(day).padding(.top, 8)
+            Text(letterDay).padding(.top, 8)
                 .font(.footnote)
+                .foregroundColor(Color.green)
+            Text(date).font(.footnote)
                 .foregroundColor(Color.gray)
         }
     }
@@ -200,24 +221,58 @@ struct ProgressUIView: View {
 
 
     func yesterDay(ind: Int) -> String {
-    var dayComponent = DateComponents()
-    dayComponent.day = ind
-    let calendar = Calendar.current
-    let nextDay =  calendar.date(byAdding: dayComponent, to: Date())!
-    let formatter = DateFormatter()
-    formatter.locale = .current
-    formatter.dateFormat = "M/dd"
-    return formatter.string(from: nextDay)
+        var dayComponent = DateComponents()
+        dayComponent.day = ind
+        let calendar = Calendar.current
+        let nextDay =  calendar.date(byAdding: dayComponent, to: Date())!
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "M/dd"
+        return formatter.string(from: nextDay)
+    }
+    
+    func letterDay(ind: Int) -> String {
+        var dayComponent = DateComponents()
+        dayComponent.day = ind
+        let calendar = Calendar.current
+        let nextDay =  calendar.date(byAdding: dayComponent, to: Date())!
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "E"
+        let getDay = formatter.string(from: nextDay)
+        if getDay == "Mon"{
+            return "M"
+        } else if getDay == "Tue" {
+            return "T"
+        } else if getDay == "Wed" {
+            return "W"
+        } else if getDay == "Thu" {
+            return "T"
+        } else if getDay == "Fri" {
+            return "F"
+        }
+        return "S"
     }
 
-    //struct Line: Shape {
-    //    func path(in rect: CGRect) -> Path {
-    //        var path = Path()
-    //        path.move(to: CGPoint(x: 0, y: 0))
-    //        path.addLine(to: CGPoint(x: rect.width, y: 0))
-    //        return path
-    //    }
-    //}
+    func toDay(ind: Int) -> String {
+        var dayComponent = DateComponents()
+        dayComponent.day = ind
+        let calendar = Calendar.current
+        let nextDay =  calendar.date(byAdding: dayComponent, to: Date())!
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "EEEE, MMMM d"
+        return formatter.string(from: nextDay)
+    }
+
+//    struct Line: Shape {
+//        func path(in rect: CGRect) -> Path {
+//            var path = Path()
+//            path.move(to: CGPoint(x: 0, y: 0))
+//            path.addLine(to: CGPoint(x: rect.width, y: 0))
+//            return path
+//        }
+//    }
 
     struct Previews_ProgressUIView_Previews: PreviewProvider {
     static var previews: some View {

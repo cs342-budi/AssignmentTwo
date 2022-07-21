@@ -36,7 +36,12 @@ struct TherapyProgress: Hashable {
     @Published var modelData: Array<BarChartDataEntry> = [] // initialize array of barchart entry
     @Published var therapyProgress: Array<TherapyProgress> = [] // initialize array of barchart entry
     @Published var todaysProgress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
-
+    @Published var day6Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+    @Published var day5Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+    @Published var day4Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+    @Published var day3Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+    @Published var day2Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+    @Published var day1Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
 
     func reset() -> Void {
         self.modelData = []
@@ -107,11 +112,23 @@ struct TherapyProgress: Hashable {
                     self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)*60)) * 100, minsCompleted: datacur, date: dayForRing, monthDate: monthDay))
                     dateFormatter.dateFormat = "MM-dd-yyyy"
                 }
-                self.todaysProgress = self.therapyProgress[0];
-                if self.todaysProgress.percent == 0 {
-                    self.todaysProgress.percent = 0.2
+                
+                for i in 0...6 {
+                    if self.therapyProgress[i].percent == 0 {
+                        self.therapyProgress[i].percent = 0.1
+                    } else if self.therapyProgress[i].percent > 1 {
+                        self.therapyProgress[i].percent = 1
+                    }
                 }
-                self.therapyProgress.reverse()
+                
+                self.todaysProgress = self.therapyProgress[0];
+                self.day1Progress = self.therapyProgress[1];
+                self.day2Progress = self.therapyProgress[2];
+                self.day3Progress = self.therapyProgress[3];
+                self.day4Progress = self.therapyProgress[4];
+                self.day5Progress = self.therapyProgress[5];
+                self.day6Progress = self.therapyProgress[6];
+                //self.therapyProgress.reverse()
                 
                 //
                 //                for val in self.modelData {
