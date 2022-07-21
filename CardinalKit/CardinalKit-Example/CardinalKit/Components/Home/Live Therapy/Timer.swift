@@ -10,36 +10,53 @@ import Foundation
 import SwiftUI
 
 struct TimerView: View {
-    @State private var workoutTime = 0
-    var hours : Int {
-        workoutTime / 3600
+
+    @ObservedObject var watchViewModel = WatchViewModel()
+
+    var body: some View {
+        HStack(spacing: 2) {
+            StopwatchView(pauseMessage: $watchViewModel.pauseMessage)
+        }
+        
     }
     
-    var minutes: Int {
-        (workoutTime % 3600) / 60
-    }
+}
+
+struct StopwatchView: View {
     
-    var seconds: Int {
-        workoutTime % 60
-    }
+    @Binding var pauseMessage : String
+    @State var workoutTime:Int = 0
     
-    var timer: Timer {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ _ in
-            workoutTime += 1
+    var body: some View {
+        Group {
+            if (workoutTime / 3600) > 0 {
+                StopwatchUnitView(timeUnit: workoutTime / 3600)
+                Text(":").font(.system(size: 20))
+            }
+            StopwatchUnitView(timeUnit: (workoutTime % 3600) / 60)
+            Text(":").font(.system(size: 20))
+            StopwatchUnitView(timeUnit: workoutTime % 60)
+        }
+        .onAppear {
+           stopwatch()
         }
     }
     
-    var body: some View {
-        HStack(spacing: 2) {
-            if hours > 0 {
-                StopwatchUnitView(timeUnit: hours)
-                Text(":").font(.system(size: 20))
+    func stopwatch() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ currTime in
+            switch pauseMessage {
+            case "RESUME":
+                self.workoutTime += 1
+            case "PAUSE":
+                print("timer_paused")
+            case "STOP":
+                currTime.invalidate()
+                self.workoutTime = 0
+            default:
+                print("default")
             }
-            StopwatchUnitView(timeUnit: minutes)
-            Text(":").font(.system(size: 20))
-            StopwatchUnitView(timeUnit: seconds)
-        }.onAppear(perform: {_ = timer})
-        
+            
+        }
     }
     
 }

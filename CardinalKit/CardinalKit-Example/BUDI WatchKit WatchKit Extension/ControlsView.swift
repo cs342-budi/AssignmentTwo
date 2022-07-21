@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The workout controls.
-*/
+ See LICENSE folder for this sample’s licensing information.
+ 
+ Abstract:
+ The workout controls.
+ */
 
 import SwiftUI
 import CoreMotion
@@ -28,27 +28,21 @@ struct ControlsView: View {
                 Button {
                     workoutManager.togglePause()
                     
-                    if workoutManager.running {
-                        print("Pause Pressed")
-                        workoutManager.session?.pause()
+                    if SendDataToPhone.shared.session.isReachable { // Pause Pressed
                         
-                        if SendDataToPhone.shared.session.isReachable {
+                        if workoutManager.running { // Pause Pressed
                             //send data to phone
                             print("SENDING PAUSE TO PHONE")
                             SendDataToPhone.shared.session
-                                .sendMessage(["message":"PAUSE_PRESSED"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                    }
-                        
-                        // send message to phone
-                    }
-                    else {
-                        if SendDataToPhone.shared.session.isReachable {
-                            workoutManager.session?.resume()
-                            //send data to phone
+                                .sendMessage(["message":"PAUSE"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                        }
+                        else { // Resume Pressed
+                            // send data to phone
                             print("SENDING RESUME TO PHONE")
                             SendDataToPhone.shared.session
-                                .sendMessage(["message":"RESUME_PRESSED"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                    }
+                                .sendMessage(["message":"RESUME"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                        }
+                        
                     }
                     
                 } label: {

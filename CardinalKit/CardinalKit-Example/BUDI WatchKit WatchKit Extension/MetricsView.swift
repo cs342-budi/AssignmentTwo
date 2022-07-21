@@ -40,8 +40,8 @@ struct MetricsView: View {
                             HStack {
                                 Image(systemName: "stopwatch.fill").imageScale(.small).foregroundColor(.black)
                                 Spacer()
-                                TimerViewAppleWatch(workoutTime: Int(workoutManager.builder?.elapsedTime ?? 0), isPaused: $workoutManager.running)
-                                
+                                //TimerViewAppleWatch(workoutTime: Int(workoutManager.builder?.elapsedTime ?? 0), isPaused: $workoutManager.running)
+                                ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0).foregroundColor(.black).font(.caption)
                             
                             }
                             HStack {

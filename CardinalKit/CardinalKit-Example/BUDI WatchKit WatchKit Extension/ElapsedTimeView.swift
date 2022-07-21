@@ -10,8 +10,7 @@ import SwiftUI
 struct ElapsedTimeView: View {
     
     var elapsedTime: TimeInterval = 0
-    var isPaused: Bool
-    var showSubseconds: Bool = true
+    var showSubseconds = false
     @State private var timeFormatter = ElapsedTimeFormatter()
     
 
@@ -54,7 +53,7 @@ class ElapsedTimeFormatter: Formatter {
 
 struct ElapsedTime_Previews: PreviewProvider {
     static var previews: some View {
-        ElapsedTimeView(isPaused: false)
+        ElapsedTimeView()
     }
 }
 
