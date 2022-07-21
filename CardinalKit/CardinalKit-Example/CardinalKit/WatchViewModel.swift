@@ -18,6 +18,8 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     @Published var messageText = ""
     @Published var data = 0.0
     @Published var maxReceived : [Double] = []
+    @Published var points : Double = 0.0
+    @Published var progressToNext : Double = 0.0 
     
     init(session: WCSession = .default) {
         self.session = session
@@ -44,6 +46,13 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         //append to published array
 //        let test_json = ["totalDuration": 10]
         print("RECEIVED FROM WATCH: \(self.data)")
+        }
+        
+        if let points = message["points"] as? Double {
+            self.points = points
+            print("Points from watch: \(self.data)")
+            self.progressToNext = (points * 100).truncatingRemainder(dividingBy: 100) / 100.0
+            print("Progress to next point \(self.progressToNext)")
         }
 
         // if total duration exists - it could be any messages so check!!

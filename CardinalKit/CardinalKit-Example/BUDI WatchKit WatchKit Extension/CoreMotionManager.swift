@@ -14,9 +14,19 @@ import CoreMotion
 class CoreMotionManager: NSObject, ObservableObject {
     @Published var accelaration: Double = 0.0
     @Published var accelerationHistory: [Double] = []
+    
     var meanAccelaration: Double = 0.0
     var motion: CMMotionManager!
-    //var timer: Timer?
+    
+    ///Timer is for point calculation
+    private var workoutTime = 0.0
+    var timer: Timer {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ _ in
+            self.workoutTime += 1
+        }
+    }
+    
+//    var points : Double = 0.0
     var accelArray : [Double] = []
     var maxArray : [Double] = []
     fileprivate let dmUserAccelSemaphore = DispatchSemaphore(value: 1)
@@ -65,11 +75,13 @@ class CoreMotionManager: NSObject, ObservableObject {
                             if let max = strongSelf.accelArray.max() {
                                 self?.maxArray.append(max)
                                 self?.accelaration = max
+                                let pointsToSend = self!.workoutTime/120 + self!.maxArray.reduce(0, +) / 60
                                 
                                     if SendDataToPhone.shared.session.isReachable {
                                         //send data to phone
                                         print("SENDING MAX TO PHONE")
                                         SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                                        SendDataToPhone.shared.session.sendMessage(["points": pointsToSend], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
                                 }
                                 self?.accelerationHistory.append(max)
                             }
