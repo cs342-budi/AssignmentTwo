@@ -9,10 +9,18 @@
 import SwiftUI
 
 struct SetGoals: View {
+   
     @AppStorage("TherapyGoal") private var therapyGoal = "10"
     @AppStorage("ActiveGoal") private var activeGoal = "3"
+    let defaults = UserDefaults.standard
+    
+   
     var body: some View {
         VStack {
+            Text("Set Daily Goals")
+                .font(.title)
+                .fontWeight(.heavy)
+                .tracking(/*@START_MENU_TOKEN@*/2.0/*@END_MENU_TOKEN@*/)
             Text("Tap a number to edit it")
                 .font(.body)
                 .fontWeight(.light)
@@ -58,8 +66,11 @@ struct SetGoals: View {
         .onAppear(perform: {
             print(self.therapyGoal)
             print(self.activeGoal)
-        }).navigationBarTitle("Set Daily Goals")
-            
+        })
+        .onDisappear(perform: {
+            defaults.set(Int(therapyGoal), forKey: "therapyGoal")
+            defaults.set(Int(activeGoal), forKey: "activeGoal")
+        })
     }
 }
 
