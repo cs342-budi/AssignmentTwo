@@ -45,7 +45,10 @@ struct LiveTherapyChartView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: LineChartView, context: Context) {
-        uiView.data = addData()
+        DispatchQueue.main.async {
+            uiView.data = addData()
+        }
+        
         //get the latest data from watch
         
     }

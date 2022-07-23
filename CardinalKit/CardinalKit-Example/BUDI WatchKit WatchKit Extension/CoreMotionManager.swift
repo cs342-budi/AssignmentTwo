@@ -51,49 +51,55 @@ class CoreMotionManager: NSObject, ObservableObject {
     
     func startAccelerometers() {
         
-        self.accelaration += 1
-       // Make sure the accelerometer hardware is available.
+        DispatchQueue.main.async { [self] in
+            self.accelaration += 1
+           // Make sure the accelerometer hardware is available.
 
-        
-       
-        if self.motion.isDeviceMotionAvailable {
-            print("MOTION AVAILABLE")
-            self.motion.deviceMotionUpdateInterval = 1.0/60.0
-            self.motion.startDeviceMotionUpdates(to: motionQueue, withHandler: { [weak self] (data: CMDeviceMotion?, error: Error?) in
-                
-                guard let strongSelf = self else {
-                    return
-                }
-                
-                if let data = data  {
+            
+           
+            if self.motion.isDeviceMotionAvailable {
+                print("MOTION AVAILABLE")
+                self.motion.deviceMotionUpdateInterval = 1.0/60.0
+                self.motion.startDeviceMotionUpdates(to: motionQueue, withHandler: { [weak self] (data: CMDeviceMotion?, error: Error?) in
                     
-                    strongSelf.dmUserAccelSemaphore.wait()
-                        let xVal = data.userAcceleration.x
-                        strongSelf.accelArray.append(xVal)
-                        print("THIS IS THE XVAL \(xVal)")
-                        if strongSelf.accelArray.count > 300 { //60 * 1 (once a second)
-                            if let max = strongSelf.accelArray.max() {
-                                self?.maxArray.append(max)
-                                self?.accelaration = max
-                                let pointsToSend = self!.workoutTime/120 + self!.maxArray.reduce(0, +) / 60
-                                
-                                    if SendDataToPhone.shared.session.isReachable {
-                                        //send data to phone
-                                        print("SENDING MAX TO PHONE")
-                                        SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                                        SendDataToPhone.shared.session.sendMessage(["points": pointsToSend], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                                }
-                                self?.accelerationHistory.append(max)
-                            }
-                            //clear array
-                            strongSelf.accelArray.removeAll()
-                        }
-                    strongSelf.dmUserAccelSemaphore.signal()
+                    guard let strongSelf = self else {
+                        return
                     }
-                })
-        } else {
-            print("motion not available :(")
+                    
+                    if let data = data  {
+                        
+                        strongSelf.dmUserAccelSemaphore.wait()
+                            let xVal = data.userAcceleration.x
+                            strongSelf.accelArray.append(xVal)
+                            print("THIS IS THE XVAL \(xVal)")
+                            if strongSelf.accelArray.count > 300 { //60 * 1 (once a second)
+                                if let max = strongSelf.accelArray.max() {
+                                    self?.maxArray.append(max)
+                                    self?.accelaration = max
+                                    let pointsToSend = self!.workoutTime/120 + self!.maxArray.reduce(0, +) / 60
+                                    
+                                        if SendDataToPhone.shared.session.isReachable {
+                                            //send data to phone
+                                            print("SENDING MAX TO PHONE")
+                                            SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                                            SendDataToPhone.shared.session.sendMessage(["points": pointsToSend], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                                    }
+                                    self?.accelerationHistory.append(max)
+                                }
+                                //clear array
+                                strongSelf.accelArray.removeAll()
+                            }
+                        strongSelf.dmUserAccelSemaphore.signal()
+                        }
+                    })
+                
+            
+                
+            } else {
+                print("motion not available :(")
+            }
         }
+        
         
         
     
