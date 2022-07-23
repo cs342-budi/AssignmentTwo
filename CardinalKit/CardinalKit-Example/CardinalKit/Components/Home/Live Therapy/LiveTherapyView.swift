@@ -17,9 +17,8 @@ struct LiveTherapyView: View {
     @State private var showingTherapyVideos = false
     @Binding public var isLiveTherapyPresented: Bool
 //    @State var exerciseCount = 0 //not in use
-    @State var points = 0
+//    @State var points = 0
     @State var time = "2:37"
-    @State var progressValue: Float = 0.01
     
     var body: some View {
         
@@ -42,13 +41,12 @@ struct LiveTherapyView: View {
                 
 
                 ZStack {
-                    ProgressBar(value: $progressValue).frame(width: UIScreen.main.bounds.size.width/1.5, height: 50)
+                    ProgressBar(value: $watchViewModel.progressToNext).frame(width: UIScreen.main.bounds.size.width/1.5, height: 50)
                     
                         VStack {
-                            Text(String(points))
+                            Text(String(Int(watchViewModel.points)))
                                 .font(.system(size: 24))
                                 .fontWeight(.bold)
-                            
                             Text("Points")
                                 .font(.system(size: 13))
                                 .fontWeight(.light)

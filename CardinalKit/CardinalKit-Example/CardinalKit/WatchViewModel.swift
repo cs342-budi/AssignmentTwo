@@ -20,6 +20,8 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     @Published var maxReceived : [Double] = []
     @Published var pauseMessage:String = "RESUME"
     // TODO - add logic for start and end
+    @Published var points : Double = 0.0
+    @Published var progressToNext : Double = 0.0 
     
     init(session: WCSession = .default) {
         self.session = session
@@ -47,6 +49,45 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     //        let test_json = ["totalDuration": 10]
             print("RECEIVED FROM WATCH: \(self.data)")
             }
+        
+        //if message that comes in has a data point, add it to the array of data points
+        // data key exist? Does this key cast to a double? Add it to to array if succeeeded
+        if let datapoint = message["data"] as? Double  {
+        //MARK: testing arbitrary data
+        self.data = datapoint  // we alr we know its a double
+        maxReceived.append(self.data);
+        //append to published array
+//        let test_json = ["totalDuration": 10]
+        print("RECEIVED FROM WATCH: \(self.data)")
+        }
+        
+        if let points = message["points"] as? Double {
+            self.points = points
+            print("Points from watch: \(self.data)")
+            self.progressToNext = (points * 100).truncatingRemainder(dividingBy: 100) / 100.0
+            print("Progress to next point \(self.progressToNext)")
+        }
+
+        // if total duration exists - it could be any messages so check!!
+        print("\(message["total-duration"]) + hello")
+        if let totalduration = message["total-duration"] as? Double {  // convert to int
+        let uuid = UUID().uuidString
+        print("received the value \(totalduration)")
+        //send start
+        // get date
+            // document called mm dd yyyy
+            // summation
+        
+        let currDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        let formattedDate = dateFormatter.string(from: currDate)
+        var totaltime = totalduration  // start with the watch's duration! thena add running total on the bottom
+
+        // checking if user is loggin in
+            guard let authCollection =  CKStudyUser.shared.authCollection else { return } // stop executing if not logged in
+            let db = Firestore.firestore()
+            let collectionRef = db.collection(authCollection + "therapy-sessions")// ref to specific col for data
             
             // Get Pause Message
             
