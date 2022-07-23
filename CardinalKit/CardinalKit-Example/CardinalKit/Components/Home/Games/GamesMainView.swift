@@ -61,25 +61,25 @@ struct GamesMainView: View {
                     }
                 }.padding()
         
-                HStack {
-                    Button (action:{
-                        showingReactionTime.toggle()
-                    }) {
-                        Text("REACTION TIME")
-                            .fontWeight(.heavy)
-                            .font(.title)
-                            .foregroundColor(Color.white)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
-                    .background(Color.yellow)
-                    .cornerRadius(10)
-                    .fullScreenCover(isPresented: $showingReactionTime) {
-                        ReactionTimeViewController()
-                    }
-                }.padding()
+//                HStack {
+//                    Button (action:{
+//                        showingReactionTime.toggle()
+//                    }) {
+//                        Text("REACTION TIME")
+//                            .fontWeight(.heavy)
+//                            .font(.title)
+//                            .foregroundColor(Color.white)
+//                    }
+//                    .frame(maxWidth: .infinity)
+//                    .padding()
+//                    .padding(.top, Metrics.PADDING_VERTICAL_MAIN*2.5)
+//                    .padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*2.5)
+//                    .background(Color.yellow)
+//                    .cornerRadius(10)
+//                    .fullScreenCover(isPresented: $showingReactionTime) {
+//                        ReactionTimeViewController()
+//                    }
+//                }.padding()
                 
                 HStack {
                     Button (action:{
