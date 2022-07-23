@@ -26,7 +26,7 @@ struct MetricsView: View {
                     HStack(alignment: .center) {
                         Spacer()
                         VStack {
-                            Text("5").font(.largeTitle).foregroundColor(.black)
+                            Text(String(Int(cmMotionManager.points))).font(.largeTitle).foregroundColor(.black)
                             Text("Points").font(.caption).foregroundColor(.black)
                         }
                         Spacer()

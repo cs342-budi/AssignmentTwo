@@ -14,6 +14,7 @@ import CoreMotion
 class CoreMotionManager: NSObject, ObservableObject {
     @Published var accelaration: Double = 0.0
     @Published var accelerationHistory: [Double] = []
+    @Published var points: Double = 0.0
     
     var meanAccelaration: Double = 0.0
     var motion: CMMotionManager!
@@ -75,7 +76,8 @@ class CoreMotionManager: NSObject, ObservableObject {
                             if let max = strongSelf.accelArray.max() {
                                 self?.maxArray.append(max)
                                 self?.accelaration = max
-                                let pointsToSend = self!.workoutTime/120 + self!.maxArray.reduce(0, +) / 60
+                                let pointsToSend = self!.workoutTime/120 + (self!.maxArray.reduce(0, +) / 60)*9.81
+                                self?.points = pointsToSend 
                                 
                                     if SendDataToPhone.shared.session.isReachable {
                                         //send data to phone
