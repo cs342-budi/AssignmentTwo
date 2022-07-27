@@ -54,7 +54,7 @@ struct LiveTherapyView: View {
                 }
                 Spacer()
                 VStack{
-                    TimerView()
+                    TimerView(watchViewModel: watchViewModel)
                     Text("Time")
                         .font(.system(size: 13))
                         .fontWeight(.light)
