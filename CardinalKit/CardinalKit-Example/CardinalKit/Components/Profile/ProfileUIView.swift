@@ -23,16 +23,17 @@ struct ProfileUIView: View {
             
             
             List {
+                //REMOVE PROFILE NAME / PICTURE FOR BETA 
 //                Section {
 //                    ProfilePictureView()
 //                }
                 
-                Section {
-                    HStack {
-//                        ProfilePictureView()
-                        PatientIDView()
-                    }
-                }.listRowBackground(Color.white)
+//                Section {
+//                    HStack {
+////                        ProfilePictureView()
+//                        PatientIDView()
+//                    }
+//                }.listRowBackground(Color.white)
                 
                 Section {
                    

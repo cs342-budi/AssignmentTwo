@@ -10,13 +10,13 @@ import SwiftUI
 struct ElapsedTimeView: View {
     
     var elapsedTime: TimeInterval = 0
-    var showSubseconds = false
+    var showSubseconds: Bool = false
     @State private var timeFormatter = ElapsedTimeFormatter()
     
 
     var body: some View {
         Text(NSNumber(value: elapsedTime), formatter: timeFormatter)
-            //.fontWeight(.bold)
+//            .fontWeight(.semibold)
             .onChange(of: showSubseconds) {
                 timeFormatter.showSubseconds = $0
             }

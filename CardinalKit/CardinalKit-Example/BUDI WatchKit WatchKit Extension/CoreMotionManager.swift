@@ -14,6 +14,7 @@ import CoreMotion
 class CoreMotionManager: NSObject, ObservableObject {
     @Published var accelaration: Double = 0.0
     @Published var accelerationHistory: [Double] = []
+    @Published var points: Double = 0.0
     
     var meanAccelaration: Double = 0.0
     var motion: CMMotionManager!
@@ -66,25 +67,22 @@ class CoreMotionManager: NSObject, ObservableObject {
                         return
                     }
                     
-                    if let data = data  {
-                        
-                        strongSelf.dmUserAccelSemaphore.wait()
-                            let xVal = data.userAcceleration.x
-                            strongSelf.accelArray.append(xVal)
-                            print("THIS IS THE XVAL \(xVal)")
-                            if strongSelf.accelArray.count > 300 { //60 * 1 (once a second)
-                                if let max = strongSelf.accelArray.max() {
-                                    self?.maxArray.append(max)
-                                    self?.accelaration = max
-                                    let pointsToSend = self!.workoutTime/120 + self!.maxArray.reduce(0, +) / 60
-                                    
-                                        if SendDataToPhone.shared.session.isReachable {
-                                            //send data to phone
-                                            print("SENDING MAX TO PHONE")
-                                            SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                                            SendDataToPhone.shared.session.sendMessage(["points": pointsToSend], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                                    }
-                                    self?.accelerationHistory.append(max)
+                    strongSelf.dmUserAccelSemaphore.wait()
+                        let xVal = data.userAcceleration.x
+                        strongSelf.accelArray.append(xVal)
+                        print("THIS IS THE XVAL \(xVal)")
+                        if strongSelf.accelArray.count > 300 { //60 * 1 (once a second)
+                            if let max = strongSelf.accelArray.max() {
+                                self?.maxArray.append(max)
+                                self?.accelaration = max
+                                let pointsToSend = self!.workoutTime/120 + (self!.maxArray.reduce(0, +) / 60)*9.81
+                                self?.points = pointsToSend 
+                                
+                                    if SendDataToPhone.shared.session.isReachable {
+                                        //send data to phone
+                                        print("SENDING MAX TO PHONE")
+                                        SendDataToPhone.shared.session.sendMessage(["data": max], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                                        SendDataToPhone.shared.session.sendMessage(["points": pointsToSend], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
                                 }
                                 //clear array
                                 strongSelf.accelArray.removeAll()

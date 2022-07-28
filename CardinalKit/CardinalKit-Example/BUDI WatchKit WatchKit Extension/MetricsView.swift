@@ -28,7 +28,7 @@ struct MetricsView: View {
                     HStack(alignment: .center) {
                         Spacer()
                         VStack {
-                            Text("5").font(.largeTitle).foregroundColor(.black)
+                            Text(String(Int(cmMotionManager.points))).font(.largeTitle).foregroundColor(.black)
                             Text("Points").font(.caption).foregroundColor(.black)
                         }
                         Spacer()
@@ -42,7 +42,7 @@ struct MetricsView: View {
                                 Spacer()
                                 //TimerViewAppleWatch(workoutTime: Int(workoutManager.builder?.elapsedTime ?? 0), isPaused: $workoutManager.running)
                                 ElapsedTimeView(elapsedTime: workoutManager.builder?.elapsedTime ?? 0).foregroundColor(.black).font(.caption)
-                            
+                                
                             }
                             HStack {
                                 Image(systemName: "flame.fill").imageScale(.small).foregroundColor(.black)
@@ -56,7 +56,6 @@ struct MetricsView: View {
                                 Spacer()
                                 Text(workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm").foregroundColor(.black).font(.caption)
                             }
-                            
                         }
                         Spacer()
                     }

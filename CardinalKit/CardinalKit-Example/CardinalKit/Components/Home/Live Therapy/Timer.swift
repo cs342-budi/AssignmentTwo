@@ -3,6 +3,7 @@
 //  CardinalKit_Example
 //
 //  Created by Taylor  Lallas on 6/20/22.
+//  Updated by Mihir Joshi on 7/20/22.
 //  Copyright © 2022 CocoaPods. All rights reserved.
 //
 
@@ -11,11 +12,11 @@ import SwiftUI
 
 struct TimerView: View {
 
-    @ObservedObject var watchViewModel = WatchViewModel()
+    @ObservedObject var watchViewModel : WatchViewModel
 
     var body: some View {
         HStack(spacing: 2) {
-            StopwatchView(pauseMessage: $watchViewModel.pauseMessage)
+            StopwatchView(timerMessage: $watchViewModel.timerMessage)
         }
         
     }
@@ -24,7 +25,7 @@ struct TimerView: View {
 
 struct StopwatchView: View {
     
-    @Binding var pauseMessage : String
+    @Binding var timerMessage : String
     @State var workoutTime:Int = 0
     
     var body: some View {
@@ -44,12 +45,12 @@ struct StopwatchView: View {
     
     func stopwatch() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ currTime in
-            switch pauseMessage {
+            switch timerMessage {
             case "RESUME":
                 self.workoutTime += 1
             case "PAUSE":
                 print("timer_paused")
-            case "STOP":
+            case "END":
                 currTime.invalidate()
                 self.workoutTime = 0
             default:
@@ -57,6 +58,7 @@ struct StopwatchView: View {
             }
             
         }
+        
     }
     
 }

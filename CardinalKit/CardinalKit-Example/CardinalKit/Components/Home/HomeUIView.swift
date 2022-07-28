@@ -135,7 +135,7 @@ struct HomeUIView: View {
                     
                     ZStack {
                         Button (action:{}) {
-                            Text("MY PROFILE")
+                            Text("MY SETTINGS")
                                 .fontWeight(.heavy)
                                 .font(.title2)
                                 .foregroundColor(Color.white)

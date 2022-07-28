@@ -17,6 +17,11 @@ struct ControlsView: View {
                 Button {
                     workoutManager.endWorkout()
                     cmMotionManager.getMeanAccelaration()
+                    
+                    print("SENDING END TO PHONE")
+                    SendDataToPhone.shared.session
+                        .sendMessage(["message":"END"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                    
                 } label: {
                     Image(systemName: "xmark")
                 }
@@ -28,6 +33,7 @@ struct ControlsView: View {
                 Button {
                     workoutManager.togglePause()
                     
+                    // Send Pause/Resume to Phone
                     if SendDataToPhone.shared.session.isReachable { // Pause Pressed
                         
                         if workoutManager.running { // Pause Pressed
