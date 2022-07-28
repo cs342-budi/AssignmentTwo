@@ -9,9 +9,11 @@ import Foundation
 import Firebase
 import CardinalKit
 
-class CKStudyUser {
+class CKStudyUser: ObservableObject {
     
     static let shared = CKStudyUser()
+
+    private weak var authStateHandle: AuthStateDidChangeListenerHandle?
     
     /* **************************************************************
      * the current user only resolves if we are logged in
@@ -73,6 +75,20 @@ class CKStudyUser {
     
     var isLoggedIn: Bool {
         return (currentUser?.isEmailVerified ?? false) && UserDefaults.standard.bool(forKey: Constants.prefConfirmedLogin)
+    }
+
+    init() {
+        // listen for changes in authentication state from Firebase
+        authStateHandle = Auth.auth().addStateDidChangeListener { [weak self] (_, _) in
+            self?.objectWillChange.send()
+        }
+    }
+
+    deinit {
+        // remove the authentication state handle when the instance is deallocated
+        if let handle = authStateHandle {
+            Auth.auth().removeStateDidChangeListener(handle)
+        }
     }
     
     /**
