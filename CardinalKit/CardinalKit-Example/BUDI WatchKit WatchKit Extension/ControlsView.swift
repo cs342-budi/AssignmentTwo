@@ -17,6 +17,11 @@ struct ControlsView: View {
                 Button {
                     workoutManager.endWorkout()
                     cmMotionManager.getMeanAccelaration()
+                    
+                    print("SENDING END TO PHONE")
+                    SendDataToPhone.shared.session
+                        .sendMessage(["message":"END"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                    
                 } label: {
                     Image(systemName: "xmark")
                 }
@@ -27,6 +32,25 @@ struct ControlsView: View {
             VStack {
                 Button {
                     workoutManager.togglePause()
+                    
+                    // Send Pause/Resume to Phone
+                    if SendDataToPhone.shared.session.isReachable { // Pause Pressed
+                        
+                        if workoutManager.running { // Pause Pressed
+                            //send data to phone
+                            print("SENDING PAUSE TO PHONE")
+                            SendDataToPhone.shared.session
+                                .sendMessage(["message":"PAUSE"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                        }
+                        else { // Resume Pressed
+                            // send data to phone
+                            print("SENDING RESUME TO PHONE")
+                            SendDataToPhone.shared.session
+                                .sendMessage(["message":"RESUME"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+                        }
+                        
+                    }
+                    
                 } label: {
                     Image(systemName: workoutManager.running ? "pause" : "play")
                 }
