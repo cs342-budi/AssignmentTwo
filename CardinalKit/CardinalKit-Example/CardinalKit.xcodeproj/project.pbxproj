@@ -1036,7 +1036,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = BUDI;
 				TargetAttributes = {
 					338AA1F627AC55990094D6F0 = {
 						CreatedOnToolsVersion = 13.2.1;
