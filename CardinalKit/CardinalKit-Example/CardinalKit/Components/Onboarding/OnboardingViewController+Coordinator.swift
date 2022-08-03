@@ -17,9 +17,6 @@ class OnboardingViewCoordinator: NSObject, ORKTaskViewControllerDelegate {
         switch reason {
         case .completed:
             UserDefaults.standard.set(true, forKey: Constants.onboardingDidComplete)
-            NotificationCenter.default.post(name: NSNotification.Name(Constants.onboardingDidComplete), object: true)
-
-            // if a consent form was signed, upload it
             if let signatureResult = taskViewController.result.stepResult(forStepIdentifier: "ConsentReviewStep")?.results?.first as? ORKConsentSignatureResult {
                 let consentDocument = ConsentDocument()
                 signatureResult.apply(to: consentDocument)
