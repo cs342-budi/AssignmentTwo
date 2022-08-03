@@ -1,9 +1,10 @@
 //
 //  OnboardingViewController.swift
-//  CardinalKit_Example
+//  BUDI
 //
 //  Created by Santiago Gutierrez on 10/12/20.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Modified by Vishnu Ravi on 7/27/22.
+//  Copyright © 2020 BUDI. All rights reserved.
 //
 
 import SwiftUI
@@ -28,18 +29,19 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         /* **************************************************************
         *  STEP (1): get user consent
         **************************************************************/
-        // use the `ORKVisualConsentStep` from ResearchKit
-        let consentDocument = ConsentDocument()
-        let consentStep = ORKVisualConsentStep(identifier: "VisualConsentStep", document: consentDocument)
+        // ** CONSENT IS DISABLED IN THIS PROJECT **
+        // let consentDocument = ConsentDocument()
+        // let consentStep = ORKVisualConsentStep(identifier: "VisualConsentStep", document: consentDocument)
         
         /* **************************************************************
         *  STEP (2): ask user to review and sign consent document
         **************************************************************/
+        // ** CONSENT IS DISABLED IN THIS PROJECT **
         // use the `ORKConsentReviewStep` from ResearchKit
-        let signature = consentDocument.signatures?.first
-        let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: signature, in: consentDocument)
-        reviewConsentStep.text = config.read(query: "Review Consent Step Text")
-        reviewConsentStep.reasonForConsent = config.read(query: "Reason for Consent Text")
+        // let signature = consentDocument.signatures?.first
+        // let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: signature, in: consentDocument)
+        // reviewConsentStep.text = config.read(query: "Review Consent Step Text")
+        // reviewConsentStep.reasonForConsent = config.read(query: "Reason for Consent Text")
         
         /* **************************************************************
         *  STEP (3): get permission to collect HealthKit data
@@ -107,7 +109,8 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         **************************************************************/
         
         // given intro steps that the user should review and consent to
-        let introSteps: [ORKStep] = [consentStep, reviewConsentStep]
+        // let introSteps: [ORKStep] = [consentStep, reviewConsentStep]
+        let introSteps = [ORKStep]()
         
         // and steps regarding login / security
         let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep]

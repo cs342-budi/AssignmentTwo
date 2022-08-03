@@ -53,15 +53,20 @@ struct ProfileUIView: View {
                 
            
                 Section {
-                    SendRecordsView()
+                    // ** HEALTH RECORDS UPLOAD DISABLED **
+                    // SendRecordsView()
+
                     ChangePasscodeView()
+
                     HelpView(site: config.read(query: "Website"))
                 }
                 
                 Section {
                     ReportView(color: self.color, email: config.read(query: "Email"))
                     SupportView(color: self.color, phone: config.read(query: "Phone"))
-                    DocumentView()
+
+                    // ** CONSENT DOCUMENT DISABLED **
+                    // DocumentView()
                 }
                 
                 Section {
