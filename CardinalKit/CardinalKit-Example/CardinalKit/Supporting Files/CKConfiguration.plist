@@ -93,13 +93,9 @@
 	<key>Login Step Text</key>
 	<string>We need to confirm your email address and send you a copy of the consent you just signed.</string>
 	<key>Withdrawal Instruction Title</key>
-	<string>Are you sure you want to withdraw?</string>
+	<string>Are you sure you want to log out?</string>
 	<key>Withdrawal Instruction Text</key>
-	<string>Withdrawing from the study will reset the app to the state it was in prior to you originally joining the study.</string>
-	<key>Withdraw Title</key>
-	<string>We appreciate your time.</string>
-	<key>Withdraw Text</key>
-	<string>Thank you for your contribution to this study. We are sorry that you could not continue. The app will now close.</string>
+	<string>Logging out of the app will reset it.</string>
 	<key>Passcode On Return Text</key>
 	<string>Welcome back!</string>
 	<key>Consent Title</key>
