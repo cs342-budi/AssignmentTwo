@@ -29,18 +29,18 @@ extension AppDelegate {
         CKApp.configure(options)
         
         // (3) if we have already logged in
-        if CKStudyUser.shared.isLoggedIn {
+        if CKStudyUser.shared.currentUser != nil {
             CKStudyUser.shared.save()
-            
+
+            // ** HealthKit background sync is disabled currently **
+            //
             // (4) then start the requested HK data collection (if any).
-            let manager = CKHealthKitManager.shared
-            manager.getHealthAuthorization { (success, error) in
-                if let error = error {
-                    print(error)
-                }
-            }
+            // let manager = CKHealthKitManager.shared
+            // manager.getHealthAuthorization { (success, error) in
+            //    if let error = error {
+            //        print(error)
+            //    }
+            // }
         }
-        CKStudyUser.shared.save()
     }
-    
 }
