@@ -29,11 +29,7 @@ struct WithdrawalViewController: UIViewControllerRepresentable {
         instructionStep.title = NSLocalizedString(config.read(query: "Withdrawal Instruction Title"), comment: "")
         instructionStep.text = NSLocalizedString(config.read(query: "Withdrawal Instruction Text"), comment: "")
         
-        let completionStep = ORKCompletionStep(identifier: "Withdraw")
-        completionStep.title = NSLocalizedString(config.read(query: "Withdraw Title"), comment: "")
-        completionStep.text = NSLocalizedString(config.read(query: "Withdraw Text"), comment: "")
-        
-        let withdrawTask = ORKOrderedTask(identifier: "Withdraw", steps: [instructionStep, completionStep])
+        let withdrawTask = ORKOrderedTask(identifier: "Withdraw", steps: [instructionStep])
         
         // wrap that task on a view controller
         let taskViewController = ORKTaskViewController(task: withdrawTask, taskRun: nil)
@@ -51,15 +47,14 @@ struct WithdrawalViewController: UIViewControllerRepresentable {
             case .completed:
                 
                 do {
-                    try CKCareKitManager.shared.wipe()
+                    // try CKCareKitManager.shared.wipe() <-- Not currently using CareKit
+                    //                                        and causes a crash upon logging back in.
                     try CKStudyUser.shared.signOut()
                     
                     if (ORKPasscodeViewController.isPasscodeStoredInKeychain()) {
                         ORKPasscodeViewController.removePasscodeFromKeychain()
                     }
                     
-                    NotificationCenter.default.post(name: NSNotification.Name(Constants.onboardingDidComplete), object: false)
-
                     UserDefaults.standard.set(nil, forKey: Constants.prefCareKitCoreDataInitDate)
                     UserDefaults.standard.set(nil, forKey: Constants.prefHealthRecordsLastUploaded)
                     UserDefaults.standard.set(false, forKey: Constants.onboardingDidComplete)

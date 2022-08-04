@@ -1,9 +1,9 @@
 //
 //  OnboardingViewController+Coordinator.swift
-//  CardinalKit_Example
+//  BUDI
 //
 //  Created by Santiago Gutierrez on 10/12/20.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Copyright © 2022 BUDI. All rights reserved.
 //
 
 import ResearchKit
@@ -16,66 +16,36 @@ class OnboardingViewCoordinator: NSObject, ORKTaskViewControllerDelegate {
         let storage = Storage.storage()
         switch reason {
         case .completed:
-            // if we completed the onboarding task view controller, go to study.
-            // performSegue(withIdentifier: "unwindToStudy", sender: nil)
-            
-            // TODO: where to go next?
-            // trigger "Studies UI"
             UserDefaults.standard.set(true, forKey: Constants.onboardingDidComplete)
-            NotificationCenter.default.post(name: NSNotification.Name(Constants.onboardingDidComplete), object: true)
-            
             if let signatureResult = taskViewController.result.stepResult(forStepIdentifier: "ConsentReviewStep")?.results?.first as? ORKConsentSignatureResult {
-                
                 let consentDocument = ConsentDocument()
                 signatureResult.apply(to: consentDocument)
-
                 consentDocument.makePDF { (data, error) -> Void in
-                    
                     let config = CKPropertyReader(file: "CKConfiguration")
-                        
+                    let consentFileName = config.read(query: "Consent File Name")
                     var docURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last as NSURL?
-                    docURL = docURL?.appendingPathComponent("\(config.read(query: "Consent File Name")).pdf") as NSURL?
-                    
+                    docURL = docURL?.appendingPathComponent("\(consentFileName).pdf") as NSURL?
 
                     do {
                         let url = docURL! as URL
                         try data?.write(to: url)
-                        
+
                         UserDefaults.standard.set(url.path, forKey: "consentFormURL")
-                        
+
                         let storageRef = storage.reference()
-                        
                         if let DocumentCollection = CKStudyUser.shared.authCollection {
-                            let DocumentRef = storageRef.child("\(DocumentCollection)/Consent.pdf")
-                            
-                            // Upload the file to the path "images/rivers.jpg"
+                            let DocumentRef = storageRef.child("\(DocumentCollection)/\(consentFileName).pdf")
                             DocumentRef.putFile(from: url, metadata: nil) { metadata, error in
-                              guard let metadata = metadata else {
-                                // Uh-oh, an error occurred!
-                                return
-                              }
-                              // Metadata contains file metadata such as size, content-type.
-//                              let size = metadata.size
-                              // You can also access to download URL after upload.
-                                DocumentRef.downloadURL { (url, error) in
-                                guard let downloadURL = url else {
-                                  // Uh-oh, an error occurred!
-                                  return
+                                if let error = error {
+                                    print(error.localizedDescription)
                                 }
-                              }
                             }
                         }
-                        
-                        
-                        
-
                     } catch let error {
-
                         print(error.localizedDescription)
                     }
                 }
             }
-            
             
             print("Login successful! task: \(taskViewController.task?.identifier ?? "(no ID)")")
             
