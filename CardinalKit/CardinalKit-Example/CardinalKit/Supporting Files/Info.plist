@@ -43,12 +43,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>FacebookAppID</key>
-	<string>1234</string>
-	<key>FacebookClientToken</key>
-	<string>1234</string>
-	<key>FacebookDisplayName</key>
-	<string>BUDI</string>
 	<key>FirebaseDynamicLinksCustomDomains</key>
 	<array>
 		<string>https://cs342.page.link</string>

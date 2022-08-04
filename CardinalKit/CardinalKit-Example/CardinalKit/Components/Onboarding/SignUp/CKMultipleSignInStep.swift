@@ -13,7 +13,6 @@ import FirebaseAuth
 import GoogleSignIn
 import AuthenticationServices
 import CryptoKit
-import FBSDKLoginKit
 import SwiftUI
 
 public class CKMultipleSignInStep: ORKQuestionStep {
@@ -61,19 +60,6 @@ public class CKMultipleSignInStepViewController: ORKQuestionStepViewController, 
             self.view.addSubview(buttonEmailPassword)
             button = buttonEmailPassword
 
-        }
-
-        if config["Login-Sign-In-With-Facebook"]["Enabled"] as? Bool == true {
-            let buttonFacebook = getSignInButton(title: "Sign in with Facebook",
-                                                 backgroundColor: UIColor(red: 59, green: 89, blue: 152),
-                                                 textColor: .white,
-                                                 borderColor: nil,
-                                                 reference: button,
-                                                 action: #selector(loginFacebookAction),
-                                                 icon: "facebook",
-                                                 imageOffset: 35)
-            self.view.addSubview(buttonFacebook)
-            button = buttonFacebook
         }
 
         if config["Login-Sign-In-With-Google"]["Enabled"] as? Bool == true {
@@ -152,30 +138,6 @@ public class CKMultipleSignInStepViewController: ORKQuestionStepViewController, 
     func loginEmailAndPasswordAction() {
         self.setAnswer(true)
         super.goForward()
-    }
-
-    @objc
-    func loginFacebookAction(sender: AnyObject) {//action of the custom button in the storyboard
-        let fbLoginManager: LoginManager = LoginManager()
-        fbLoginManager.logIn(permissions: ["email"], from: self){ (result, error) -> Void in
-            if (error == nil){
-                let fbloginresult: LoginManagerLoginResult = result!
-                if (result?.isCancelled)!{ return }
-
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-                    Auth.auth().signIn(with: credential) { (_, error) in
-                        if let error = error {
-                            self.showError(error)
-                        } else {
-                            self.setAnswer(false)
-                            super.goForward()
-                        }
-                    }
-                }
-            }
-        }
     }
 
     private var currentNonce: String!
