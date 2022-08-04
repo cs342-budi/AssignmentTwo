@@ -10,11 +10,6 @@ import ResearchKit
 import SwiftUI
 import Foundation
 import CoreData
-
-
-// import facebook
-import FBSDKCoreKit
-
 import GoogleSignIn
 
 @UIApplicationMain
@@ -50,12 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().delegate = self
         
-        // Set up FB Sign In
-        FBSDKCoreKit.ApplicationDelegate.shared.application(
-                    application,
-                    didFinishLaunchingWithOptions: launchOptions
-                )
-        
         return true
     }
 
@@ -65,13 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any])
       -> Bool {
-          
-          ApplicationDelegate.shared.application(
-              application,
-              open: url,
-              sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-              annotation: options[UIApplication.OpenURLOptionsKey.annotation]
-          )
           
       return GIDSignIn.sharedInstance.handle(url)
     }
