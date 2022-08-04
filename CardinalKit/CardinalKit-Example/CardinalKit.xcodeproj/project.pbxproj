@@ -245,6 +245,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01FE5A8BE22682C67B3DC75A /* Pods-CardinalKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		03480519284870E500C0E492 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07D78DA16FC9C3C7709EA243 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudiSurvey.swift; sourceTree = "<group>"; };
@@ -298,6 +299,8 @@
 		41DC264876E45FE5A3FD8701 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CardinalKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardinalKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AA5CD1C2188D392530510F /* CardinalKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CardinalKit.podspec; path = ../CardinalKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		65B5425658CF2B190798B1B1 /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A40CE7771D88357CD99887A /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyChartView.swift; sourceTree = "<group>"; };
 		7643165027C176300036BE83 /* ProgressUIChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUIChartView.swift; sourceTree = "<group>"; };
 		89F38B517BD8E2265B947159 /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1262,6 +1265,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0BAEA8798E9EE062A2E2497 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardinalKit_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
