@@ -27,7 +27,7 @@ struct HomeUIView: View {
         
     }
     
-   @State public var liveTherapyView = false
+    @State public var liveTherapyView = false
 
     
     var body: some View {
@@ -83,8 +83,9 @@ struct HomeUIView: View {
                     }.padding(.bottom, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .padding(.top, Metrics.PADDING_VERTICAL_MAIN*0.5)
                         .fullScreenCover(isPresented: $liveTherapyView) {
-                            LiveTherapyView(isLiveTherapyPresented: $liveTherapyView)
+                            LiveTherapyView(watchViewModel: watchViewModel, isLiveTherapyPresented: $liveTherapyView)
                         }
+                        
                     
                   
                   
@@ -168,8 +169,28 @@ struct HomeUIView: View {
             }
         
         }.padding(.top)
+        .onAppear {
+            switch watchViewModel.timerMessage {
+            case "END":
+                liveTherapyView = false
+                print("End workout")
+            case "START":
+                liveTherapyView = true
+            default:
+                print("default_live_therapy")
+            }
+        }
     
     }
+    
+//    func startTherapy() -> Bool {
+//
+//        var startTherapy = false
+//
+//
+//
+//        return startTherapy
+//    }
 }
 
 struct HomeUIView_Previews: PreviewProvider {

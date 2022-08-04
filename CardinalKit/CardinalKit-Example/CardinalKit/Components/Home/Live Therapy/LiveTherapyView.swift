@@ -13,7 +13,7 @@ import Charts
 
 struct LiveTherapyView: View {
     
-    @ObservedObject var watchViewModel = WatchViewModel()
+    @ObservedObject var watchViewModel : WatchViewModel
     @State private var showingTherapyVideos = false
     @Binding public var isLiveTherapyPresented: Bool
 //    @State var exerciseCount = 0 //not in use

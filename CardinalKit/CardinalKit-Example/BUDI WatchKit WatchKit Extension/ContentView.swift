@@ -26,7 +26,8 @@ struct ContentView: View {
                     NavigationLink(workoutType.name,
                                                    destination: SessionPagingView(),
                                                    tag: workoutType, selection: $workoutManager.selectedWorkout
-                    ).padding(
+                    )
+                    .padding(
                         EdgeInsets(top: 65, leading: 0, bottom: 65, trailing: 0)
                     )
                     .font(.system(size: 24, weight: .bold))

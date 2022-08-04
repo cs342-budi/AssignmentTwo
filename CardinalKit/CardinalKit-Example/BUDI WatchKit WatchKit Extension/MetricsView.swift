@@ -71,10 +71,14 @@ struct MetricsView: View {
             .background(Color.green)
             .navigationTitle("Therapy")
         }
-        
+        .onAppear {
+            SendDataToPhone.shared.session
+                .sendMessage(["message":"START"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+        }
         
         
     }
+    
 }
 
 //struct MetricsView_Previews: PreviewProvider {
