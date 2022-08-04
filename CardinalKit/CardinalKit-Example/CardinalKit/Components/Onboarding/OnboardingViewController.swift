@@ -113,7 +113,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         let introSteps = [ORKStep]()
         
         // and steps regarding login / security
-        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep]
+        let emailVerificationSteps = loginSteps + [passcodeStep]
         //let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, healthRecordsStep]
         
         let informationstep = ORKInstructionStep(identifier: "info")
