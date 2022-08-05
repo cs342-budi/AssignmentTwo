@@ -87,9 +87,9 @@ struct LiveTherapyView: View {
                 
             // pass in array of max accelerations into LiveTherapyChartView
             LiveTherapyChartView(maxData: watchViewModel.maxReceived)
-                .frame(width: 350, height: 210)
-                .padding(.leading, 5)
-                .padding(.trailing, 5)
+                .frame(width: UIScreen.main.bounds.size.width, height: 210)
+                //.padding(.leading, 5)
+                //.padding(.trailing, 5)
                 .padding(.bottom, 20)
             
             

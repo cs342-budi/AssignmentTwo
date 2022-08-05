@@ -53,7 +53,7 @@ struct LoginExistingUserViewController: UIViewControllerRepresentable {
         passcodeStep.text = config.read(query: "Passcode Text")
 
         // loginSteps += [consentReview, reviewConsentStep, healthDataStep, healthRecordsStep, passcodeStep]
-        loginSteps += [signInButtons, loginUserPassword, healthDataStep, passcodeStep]
+        loginSteps += [signInButtons, loginUserPassword, passcodeStep]
 
 
         // This navigation rule checks if the user is signing in with a federated provider (Google, Apple, etc)
