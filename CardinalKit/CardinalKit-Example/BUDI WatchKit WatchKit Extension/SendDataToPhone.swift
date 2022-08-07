@@ -45,6 +45,16 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
+    public private(set) var timerMsg: String = "" {
+        willSet {
+            
+            
+            DispatchQueue.main.async { [weak self] in // Publish on main thread
+                self?.actionNotification.send(newValue)
+            }
+        }
+    }
+    
     // MARK: added private b/c singleton
     private init(session: WCSession = .default){
         self.session = session
@@ -68,7 +78,8 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
         // main view.
         
         self.action = message["action"] as? String ?? ""
-        print(self.action)
+        self.timerMsg = message["message"] as? String ?? ""
+        print(self.timerMsg)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
@@ -79,7 +90,8 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
         // if we want to.
         
         self.action = message["action"] as? String ?? ""
-        print(self.action)
+        self.timerMsg = message["message"] as? String ?? ""
+        print(self.timerMsg)
     }
 
 }

@@ -43,7 +43,7 @@ struct SummaryView: View {
 //                                                                usage: .road,
 //                                                                numberFormatStyle: .number.precision(.fractionLength(2)))))
                         //.foregroundStyle(.green)
-                    SummaryMetricView(title: "Points Earned", value: "5").foregroundColor(.green)
+                    SummaryMetricView(title: "Points Earned", value: cmMotionManager.points.formatted(.number.precision(.fractionLength(0)))).foregroundColor(.green)
                     SummaryMetricView(title: "Total Energy",
                                       value: Measurement(value: workoutManager.workout?.totalEnergyBurned?.doubleValue(for: .kilocalorie()) ?? 0,
                                                          unit: UnitEnergy.kilocalories)
