@@ -62,6 +62,7 @@ class SendDataToPhone: NSObject, WCSessionDelegate, ObservableObject {
         self.session.delegate = self
         session.activate()
         print("INITIALIZED SINGLETON")
+        
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

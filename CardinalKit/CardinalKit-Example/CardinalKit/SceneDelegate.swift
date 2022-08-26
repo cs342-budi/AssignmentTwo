@@ -33,6 +33,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        // Changes Alert Button Tint color to Budi Green
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = CKConfig.shared.readColor(query: "Tint Color")
+
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {

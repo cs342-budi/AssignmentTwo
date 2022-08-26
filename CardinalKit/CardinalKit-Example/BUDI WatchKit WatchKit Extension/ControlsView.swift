@@ -13,28 +13,29 @@ struct ControlsView: View {
     @EnvironmentObject var cmMotionManager: CoreMotionManager
     var body: some View {
         HStack {
+//            VStack {
+//                Button {
+//                    workoutManager.endWorkout()
+//                    cmMotionManager.getMeanAccelaration()
+//
+//                    print("SENDING END TO PHONE")
+//                    SendDataToPhone.shared.session
+//                        .sendMessage(["message":"END"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
+//
+//                } label: {
+//                    Image(systemName: "xmark")
+//                }
+//                .tint(.red)
+//                .font(.title2)
+//                Text("End")
+//            }
             VStack {
                 Button {
-                    workoutManager.endWorkout()
-                    cmMotionManager.getMeanAccelaration()
                     
-                    print("SENDING END TO PHONE")
-                    SendDataToPhone.shared.session
-                        .sendMessage(["message":"END"], replyHandler: nil, errorHandler: { (err) in print (err.localizedDescription)})
-                    
-                } label: {
-                    Image(systemName: "xmark")
-                }
-                .tint(.red)
-                .font(.title2)
-                Text("End")
-            }
-            VStack {
-                Button {
-                    workoutManager.togglePause()
                     
                     // Send Pause/Resume to Phone
                     if SendDataToPhone.shared.session.isReachable { // Pause Pressed
+                        workoutManager.togglePause()
                         
                         if workoutManager.running { // Pause Pressed
                             //send data to phone

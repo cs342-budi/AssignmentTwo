@@ -13,7 +13,7 @@ import WatchConnectivity
 
 class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     
-    var session: WCSession
+    var session : WCSession
     
     @Published var messageText = ""
     @Published var data = 0.0
@@ -31,10 +31,10 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         print("WatchSessionManager active")
     }
     
-    deinit {
-        session.delegate = nil
-        // stop watch session when paused/ended
-    }
+//    deinit {
+//        session.delegate = nil
+//        // stop watch session when paused/ended
+//    }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     

@@ -14,71 +14,87 @@ struct ContentView: View {
     //    var workoutTypes: [HKWorkoutActivityType] = [.cycling, .running, .walking]
     var workoutTypes: [HKWorkoutActivityType] = [.flexibility]
     @EnvironmentObject var cmManager : CoreMotionManager
+    @State private var startTherapy = false
     
     //var phoneViewModel = SendDataToPhone()
     
     var body: some View {
         VStack{
             //MARK: initiate session with phone when start therapy tapped from watch
-            List(workoutTypes){ workoutType in
-                HStack{
-                    Spacer()
-                    NavigationLink(workoutType.name,
-                                                   destination: SessionPagingView(),
-                                                   tag: workoutType, selection: $workoutManager.selectedWorkout
-                    ).padding(
-                        EdgeInsets(top: 65, leading: 0, bottom: 65, trailing: 0)
-                    )
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(.white)
-                    Spacer()
-                }.background(Color.green)
-                    .cornerRadius(15)
-                    .padding(
-                        EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
-                    )
+           
+            if startTherapy {
+                withAnimation {
+                    SessionPagingView()
+                }
             }
-            .listStyle(.carousel)
-            .navigationBarTitle("BUDI")
-            .onAppear {
-                workoutManager.requestAuthorization()
-                if SendDataToPhone.shared.session.isReachable {
-                    print("Session reached")
+            else {
+                Text("Open BUDI on iPhone to Start Therapy session.")
+            }
+            
+            //            List(workoutTypes){ workoutType in
+            //                HStack{
+            //                    Spacer()
+            //                    NavigationLink(workoutType.name,
+            //                                                   destination: SessionPagingView(),
+            //                                                   tag: workoutType, selection: $workoutManager.selectedWorkout
+            //                    ).padding(
+            //                        EdgeInsets(top: 65, leading: 0, bottom: 65, trailing: 0)
+            //                    )
+            //                    .font(.system(size: 24, weight: .bold))
+            //                    .foregroundColor(.white)
+            //                    Spacer()
+            //                }.background(Color.green)
+            //                    .cornerRadius(15)
+            //                    .padding(
+            //                        EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+            //                    )
+            //            }
+            //            .listStyle(.carousel)
+            //            .navigationBarTitle("BUDI")
+            //            .onAppear {
+            //                workoutManager.requestAuthorization()
+            //                if SendDataToPhone.shared.session.isReachable {
+            //                    print("Session reached")
+            //                } else {
+            //                    print("Session not reached.")
+            //                }
+            //
+            //            }
+                
+        }
+        .navigationBarTitle("BUDI")
+        .onReceive(SendDataToPhone.shared.actionNotification){ action in
+            // MARK: Taylor
+            // We subscribe to *actionNotification* from the viewModel to listen for a notification
+            // then based on the message we got, we either start or stop the therapy session.
+            
+            switch action {
+            case "THERAPY_START":
+                if !workoutManager.running {
+                    startTherapy = true
+                    print("Starting therapy...")
+                    // setting the workout type triggers it to start
+                    workoutManager.selectedWorkout = workoutTypes.first
+                    cmManager.startAccelerometers()
+                    
                 } else {
-                    print("Session not reached.")
+                    print("Therapy has already been started.")
                 }
                 
-            }
-            .onReceive(SendDataToPhone.shared.actionNotification){ action in
-                // MARK: Taylor
-                // We subscribe to *actionNotification* from the viewModel to listen for a notification
-                // then based on the message we got, we either start or stop the therapy session.
-                
-                switch action {
-                    case "THERAPY_START":
-                        if !workoutManager.running {
-                            print("Starting therapy...")
-                            // setting the workout type triggers it to start
-                            workoutManager.selectedWorkout = workoutTypes.first
-                            cmManager.startAccelerometers()
-                            
-                        } else {
-                            print("Therapy has already been started.")
-                        }
-                        
-                    case "THERAPY_STOP":
-                        if workoutManager.running {
-                            print("Stopping therapy...")
-                            cmManager.stopAccelerometers()
-                            workoutManager.endWorkout()
-                        } else {
-                            print("Therapy hasn't been started.")
-                        }
-                    default:
-                        return
+            case "THERAPY_STOP":
+                if workoutManager.running {
+                    print("Stopping therapy...")
+                    cmManager.stopAccelerometers()
+                    workoutManager.endWorkout()
+                } else {
+                    print("Therapy hasn't been started.")
                 }
-                
+                startTherapy = false
+
+            default:
+                return
             }
+            
         }
     }
 }

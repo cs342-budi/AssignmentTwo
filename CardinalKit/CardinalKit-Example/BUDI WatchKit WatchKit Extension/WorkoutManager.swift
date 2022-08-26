@@ -107,7 +107,7 @@ class WorkoutManager: NSObject, ObservableObject {
 
     func togglePause() {
         if running == true {
-            self.pause()
+            pause()
         } else {
             resume()
         }

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Charts
+import WatchConnectivity
 
 
 
@@ -27,8 +28,8 @@ struct HomeUIView: View {
         
     }
     
-   @State public var liveTherapyView = false
-
+    @State public var liveTherapyView = false
+    @State private var showAlert = false
     
     var body: some View {
         VStack {
@@ -59,12 +60,16 @@ struct HomeUIView: View {
                                 // send a message to the watch to start the therapy session
                                 self.watchViewModel.session.sendMessage(["action": "THERAPY_START"], replyHandler: nil,         errorHandler: { (err) in
                                     print(err.localizedDescription)
+
                                 })
+                                liveTherapyView.toggle()
+                                showAlert = false
+
                             } else {
+                                showAlert = true
                                 print ("cannot reach watch")
                             }
                             
-                            liveTherapyView.toggle()
                         
                             
                         }) {
@@ -85,7 +90,9 @@ struct HomeUIView: View {
                         .fullScreenCover(isPresented: $liveTherapyView) {
                             LiveTherapyView(isLiveTherapyPresented: $liveTherapyView)
                         }
-                    
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text("Watch Not Connected :("), message: Text("Open BUDI on your Apple Watch and try again."), dismissButton: .cancel(Text("Got it!")))
+                        }
                   
                   
 
