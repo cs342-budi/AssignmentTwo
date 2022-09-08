@@ -12,8 +12,6 @@
 		1DD7142727BE050500B4A6EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142627BE050500B4A6EB /* ImagePicker.swift */; };
 		1DD7142927BE080700B4A6EB /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */; };
 		275F719827B9D526005B6D18 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275F719727B9D526005B6D18 /* HealthKit.framework */; };
-		275F71CB27B9E481005B6D18 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; };
-		275F71CC27B9E481005B6D18 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		275F71D127BA14AB005B6D18 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F71D027BA14AB005B6D18 /* WatchViewModel.swift */; };
 		27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */; };
 		278E856E27D028AF00E737BF /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E856A27D028A700E737BF /* GoalsView.swift */; };
@@ -26,7 +24,7 @@
 		2B932F84276BF8D300AB3A02 /* CKReviewConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B932F83276BF8D300AB3A02 /* CKReviewConsentDocument.swift */; };
 		2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328226C2CC4E00C4636E /* CkResearchSurveysManager.swift */; };
 		2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5328426C30F2E00C4636E /* CloudTaskItem.swift */; };
-		2BF6451826C1D0040020C206 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		2BF6451826C1D0040020C206 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6451F26C1DBE70020C206 /* CK_ORKSerialization.swift */; };
 		2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94C5F12536543600DF8866 /* SceneDelegate+CardinalKit.swift */; };
 		333DABF127B3645B0032D213 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DABED27B3645B0032D213 /* UserDefaultsKeys.swift */; };
@@ -67,7 +65,6 @@
 		8E0A43C1244A4A0400656518 /* LoginCustomWaitStepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A43A1244A4A0400656518 /* LoginCustomWaitStepView.xib */; };
 		8E0A43C2244A4A0400656518 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A43A2244A4A0400656518 /* ConsentDocument.swift */; };
 		8E0A43C3244A4A0400656518 /* LoginCustomWaitStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A43A3244A4A0400656518 /* LoginCustomWaitStepViewController.swift */; };
-		8E0A43D5244A693D00656518 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0A43D4244A693D00656518 /* HealthKit.framework */; };
 		8E40DC042471E5940027536B /* CKNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40DC032471E5940027536B /* CKNetworkManager.swift */; };
 		8E6E1E092534F4100024B8DF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E1E082534F4100024B8DF /* OnboardingViewController.swift */; };
 		8E6E1E0B2534FF640024B8DF /* OnboardingViewController+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E1E0A2534FF640024B8DF /* OnboardingViewController+Coordinator.swift */; };
@@ -153,6 +150,10 @@
 		C50D145A283361470023874A /* BUDI WatchKit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 338AA1FF27AC559B0094D6F0 /* BUDI WatchKit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C57684E92829E94C00CD47DF /* TrailMakingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */; };
 		C57684ED2829EA7D00CD47DF /* ReactionTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */; };
+		C5A476C928910D5100A22D45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0A43D4244A693D00656518 /* HealthKit.framework */; };
+		C5A476CB28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */; };
+		C5A476CC28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C5A476CD28910D7800A22D45 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5168B0128910207006ECBEC /* ResearchKit.framework */; platformFilter = ios; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -160,7 +161,6 @@
 		E2DF9F0A2500C9CE00A93B93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF9F092500C9CE00A93B93 /* LoginViewController.swift */; };
 		E2F1FD7624D61EDA006C39DF /* CKPropertyReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1FD7524D61EDA006C39DF /* CKPropertyReader.swift */; };
 		E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F1FD7724D62064006C39DF /* CKConfiguration.plist */; };
-		E54E0F90F1BDF9FEF1CEDE82 /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C8D8AE894CCB75102F53E7 /* Pods_CardinalKit_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,26 +185,26 @@
 			remoteGlobalIDString = 338AA1F627AC55990094D6F0;
 			remoteInfo = "BUDI WatchKit";
 		};
-		95A8C5F027B0AB0300E0D4AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		95A8C5F227B0AB0300E0D4AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
 		C50D145B283361EE0023874A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
 			remoteInfo = "BUDI WatchKit WatchKit Extension";
+		};
+		C5168B0028910207006ECBEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		C5168B0228910207006ECBEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -215,7 +215,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				275F71CC27B9E481005B6D18 /* ResearchKit.framework in Embed Frameworks */,
+				C5A476CC28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,7 +390,6 @@
 		9590DFAC27B23A2000B6A633 /* ActiveTaskViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskViewCoordinator.swift; sourceTree = "<group>"; };
 		9590DFAE27B2479000B6A633 /* NineHoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineHoleViewController.swift; sourceTree = "<group>"; };
 		9599A740283357210057A6D3 /* DeleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteModalView.swift; sourceTree = "<group>"; };
-		95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		95A8C5FC27B10BE100E0D4AC /* GamesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesMainView.swift; sourceTree = "<group>"; };
 		95A8C60127B11A1A00E0D4AC /* ProgressUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUIView.swift; sourceTree = "<group>"; };
 		95A8C60427B11A9E00E0D4AC /* LiveTherapyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyView.swift; sourceTree = "<group>"; };
@@ -398,7 +397,8 @@
 		95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudiModel.xcdatamodel; sourceTree = "<group>"; };
 		95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyInstructionsView.swift; sourceTree = "<group>"; };
 		95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstructionsButton.swift; sourceTree = "<group>"; };
-		980033A849A0774898854284 /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-main/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		C5255C2928335FFE0028EA66 /* BUDI-WatchKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BUDI-WatchKit-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMakingTaskViewController.swift; sourceTree = "<group>"; };
 		C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTimeViewController.swift; sourceTree = "<group>"; };
@@ -447,11 +447,11 @@
 			files = (
 				8E9CDE952591534B00C8A228 /* CareKit in Frameworks */,
 				8E9CDE972591534B00C8A228 /* CareKitUI in Frameworks */,
-				8E0A43D5244A693D00656518 /* HealthKit.framework in Frameworks */,
 				8E9CDE912591534B00C8A228 /* CareKitStore in Frameworks */,
+				C5A476C928910D5100A22D45 /* HealthKit.framework in Frameworks */,
+				C5A476CB28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Frameworks */,
+				C5A476CD28910D7800A22D45 /* ResearchKit.framework in Frameworks */,
 				8E9CDE932591534B00C8A228 /* CareKitFHIR in Frameworks */,
-				275F71CB27B9E481005B6D18 /* ResearchKit.framework in Frameworks */,
-				E54E0F90F1BDF9FEF1CEDE82 /* Pods_CardinalKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +540,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */,
+				C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */,
 				270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */,
 				8E0A438B244A4A0400656518 /* CardinalKit-Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
@@ -552,6 +552,7 @@
 				607FACD11AFB9204008FA782 /* Products */,
 				A562A578C883F67F0DAE1385 /* Pods */,
 				2C45A885E8BD0CAC5349997A /* Frameworks */,
+				C55D78FE28C991DF0038B52A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -862,15 +863,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		95A8C5EB27B0AB0200E0D4AC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */,
-				95A8C5F327B0AB0300E0D4AC /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		95A8C5F827B10BA000E0D4AC /* Games */ = {
 			isa = PBXGroup;
 			children = (
@@ -920,10 +912,26 @@
 		A562A578C883F67F0DAE1385 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				980033A849A0774898854284 /* Pods-CardinalKit_Example.debug.xcconfig */,
 				3752F4EB3A97D8F5FAB4CF98 /* Pods-CardinalKit_Example.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C5168AFB28910206006ECBEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5168B0128910207006ECBEC /* ResearchKit.framework */,
+				C5168B0328910207006ECBEC /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C55D78FE28C991DF0038B52A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1075,8 +1083,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 95A8C5EB27B0AB0200E0D4AC /* Products */;
-					ProjectRef = 95A8C5EA27B0AB0200E0D4AC /* ResearchKit.xcodeproj */;
+					ProductGroup = C5168AFB28910206006ECBEC /* Products */;
+					ProjectRef = C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1091,18 +1099,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		95A8C5F127B0AB0300E0D4AC /* ResearchKit.framework */ = {
+		C5168B0128910207006ECBEC /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = 95A8C5F027B0AB0300E0D4AC /* PBXContainerItemProxy */;
+			remoteRef = C5168B0028910207006ECBEC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		95A8C5F327B0AB0300E0D4AC /* ResearchKitTests.xctest */ = {
+		C5168B0328910207006ECBEC /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = 95A8C5F227B0AB0300E0D4AC /* PBXContainerItemProxy */;
+			remoteRef = C5168B0228910207006ECBEC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1367,7 +1375,7 @@
 				8E7FFFB825DE350A002982B4 /* CoffeeUIView.swift in Sources */,
 				7643165127C176300036BE83 /* ProgressUIChartView.swift in Sources */,
 				9553F50927B0817200DF7191 /* CareTeamView.swift in Sources */,
-				2BF6451826C1D0040020C206 /* BuildFile in Sources */,
+				2BF6451826C1D0040020C206 /* (null) in Sources */,
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
 				2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */,
@@ -1493,7 +1501,7 @@
 				MARKETING_VERSION = 2.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.blynn.watchkitapp.watchkitextension2M;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mks.budi.watchkitapp.watchkitextension2M;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1539,7 +1547,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp.watchkitextension2M;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mks.budi.watchkitapp.watchkitextension2M;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1568,7 +1576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = C5HKYY287A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
@@ -1576,11 +1584,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi.blynn;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.mks.budi;
 				MARKETING_VERSION = 2.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.blynn.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mks.budi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1609,7 +1617,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VM7SQWLDT5;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
@@ -1617,10 +1625,10 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.stanford.budi.blynn;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.mks.budi;
 				MARKETING_VERSION = 2.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mks.budi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1806,7 +1814,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1852,7 +1860,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1863,22 +1871,21 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 980033A849A0774898854284 /* Pods-CardinalKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "CardinalKit-Example.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C5HKYY287A;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi.blynn;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mks.budi;
 				PRODUCT_NAME = "CardinalKit Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardinalKit/Supporting Files/CardinalKit_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1895,16 +1902,16 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CardinalKit_ExampleRelease.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VM7SQWLDT5;
+				DEVELOPMENT_TEAM = KC87UR4VZ4;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.budi;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mks.budi;
 				PRODUCT_NAME = "CardinalKit Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardinalKit/Supporting Files/CardinalKit_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

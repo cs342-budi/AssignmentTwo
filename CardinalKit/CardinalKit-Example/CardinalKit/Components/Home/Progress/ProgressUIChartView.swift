@@ -25,7 +25,7 @@ struct TherapyProgress: Hashable {
        
     var id = UUID().uuidString
     var percent: Double
-    var minsCompleted: Double
+    var minsCompleted: Int
     var date: String
     var monthDate: String
     }
@@ -42,6 +42,7 @@ struct TherapyProgress: Hashable {
     @Published var day3Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
     @Published var day2Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
     @Published var day1Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
+    @Published var day0Progress = TherapyProgress(percent: 0, minsCompleted: 0, date: "", monthDate: "");
 
     func reset() -> Void {
         self.modelData = []
@@ -109,19 +110,26 @@ struct TherapyProgress: Hashable {
                     let dayForRing = dateFormatter.string(from: newdate)
                     dateFormatter.dateFormat = "M/d"
                     let monthDay = dateFormatter.string(from: newdate)
-                    self.therapyProgress.append(TherapyProgress(percent: (datacur/(Double(self.therapyGoal)*60)) * 100, minsCompleted: datacur, date: dayForRing, monthDate: monthDay))
+                    self.therapyProgress.append(TherapyProgress(percent: (Double(datacur/60)/(Double(self.therapyGoal))), minsCompleted: Int(datacur/60), date: dayForRing, monthDate: monthDay))
                     dateFormatter.dateFormat = "MM-dd-yyyy"
                 }
                 
+                
+                //self.todaysProgress = self.therapyProgress[0];
+                self.todaysProgress = self.therapyProgress[0];
+                if self.todaysProgress.percent <= 0.01 {
+                    self.todaysProgress.percent = 0.01
+                }
+                
                 for i in 0...6 {
-                    if self.therapyProgress[i].percent == 0 {
-                        self.therapyProgress[i].percent = 0.1
+                    if self.therapyProgress[i].percent <= 0.07 {
+                        self.therapyProgress[i].percent = 0.07
                     } else if self.therapyProgress[i].percent > 1 {
                         self.therapyProgress[i].percent = 1
                     }
                 }
                 
-                self.todaysProgress = self.therapyProgress[0];
+                self.day0Progress = self.therapyProgress[0];
                 self.day1Progress = self.therapyProgress[1];
                 self.day2Progress = self.therapyProgress[2];
                 self.day3Progress = self.therapyProgress[3];
