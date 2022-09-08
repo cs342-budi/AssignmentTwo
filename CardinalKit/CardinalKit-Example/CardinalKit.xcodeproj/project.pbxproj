@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0348051D284870E500C0E492 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03480519284870E500C0E492 /* GoogleService-Info.plist */; };
+		03C48D8B28C980AB00B50D54 /* punches.mov in Resources */ = {isa = PBXBuildFile; fileRef = 03C48D8728C980AA00B50D54 /* punches.mov */; };
 		1D6A5A01279E5FD900184D5F /* BudiSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */; };
 		1DD7142727BE050500B4A6EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142627BE050500B4A6EB /* ImagePicker.swift */; };
 		1DD7142927BE080700B4A6EB /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */; };
@@ -246,6 +247,7 @@
 
 /* Begin PBXFileReference section */
 		03480519284870E500C0E492 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03C48D8728C980AA00B50D54 /* punches.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = punches.mov; sourceTree = "<group>"; };
 		07D78DA16FC9C3C7709EA243 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudiSurvey.swift; sourceTree = "<group>"; };
 		1DD7142627BE050500B4A6EB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -902,6 +904,7 @@
 				956447CA283C8D64009970B0 /* armAcrossBody.mov */,
 				956447CC283C8D86009970B0 /* upDownmov.mov */,
 				956447CE283C8DA3009970B0 /* armUpCropped.mov */,
+				03C48D8728C980AA00B50D54 /* punches.mov */,
 				957EFD8F27D6A7AF00495061 /* squeeze.mov */,
 				956447C4283C8CE5009970B0 /* forwardArmCircles.mov */,
 				957EFD9327D6A7C600495061 /* armOutCropped.mov */,
@@ -1144,6 +1147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0A43AF244A4A0400656518 /* Assets.xcassets in Resources */,
+				03C48D8B28C980AB00B50D54 /* punches.mov in Resources */,
 				956447C5283C8CE6009970B0 /* forwardArmCircles.mov in Resources */,
 				956447CF283C8DA3009970B0 /* armUpCropped.mov in Resources */,
 				957EFD8A27D6A78600495061 /* backCircles.mov in Resources */,
