@@ -195,17 +195,17 @@ internal extension OCKStore {
         contact2.asset = "BlynnShideler"
         contact2.title = "Medical Student"
         contact2.role = "Blynn is a medical student at Stanford & is the lead of BUDI and the Pediatric Rehabilitation Technologies Program."
-        contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(412) 216-2424")]
+        //contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(412) 216-2424")]
         contact2.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "blynns@stanford.edu")]
-        contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(412) 216-2424")]
-        contact2.address = {
-            let address = OCKPostalAddress()
-            address.street = "725 Welch Rd"
-            address.city = "Palo Alto"
-            address.state = "CA"
-            address.postalCode = "94304"
-            return address
-        }()
+        //contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(412) 216-2424")]
+//        contact2.address = {
+//            let address = OCKPostalAddress()
+//            address.street = "725 Welch Rd"
+//            address.city = "Palo Alto"
+//            address.state = "CA"
+//            address.postalCode = "94304"
+//            return address
+//        }()
         
         var contact3 = OCKContact(id: "vishnu", givenName: "Vishnu",
                                   familyName: "Ravi", carePlanUUID: nil)
@@ -224,10 +224,10 @@ internal extension OCKStore {
             address.postalCode = "94305"
             return address
         }()
-
-        addContacts([contact1, contact3, contact2])
+       //updateContacts([contact2])
+        addContacts([contact2])
     }
-    
+//
 }
 
 extension OCKHealthKitPassthroughStore {

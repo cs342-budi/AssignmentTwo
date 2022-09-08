@@ -32,6 +32,10 @@ struct LiveTherapyChartView: UIViewRepresentable {
         chart.rightAxis.drawAxisLineEnabled = false //hides right axis
         chart.rightAxis.drawGridLinesEnabled = false //hides other vertical gridlines
         chart.rightAxis.enabled = false //hides right axis fully
+        chart.leftAxis.enabled = false
+        chart.xAxis.enabled = false
+        chart.drawBordersEnabled = false
+        chart.minOffset = 0
         chart.xAxis.labelPosition = XAxis.LabelPosition.bottom //puts x axis on bottom
         chart.xAxis.drawLabelsEnabled = false //hides x axis labels
         chart.leftAxis.drawLabelsEnabled = false //hides y axis labels
