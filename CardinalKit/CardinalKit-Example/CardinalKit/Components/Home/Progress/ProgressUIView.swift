@@ -28,7 +28,13 @@ struct ProgressUIView: View {
     init(onComplete: (() -> Void)? = nil) {
         self.color = Color(config.readColor(query: "Primary Color"))
         self.accent = Color(config.readColor(query: "Accent Color"))
+        if defaults.integer(forKey: "therapyGoal") == 0 {
+            defaults.set(10, forKey: "therapyGoal")
+        }
+       
+        
         self.therapyGoal = defaults.integer(forKey: "therapyGoal")
+       
         self.color_bkg = Color.gray
     }
 
@@ -41,63 +47,67 @@ struct ProgressUIView: View {
         
       
         VStack {
-                VStack {
+           // VStack (alignment: .leading){
                     
-                    HStack {
+               HStack {
                         
                         Text("Today")
                             .font(.title2)
                             .fontWeight(.light)
+                            .frame(alignment: .leading)
                        
                         Text (toDay(ind: 0))
                             .font(.title2)
                             .fontWeight(.thin)
                             .foregroundColor(self.color)
-                    }
+               }.padding(.top)
+                .padding(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .navigationBarTitle("Today's progress")
                 
-                    HStack {
-                        TherapyRingView(ringWidth: 30, percent: dataViewModel.todaysProgress.percent*100,
-                                                backgroundColor: self.color_bkg.opacity(0.2),
-                                                foregroundColors: [self.color, self.color])
-                    
-                        VStack {
-                                HStack {
-                                    Text(String(Int(dataViewModel.todaysProgress.minsCompleted)))
-                                            .font(.largeTitle)
-                                            .bold()
-                                            .italic()
-                                            .foregroundColor(Color.green)
-                                    Text(" / \(String(defaults.integer(forKey: "therapyGoal"))) min")
-                                            .font(.headline)
-                                            .bold()
-                                            .foregroundColor(Color.gray)
-                                }
+                
+                HStack {
+            
+                            TherapyRingView(ringWidth: 30, percent: dataViewModel.todaysProgress.percent*100,
+                                                    backgroundColor: self.color_bkg.opacity(0.2),
+                                                    foregroundColors: [self.color, self.color])
+                          
+                            VStack {
+                                    HStack {
+                                        Text(String(Int(dataViewModel.todaysProgress.minsCompleted)))
+                                                .font(.largeTitle)
+                                                .bold()
+                                                .italic()
+                                                .foregroundColor(Color.green)
+                                        Text(" / \(String(defaults.integer(forKey: "therapyGoal"))) min")
+                                                .font(.headline)
+                                                .bold()
+                                                .foregroundColor(Color.gray)
+                                    }
 
-                                   
-                                Text("Today's progress")
-                                        .font(.footnote)
-                                        .fontWeight(.thin)
-                                        .foregroundColor(Color.gray)
-                                   
+                                       
+                                    Text("Today's progress")
+                                            .font(.footnote)
+                                            .fontWeight(.thin)
+                                            .foregroundColor(Color.gray)
+                                       
                                 }
-                            
-                        }
-                
-                    }.padding(.bottom)
-                    //.navigationBarTitleDisplayMode(.inline)
+        
+                }.padding(.trailing)
+                .padding(.bottom)
+                 
                 
             Divider()
-            Spacer()
+           
             
-            
-            VStack {
-                Text("Past 7 Days")
-                        .font(.title2)
-                        .fontWeight(.light)
-                        .foregroundColor(Color.black)
-                        .padding(.top)
-                        .padding(.leading)
-                       
+            Text("Past 7 Days")
+                    .font(.title2)
+                    .fontWeight(.light)
+                    .foregroundColor(Color.black)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.leading)
+    
                 HStack {
                     BarView(val: dataViewModel.day6Progress.percent, date: yesterDay(ind: -6), letterDay: letterDay(ind: -6))
                     BarView(val: dataViewModel.day5Progress.percent, date: yesterDay(ind: -5), letterDay: letterDay(ind: -5))
@@ -108,16 +118,15 @@ struct ProgressUIView: View {
                     BarView(val: dataViewModel.day0Progress.percent, date: yesterDay(ind: 0), letterDay: letterDay(ind: 0))
                                                                
                 }
-            }.padding(.bottom)
-           
-            Spacer()
+      
 
         }.onAppear(perform: {
             self.dataViewModel.getData()
             print(dataViewModel.therapyProgress)
             })
-      
+        .padding(.bottom)
     }
+  
     
 }
 
