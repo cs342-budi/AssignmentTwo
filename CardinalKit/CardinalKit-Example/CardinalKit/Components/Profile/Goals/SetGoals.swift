@@ -13,7 +13,7 @@ struct SetGoals: View {
     @AppStorage("TherapyGoal") private var therapyGoal = "10"
     @AppStorage("ActiveGoal") private var activeGoal = "3"
     let defaults = UserDefaults.standard
-    
+
    
     var body: some View {
         VStack {
