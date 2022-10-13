@@ -105,17 +105,10 @@ class OnboardingViewCoordinator: NSObject, ORKTaskViewControllerDelegate {
                             DispatchQueue.main.async {
                                 if error != nil {
                                     alert.dismiss(animated: false, completion: nil)
-                                    if let errCode = AuthErrorCode(rawValue: error!._code) {
+                                    let alert = UIAlertController(title: "Registration Error!", message: error?.localizedDescription, preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
 
-                                        switch errCode {
-                                            default:
-                                                let alert = UIAlertController(title: "Registration Error!", message: error?.localizedDescription, preferredStyle: .alert)
-                                                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-
-                                                taskViewController.present(alert, animated: false)
-                                        }
-                                    }
-                                    
+                                    taskViewController.present(alert, animated: false)
                                     stepViewController.goBackward()
 
                                 } else {

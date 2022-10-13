@@ -185,7 +185,7 @@ struct TherapyProgress: Hashable {
     }
     }
 
-    final class ChartFormatter: NSObject, IAxisValueFormatter {
+    final class ChartFormatter: NSObject, AxisValueFormatter {
 
     func stringForValue( _ value: Double, axis _: AxisBase?) -> String {
         let formatter = DateFormatter()
@@ -223,7 +223,7 @@ struct TherapyProgress: Hashable {
         chart.xAxis.labelPosition = XAxis.LabelPosition.bottom
         chart.legend.enabled = false
         chart.leftAxis.drawLabelsEnabled = false
-        chart.xAxis.valueFormatter = ChartFormatter()
+        chart.xAxis.valueFormatter = DefaultAxisValueFormatter()
 
         return chart
     }
@@ -247,7 +247,7 @@ struct TherapyProgress: Hashable {
         //changed to match progress color
         dataSet.colors = [NSUIColor(red: 151.0/255.0, green: 156.0/255.0, blue: 233.0/255.0, alpha: 1.0)]
         dataSet.label = "My Data"
-        data.addDataSet(dataSet)
+        data.dataSets.append(dataSet)
         return data
     }
 

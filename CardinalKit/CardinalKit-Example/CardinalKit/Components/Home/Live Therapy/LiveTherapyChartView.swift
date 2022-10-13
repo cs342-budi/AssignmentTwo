@@ -99,7 +99,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
         let gradientColors = [UIColor.black.cgColor, UIColor.clear.cgColor] as CFArray // Colors of the gradient
         let colorLocations:[CGFloat] = [0.3, 0.0] // Positioning of the gradient
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
-        dataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+        dataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0) // Set the Gradient
         dataSet.drawFilledEnabled = true // Draw the Gradient
         //dataSet.label = “My Data”
         dataSet.mode = .cubicBezier
@@ -109,7 +109,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
         dataSet.drawCirclesEnabled = false
         dataSet.drawValuesEnabled = false //remove data values on top of each data point
         //dataSet.drawFilledEnabled = true
-        data.addDataSet(dataSet)
+        data.dataSets.append(dataSet)
         return data
     }
     

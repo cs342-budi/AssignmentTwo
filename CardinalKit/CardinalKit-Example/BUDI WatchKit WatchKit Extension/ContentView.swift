@@ -51,17 +51,28 @@ struct ContentView: View {
             //            }
             //            .listStyle(.carousel)
             //            .navigationBarTitle("BUDI")
-            //            .onAppear {
-            //                workoutManager.requestAuthorization()
-            //                if SendDataToPhone.shared.session.isReachable {
-            //                    print("Session reached")
-            //                } else {
-            //                    print("Session not reached.")
-            //                }
-            //
-            //            }
+//                        .onAppear {
+//                            workoutManager.requestAuthorization()
+//                            if SendDataToPhone.shared.session.isReachable {
+//                                print("Session reached")
+//                            } else {
+//                                print("Session not reached.")
+//                            }
+//
+//                        }
                 
         }
+        
+        .onAppear {
+            workoutManager.requestAuthorization()
+            if SendDataToPhone.shared.session.isReachable {
+                print("Session reached")
+            } else {
+                print("Session not reached.")
+            }
+
+        }
+        
         .navigationBarTitle("BUDI")
         .onReceive(SendDataToPhone.shared.actionNotification){ action in
             // MARK: Taylor

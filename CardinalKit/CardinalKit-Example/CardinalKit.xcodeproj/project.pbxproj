@@ -115,6 +115,8 @@
 		8EA664B2259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B1259422E400B6A45A /* CKCareKitRemoteSyncWithFirestore.swift */; };
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
+		901539A728F7B5AB00549742 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901539A428F7B58900549742 /* ResearchKit.framework */; };
+		901539A828F7B5AB00549742 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 901539A428F7B58900549742 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		951E6C002860F4120043E302 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AA24927AC58AA0094D6F0 /* ElapsedTimeView.swift */; };
 		951E6C072860F73B0043E302 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E6C062860F73B0043E302 /* Timer.swift */; };
 		954796F027B3A6D7006D5D02 /* TherapySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954796EF27B3A6D7006D5D02 /* TherapySettingsView.swift */; };
@@ -152,9 +154,8 @@
 		C57684E92829E94C00CD47DF /* TrailMakingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */; };
 		C57684ED2829EA7D00CD47DF /* ReactionTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */; };
 		C5A476C928910D5100A22D45 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0A43D4244A693D00656518 /* HealthKit.framework */; };
-		C5A476CB28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */; };
-		C5A476CC28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C5A476CD28910D7800A22D45 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5168B0128910207006ECBEC /* ResearchKit.framework */; platformFilter = ios; };
+		C5A476CC28910D5400A22D45 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA33506EE27FF7917558AD59 /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27834CFF380FB16960A7EAD /* Pods_CardinalKit_Example.framework */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -186,26 +187,26 @@
 			remoteGlobalIDString = 338AA1F627AC55990094D6F0;
 			remoteInfo = "BUDI WatchKit";
 		};
-		C50D145B283361EE0023874A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
-			remoteInfo = "BUDI WatchKit WatchKit Extension";
-		};
-		C5168B0028910207006ECBEC /* PBXContainerItemProxy */ = {
+		901539A328F7B58900549742 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		C5168B0228910207006ECBEC /* PBXContainerItemProxy */ = {
+		901539A528F7B58900549742 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
+		};
+		C50D145B283361EE0023874A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338AA1FE27AC559B0094D6F0;
+			remoteInfo = "BUDI WatchKit WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -216,7 +217,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C5A476CC28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Embed Frameworks */,
+				901539A828F7B5AB00549742 /* ResearchKit.framework in Embed Frameworks */,
+				C5A476CC28910D5400A22D45 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +254,7 @@
 		1D6A5A00279E5FD900184D5F /* BudiSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudiSurvey.swift; sourceTree = "<group>"; };
 		1DD7142627BE050500B4A6EB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1DD7142827BE080700B4A6EB /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
+		22DAB558C4E2FB75094E0F30 /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardinalKit_ExampleRelease.entitlements; sourceTree = "<group>"; };
 		275F719627B9D526005B6D18 /* BUDI WatchKit WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BUDI WatchKit WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		275F719727B9D526005B6D18 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -298,7 +301,6 @@
 		338AA24B27AC5BD50094D6F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		33D8711927B5DF8D0095516B /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		41DC264876E45FE5A3FD8701 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5565D85A9C2981F232BA4B6E /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* CardinalKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardinalKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AA5CD1C2188D392530510F /* CardinalKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CardinalKit.podspec; path = ../CardinalKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7643164B27C1705C0036BE83 /* LiveTherapyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTherapyChartView.swift; sourceTree = "<group>"; };
@@ -398,8 +400,8 @@
 		95D9C2B8281D8D3800982FD2 /* BudiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudiModel.xcdatamodel; sourceTree = "<group>"; };
 		95ECF81C27D44A4F00763452 /* TherapyInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyInstructionsView.swift; sourceTree = "<group>"; };
 		95ECF82127D44B1C00763452 /* ViewInstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInstructionsButton.swift; sourceTree = "<group>"; };
-		BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-main/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		C27834CFF380FB16960A7EAD /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		C5255C2928335FFE0028EA66 /* BUDI-WatchKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BUDI-WatchKit-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C57684E82829E94C00CD47DF /* TrailMakingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMakingTaskViewController.swift; sourceTree = "<group>"; };
 		C57684EC2829EA7D00CD47DF /* ReactionTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTimeViewController.swift; sourceTree = "<group>"; };
@@ -410,8 +412,7 @@
 		E2DF9F092500C9CE00A93B93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2F1FD7524D61EDA006C39DF /* CKPropertyReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKPropertyReader.swift; sourceTree = "<group>"; };
 		E2F1FD7724D62064006C39DF /* CKConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CKConfiguration.plist; sourceTree = "<group>"; };
-		F6FE8CBEB531134E3BB13E77 /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F9EBA6D74B853AD4BFA2080E /* Pods-CardinalKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FC828CB1A818F3D7C17C9B8E /* Pods-CardinalKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,9 +453,9 @@
 				8E9CDE972591534B00C8A228 /* CareKitUI in Frameworks */,
 				8E9CDE912591534B00C8A228 /* CareKitStore in Frameworks */,
 				C5A476C928910D5100A22D45 /* HealthKit.framework in Frameworks */,
-				C5A476CB28910D5400A22D45 /* Pods_CardinalKit_Example.framework in Frameworks */,
-				C5A476CD28910D7800A22D45 /* ResearchKit.framework in Frameworks */,
 				8E9CDE932591534B00C8A228 /* CareKitFHIR in Frameworks */,
+				901539A728F7B5AB00549742 /* ResearchKit.framework in Frameworks */,
+				CA33506EE27FF7917558AD59 /* Pods_CardinalKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +476,7 @@
 			children = (
 				275F719727B9D526005B6D18 /* HealthKit.framework */,
 				8E0A43D4244A693D00656518 /* HealthKit.framework */,
-				5565D85A9C2981F232BA4B6E /* Pods_CardinalKit_Example.framework */,
+				C27834CFF380FB16960A7EAD /* Pods_CardinalKit_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -841,6 +842,15 @@
 			path = ResearchKit;
 			sourceTree = "<group>";
 		};
+		9015399E28F7B58900549742 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				901539A428F7B58900549742 /* ResearchKit.framework */,
+				901539A628F7B58900549742 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		954796F427B3AC14006D5D02 /* TherapySettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -916,24 +926,15 @@
 		A562A578C883F67F0DAE1385 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3752F4EB3A97D8F5FAB4CF98 /* Pods-CardinalKit_Example.release.xcconfig */,
+				22DAB558C4E2FB75094E0F30 /* Pods-CardinalKit_Example.debug.xcconfig */,
+				FC828CB1A818F3D7C17C9B8E /* Pods-CardinalKit_Example.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C5168AFB28910206006ECBEC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C5168B0128910207006ECBEC /* ResearchKit.framework */,
-				C5168B0328910207006ECBEC /* ResearchKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C55D78FE28C991DF0038B52A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				BCE8E9D128D7D9596F4CD775 /* Pods_CardinalKit_Example.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1016,13 +1017,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CardinalKit_Example" */;
 			buildPhases = (
-				ADFFFB5A6773FACAA3FAEC0A /* [CP] Check Pods Manifest.lock */,
+				70991953844176C8B5EB0F72 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				338AA1E727AC53840094D6F0 /* Embed Watch Content */,
 				275F71CD27B9E481005B6D18 /* Embed Frameworks */,
-				DC1CFAE4FF7AAA3563307DB5 /* [CP] Embed Pods Frameworks */,
+				74408E38BE0CBC3C2558F9A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1087,7 +1088,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C5168AFB28910206006ECBEC /* Products */;
+					ProductGroup = 9015399E28F7B58900549742 /* Products */;
 					ProjectRef = C5168AFA28910206006ECBEC /* ResearchKit.xcodeproj */;
 				},
 			);
@@ -1103,18 +1104,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C5168B0128910207006ECBEC /* ResearchKit.framework */ = {
+		901539A428F7B58900549742 /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = C5168B0028910207006ECBEC /* PBXContainerItemProxy */;
+			remoteRef = 901539A328F7B58900549742 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C5168B0328910207006ECBEC /* ResearchKitTests.xctest */ = {
+		901539A628F7B58900549742 /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = C5168B0228910207006ECBEC /* PBXContainerItemProxy */;
+			remoteRef = 901539A528F7B58900549742 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1177,7 +1178,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		ADFFFB5A6773FACAA3FAEC0A /* [CP] Check Pods Manifest.lock */ = {
+		70991953844176C8B5EB0F72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1199,7 +1200,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC1CFAE4FF7AAA3563307DB5 /* [CP] Embed Pods Frameworks */ = {
+		74408E38BE0CBC3C2558F9A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1210,19 +1211,22 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/CardinalKit/CardinalKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuthInterop/FirebaseAuthInterop.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreExtension/FirebaseCoreExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseDynamicLinks/FirebaseDynamicLinks.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseFirestore/FirebaseFirestore.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseStorage/FirebaseStorage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleSignIn/GoogleSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Granola/Granola.framework",
+				"${BUILT_PRODUCTS_DIR}/Libuv-gRPC/uv.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectiveSugar/ObjectiveSugar.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
@@ -1230,6 +1234,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
 				"${BUILT_PRODUCTS_DIR}/abseil/absl.framework",
@@ -1244,19 +1249,22 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAppCheckInterop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuthInterop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDynamicLinks.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseFirestore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseStorage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Granola.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/uv.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectiveSugar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
@@ -1264,6 +1272,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Algorithms.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/absl.framework",
@@ -1488,7 +1497,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = VM7SQWLDT5;
+				DEVELOPMENT_TEAM = C5HKYY287A;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1506,7 +1515,7 @@
 				MARKETING_VERSION = 2.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mihir.budi.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.official.budi.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1535,7 +1544,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BUDI WatchKit WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = VM7SQWLDT5;
+				DEVELOPMENT_TEAM = C5HKYY287A;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1552,7 +1561,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mihir.budi.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.official.budi.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1581,7 +1590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = VM7SQWLDT5;
+				DEVELOPMENT_TEAM = C5HKYY287A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
@@ -1589,11 +1598,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.mihir.budi;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.official.budi;
 				MARKETING_VERSION = 2.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mihir.budi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.official.budi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1622,7 +1631,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KC87UR4VZ4;
+				DEVELOPMENT_TEAM = C5HKYY287A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = BUDI_WatchKit_WatchKit_Extension;
@@ -1630,10 +1639,10 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "BUDI WatchKit";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = edu.mihir.budi;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.official.budi;
 				MARKETING_VERSION = 2.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mihir.budi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.official.budi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1876,12 +1885,13 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22DAB558C4E2FB75094E0F30 /* Pods-CardinalKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "CardinalKit-Example.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VM7SQWLDT5;
+				DEVELOPMENT_TEAM = C5HKYY287A;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1890,7 +1900,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mihir.budi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.official.budi;
 				PRODUCT_NAME = "CardinalKit Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardinalKit/Supporting Files/CardinalKit_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1901,13 +1911,13 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9EBA6D74B853AD4BFA2080E /* Pods-CardinalKit_Example.release.xcconfig */;
+			baseConfigurationReference = FC828CB1A818F3D7C17C9B8E /* Pods-CardinalKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CardinalKit_ExampleRelease.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KC87UR4VZ4;
+				DEVELOPMENT_TEAM = C5HKYY287A;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1916,7 +1926,7 @@
 				);
 				MARKETING_VERSION = 2.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mihir.budi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.official.budi;
 				PRODUCT_NAME = "CardinalKit Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "CardinalKit/Supporting Files/CardinalKit_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
