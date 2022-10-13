@@ -71,7 +71,7 @@ struct LiveTherapyChartView: UIViewRepresentable {
 //            }
 //        }
         //Option B: live data grows from left & resets every at the end of the x axis, where limits go from 0 to <dataViewLengh>
-        let dataViewLength = 15
+        let dataViewLength = 80
 
         for i in 1...dataViewLength {
               if dataViewLength <= maxData.count {

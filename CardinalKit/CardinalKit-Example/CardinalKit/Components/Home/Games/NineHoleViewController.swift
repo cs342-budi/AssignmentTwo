@@ -22,7 +22,7 @@ struct NineHoleViewController: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> ORKTaskViewController {
         let nineHoleTask: ORKOrderedTask = {
-            return ORKOrderedTask.holePegTest(withIdentifier: "nineHoleTask", intendedUseDescription: "Hand Dexterity Exercise", dominantHand: .right, numberOfPegs: 9, threshold: 0, rotated: false, timeLimit: 30, options: .excludeAudio)
+            return ORKOrderedTask.holePegTest(withIdentifier: "nineHoleTask", intendedUseDescription: "Hand Dexterity Exercise", dominantHand: .right, numberOfPegs: 5, threshold: 0.1, rotated: false, timeLimit: 30, options: .excludeAudio)
         }()
         
         let taskViewController = ORKTaskViewController(task: nineHoleTask, taskRun: nil)

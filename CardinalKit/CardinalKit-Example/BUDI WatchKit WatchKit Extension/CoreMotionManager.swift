@@ -69,14 +69,15 @@ class CoreMotionManager: NSObject, ObservableObject {
                 if let data = data  {
                     
                     strongSelf.dmUserAccelSemaphore.wait()
-                        let xVal = data.userAcceleration.x
+//                        let xVal = data.userAcceleration.x
+                        let xVal = abs(data.userAcceleration.x)
                         strongSelf.accelArray.append(xVal)
                         print("THIS IS THE XVAL \(xVal)")
-                    if strongSelf.accelArray.count > 300 && SendDataToPhone.shared.timerMsg != "PAUSE" { //60 * 1 (once a second)
+                    if strongSelf.accelArray.count > 10 && SendDataToPhone.shared.timerMsg != "PAUSE" { //60 * 1 (once a second)
                             if let max = strongSelf.accelArray.max() {
                                 self?.maxArray.append(max)
                                 self?.accelaration = max
-                                let pointsToSend = self!.workoutTime/120 + (self!.maxArray.reduce(0, +) / 60)*9.81
+                                let pointsToSend = self!.workoutTime/30 + (self!.maxArray.reduce(0, +) / 300)*9.81
                                 self?.points = pointsToSend 
                                 
                                     if SendDataToPhone.shared.session.isReachable {
