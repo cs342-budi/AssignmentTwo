@@ -61,6 +61,8 @@ _Budi watchOS & data collection inquiries_:
     Taylor Lallas -- tlallas@stanford.edu
     
     Tracy Cai -- cpcai@stanford.edu
+
+    Mihir Joshi -- joshi.373@osu.edu
     
     
 _Live Therapy View_:
@@ -70,6 +72,8 @@ _Live Therapy View_:
     Lavender Chen -- lvc0417@stanford.edu
     
     Taylor Lallas -- tlallas@stanford.edu
+
+    Mihir Joshi -- joshi.373@osu.edu
     
 
 _iOS Charts & Progress View_:
